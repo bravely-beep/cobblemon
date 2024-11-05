@@ -3,6 +3,8 @@
 #### "Now that there's a fishing mechanic, the mod is actually good!"
 
 ### Additions
+- Added the Poké Dex as a craftable item.
+- Poké Dexes can be placed on lecterns.
 - Added Pokémon (and item) fishing using modified fishing rods - Poké Rods! You'll need a Poké Rod smithing template, a fishing rod, and some type of Poké Ball. Each Poké Ball makes a differently themed rod. Why not?
 - Added Lure Ball functionality, increasing the catch rate of Pokémon that were caught on a fishing rod.
 - Added Repeat Ball functionality, increasing the catch rate of Pokémon that are already registered as caught in a player's Pokédex.
@@ -30,6 +32,7 @@
 - New config setting `displayEntityNameLabel` and `displayEntityLabelsWhenCrouchingOnly` to control what and when is displayed for the pokemon label
 - `/freezepokemon` command to pause a Pokémon's animation at a specific point in time.
 - Added `no_ai` and `freeze_frame` options to the `/spawnpokemon` command.
+- Added `moves` option to Pokémon properties, allowing you to set the moves of a Pokémon in commands and spawn files using comma-separated move names.
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
 - Added effects for the moves: Psychic, Water Sport, and Mud Sport.
@@ -37,6 +40,9 @@
 - Added shiny Pokémon particles with sound effects.
 - Added animation for trading.
 - Added icons for pending trade, team-up, and battle requests from other players.
+- Added /spawnnpc and /spawnnpcat commands.
+- Pokémon are now animated when seen in any GUI that isn't the party GUI.
+- Quirk animations can now occur for Pokémon that are shoulder mounted.
 
 ### Pokémon Added
 #### Gen 1
@@ -327,6 +333,7 @@
 - Updated particles for status effects: Paralysis, Poison, and Sleep.
 - Updated particles on Gastly.
 - Revamped stat buff and de-buff particles.
+- Improved the performance of display cases that contain Pokémon photos.
 
 ### Fixes
 - Scaled down Amaura's fetus model to avoid clipping through the tank while animating.
@@ -395,6 +402,11 @@
 - Fixed the Ice Face ability activation being displayed incorrectly in a battle.
 - Fixed edge case of F1 and R locking you in battle with no R functionality (requiring ESC to get out).
 - Fixed Poké Ball render orientation in battle interface when capturing.
+- Fixed sync issues with recently learned moves where their PP would not go down until you logout and in.
+- Fixed some Pokémon photos in display cases flashing if the Pokémon has gender differences.
+- Fixed Bidoof and Jigglypuff sleep animations stopping after some time, causing them to be 'asleep' while T-posing menacingly.
+- Fixed entities not changing poses unless you're looking at them.
+- Fixed cries not playing on send-out if the Pokémon is off-screen.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
@@ -425,6 +437,11 @@
   - Pokémon Heal (with context)
     - Added HealingSource, an interface applied to all sources of healing from player actions, for easier tracking of healing sources.
   - Move Change
+- Rebuilt large swaths of the model animation code to simplify it.
+- Renamed a bunch of things from %Poseable% to %Posable% because spelling.
+- Renamed StatelessAnimation to PoseAnimation.
+- Renamed StatefulAnimation to ActiveAnimation.
+- Documented the animation system.
 
 ### Data Pack & Resource Pack Creators
 - Added support for "shedders" similar to Shedinja's evolution logic.
@@ -441,6 +458,9 @@
 - Sound events for all blocks now start with "block."
 - Gimmighoul chest and item interaction sounds have been moved to where its cry is.
 - Unused sound files and sound events have been removed.
+- Added MoLang compatibility in the isVisible property for transformed parts.
+- Added q.has_aspect('some_aspect') function to animations, posers, and entity particle effects.
+- Added support for conditional pose animations.
 
 ### Localization
 - Updated translations for:
