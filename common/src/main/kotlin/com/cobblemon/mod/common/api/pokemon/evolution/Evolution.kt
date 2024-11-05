@@ -156,12 +156,11 @@ interface Evolution : EvolutionLike {
         }
 
         val preEvoName = pokemon.getDisplayName()
-        val evolveMessage = lang("ui.evolve.into", preEvoName, pokemon.species.translatedName)
         val pokemonEntity = pokemon.entity
         if (pokemonEntity == null || !useEvolutionEffect) {
             pokemon.getOwnerPlayer()?.playNotifySound(CobblemonSounds.EVOLUTION_UI, SoundSource.PLAYERS, 1F, 1F)
             evolutionMethod(pokemon)
-            pokemon.getOwnerPlayer()?.sendSystemMessage(evolveMessage)
+            pokemon.getOwnerPlayer()?.sendSystemMessage(lang("ui.evolve.into", preEvoName, pokemon.species.translatedName))
         } else {
             pokemonEntity.busyLocks.add("evolving")
             pokemonEntity.navigation.stop()
@@ -174,7 +173,7 @@ interface Evolution : EvolutionLike {
             pokemonEntity.after( seconds = 12F ) {
                 cryAnimation(pokemonEntity)
                 pokemonEntity.busyLocks.remove("evolving")
-                pokemon.getOwnerPlayer()?.sendSystemMessage(evolveMessage)
+                pokemon.getOwnerPlayer()?.sendSystemMessage(lang("ui.evolve.into", preEvoName, pokemon.species.translatedName))
             }
         }
     }
