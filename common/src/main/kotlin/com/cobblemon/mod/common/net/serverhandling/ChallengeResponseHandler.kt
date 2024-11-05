@@ -12,6 +12,7 @@ import com.cobblemon.mod.common.api.net.ServerNetworkPacketHandler
 import com.cobblemon.mod.common.battles.ChallengeManager
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.net.messages.server.BattleChallengeResponsePacket
+import com.cobblemon.mod.common.util.party
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.level.ServerPlayer
 
@@ -31,10 +32,11 @@ object ChallengeResponseHandler : ServerNetworkPacketHandler<BattleChallengeResp
             }
         } ?: return
 
-        ChallengeManager.setLead(player, packet.selectedPokemonId)
-        if (targetedEntity !is ServerPlayer)
-            return
-        else if (packet.accept)
+        if (targetedEntity !is ServerPlayer) return
+
+        val leadingPokemon = player.party()[packet.selectedPokemonId]?.uuid ?: return   // server-side validation
+        ChallengeManager.setLead(player, leadingPokemon)
+        if (packet.accept)
             ChallengeManager.acceptRequest(player, packet.requestID, targetedEntity)
         else
             ChallengeManager.declineRequest(player, packet.requestID)

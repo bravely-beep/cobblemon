@@ -78,12 +78,12 @@ object PartySendBinding : CobblemonBlockingKeyBinding(
 
         if (CobblemonClient.storage.selectedSlot != -1 && Minecraft.getInstance().screen == null) {
             val pokemon = CobblemonClient.storage.myParty.get(CobblemonClient.storage.selectedSlot)
-            if (pokemon != null && pokemon.currentHealth > 0) {
+            if (pokemon != null) {
                 val targetEntity = player.traceFirstEntityCollision(
-                        entityClass = LivingEntity::class.java,
-                        ignoreEntity = player,
-                        maxDistance = Cobblemon.config.battleSpectateMaxDistance,
-                        collideBlock = ClipContext.Fluid.NONE)
+                    entityClass = LivingEntity::class.java,
+                    ignoreEntity = player,
+                    maxDistance = Cobblemon.config.battleSpectateMaxDistance,
+                    collideBlock = ClipContext.Fluid.NONE)
                 if (targetEntity == null || (targetEntity is PokemonEntity && targetEntity.ownerUUID == player.uuid)) {
                     sendToServer(SendOutPokemonPacket(CobblemonClient.storage.selectedSlot))
                 }
