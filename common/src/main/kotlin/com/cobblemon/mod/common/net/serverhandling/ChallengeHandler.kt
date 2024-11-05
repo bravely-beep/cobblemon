@@ -10,17 +10,25 @@ package com.cobblemon.mod.common.net.serverhandling
 
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.api.net.ServerNetworkPacketHandler
+import com.cobblemon.mod.common.api.text.red
+import com.cobblemon.mod.common.battles.BattleBuilder
 import com.cobblemon.mod.common.battles.BattleTypes
 import com.cobblemon.mod.common.battles.ChallengeManager
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.net.messages.client.battle.BattleChallengeNotificationPacket
 import com.cobblemon.mod.common.net.messages.server.BattleChallengePacket
+import com.cobblemon.mod.common.util.canInteractWith
+import com.cobblemon.mod.common.util.party
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.level.ServerPlayer
 
 /**
- * Processes a player's interaction request to battle with another player. If valid, creates a respective [BattleChallenge]
- * and sends a [BattleChallengeNotificationPacket] to the player to decide upon.
+ * Processes a player's interaction request to battle with another player or Pokemon.
+ *
+ * If valid player interaction, creates a respective [BattleChallenge] and sends a [BattleChallengeNotificationPacket]
+ * to the player to decide upon.
+ *
+ * If valid Pokemon interaction, initiates a PVE battle.
  *
  * @author Hiroku
  * @since April 23rd, 2022
@@ -29,19 +37,26 @@ object ChallengeHandler : ServerNetworkPacketHandler<BattleChallengePacket> {
     override fun handle(packet: BattleChallengePacket, server: MinecraftServer, player: ServerPlayer) {
         val targetedEntity = player.level().getEntity(packet.targetedEntityId)?.let {
             when (it) {
-                is PokemonEntity -> it.owner
+                is PokemonEntity -> it.owner ?: it
                 is ServerPlayer -> it
                 else -> null
             }
         } ?: return
 
-        ChallengeManager.setLead(player, packet.selectedPokemonId)
-        if (targetedEntity !is ServerPlayer) return
-        val challenge =
-            if (packet.battleFormat.battleType.name == BattleTypes.MULTI.name)
-                ChallengeManager.MultiBattleChallenge(player, targetedEntity, packet.selectedPokemonId, packet.battleFormat)
-            else
-                ChallengeManager.SinglesBattleChallenge(player, targetedEntity, packet.selectedPokemonId, packet.battleFormat)
-        ChallengeManager.sendRequest(challenge)
+        val leadingPokemon = player.party()[packet.selectedPokemonId]?.uuid ?: return   // validate id
+        if (targetedEntity is PokemonEntity && player.canInteractWith(targetedEntity, Cobblemon.config.battleWildMaxDistance) && targetedEntity.canBattle(player)) {
+            BattleBuilder.pve(player, targetedEntity, leadingPokemon).ifErrored { it.sendTo(player) { it.red() } }
+        }
+        else if (targetedEntity is ServerPlayer) {
+            ChallengeManager.setLead(player, leadingPokemon)
+            val challenge =
+                if (packet.battleFormat.battleType.name == BattleTypes.MULTI.name)
+                    ChallengeManager.MultiBattleChallenge(player, targetedEntity, leadingPokemon, packet.battleFormat)
+                else
+                    ChallengeManager.SinglesBattleChallenge(player, targetedEntity, leadingPokemon, packet.battleFormat)
+
+            // player interaction validation is done on sendRequest
+            ChallengeManager.sendRequest(challenge)
+        }
     }
 }

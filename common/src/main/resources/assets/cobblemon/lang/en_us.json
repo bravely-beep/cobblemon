@@ -1578,6 +1578,7 @@
   "cobblemon.battle.activate.allyswitch": "%1$s and %2$s switched places!",
   "cobblemon.battle.activate.insomnia": "The Pokémon is suffering from insomnia and cannot fall asleep.",
   "cobblemon.battle.activate.custapberry": "%1$s can act faster than normal, thanks to its Custap Berry!",
+  "cobblemon.battle.activate.lingeringaroma": "A lingering aroma clings to %2$s!",
 
   "cobblemon.battle.prepare.bounce": "%1$s sprang up!",
   "cobblemon.battle.prepare.dig": "%1$s burrowed its way under the ground!",
@@ -1689,9 +1690,11 @@
   "cobblemon.battle.end.skydrop": "%1$s was freed from the Sky Drop!",
   "cobblemon.battle.end.illusion": "%1$s's illusion wore off!",
   "cobblemon.battle.end.neutralizinggas": "The effects of the neutralizing gas wore off!",
+  "cobblemon.battle.end.stockpile": "%1$s's stockpiled effect wore off!",
 
   "cobblemon.battle.block.sweetveil": "%1$s can't fall asleep due to a veil of sweetness!",
   "cobblemon.battle.block.uproar": "But the uproar kept %1$s awake!",
+  "cobblemon.battle.block.aromaveil": "%1$s is protected by an aromatic veil!!",
 
   "cobblemon.battle.fail.substitute": "But it could not create a substitute!",
   "cobblemon.battle.fail.healblock": "But it failed to affect %1$s!",

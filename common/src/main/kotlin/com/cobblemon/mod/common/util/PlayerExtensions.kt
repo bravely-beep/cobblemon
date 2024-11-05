@@ -99,7 +99,7 @@ fun ServerPlayer.getBattleTeam() = TeamManager.getTeam(this)
 
 fun ServerPlayer.isTrading() = TradeManager.getActiveTrade(this.uuid) != null
 
-fun ServerPlayer.canInteractWith(target: Entity, maxDistance: Float) = target is ServerPlayer && target != this && !this.isSpectator && !target.isSpectator &&
+fun ServerPlayer.canInteractWith(target: LivingEntity, maxDistance: Float) = target != this && !this.isSpectator && !target.isSpectator &&
     this.traceFirstEntityCollision(
         entityClass = LivingEntity::class.java,
         ignoreEntity = this,
