@@ -228,7 +228,7 @@
 - Gimmighoul [Roaming]
 
 ### Animation updates for the following Pokémon
-- Bellsprout, Weepinbel, Victreebel
+- Bellsprout, Weepinbell, Victreebel
 - Shellder, Cloyster
 - Porygon, Porygon2, Porygon-Z
 - Furret
