@@ -18,7 +18,6 @@
 - Moves impacted by the abilities Pixelate, Refrigerate, Aerilate, Galvanize, and Normalize now display as their altered typing.
 - Added Polished Tumblestone and Tumblestone Brick block sets from Tumblestone, Black Tumblestone, and Sky Tumblestone.
 - Added Metronome, Protective Pads, Punching Glove, Room Service, Scope Lens, Shed Shell, Terrain Extender, Throat Spray, Utility Umbrella, Wide Lens, and Zoom Lens held items
-- Added particles for moves: Watersport, Mud Sport, and Psychic.
 - Added Fire, Water, Thunder, Leaf, Ice, Sun, Moon, Shiny, Dawn, and Dusk Stone storage blocks.
 - Added Eject Pack, Metronome, Protective Pads, Punching Glove, Room Service, Scope Lens, Shed Shell, Terrain Extender, Throat Spray, Utility Umbrella, Wide Lens, and Zoom Lens held items
 - Added `stonjourner_henge_ruins`, `luna_henge_ruins`, and `sol_henge_ruins` structures.
@@ -36,7 +35,6 @@
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
 - Added effects for the moves: Psychic, Water Sport, and Mud Sport.
-- Added a new universal locator called "top".
 - Added shiny Pokémon particles with sound effects.
 - Added animation for trading.
 - Added icons for pending trade, team-up, and battle requests from other players.
@@ -61,10 +59,6 @@
 - Octillery
 - Mantine
 - Smeargle
-- Remoraid
-- Octillery
-- Mantine
-- Corsola
 
 #### Gen 3
 - Slakoth
@@ -82,11 +76,6 @@
 - Bagon
 - Shelgon
 - Salamence
-- Feebas
-- Milotic
-- Spheal
-- Sealeo
-- Walrein
 - Kecleon
 
 #### Gen 4
@@ -122,12 +111,6 @@
 - Hatenna
 - Hattrem
 - Hatterene
-- Bruxish
-- Mareanie
-- Toxapex
-
-#### Gen 8
-- Cramorant
 - Pincurchin
 
 #### Gen 9
@@ -461,6 +444,7 @@
 - Added MoLang compatibility in the isVisible property for transformed parts.
 - Added q.has_aspect('some_aspect') function to animations, posers, and entity particle effects.
 - Added support for conditional pose animations.
+- Added a new universal locator called "top".
 
 ### Localization
 - Updated translations for:
