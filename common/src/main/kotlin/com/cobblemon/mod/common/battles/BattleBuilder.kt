@@ -125,42 +125,44 @@ object BattleBuilder {
 
     @JvmOverloads
     fun pvp2v2(
-            players: List<ServerPlayer> = emptyList(),
-            leadingPokemon: List<UUID> = emptyList(),
-            battleFormat: BattleFormat = BattleFormat.GEN_9_MULTI,
-            cloneParties: Boolean = false,
-            healFirst: Boolean = false,
-            partyAccessor: (ServerPlayer) -> PartyStore = { it.party() }
+        players: List<ServerPlayer> = emptyList(),
+        leadingPokemon: List<UUID> = emptyList(),
+        battleFormat: BattleFormat = BattleFormat.GEN_9_MULTI,
+        cloneParties: Boolean = false,
+        healFirst: Boolean = false,
+        partyAccessor: (ServerPlayer) -> PartyStore = { it.party() }
     ): BattleStartResult {
+        val adjustLevel = battleFormat.adjustLevel
         val teams = players.mapIndexed { index, it ->
             partyAccessor(it).toBattleTeam(
-                    clone = cloneParties,
+                    clone = cloneParties || adjustLevel > 0,
                     healPokemon = healFirst,
                     leadingPokemon[index]
             ).sortedBy { it.health <= 0 }
         }
         val playerActors = teams.mapIndexed { index, team -> PlayerBattleActor(players[index].uuid, team)}.toMutableList()
 
-        val adjustLevel = battleFormat.adjustLevel
         val battlePartyStores = mutableListOf<PlayerPartyStore>()
 
         if (adjustLevel > 0) {
-            teams.forEachIndexed { index, battleTeam ->
-                battleTeam.forEach { battlePokemon ->
+            teams.forEachIndexed { playerIndex, battleTeam ->
+                val tempStore = PlayerPartyStore(players[playerIndex].uuid)
+                battleTeam.forEachIndexed { pokemonIndex, battlePokemon ->
                     battlePokemon.effectedPokemon.level = adjustLevel
                     battlePokemon.effectedPokemon.heal()
-                    val tempStore = PlayerPartyStore(players[index].uuid)
-                    battlePartyStores.add(tempStore)
+                    tempStore.set(pokemonIndex, battlePokemon.effectedPokemon)
                 }
+                battlePartyStores.add(tempStore)
+
             }
         }
 
         val errors = ErroredBattleStart()
 
-        if (players.size != BattleRegistry.MAX_TEAM_MEMBER_COUNT * 2) {
+        if (players.size != TeamManager.MAX_TEAM_MEMBER_COUNT * 2) {
             playerActors.forEach {actor ->
                 errors.participantErrors[actor] += BattleStartError.incorrectActorCount(
-                    requiredCount = BattleRegistry.MAX_TEAM_MEMBER_COUNT * 2,
+                    requiredCount = TeamManager.MAX_TEAM_MEMBER_COUNT * 2,
                     hadCount = players.size
                 )
             }
@@ -493,6 +495,10 @@ open class ErroredBattleStart(
     inline fun <reified T : BattleStartError> forError(action: (T) -> Unit): ErroredBattleStart {
         errors.filterIsInstance<T>().forEach { action(it) }
         return this
+    }
+
+    fun sendTo(entities: Collection<Entity>, transformer: (MutableComponent) -> (MutableComponent) = { it }) {
+        entities.forEach { this.sendTo(it, transformer) }
     }
 
     fun sendTo(entity: Entity, transformer: (MutableComponent) -> (MutableComponent) = { it }) {
