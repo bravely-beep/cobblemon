@@ -49,7 +49,7 @@
 			},
 			"event_sound": {
 				"sound_effect": {
-					"event_name": "status.nonvolatile.confused.actor"
+					"event_name": "cobblemon:status.volatile.confusion.actor"
 				}
 			}
 		},
