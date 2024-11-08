@@ -19,7 +19,7 @@
 		"events": {
 			"event_sound": {
 				"sound_effect": {
-					"event_name": "stat.debuff"
+					"event_name": "status.down.actor"
 				}
 			}
 		},
