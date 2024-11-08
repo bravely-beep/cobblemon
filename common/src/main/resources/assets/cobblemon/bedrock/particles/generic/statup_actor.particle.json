@@ -19,7 +19,7 @@
 		"events": {
 			"event_sound": {
 				"sound_effect": {
-					"event_name": "stat.buff"
+					"event_name": "status.up.actor"
 				}
 			}
 		},
