@@ -894,22 +894,22 @@
     ]
   },
   "status.up.actor": {
-    "sounds": [ { "name": "cobblemon:status/stat_up_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:status/stat_up_actor", "volume": 0.6 } ]
   },
   "status.down.actor": {
-    "sounds": [ { "name": "cobblemon:status/stat_down_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:status/stat_down_actor", "volume": 0.6 } ]
   },
   "status.nonvolatile.burn.actor": {
-    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_burn_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_burn_actor", "volume": 0.6 } ]
   },
   "status.nonvolatile.paralysis.actor": {
-    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_paralysis_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_paralysis_actor", "volume": 0.6 } ]
   },
   "status.nonvolatile.poison.actor": {
-    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_poison_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_poison_actor", "volume": 0.6 } ]
   },
   "status.nonvolatile.toxpoison.actor": {
-    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_toxpoison_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:status/nonvolatile/status_toxpoison_actor", "volume": 0.6 } ]
   },
   "status.volatile.confusion.actor": {
     "sounds": [ { "name": "cobblemon:status/volatile/status_confusion_actor", "volume": 0.6 } ]
