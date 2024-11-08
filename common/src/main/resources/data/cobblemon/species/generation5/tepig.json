@@ -29,7 +29,6 @@
     "speed": 45
   },
   "behaviour": {
-
     "moving": {
       "walk": {
         "walkSpeed": 0.14
