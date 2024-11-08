@@ -16,8 +16,9 @@
       "quirks": ["q.bedrock_quirk('flamigo', 'blink')"]
     },
     "standing": {
-      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
       "isBattle": false,
+      "isTouchingWater": false,
       "animations": ["q.look('head')", "q.bedrock('flamigo', 'ground_idle')"],
       "quirks": [
         "q.bedrock_quirk('flamigo', 'blink')",
@@ -25,7 +26,8 @@
       ]
     },
     "walking": {
-      "poseTypes": ["WALK", "SWIM"],
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
       "animations": ["q.look('head')", "q.bedrock('flamigo', 'ground_walk')"],
       "quirks": ["q.bedrock_quirk('flamigo', 'blink')"]
     },
@@ -37,6 +39,24 @@
     "fly": {
       "poseTypes": ["FLY"],
       "animations": ["q.look('head')", "q.bedrock('flamigo', 'air_fly')"],
+      "quirks": ["q.bedrock_quirk('flamigo', 'blink')"]
+    },
+    "float": {
+      "poseTypes": ["STAND", "FLOAT"],
+      "isTouchingWater": true,
+      "animations": ["q.look('head')", "q.bedrock('flamigo', 'surfacewater_idle')"],
+      "quirks": ["q.bedrock_quirk('flamigo', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, -8, 0]
+        }
+      ]
+    },
+    "swim": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": true,
+      "animations": ["q.look('head')", "q.bedrock('flamigo', 'surfacewater_swim')"],
       "quirks": ["q.bedrock_quirk('flamigo', 'blink')"]
     },
     "sleep": {
