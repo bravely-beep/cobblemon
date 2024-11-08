@@ -546,12 +546,6 @@
       "cobblemon:block/gilded_chest/gilded_chest_step_4"
     ]
   },
-  "stat.buff": {
-    "sounds": [ { "name": "cobblemon:stat/stat_up", "volume": 0.8 } ]
-  },
-  "stat.debuff": {
-    "sounds": [ { "name": "cobblemon:stat/stat_down", "volume": 0.8 } ]
-  },
   "move.watersport.actor": {
     "sounds": [ { "name": "cobblemon:move/watersport/water_sport_actor", "volume": 0.8 } ]
   },
@@ -898,6 +892,12 @@
       { "name": "cobblemon:move/impact_generic/impact_generic_fairy_7", "volume": 0.8 },
       { "name": "cobblemon:move/impact_generic/impact_generic_fairy_8", "volume": 0.8 }
     ]
+  },
+  "status.up": {
+    "sounds": [ { "name": "cobblemon:status/stat_up", "volume": 0.8 } ]
+  },
+  "status.down": {
+    "sounds": [ { "name": "cobblemon:status/stat_down", "volume": 0.8 } ]
   },
   "status.nonvolatile.paralysis.actor": {
     "sounds": [ { "name": "cobblemon:status/nonvolatile/status_paralysis_actor", "volume": 0.8 } ]
