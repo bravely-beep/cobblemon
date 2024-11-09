@@ -76,7 +76,6 @@ class MoveDescriptionScrollList(
                 && mouseX < (getScrollbarPosition() + 3).toDouble()
                 && mouseY >= y
                 && mouseY < bottom
-        println("UPDATE SCROLLING: $scrolling")
     }
 
     fun setMoveDescription(moveDescription: MutableComponent) {
