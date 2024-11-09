@@ -174,6 +174,7 @@ class PokemonInfoWidget(val pX: Int, val pY: Int, val updateForm: (PokedexForm) 
     }
 
     val possibleVariationButtonPositions = mutableListOf<Pair<Float, Float>>(
+        126F to 27F,
         114F to 27F,
         102F to 27F,
         90F to 27F,
@@ -469,7 +470,6 @@ class PokemonInfoWidget(val pX: Int, val pY: Int, val updateForm: (PokedexForm) 
                 )
             }
 
-
             // Cry
             blitk(
                 matrixStack = matrices,
@@ -550,6 +550,12 @@ class PokemonInfoWidget(val pX: Int, val pY: Int, val updateForm: (PokedexForm) 
         variationButtons.forEach { removeWidget(it.getWidget()) }
         variationButtons.clear()
 
+        val seenShinyStates = CobblemonClient.clientPokedexData.getSeenShinyStates(pokedexEntry, pokedexForm)
+        shiny = seenShinyStates.count() == 1 && seenShinyStates.first() == "shiny"
+        shinyButton.resource = if (shiny) buttonShiny else buttonNone
+        shinyButton.visible = shiny || seenShinyStates.size > 1
+        shinyButton.active = seenShinyStates.size > 1
+
         val form = species.forms.find { it.name.equals(pokedexForm.displayForm, ignoreCase = true) } ?: species.standardForm
         maleRatio = form.maleRatio
 
@@ -562,12 +568,13 @@ class PokemonInfoWidget(val pX: Int, val pY: Int, val updateForm: (PokedexForm) 
             genderButton.visible = true
             genderButton.active = seenGenders.size > 1
         }
+        genderButton.buttonX = pX + (if (shinyButton.visible) 114F else 126F)
 
-        if (CobblemonClient.clientPokedexData.getHighestKnowledgeFor(pokedexEntry) == PokedexEntryProgress.NONE) {
-            return
-        }
+        if (CobblemonClient.clientPokedexData.getHighestKnowledgeFor(pokedexEntry) == PokedexEntryProgress.NONE) return
 
-        val startPosition = if (species.maleRatio == -1F) 0 else 1
+        var startPosition = if (shinyButton.visible) 1 else 0
+        startPosition += if (genderButton.visible || (species.maleRatio == -1F)) 1 else 0
+
         pokedexEntry.variations.forEachIndexed { index, variation ->
             val pos = possibleVariationButtonPositions[index + startPosition]
             val button = VariationButtonWrapper(this, pX + pos.first, pY + pos.second)
@@ -575,11 +582,6 @@ class PokemonInfoWidget(val pX: Int, val pY: Int, val updateForm: (PokedexForm) 
             addWidget(button.getWidget())
             variationButtons.add(button)
         }
-
-        val seenShinyStates = CobblemonClient.clientPokedexData.getSeenShinyStates(pokedexEntry, pokedexForm)
-        shiny = seenShinyStates.count() == 1 && seenShinyStates.first() == "shiny"
-        shinyButton.resource = if (shiny) buttonShiny else buttonNone
-        shinyButton.active = seenShinyStates.size > 1
     }
 
     private fun updateType(species: Species, form: FormData) {
