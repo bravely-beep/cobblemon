@@ -36,11 +36,11 @@
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
 - Added effects for the moves: Psychic, Water Sport, and Mud Sport.
-- Added a new universal locator called "top".
+- Added a new universal locator called `top`.
 - Added shiny Pokémon particles with sound effects.
 - Added animation for trading.
 - Added icons for pending trade, team-up, and battle requests from other players.
-- Added /spawnnpc and /spawnnpcat commands.
+- Added `/spawnnpc` and `/spawnnpcat` commands.
 - Pokémon are now animated when seen in any GUI that isn't the party GUI.
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
 
@@ -228,7 +228,7 @@
 - Gimmighoul \[Roaming\]
 
 ### Animation updates for the following Pokémon
-- Bellsprout, Weepinbel, Victreebel
+- Bellsprout, Weepinbell, Victreebel
 - Shellder, Cloyster
 - Porygon, Porygon2, Porygon-Z
 - Furret
@@ -407,6 +407,8 @@
 - Fixed Bidoof and Jigglypuff sleep animations stopping after some time, causing them to be 'asleep' while T-posing menacingly.
 - Fixed entities not changing poses unless you're looking at them.
 - Fixed cries not playing on send-out if the Pokémon is off-screen.
+- Fixed text row selection highlight in battle log.
+- Fixed top black border rendering in scroll interfaces in summary UI.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
