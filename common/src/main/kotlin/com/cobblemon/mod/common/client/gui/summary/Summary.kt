@@ -366,7 +366,7 @@ class Summary private constructor(party: Collection<Pokemon?>, private val edita
                 if (movesWidget is MovesWidget) {
                     sideScreen = MoveSwapScreen(
                         x + 216,
-                        y + 24,
+                        y + 23,
                         movesWidget = movesWidget,
                         replacedMove = move
                     ).also { switchPane ->
@@ -387,7 +387,7 @@ class Summary private constructor(party: Collection<Pokemon?>, private val edita
             EVOLVE -> {
                 sideScreen = EvolutionSelectScreen(
                         x + 216,
-                        y + 22,
+                        y + 23,
                         pokemon = selectedPokemon
                 )
             }
@@ -592,6 +592,7 @@ class Summary private constructor(party: Collection<Pokemon?>, private val edita
 
     override fun mouseDragged(mouseX: Double, mouseY: Double, button: Int, deltaX: Double, deltaY: Double): Boolean {
         if (sideScreenIndex == MOVE_SWAP || sideScreenIndex == EVOLVE) sideScreen.mouseDragged(mouseX, mouseY, button, deltaX, deltaY)
+        if (mainScreenIndex == MOVES) mainScreen.mouseDragged(mouseX, mouseY, button, deltaX, deltaY)
         return super.mouseDragged(mouseX, mouseY, button, deltaX, deltaY)
     }
 
