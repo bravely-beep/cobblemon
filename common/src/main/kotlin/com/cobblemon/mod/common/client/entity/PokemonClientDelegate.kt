@@ -230,13 +230,6 @@ class PokemonClientDelegate : PosableState(), PokemonSideDelegate {
                                                             world
                                                         ).spawn()
                                                     }
-                                                    currentEntity.after(seconds = 0.1f) {
-                                                        //This is only for when the player is sending out the Pokemon into the world and not a battle.
-                                                        if (currentEntity.pokemon.shiny && !currentEntity.isBattling) {
-                                                            playShinyEffect("cobblemon:shiny_ring")
-                                                            lastShinyParticle = System.currentTimeMillis()
-                                                        }
-                                                    }
                                                 }
                                             }
                                         }
