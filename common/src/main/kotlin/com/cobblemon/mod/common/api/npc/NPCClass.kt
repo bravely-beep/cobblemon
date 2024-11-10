@@ -47,6 +47,7 @@ class NPCClass {
     var variables = mutableMapOf<String, MoValue>() // Questionable whether this should be here.
     var party: NPCPartyProvider? = null
     var skill: Int = 0
+    var autoHealParty: Boolean = false
     var battleTheme: ResourceLocation? = null
     var ai: MutableList<BrainConfig> = mutableListOf()
 
@@ -77,6 +78,7 @@ class NPCClass {
             buffer.writeString(v.defaultValue)
         }
         buffer.writeInt(skill)
+        buffer.writeBoolean(autoHealParty)
         buffer.writeMapK(size = IntSize.U_BYTE, map = variables) { (key, value) ->
             buffer.writeString(key)
             buffer.writeString(value.asString())
@@ -116,6 +118,7 @@ class NPCClass {
             NPCConfigVariable(variableName, displayName, description, type, defaultValue)
         }.toMutableList()
         skill = buffer.readInt()
+        autoHealParty = buffer.readBoolean()
         buffer.readMapK(size = IntSize.U_BYTE, map = variables) {
             val key = buffer.readString()
             val value = buffer.readString()
