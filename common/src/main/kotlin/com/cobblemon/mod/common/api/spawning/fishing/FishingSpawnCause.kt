@@ -122,7 +122,7 @@ class FishingSpawnCause(
                     .randomOrNull ()
                     ?.let { ability ->
                         // No need to force, this is legal
-                        pokemonEntity.pokemon.ability = ability.template.create(false)
+                        pokemonEntity.pokemon.ability = ability.template.create(false, ability.priority)
                         return
                     }
             }
