@@ -11,12 +11,14 @@ package com.cobblemon.mod.common.api.moves.animations.keyframes
 import com.cobblemon.mod.common.api.molang.ExpressionLike
 import com.cobblemon.mod.common.api.moves.animations.ActionEffectContext
 import com.cobblemon.mod.common.api.moves.animations.EntityProvider
+import com.cobblemon.mod.common.api.moves.animations.TargetsProvider
 import com.cobblemon.mod.common.api.moves.animations.UsersProvider
 import com.cobblemon.mod.common.api.scheduling.delayedFuture
 import com.cobblemon.mod.common.entity.PosableEntity
 import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormEntityParticlePacket
 import com.cobblemon.mod.common.util.asExpressionLike
 import com.cobblemon.mod.common.util.asIdentifierDefaultingNamespace
+import net.minecraft.commands.arguments.EntityArgument.getPlayers
 import java.util.concurrent.CompletableFuture
 import net.minecraft.server.level.ServerLevel
 
@@ -29,9 +31,7 @@ import net.minecraft.server.level.ServerLevel
 class EntityParticlesActionEffectKeyframe : ConditionalActionEffectKeyframe(), EntityConditionalActionEffectKeyframe {
     override val entityCondition = "q.entity.is_user".asExpressionLike()
     var effect: String? = null
-    @Deprecated("Use the locators property instead", ReplaceWith("locators"))
-    var locator: String = "root"
-    var locators: Set<String> = setOf("root")
+    var locators: List<String> = listOf("target")
 
     val delay: ExpressionLike = "0".asExpressionLike()
     val visibilityRange = 200
@@ -48,7 +48,7 @@ class EntityParticlesActionEffectKeyframe : ConditionalActionEffectKeyframe(), E
         }?.asIdentifierDefaultingNamespace() ?: return skip()
 
         entities.filter { it is PosableEntity }.forEach { entity ->
-            val packet = SpawnSnowstormEntityParticlePacket(effectIdentifier, entity.id, (locators + locator).toList())
+            val packet = SpawnSnowstormEntityParticlePacket(effectIdentifier, entity.id, (locators).toList())
             val players = (entity.level() as ServerLevel).getPlayers { it.distanceTo(entity) <= visibilityRange }
             packet.sendToPlayers(players)
         }

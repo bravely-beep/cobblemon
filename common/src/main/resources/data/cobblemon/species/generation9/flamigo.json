@@ -51,11 +51,17 @@
   },
   "behaviour": {
     "moving": {
-      "walking": {
+      "walk": {
         "walkSpeed": 0.16
       },
       "fly": {
         "canFly": true
+      },
+      "swim": {
+        "swimSpeed": 0.16,
+        "canSwimInWater": true,
+        "canBreatheUnderwater": true,
+        "canWalkOnWater": true
       }
     },
     "resting": {

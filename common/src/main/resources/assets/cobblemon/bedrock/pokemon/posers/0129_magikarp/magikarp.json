@@ -29,13 +29,11 @@
     },
     "float": {
       "poseTypes": ["PORTRAIT", "PROFILE", "FLOAT"],
-      "isUnderWater": true,
       "animations": ["q.look('head')", "q.bedrock('magikarp', 'water_idle')"],
       "quirks": ["q.bedrock_quirk('magikarp', 'blink')"]
     },
     "swim": {
       "poseTypes": ["SWIM"],
-      "isUnderWater": true,
       "animations": ["q.look('head')", "q.bedrock('magikarp', 'water_swim')"],
       "quirks": ["q.bedrock_quirk('magikarp', 'blink')"]
     },
@@ -48,7 +46,6 @@
     "surface_idle": {
       "poseTypes": ["STAND"],
       "isTouchingWater": true,
-      "isUnderWater": false,
       "animations": [
         "q.look('head')",
         "q.bedrock('magikarp', 'surfacewater_idle')"
@@ -67,7 +64,6 @@
     "surface_swim": {
       "poseTypes": ["WALK"],
       "isTouchingWater": true,
-      "isUnderWater": false,
       "animations": [
         "q.look('head')",
         "q.bedrock('magikarp', 'surfacewater_swim')"

@@ -198,7 +198,7 @@ class PokerodItem(val pokeRodId: ResourceLocation, settings: Properties) : Fishi
             }
 
 
-            world.playSound(null as Player?, user.x, user.y, user.z, CobblemonSounds.FISHING_ROD_REEL_IN, SoundSource.PLAYERS, 1.0f, 1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f))
+            world.playSound(null as Player?, user.x, user.y, user.z, CobblemonSounds.FISHING_ROD_REEL_IN, SoundSource.PLAYERS, 1.0f, 1.0f)
             user.gameEvent(GameEvent.ITEM_INTERACT_FINISH)
         } else { // if the bobber is not out yet
 

@@ -12,12 +12,12 @@
     {
       "type": "entity_particles",
       "effect": "cobblemon:stunspore",
-      "locator": "target"
+      "locators": ["target"]
     },
     {
       "type": "entity_particles",
       "effect": "cobblemon:stunspore_cloud",
-      "locator": "target",
+      "locators": ["target"],
       "delay": 0.1
     },
     {
@@ -28,14 +28,14 @@
       "type": "entity_particles",
       "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
       "effect": "cobblemon:stunspore_land",
-      "locator": "target",
+      "locators": ["target"],
       "delay": 0.1
     },
     {
       "type": "entity_particles",
       "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
       "effect": "cobblemon:paralysis_actor",
-      "locator": "middle",
+      "locators": ["middle"],
       "delay": 1
     },
     {

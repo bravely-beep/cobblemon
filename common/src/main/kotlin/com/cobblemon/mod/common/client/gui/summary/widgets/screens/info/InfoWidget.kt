@@ -25,7 +25,6 @@ import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
 
-
 class InfoWidget(
     pX: Int,
     pY: Int,

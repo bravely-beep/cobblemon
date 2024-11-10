@@ -63,6 +63,7 @@ import com.cobblemon.mod.common.entity.npc.NPCEntity
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.entity.pokemon.effects.IllusionEffect
 import com.cobblemon.mod.common.net.messages.client.PokemonUpdatePacket
+import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormEntityParticlePacket
 import com.cobblemon.mod.common.net.messages.client.pokemon.update.*
 import com.cobblemon.mod.common.net.serverhandling.storage.SendOutPokemonHandler.SEND_OUT_DURATION
 import com.cobblemon.mod.common.net.serverhandling.storage.SendOutPokemonHandler.THROW_DURATION
@@ -618,6 +619,12 @@ open class Pokemon : ShowdownIdentifiable {
                     if (doCry) {
                         it.cry()
                     }
+
+                    if (illusion != null) {
+                        if (illusion.mock.shiny == true) SpawnSnowstormEntityParticlePacket(cobblemonResource("shiny_ring"), it.id, listOf("shiny_particles", "middle")).sendToPlayersAround(it.x, it.y, it.z, 64.0, it.level().dimension())
+                    } else {
+                        if (shiny) SpawnSnowstormEntityParticlePacket(cobblemonResource("shiny_ring"), it.id, listOf("shiny_particles", "middle")).sendToPlayersAround(it.x, it.y, it.z, 64.0, it.level().dimension())
+                    }
                 }
 
                 mutation(it)
@@ -935,8 +942,16 @@ open class Pokemon : ShowdownIdentifiable {
         this.experience = other.experience
         this.setFriendship(other.friendship)
         // Applied before current health for calcs to take place
-        this.ivs = other.ivs
-        this.evs = other.evs
+        other.ivs.doWithoutEmitting {
+            this.ivs.forEach {
+                other.ivs[it.key] = it.value
+            }
+        }
+        other.evs.doWithoutEmitting {
+            this.evs.forEach {
+                other.evs[it.key] = it.value
+            }
+        }
         this.currentHealth = other.currentHealth
         this.gender = other.gender
         this.moveSet.copyFrom(other.moveSet)
@@ -1122,15 +1137,15 @@ open class Pokemon : ShowdownIdentifiable {
         get() = allAccessibleMoves.filter { accessibleMove -> moveSet.none { it.template == accessibleMove } }
 
     fun updateAspects() {
-        aspects = emptySet()
         /*
          * We don't want to run this for client representations of Pokémon as they won't always have the same
          * aspect providers, and we want the server side to entirely manage them anyway.
          */
         if (!isClient) {
-            aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet()
+            aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet() + forcedAspects
+        } else {
+            aspects = forcedAspects
         }
-        aspects += forcedAspects
     }
 
     fun updateForm() {

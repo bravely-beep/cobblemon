@@ -169,7 +169,6 @@ object CobblemonItems : PlatformRegistry<Registry<Item>, ResourceKey<Registry<It
     @JvmField
     val POKEDEX_WHITE = pokedexItem(PokedexTypes.WHITE)
 
-
     @JvmField
     val VIVICHOKE = compostableItem("vivichoke")
 
