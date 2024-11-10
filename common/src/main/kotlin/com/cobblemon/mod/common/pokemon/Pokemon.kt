@@ -1122,15 +1122,15 @@ open class Pokemon : ShowdownIdentifiable {
         get() = allAccessibleMoves.filter { accessibleMove -> moveSet.none { it.template == accessibleMove } }
 
     fun updateAspects() {
-        aspects = emptySet()
         /*
          * We don't want to run this for client representations of Pokémon as they won't always have the same
          * aspect providers, and we want the server side to entirely manage them anyway.
          */
         if (!isClient) {
-            aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet()
+            aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet() + forcedAspects
+        } else {
+            aspects = forcedAspects
         }
-        aspects += forcedAspects
     }
 
     fun updateForm() {

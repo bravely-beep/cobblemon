@@ -62,10 +62,14 @@ class FormDexRecord {
     lateinit var speciesDexRecord: SpeciesDexRecord
 
     @Transient
+    lateinit var formName: String
+
+    @Transient
     lateinit var struct: QueryStruct
 
-    fun initialize(speciesDexRecord: SpeciesDexRecord) {
+    fun initialize(speciesDexRecord: SpeciesDexRecord, formName: String) {
         this.speciesDexRecord = speciesDexRecord
+        this.formName = formName
         struct = QueryStruct(hashMapOf())
             .addFunction("data") { data }
             .addFunction("knowledge") { StringValue(knowledge.name) }
