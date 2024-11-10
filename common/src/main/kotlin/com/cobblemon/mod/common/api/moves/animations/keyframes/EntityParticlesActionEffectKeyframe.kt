@@ -48,7 +48,7 @@ class EntityParticlesActionEffectKeyframe : ConditionalActionEffectKeyframe(), E
         }?.asIdentifierDefaultingNamespace() ?: return skip()
 
         entities.filter { it is PosableEntity }.forEach { entity ->
-            val packet = SpawnSnowstormEntityParticlePacket(effectIdentifier, entity.id, (locators + locator).toList())
+            val packet = SpawnSnowstormEntityParticlePacket(effectIdentifier, entity.id, (locators).toList())
             val players = (entity.level() as ServerLevel).getPlayers { it.distanceTo(entity) <= visibilityRange }
             packet.sendToPlayers(players)
         }
