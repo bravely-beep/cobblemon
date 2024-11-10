@@ -13,8 +13,10 @@ import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.PokemonPropertyExtractor
 import com.cobblemon.mod.common.api.scheduling.afterOnServer
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormEntityParticlePacket
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.util.DataKeys
+import com.cobblemon.mod.common.util.cobblemonResource
 import net.minecraft.core.HolderLookup
 import net.minecraft.nbt.CompoundTag
 import java.util.concurrent.CompletableFuture
@@ -45,6 +47,7 @@ class IllusionEffect(
         entity.effects.mockEffect = null
         afterOnServer(seconds = 1.0F) {
             entity.cry()
+            if (entity.pokemon.shiny) SpawnSnowstormEntityParticlePacket(cobblemonResource("shiny_ring"), entity.id, listOf("shiny_particles", "middle")).sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
             future.complete(entity)
         }
     }
