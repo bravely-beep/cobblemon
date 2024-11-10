@@ -113,11 +113,12 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
     val level: Int
         get() = entityData.get(LEVEL)
 
-    var skill: Int? = npc.skill ?: 0 // range from 0 - 5
+    var skill: Int? = null // range from 0 - 5
 
     var party: NPCPartyStore? = null
 
     fun getPartyForChallenge(player: ServerPlayer): NPCPartyStore? {
+        val party = this.party
         return if (party != null) {
             party
         } else if (npc.party?.isStatic == false) {

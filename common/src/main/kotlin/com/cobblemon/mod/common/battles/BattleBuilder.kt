@@ -334,12 +334,12 @@ object BattleBuilder {
             return errors
         }
 
-        val npcActor = NPCBattleActor(npcEntity, npcParty, npcEntity.skill ?: 0)
+        val npcActor = NPCBattleActor(npcEntity, npcParty, npcEntity.skill ?: npcEntity.npc.skill)
 //        if (npcEntity.battleIds.get().isPresent) {
 //            errors.participantErrors[npcActor] += BattleStartError.alreadyInBattle(npcActor)
 //        }
 
-        if (npcActor.pokemonList.size < battleFormat.battleType.slotsPerActor) {
+        if (npcActor.pokemonList.filter { it.health > 0 }.size < battleFormat.battleType.slotsPerActor) {
             errors.participantErrors[npcActor] += BattleStartError.insufficientPokemon(
                 actorEntity = npcEntity,
                 requiredCount = battleFormat.battleType.slotsPerActor,
