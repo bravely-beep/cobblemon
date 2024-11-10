@@ -5,20 +5,28 @@
   "profileTranslation": [-0.1, 0.93, 0],
   "rootBone": "milotic",
   "animations": {
-    "cry": "q.bedrock_stateful('milotic', 'cry')"
+    "cry": "q.bedrock_stateful('milotic', 'cry')",
+    "recoil": "q.bedrock_stateful('milotic', 'recoil')"
   },
   "poses": {
     "standing": {
-      "poseTypes": [
-        "STAND",
-        "WALK",
-        "SWIM",
-        "FLOAT",
-        "PORTRAIT",
-        "PROFILE",
-        "NONE"
-      ],
+      "poseTypes": ["STAND", "PORTRAIT", "PROFILE", "NONE"],
       "animations": ["q.bedrock('milotic', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('milotic', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": ["q.bedrock('milotic', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('milotic', 'blink')"]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": ["q.bedrock('milotic', 'water_idle')"],
+      "quirks": ["q.bedrock_quirk('milotic', 'blink')"]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": ["q.bedrock('milotic', 'water_swim')"],
       "quirks": ["q.bedrock_quirk('milotic', 'blink')"]
     }
   }
