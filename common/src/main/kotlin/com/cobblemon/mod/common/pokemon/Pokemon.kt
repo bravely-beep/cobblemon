@@ -935,8 +935,16 @@ open class Pokemon : ShowdownIdentifiable {
         this.experience = other.experience
         this.setFriendship(other.friendship)
         // Applied before current health for calcs to take place
-        this.ivs = other.ivs
-        this.evs = other.evs
+        other.ivs.doWithoutEmitting {
+            this.ivs.forEach {
+                other.ivs[it.key] = it.value
+            }
+        }
+        other.evs.doWithoutEmitting {
+            this.evs.forEach {
+                other.evs[it.key] = it.value
+            }
+        }
         this.currentHealth = other.currentHealth
         this.gender = other.gender
         this.moveSet.copyFrom(other.moveSet)
