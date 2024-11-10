@@ -393,6 +393,7 @@
 - Fixed cries not playing on send-out if the Pokémon is off-screen.
 - Fixed text row selection highlight in battle log.
 - Fixed top black border rendering in scroll interfaces in summary UI.
+- Fixed aspect tracking for Advancements.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
@@ -448,6 +449,7 @@
 - Added q.has_aspect('some_aspect') function to animations, posers, and entity particle effects.
 - Added support for conditional pose animations.
 - Added a new universal locator called "top".
+- Added `eggs_collected` and `eggs_hatched` Advancement triggers.
 
 ### Localization
 - Updated translations for:
