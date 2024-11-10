@@ -169,7 +169,6 @@ object PokemonModelRepository : VaryingModelRepository<PokemonPosableModel>() {
         inbuilt("hitmontop", ::HitmontopModel)
         inbuilt("electivire", ::ElectivireModel)
         inbuilt("glaceon", ::GlaceonModel)
-        inbuilt("happiny", ::HappinyModel)
         inbuilt("leafeon", ::LeafeonModel)
         inbuilt("lickilicky", ::LickilickyModel)
         inbuilt("mimejr", ::MimejrModel)
