@@ -47,7 +47,7 @@ class NPCClass {
     var variables = mutableMapOf<String, MoValue>() // Questionable whether this should be here.
     var party: NPCPartyProvider? = null
     var skill: Int = 0
-    var autoHealParty: Boolean = false
+    var autoHealParty: Boolean = true
     var battleTheme: ResourceLocation? = null
     var ai: MutableList<BrainConfig> = mutableListOf()
 
