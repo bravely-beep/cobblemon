@@ -10,7 +10,9 @@ package com.cobblemon.mod.common.pokedex.scanner
 
 import com.cobblemon.mod.common.pokedex.scanner.PokedexUsageContext.Companion.BLOCK_LENGTH_PER_ZOOM_STAGE
 import net.minecraft.world.entity.Entity
+import net.minecraft.world.level.ClipContext
 import net.minecraft.world.phys.AABB
+import net.minecraft.world.phys.HitResult
 
 //Handles the actual raycasting to figure out what pokemon we are looking at
 object PokemonScanner {
@@ -70,6 +72,21 @@ object PokemonScanner {
                 if (distanceToEntity < closestDistance) {
                     closestEntity = entity
                     closestDistance = distanceToEntity
+                }
+                if (closestEntity != null) {
+                    // Check if the view path collides with a solid block along the path
+                    val pathCollidesWithBlock = castingEntity.level().clip(
+                        ClipContext(
+                            eyePos,
+                            intersection.get(),
+                            ClipContext.Block.COLLIDER,
+                            ClipContext.Fluid.NONE,
+                            castingEntity
+                        )).type == HitResult.Type.BLOCK
+                    if (pathCollidesWithBlock) {
+                        // Targeted entity is obscured by a solid block
+                        closestEntity = null
+                    }
                 }
             }
         }

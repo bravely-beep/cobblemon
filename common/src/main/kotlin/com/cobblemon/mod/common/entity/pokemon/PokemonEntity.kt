@@ -386,7 +386,7 @@ open class PokemonEntity(
         }
         //This is so that pokemon in the pasture block are ALWAYS in sync with the pokemon box
         //Before, pokemon entities in pastures would hold an old ref to a pokemon obj and changes to that would not appear to the underlying file
-        if (this.tethering != null) {
+        if (this.tethering != null && age % 20 == 0) {
             // Only for online players
             this.ownerUUID?.let { ownerUUID ->
                 val player = level().getPlayerByUUID(ownerUUID) as? ServerPlayer
