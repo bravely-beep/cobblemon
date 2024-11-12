@@ -31,6 +31,7 @@ class NPCPreset {
     var skill: Int? = null
     var autoHealParty: Boolean? = null
     var battleTheme: ResourceLocation? = null
+    var isMovable: Boolean? = null
 
     fun applyTo(npcClass: NPCClass) {
         resourceIdentifier?.let { npcClass.resourceIdentifier = it }
@@ -51,5 +52,6 @@ class NPCPreset {
         autoHealParty?.let { npcClass.autoHealParty = it }
         battleTheme?.let { npcClass.battleTheme = it }
         ai?.let { npcClass.ai.addAll(it) }
+        isMovable?.let { npcClass.isMovable = it }
     }
 }

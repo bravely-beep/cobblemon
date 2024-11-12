@@ -117,6 +117,8 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
 
     var party: NPCPartyStore? = null
 
+    var isMovable: Boolean? = null
+
     fun getPartyForChallenge(player: ServerPlayer): NPCPartyStore? {
         val party = this.party
         return if (party != null) {
@@ -325,6 +327,7 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
                 it.putByteArray(DataKeys.NPC_PLAYER_TEXTURE_TEXTURE, playerTexture.texture)
             })
         }
+        nbt.putBoolean("isMovable", isMovable ?: false)
         return nbt
     }
 
@@ -358,6 +361,7 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
             val texture = textureNBT.getByteArray(DataKeys.NPC_PLAYER_TEXTURE_TEXTURE)
             entityData.set(NPC_PLAYER_TEXTURE, NPCPlayerTexture(texture, model))
         }
+        this.isMovable = npc.isMovable
         updateAspects()
     }
 
@@ -390,6 +394,10 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
     override fun isPersistenceRequired() = !npc.canDespawn
 
     override fun getDefaultDimensions(pose: Pose) = npc.hitbox
+
+    override fun isPushable(): Boolean {
+        return npc.isMovable
+    }
 
     fun initialize(level: Int) {
         appliedAspects.clear()
