@@ -180,7 +180,7 @@ class PokeBobberEntityRenderer(context: EntityRendererProvider.Context?) : Entit
 
         var armOffset = if (playerEntity.mainArm == HumanoidArm.RIGHT) 1 else -1
         val itemStack = playerEntity.mainHandItem
-        if (itemStack.item !is PokerodItem) {
+        if ((itemStack.item !is PokerodItem) || (itemStack.item as PokerodItem).pokeRodId != pokeRodId) {
             armOffset = -armOffset
         }
         val handSwingProgress = playerEntity.getAttackAnim(tickDelta)
