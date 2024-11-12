@@ -327,7 +327,7 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
                 it.putByteArray(DataKeys.NPC_PLAYER_TEXTURE_TEXTURE, playerTexture.texture)
             })
         }
-        nbt.putBoolean("isMovable", isMovable ?: false)
+        nbt.putBoolean(DataKeys.NPC_IS_MOVABLE, isMovable ?: true)
         return nbt
     }
 
@@ -361,7 +361,7 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
             val texture = textureNBT.getByteArray(DataKeys.NPC_PLAYER_TEXTURE_TEXTURE)
             entityData.set(NPC_PLAYER_TEXTURE, NPCPlayerTexture(texture, model))
         }
-        this.isMovable = npc.isMovable
+        this.isMovable = nbt.getBoolean(DataKeys.NPC_IS_MOVABLE)
         updateAspects()
     }
 
@@ -395,9 +395,7 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
 
     override fun getDefaultDimensions(pose: Pose) = npc.hitbox
 
-    override fun isPushable(): Boolean {
-        return npc.isMovable
-    }
+    override fun isPushable() = npc.isMovable
 
     fun initialize(level: Int) {
         appliedAspects.clear()
