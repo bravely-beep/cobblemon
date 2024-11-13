@@ -16,6 +16,7 @@ import com.cobblemon.mod.common.util.cobblemonResource
 import net.minecraft.core.Registry
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.nbt.ListTag
+import net.minecraft.nbt.StringTag
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.item.Item
@@ -31,7 +32,12 @@ data class FishingBait(
         val type: ResourceLocation,
         val subcategory: ResourceLocation?,
         val chance: Double = 0.0,
-        val value: Double = 0.0
+        val value: Double = 0.0,
+        val textPlain: String?,
+        val fieldA: String?,
+        val fieldB: String?,
+        val fieldC: String?,
+        val fields: List<String>? = null
     ) {
         fun toNbt(): CompoundTag {
             val nbt = CompoundTag()
@@ -39,6 +45,17 @@ data class FishingBait(
             subcategory?.let { nbt.putString("Subcategory", it.toString()) }
             nbt.putDouble("Chance", chance)
             nbt.putDouble("Value", value)
+            nbt.putString("Text", textPlain.toString())
+            nbt.putString("FieldA", textPlain.toString())
+            nbt.putString("FieldB", textPlain.toString())
+            nbt.putString("FieldC", textPlain.toString())
+            fields?.let {
+                val listTag = ListTag()
+                it.forEach { field ->
+                    listTag.add(StringTag.valueOf(field))
+                }
+                nbt.put("Fields", listTag)
+            }
             return nbt
         }
 
@@ -48,7 +65,17 @@ data class FishingBait(
                 val subcategory = if (nbt.contains("Subcategory")) ResourceLocation.parse(nbt.getString("Subcategory")) else null
                 val chance = nbt.getDouble("Chance")
                 val value = nbt.getDouble("Value")
-                return Effect(type, subcategory, chance, value)
+                val text = nbt.getString("Text")
+                val fieldA = nbt.getString("FieldA")
+                val fieldB = nbt.getString("FieldB")
+                val fieldC = nbt.getString("FieldC")
+                val fields = if (nbt.contains("Fields")) {
+                    val listTag = nbt.getList("Fields", 8) // 8 is the NBT type for String
+                    listTag.map { it.asString }
+                } else {
+                    null
+                }
+                return Effect(type, subcategory, chance, value, text, fieldA, fieldB, fieldC, fields)
             }
         }
     }
@@ -87,7 +114,8 @@ data class FishingBait(
         val BITE_TIME = cobblemonResource("bite_time")
         val GENDER_CHANCE = cobblemonResource("gender_chance")
         val LEVEL_RAISE = cobblemonResource("level_raise")
-        val TERA = cobblemonResource("tera")
+        val TYPING = cobblemonResource("typing")
+        val EGG_GROUP = cobblemonResource("egg_group")
         val SHINY_REROLL = cobblemonResource("shiny_reroll")
         val HIDDEN_ABILITY_CHANCE = cobblemonResource("ha_chance")
         val POKEMON_CHANCE = cobblemonResource("pokemon_chance")
@@ -108,7 +136,6 @@ data class FishingBait(
             EFFECT_FUNCTIONS[SHINY_REROLL] = { entity, effect -> FishingSpawnCause.shinyReroll(entity, effect) }
             EFFECT_FUNCTIONS[GENDER_CHANCE] = { entity, effect -> FishingSpawnCause.alterGenderAttempt(entity, effect) }
             EFFECT_FUNCTIONS[LEVEL_RAISE] = { entity, effect -> FishingSpawnCause.alterLevelAttempt(entity, effect) }
-            EFFECT_FUNCTIONS[TERA] = { entity, effect -> FishingSpawnCause.alterTeraAttempt(entity, effect) }
             EFFECT_FUNCTIONS[HIDDEN_ABILITY_CHANCE] = { entity, _ -> FishingSpawnCause.alterHAAttempt(entity) }
             EFFECT_FUNCTIONS[FRIENDSHIP] = { entity, effect -> FishingSpawnCause.alterFriendshipAttempt(entity, effect) }
             CobblemonEvents.BAIT_EFFECT_REGISTRATION.post(BaitEffectFunctionRegistryEvent()) { event ->

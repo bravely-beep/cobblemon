@@ -2,10 +2,12 @@
     "item": "cobblemon:aspear_berry",
     "effects": [
       {
-        "type": "cobblemon:nature",
-        "chance": 0.25,
-        "value": 0.0,
-        "subcategory": "cobblemon:def"
+        "type": "cobblemon:egg_group",
+        "chance": 1.00,
+        "value": 10.0,
+        "textPlain": "Egg Groups",
+        "fieldA": "Water 1/Water 2",
+        "fields": ["Water 1", "Water 2"]
       }
     ]
   }

@@ -2,7 +2,12 @@
     "item": "cobblemon:lum_berry",
     "effects": [
       {
-        "type": "cobblemon:inert"
+        "type": "cobblemon:egg_group",
+        "chance": 1.00,
+        "value": 10.0,
+        "textPlain": "Egg Groups",
+        "fieldA": "Gradon/Monster",
+        "fields": ["Dragon", "Monster"]
       }
     ]
   }

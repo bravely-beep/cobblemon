@@ -89,8 +89,8 @@
             "weight": 1.98
         },
         {
-            "id": "magikarp-apricot-striped-2",
-            "pokemon": "magikarp magikarp_jump=apricot-striped",
+            "id": "magikarp-apricot-stripes-2",
+            "pokemon": "magikarp magikarp_jump=apricot-stripes",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",
@@ -173,8 +173,8 @@
             }
         },
         {
-            "id": "magikarp-brown-striped-9",
-            "pokemon": "magikarp magikarp_jump=brown-striped",
+            "id": "magikarp-brown-stripes-9",
+            "pokemon": "magikarp magikarp_jump=brown-stripes",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",
@@ -209,8 +209,8 @@
             }
         },
         {
-            "id": "magikarp-calico-1-12",
-            "pokemon": "magikarp magikarp_jump=calico-1",
+            "id": "magikarp-calico-orange-white-12",
+            "pokemon": "magikarp magikarp_jump=calico-orange-white",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",
@@ -221,8 +221,8 @@
             }
         },
         {
-            "id": "magikarp-calico-2-13",
-            "pokemon": "magikarp magikarp_jump=calico-2",
+            "id": "magikarp-calico-orange-white-black-13",
+            "pokemon": "magikarp magikarp_jump=calico-orange-white-black",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",
@@ -233,8 +233,8 @@
             }
         },
         {
-            "id": "magikarp-calico-3-14",
-            "pokemon": "magikarp magikarp_jump=calico-3",
+            "id": "magikarp-calico-white-orange-14",
+            "pokemon": "magikarp magikarp_jump=calico-white-orange",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",
@@ -245,8 +245,8 @@
             }
         },
         {
-            "id": "magikarp-calico-4-15",
-            "pokemon": "magikarp magikarp_jump=calico-4",
+            "id": "magikarp-calico-orange-gold-15",
+            "pokemon": "magikarp magikarp_jump=calico-orange-gold",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",
@@ -257,7 +257,7 @@
             }
         },
         {
-            "id": "magikarp-dapples-16",
+            "id": "magikarp-orange-dapples-16",
             "pokemon": "magikarp magikarp_jump=dapples",
             "type": "pokemon",
             "context": "fishing",
@@ -329,7 +329,7 @@
             }
         },
         {
-            "id": "magikarp-orca-22",
+            "id": "magikarp-orange-orca-22",
             "pokemon": "magikarp magikarp_jump=orca",
             "type": "pokemon",
             "context": "fishing",
@@ -365,7 +365,7 @@
             }
         },
         {
-            "id": "magikarp-pink-two_tone-25",
+            "id": "magikarp-pink-two-tone-25",
             "pokemon": "magikarp magikarp_jump=pink-two-tone",
             "type": "pokemon",
             "context": "fishing",
@@ -425,8 +425,8 @@
             }
         },
         {
-            "id": "magikarp-two-tone-30",
-            "pokemon": "magikarp magikarp_jump=two-tone",
+            "id": "magikarp-orange-two-tone-30",
+            "pokemon": "magikarp magikarp_jump=orange-two-tone",
             "type": "pokemon",
             "context": "fishing",
             "bucket": "common",

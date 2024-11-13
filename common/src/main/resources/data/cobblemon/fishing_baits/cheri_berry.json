@@ -2,10 +2,12 @@
   "item": "cobblemon:cheri_berry",
   "effects": [
     {
-      "type": "cobblemon:nature",
-      "chance": 0.25,
-      "value": 0.0,
-      "subcategory": "cobblemon:atk"
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "textPlain": "Egg Groups",
+      "fieldA": "Fairy/Grass",
+      "fields": ["Fairy", "Grass"]
     }
   ]
 }
