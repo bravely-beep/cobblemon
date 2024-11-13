@@ -18,6 +18,7 @@
 - Moves impacted by the abilities Pixelate, Refrigerate, Aerilate, Galvanize, and Normalize now display as their altered typing.
 - Added Polished Tumblestone and Tumblestone Brick block sets from Tumblestone, Black Tumblestone, and Sky Tumblestone.
 - Added Metronome, Protective Pads, Punching Glove, Room Service, Scope Lens, Shed Shell, Terrain Extender, Throat Spray, Utility Umbrella, Wide Lens, and Zoom Lens held items
+- Added particles for moves: Watersport, Mud Sport, and Psychic.
 - Added Fire, Water, Thunder, Leaf, Ice, Sun, Moon, Shiny, Dawn, and Dusk Stone storage blocks.
 - Added Eject Pack, Metronome, Protective Pads, Punching Glove, Room Service, Scope Lens, Shed Shell, Terrain Extender, Throat Spray, Utility Umbrella, Wide Lens, and Zoom Lens held items
 - Added `stonjourner_henge_ruins`, `luna_henge_ruins`, and `sol_henge_ruins` structures.
@@ -31,10 +32,14 @@
 - New config setting `displayEntityNameLabel` and `displayEntityLabelsWhenCrouchingOnly` to control what and when is displayed for the pokemon label
 - `/freezepokemon` command to pause a Pokémon's animation at a specific point in time.
 - Added `no_ai` and `freeze_frame` options to the `/spawnpokemon` command.
-- Added `moves` option to Pokémon properties, allowing you to set the moves of a Pokémon in commands and spawn files using comma-separated move names.
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
 - Added effects for the moves: Psychic, Water Sport, and Mud Sport.
+- Added a new universal locator called "top".
+- Added `moves` option to Pokémon properties, allowing you to set the moves of a Pokémon in commands and spawn files using comma-separated move names.
+- Added shiny Pokémon effects.
+- Added effects for the burn status effect.
+- Added effects for the moves: Seismic Toss, Withdraw, Bite, Crunch, Super Fang, Hyper Fang, Pursuit, Mist, Haze, Lick, Kinesis, Psychic, Water Sport, and Mud Sport.
 - Added a new universal locator called `top`.
 - Added shiny Pokémon particles with sound effects.
 - Added animation for trading.
