@@ -5,9 +5,13 @@
         "type": "cobblemon:egg_group",
         "chance": 1.00,
         "value": 10.0,
-        "textPlain": "Egg Groups",
-        "fieldA": "Water 3/Bug",
-        "fields": ["Water 3", "Bug"]
+        "subcategory": "water_3"
+      },
+      {
+        "type": "cobblemon:egg_group",
+        "chance": 1.00,
+        "value": 10.0,
+        "subcategory": "bug"
       }
     ]
   }

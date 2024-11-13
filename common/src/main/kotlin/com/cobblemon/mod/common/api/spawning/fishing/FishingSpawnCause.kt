@@ -195,14 +195,25 @@ class FishingSpawnCause(
         if (bait != null && bait.effects.any { it.type == FishingBait.Effects.EGG_GROUP }) {
             if (detail is PokemonSpawnDetail) {
                 val detailSpecies = detail.pokemon.species?.let { PokemonSpecies.getByName(it) }
-                val baitEffect = bait.effects.firstOrNull { it.type == FishingBait.Effects.EGG_GROUP }
-                val baitEggGroups = baitEffect?.fields
 
-                if (detailSpecies != null && baitEggGroups != null) {
-                    val isOfEggGroup = detailSpecies.eggGroups.any { eggGroup -> baitEggGroups.contains(eggGroup.showdownID) }
-                    return when {
-                        isOfEggGroup -> super.affectWeight(detail, ctx, weight * baitEffect.value.toFloat()) // if bait matches egg group of species then use multiplier to boost weight
-                        else -> super.affectWeight(detail, ctx, weight) // if not then use base weights
+                if (detailSpecies != null) {
+                    // Collect all the egg group effects
+                    val eggGroupEffects = bait.effects.filter { it.type == FishingBait.Effects.EGG_GROUP }
+
+                    // Check if any of the egg group effects match the species' egg groups
+                    val matchingEffect = eggGroupEffects.firstOrNull { effect ->
+                        val effectEggGroupKey = effect.subcategory?.path ?: return@firstOrNull false
+                        val eggGroup = EggGroup.fromIdentifier(effectEggGroupKey)
+                        if (eggGroup == null) {
+                            LOGGER.warn("Unknown egg group identifier: $effectEggGroupKey")
+                            return@firstOrNull false
+                        }
+                        detailSpecies.eggGroups.contains(eggGroup)
+                    }
+
+                    if (matchingEffect != null) {
+                        val multiplier = matchingEffect.value
+                        return super.affectWeight(detail, ctx, (weight * multiplier).toFloat())
                     }
                 }
             }

@@ -5,9 +5,13 @@
       "type": "cobblemon:egg_group",
       "chance": 1.00,
       "value": 10.0,
-      "textPlain": "Egg Groups",
-      "fieldA": "Human-Like/Flying",
-      "fields": ["Human-Like", "Flying"]
+      "subcategory": "human_like"
+    },
+    {
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "subcategory": "flying"
     }
   ]
 }

@@ -32,12 +32,7 @@ data class FishingBait(
         val type: ResourceLocation,
         val subcategory: ResourceLocation?,
         val chance: Double = 0.0,
-        val value: Double = 0.0,
-        val textPlain: String?,
-        val fieldA: String?,
-        val fieldB: String?,
-        val fieldC: String?,
-        val fields: List<String>? = null
+        val value: Double = 0.0
     ) {
         fun toNbt(): CompoundTag {
             val nbt = CompoundTag()
@@ -45,17 +40,6 @@ data class FishingBait(
             subcategory?.let { nbt.putString("Subcategory", it.toString()) }
             nbt.putDouble("Chance", chance)
             nbt.putDouble("Value", value)
-            nbt.putString("Text", textPlain.toString())
-            nbt.putString("FieldA", textPlain.toString())
-            nbt.putString("FieldB", textPlain.toString())
-            nbt.putString("FieldC", textPlain.toString())
-            fields?.let {
-                val listTag = ListTag()
-                it.forEach { field ->
-                    listTag.add(StringTag.valueOf(field))
-                }
-                nbt.put("Fields", listTag)
-            }
             return nbt
         }
 
@@ -65,17 +49,7 @@ data class FishingBait(
                 val subcategory = if (nbt.contains("Subcategory")) ResourceLocation.parse(nbt.getString("Subcategory")) else null
                 val chance = nbt.getDouble("Chance")
                 val value = nbt.getDouble("Value")
-                val text = nbt.getString("Text")
-                val fieldA = nbt.getString("FieldA")
-                val fieldB = nbt.getString("FieldB")
-                val fieldC = nbt.getString("FieldC")
-                val fields = if (nbt.contains("Fields")) {
-                    val listTag = nbt.getList("Fields", 8) // 8 is the NBT type for String
-                    listTag.map { it.asString }
-                } else {
-                    null
-                }
-                return Effect(type, subcategory, chance, value, text, fieldA, fieldB, fieldC, fields)
+                return Effect(type, subcategory, chance, value)
             }
         }
     }

@@ -51,10 +51,6 @@ object FishingBaitTooltipGenerator : TooltipGenerator() {
                 "bite_time" -> (effect.value * 100).toInt()
                 else -> effect.value.toInt()
             }
-            val effectPlainText = effect.textPlain.toString()
-            val effectFieldA = effect.fieldA.toString()
-            val effectFieldB = effect.fieldB.toString()
-            val effectFieldC = effect.fieldC.toString()
             val subcategoryString: Component = if (effectSubcategory != null) {
                 when (effectType) {
                     "nature", "ev", "iv" -> com.cobblemon.mod.common.api.pokemon.stats.Stats.getStat(
@@ -64,6 +60,15 @@ object FishingBaitTooltipGenerator : TooltipGenerator() {
                     "gender_chance" -> Genders[Gender.valueOf(effectSubcategory.toUpperCase())]
 
                     "typing" -> ElementalTypes.get(effectSubcategory)?.displayName
+
+                    "egg_group" -> {
+                        val effectSubcategory = effect.subcategory?.path
+                        val eggGroup = effectSubcategory?.let { EggGroup.fromIdentifier(it) }
+                        eggGroup?.let {
+                            val langKey = "egg_group.${it.name.lowercase()}"
+                            lang(langKey)
+                        } ?: Component.literal(effectSubcategory ?: "Unknown").gold()
+                    }
 
                     else -> Component.empty()
                 } ?: Component.literal("cursed").obfuscate()
@@ -79,11 +84,7 @@ object FishingBaitTooltipGenerator : TooltipGenerator() {
                     "fishing_bait_effects.$effectType.tooltip",
                     Component.literal(formatter.format(effectChance)).yellow(),
                     subcategoryString.copy().gold(),
-                    Component.literal(formatter.format(effectValue)).green(),
-                    effectPlainText,
-                    effectFieldA.gold(),
-                    effectFieldB.gold(),
-                    effectFieldC.gold()
+                    Component.literal(formatter.format(effectValue)).green()
                 )
             )
         }

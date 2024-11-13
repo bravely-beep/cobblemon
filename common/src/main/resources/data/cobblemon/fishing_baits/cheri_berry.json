@@ -5,9 +5,13 @@
       "type": "cobblemon:egg_group",
       "chance": 1.00,
       "value": 10.0,
-      "textPlain": "Egg Groups",
-      "fieldA": "Fairy/Grass",
-      "fields": ["Fairy", "Grass"]
+      "subcategory": "fairy"
+    },
+    {
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "subcategory": "grass"
     }
   ]
 }

@@ -5,9 +5,7 @@
         "type": "cobblemon:egg_group",
         "chance": 1.00,
         "value": 10.0,
-        "textPlain": "Egg Group",
-        "fieldA": "Field",
-        "fields": ["Field"]
+        "subcategory": "field"
       }
     ]
   }
