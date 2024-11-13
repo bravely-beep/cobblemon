@@ -129,6 +129,8 @@ object CobblemonEvents {
     val POKEMON_ENTITY_SAVE_TO_WORLD = CancelableObservable<PokemonEntitySaveToWorldEvent>()
     @JvmField
     val ENTITY_SPAWN = CancelableObservable<SpawnEvent<*>>()
+    @JvmField
+    val SHINY_CHANCE_CALCULATION = EventObservable<ShinyChanceCalculationEvent>()
 
     @JvmField
     val POKEMON_ENTITY_SPAWN = ENTITY_SPAWN

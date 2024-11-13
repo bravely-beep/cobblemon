@@ -424,6 +424,7 @@
   - Pokémon Heal (with context)
     - Added HealingSource, an interface applied to all sources of healing from player actions, for easier tracking of healing sources.
   - Move Change
+  - Shiny Chance Calculation Event (with player context)
 - Rebuilt large swaths of the model animation code to simplify it.
 - Renamed a bunch of things from %Poseable% to %Posable% because spelling.
 - Renamed StatelessAnimation to PoseAnimation.
