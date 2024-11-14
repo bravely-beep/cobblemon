@@ -13,7 +13,7 @@
             "context": "grounded",
             "bucket": "ultra-rare",
             "level": "18-41",
-            "weight": 0.9,
+            "weight": 3.6,
             "condition": {
                 "minSkyLight": 8,
                 "maxSkyLight": 15,
@@ -32,12 +32,69 @@
             "context": "submerged",
             "bucket": "ultra-rare",
             "level": "18-41",
-            "weight": 0.9,
+            "weight": 3.6,
             "condition": {
                 "canSeeSky": true,
                 "biomes": [
                     "#cobblemon:is_swamp"
                 ]
+            }
+        },
+        {
+            "id": "croconaw-3",
+            "pokemon": "croconaw",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "ultra-rare",
+            "level": "18-41",
+            "weight": 3.6,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "#cobblemon:is_arid",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_swamp"
+                ]
+            },
+            "anticondition": {
+                "minLureLevel": 2
+            }
+        },
+        {
+            "id": "croconaw-4",
+            "pokemon": "croconaw",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "rare",
+            "level": "18-41",
+            "weight": 2.25,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "#cobblemon:is_arid",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_swamp"
+                ],
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "croconaw-5",
+            "pokemon": "croconaw",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "18-41",
+            "weight": 0.18,
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "#cobblemon:is_arid",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_swamp"
+                ],
+                "minLureLevel": 3
             }
         }
     ]

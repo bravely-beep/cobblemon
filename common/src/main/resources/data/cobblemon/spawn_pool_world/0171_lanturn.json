@@ -21,6 +21,28 @@
                 ],
                 "maxY": 48
             }
+        },
+        {
+            "id": "lanturn-2",
+            "pokemon": "lanturn",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "27-46",
+            "weight": 1.0,
+            "weightMultiplier": {
+                "multiplier": 0.6,
+                "condition": {
+                    "minLureLevel": "0",
+                    "maxLureLevel": "0"
+                }
+            },
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "#cobblemon:is_ocean"
+                ]
+            }
         }
     ]
 }

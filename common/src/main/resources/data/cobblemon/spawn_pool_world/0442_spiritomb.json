@@ -44,7 +44,7 @@
             "id": "spiritomb-3",
             "pokemon": "spiritomb",
             "presets": [
-                "underground_ruins"
+                "underground ruins"
             ],
             "type": "pokemon",
             "context": "grounded",

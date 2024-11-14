@@ -20,6 +20,36 @@
                     "#cobblemon:is_ocean"
                 ]
             }
+        },
+        {
+            "id": "sharpedo-2",
+            "pokemon": "sharpedo",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-46",
+            "weight": 0.2,
+            "weightMultipliers": [
+                {
+                    "multiplier": 3.0,
+                    "condition": {
+                        "minLureLevel": "1",
+                        "maxLureLevel": "2"
+                    }
+                },
+                {
+                    "multiplier": 5.0,
+                    "condition": {
+                        "minLureLevel": "3"
+                    }
+                }
+            ],
+            "condition": {
+                "canSeeSky": true,
+                "biomes": [
+                    "#cobblemon:is_ocean"
+                ]
+            }
         }
     ]
 }
