@@ -175,7 +175,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_mountain, #cobblemon:is_freshwater"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_freshwater"
                         ]
                     }
                 },
@@ -208,7 +210,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_mountain, #cobblemon:is_freshwater"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_freshwater"
                         ]
                     }
                 },
@@ -241,7 +245,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_mountain, #cobblemon:is_freshwater"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_freshwater"
                         ]
                     }
                 },
@@ -307,7 +313,10 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_forest, #cobblemon:is_island, #cobblemon:is_savanna"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_forest",
+                            "#cobblemon:is_island",
+                            "#cobblemon:is_savanna"
                         ]
                     }
                 },
@@ -315,7 +324,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_ocean, #cobblemon:is_river"
+                            "#cobblemon:is_ocean",
+                            "#cobblemon:is_river"
                         ]
                     }
                 }
@@ -340,7 +350,10 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_forest, #cobblemon:is_island, #cobblemon:is_savanna"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_forest",
+                            "#cobblemon:is_island",
+                            "#cobblemon:is_savanna"
                         ]
                     }
                 },
@@ -348,7 +361,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_ocean, #cobblemon:is_river"
+                            "#cobblemon:is_ocean",
+                            "#cobblemon:is_river"
                         ]
                     }
                 }
@@ -373,7 +387,10 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_forest, #cobblemon:is_island, #cobblemon:is_savanna"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_forest",
+                            "#cobblemon:is_island",
+                            "#cobblemon:is_savanna"
                         ]
                     }
                 },
@@ -381,7 +398,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_ocean, #cobblemon:is_river"
+                            "#cobblemon:is_ocean",
+                            "#cobblemon:is_river"
                         ]
                     }
                 }
@@ -406,7 +424,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_desert, #cobblemon:is_magical, #cobblemon:is_plains"
+                            "#cobblemon:is_desert",
+                            "#cobblemon:is_magical",
+                            "#cobblemon:is_plains"
                         ]
                     }
                 },
@@ -414,7 +434,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_island"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_island"
                         ]
                     }
                 }
@@ -439,7 +460,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_desert, #cobblemon:is_magical, #cobblemon:is_plains"
+                            "#cobblemon:is_desert",
+                            "#cobblemon:is_magical",
+                            "#cobblemon:is_plains"
                         ]
                     }
                 },
@@ -447,7 +470,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_island"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_island"
                         ]
                     }
                 }
@@ -472,7 +496,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_desert, #cobblemon:is_magical, #cobblemon:is_plains"
+                            "#cobblemon:is_desert",
+                            "#cobblemon:is_magical",
+                            "#cobblemon:is_plains"
                         ]
                     }
                 },
@@ -480,7 +506,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_island"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_island"
                         ]
                     }
                 }
@@ -505,7 +532,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_river, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                            "#cobblemon:is_river",
+                            "#cobblemon:is_snowy",
+                            "#cobblemon:is_tundra"
                         ]
                     }
                 },
@@ -513,7 +542,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_mountain, #cobblemon:is_spooky"
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 }
@@ -538,7 +568,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_river, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                            "#cobblemon:is_river",
+                            "#cobblemon:is_snowy",
+                            "#cobblemon:is_tundra"
                         ]
                     }
                 },
@@ -546,7 +578,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_mountain, #cobblemon:is_spooky"
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 }
@@ -571,7 +604,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_river, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                            "#cobblemon:is_river",
+                            "#cobblemon:is_snowy",
+                            "#cobblemon:is_tundra"
                         ]
                     }
                 },
@@ -579,7 +614,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_mountain, #cobblemon:is_spooky"
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 }
@@ -604,7 +640,10 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_forest, #cobblemon:is_magical, #cobblemon:is_taiga"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_forest",
+                            "#cobblemon:is_magical",
+                            "#cobblemon:is_taiga"
                         ]
                     }
                 },
@@ -637,7 +676,10 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_forest, #cobblemon:is_magical, #cobblemon:is_taiga"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_forest",
+                            "#cobblemon:is_magical",
+                            "#cobblemon:is_taiga"
                         ]
                     }
                 },
@@ -670,7 +712,10 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_floral, #cobblemon:is_forest, #cobblemon:is_magical, #cobblemon:is_taiga"
+                            "#cobblemon:is_floral",
+                            "#cobblemon:is_forest",
+                            "#cobblemon:is_magical",
+                            "#cobblemon:is_taiga"
                         ]
                     }
                 },
@@ -703,7 +748,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_jungle, #cobblemon:is_ocean, #cobblemon:is_plains"
+                            "#cobblemon:is_jungle",
+                            "#cobblemon:is_ocean",
+                            "#cobblemon:is_plains"
                         ]
                     }
                 },
@@ -711,7 +758,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_desert, #cobblemon:is_savanna"
+                            "#cobblemon:is_desert",
+                            "#cobblemon:is_savanna"
                         ]
                     }
                 }
@@ -736,7 +784,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_jungle, #cobblemon:is_ocean, #cobblemon:is_plains"
+                            "#cobblemon:is_jungle",
+                            "#cobblemon:is_ocean",
+                            "#cobblemon:is_plains"
                         ]
                     }
                 },
@@ -744,7 +794,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_desert, #cobblemon:is_savanna"
+                            "#cobblemon:is_desert",
+                            "#cobblemon:is_savanna"
                         ]
                     }
                 }
@@ -769,7 +820,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_jungle, #cobblemon:is_ocean, #cobblemon:is_plains"
+                            "#cobblemon:is_jungle",
+                            "#cobblemon:is_ocean",
+                            "#cobblemon:is_plains"
                         ]
                     }
                 },
@@ -777,7 +830,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_desert, #cobblemon:is_savanna"
+                            "#cobblemon:is_desert",
+                            "#cobblemon:is_savanna"
                         ]
                     }
                 }
@@ -802,7 +856,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_mountain, #cobblemon:is_swamp, #cobblemon:is_taiga"
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_swamp",
+                            "#cobblemon:is_taiga"
                         ]
                     }
                 },
@@ -810,7 +866,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_jungle"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_jungle"
                         ]
                     }
                 }
@@ -835,7 +892,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_mountain, #cobblemon:is_swamp, #cobblemon:is_taiga"
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_swamp",
+                            "#cobblemon:is_taiga"
                         ]
                     }
                 },
@@ -843,7 +902,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_jungle"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_jungle"
                         ]
                     }
                 }
@@ -868,7 +928,9 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_mountain, #cobblemon:is_swamp, #cobblemon:is_taiga"
+                            "#cobblemon:is_mountain",
+                            "#cobblemon:is_swamp",
+                            "#cobblemon:is_taiga"
                         ]
                     }
                 },
@@ -876,7 +938,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_jungle"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_jungle"
                         ]
                     }
                 }
@@ -900,7 +963,10 @@
                 "multiplier": 3.0,
                 "condition": {
                     "biomes": [
-                        "#cobblemon:is_desert, #cobblemon:is_savanna, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                        "#cobblemon:is_desert",
+                        "#cobblemon:is_savanna",
+                        "#cobblemon:is_snowy",
+                        "#cobblemon:is_tundra"
                     ]
                 }
             },
@@ -924,7 +990,10 @@
                 "multiplier": 3.0,
                 "condition": {
                     "biomes": [
-                        "#cobblemon:is_desert, #cobblemon:is_savanna, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                        "#cobblemon:is_desert",
+                        "#cobblemon:is_savanna",
+                        "#cobblemon:is_snowy",
+                        "#cobblemon:is_tundra"
                     ]
                 }
             },
@@ -982,7 +1051,10 @@
                 "multiplier": 3.0,
                 "condition": {
                     "biomes": [
-                        "#cobblemon:is_desert, #cobblemon:is_savanna, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                        "#cobblemon:is_desert",
+                        "#cobblemon:is_savanna",
+                        "#cobblemon:is_snowy",
+                        "#cobblemon:is_tundra"
                     ]
                 }
             },
@@ -1008,7 +1080,10 @@
                 "multiplier": 3.0,
                 "condition": {
                     "biomes": [
-                        "#cobblemon:is_desert, #cobblemon:is_savanna, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                        "#cobblemon:is_desert",
+                        "#cobblemon:is_savanna",
+                        "#cobblemon:is_snowy",
+                        "#cobblemon:is_tundra"
                     ]
                 }
             },
@@ -1035,7 +1110,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_spooky"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 },
@@ -1069,7 +1145,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_spooky"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 },
@@ -1137,7 +1214,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_spooky"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 },
@@ -1173,7 +1251,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_badlands, #cobblemon:is_spooky"
+                            "#cobblemon:is_badlands",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 },
@@ -1209,7 +1288,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_island, #cobblemon:is_ocean"
+                            "#cobblemon:is_island",
+                            "#cobblemon:is_ocean"
                         ]
                     }
                 },
@@ -1217,7 +1297,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_snowy, #cobblemon:is_tundra"
+                            "#cobblemon:is_snowy",
+                            "#cobblemon:is_tundra"
                         ]
                     }
                 }
@@ -1242,7 +1323,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_island, #cobblemon:is_ocean"
+                            "#cobblemon:is_island",
+                            "#cobblemon:is_ocean"
                         ]
                     }
                 },
@@ -1250,7 +1332,8 @@
                     "multiplier": 5.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_snowy, #cobblemon:is_tundra"
+                            "#cobblemon:is_snowy",
+                            "#cobblemon:is_tundra"
                         ]
                     }
                 }
@@ -1275,7 +1358,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_jungle, #cobblemon:is_spooky"
+                            "#cobblemon:is_jungle",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 },
@@ -1308,7 +1392,8 @@
                     "multiplier": 3.0,
                     "condition": {
                         "biomes": [
-                            "#cobblemon:is_jungle, #cobblemon:is_spooky"
+                            "#cobblemon:is_jungle",
+                            "#cobblemon:is_spooky"
                         ]
                     }
                 },
