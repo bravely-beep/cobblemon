@@ -725,7 +725,7 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
             hookedEntity = level().getEntity(hookedEntityID)
         }
 
-        afterOnServer(ticks = 2) {
+        afterOnServer(seconds = 0.1F) {
             if (player !in player.level().players()) {
                 return@afterOnServer
             }
