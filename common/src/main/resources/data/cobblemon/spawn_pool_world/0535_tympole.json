@@ -75,6 +75,48 @@
                     "#cobblemon:is_lush"
                 ]
             }
+        },
+        {
+            "id": "tympole-5",
+            "pokemon": "tympole",
+            "presets": [
+                "underwater"
+            ],
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "4-29",
+            "weight": 9.0,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_swamp"
+                ]
+            }
+        },
+        {
+            "id": "tympole-6",
+            "pokemon": "tympole",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "4-29",
+            "weight": 9.0,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_arid",
+                    "#cobblemon:is_forest",
+                    "#cobblemon:is_hills",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_mushroom",
+                    "#cobblemon:is_swamp"
+                ]
+            }
         }
     ]
 }

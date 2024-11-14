@@ -58,7 +58,45 @@
             }
         },
         {
-            "id": "magikarp-skelly-4",
+            "id": "magikarp-4",
+            "pokemon": "magikarp",
+            "presets": [
+                "underwater"
+            ],
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "1-20",
+            "weight": 9.9,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_freshwater",
+                    "#cobblemon:is_ocean"
+                ]
+            }
+        },
+        {
+            "id": "magikarp-5",
+            "pokemon": "magikarp",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "1-20",
+            "weight": 9.0,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ]
+            }
+        },
+        {
+            "id": "magikarp-skelly-6",
             "pokemon": "magikarp magikarp_jump=skelly",
             "type": "pokemon",
             "context": "fishing",
@@ -74,8 +112,7 @@
                 }
             },
             "condition": {
-                "minSkyLight": 8,
-                "maxSkyLight": 15,
+                "canSeeSky": true,
                 "biomes": [
                     "#cobblemon:is_overworld"
                 ],
@@ -83,7 +120,7 @@
             }
         },
         {
-            "id": "magikarp-skelly-5",
+            "id": "magikarp-skelly-7",
             "pokemon": "magikarp magikarp_jump=skelly",
             "type": "pokemon",
             "context": "fishing",
@@ -100,7 +137,33 @@
             }
         },
         {
-            "id": "magikarp-calico-orange-white-6",
+            "id": "magikarp-skelly-8",
+            "pokemon": "magikarp magikarp_jump=skelly",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "uncommon",
+            "level": "1-20",
+            "weight": 2.0,
+            "weightMultiplier": {
+                "multiplier": 5.0,
+                "condition": {
+                    "biomes": [
+                        "#cobblemon:is_spooky"
+                    ]
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ],
+                "minLureLevel": 1
+            }
+        },
+        {
+            "id": "magikarp-calico-orange-white-9",
             "pokemon": "magikarp magikarp_jump=calico-orange-white",
             "type": "pokemon",
             "context": "fishing",
@@ -133,7 +196,7 @@
             }
         },
         {
-            "id": "magikarp-calico-orange-white-black-6",
+            "id": "magikarp-calico-orange-white-black-9",
             "pokemon": "magikarp magikarp_jump=calico-orange-white-black",
             "type": "pokemon",
             "context": "fishing",
@@ -166,7 +229,7 @@
             }
         },
         {
-            "id": "magikarp-calico-white-orange-6",
+            "id": "magikarp-calico-white-orange-9",
             "pokemon": "magikarp magikarp_jump=calico-white-orange",
             "type": "pokemon",
             "context": "fishing",
@@ -199,7 +262,7 @@
             }
         },
         {
-            "id": "magikarp-calico-orange-gold-7",
+            "id": "magikarp-calico-orange-gold-10",
             "pokemon": "magikarp magikarp_jump=calico-orange-gold",
             "type": "pokemon",
             "context": "fishing",
@@ -232,7 +295,7 @@
             }
         },
         {
-            "id": "magikarp-orange-two-tone-8",
+            "id": "magikarp-orange-two-tone-11",
             "pokemon": "magikarp magikarp_jump=orange-two-tone",
             "type": "pokemon",
             "context": "fishing",
@@ -265,7 +328,7 @@
             }
         },
         {
-            "id": "magikarp-orange-orca-8",
+            "id": "magikarp-orange-orca-11",
             "pokemon": "magikarp magikarp_jump=orange-orca",
             "type": "pokemon",
             "context": "fishing",
@@ -298,7 +361,7 @@
             }
         },
         {
-            "id": "magikarp-orange-dapples-8",
+            "id": "magikarp-orange-dapples-11",
             "pokemon": "magikarp magikarp_jump=orange-dapples",
             "type": "pokemon",
             "context": "fishing",
@@ -331,7 +394,7 @@
             }
         },
         {
-            "id": "magikarp-pink-two-tone-9",
+            "id": "magikarp-pink-two-tone-12",
             "pokemon": "magikarp magikarp_jump=pink-two-tone",
             "type": "pokemon",
             "context": "fishing",
@@ -364,7 +427,7 @@
             }
         },
         {
-            "id": "magikarp-pink-orca-9",
+            "id": "magikarp-pink-orca-12",
             "pokemon": "magikarp magikarp_jump=pink-orca",
             "type": "pokemon",
             "context": "fishing",
@@ -397,7 +460,7 @@
             }
         },
         {
-            "id": "magikarp-pink-dapples-9",
+            "id": "magikarp-pink-dapples-12",
             "pokemon": "magikarp magikarp_jump=pink-dapples",
             "type": "pokemon",
             "context": "fishing",
@@ -430,7 +493,7 @@
             }
         },
         {
-            "id": "magikarp-gray-bubbles-10",
+            "id": "magikarp-gray-bubbles-13",
             "pokemon": "magikarp magikarp_jump=gray-bubbles",
             "type": "pokemon",
             "context": "fishing",
@@ -463,7 +526,7 @@
             }
         },
         {
-            "id": "magikarp-gray-diamonds-10",
+            "id": "magikarp-gray-diamonds-13",
             "pokemon": "magikarp magikarp_jump=gray-diamonds",
             "type": "pokemon",
             "context": "fishing",
@@ -496,7 +559,7 @@
             }
         },
         {
-            "id": "magikarp-gray-patches-10",
+            "id": "magikarp-gray-patches-13",
             "pokemon": "magikarp magikarp_jump=gray-patches",
             "type": "pokemon",
             "context": "fishing",
@@ -529,7 +592,7 @@
             }
         },
         {
-            "id": "magikarp-purple-bubbles-12",
+            "id": "magikarp-purple-bubbles-14",
             "pokemon": "magikarp magikarp_jump=purple-bubbles",
             "type": "pokemon",
             "context": "fishing",
@@ -562,7 +625,7 @@
             }
         },
         {
-            "id": "magikarp-purple-diamonds-12",
+            "id": "magikarp-purple-diamonds-14",
             "pokemon": "magikarp magikarp_jump=purple-diamonds",
             "type": "pokemon",
             "context": "fishing",
@@ -595,7 +658,7 @@
             }
         },
         {
-            "id": "magikarp-purple-patches-12",
+            "id": "magikarp-purple-patches-14",
             "pokemon": "magikarp magikarp_jump=purple-patches",
             "type": "pokemon",
             "context": "fishing",
@@ -628,7 +691,7 @@
             }
         },
         {
-            "id": "magikarp-apricot-tiger-13",
+            "id": "magikarp-apricot-tiger-15",
             "pokemon": "magikarp magikarp_jump=apricot-tiger",
             "type": "pokemon",
             "context": "fishing",
@@ -661,7 +724,7 @@
             }
         },
         {
-            "id": "magikarp-apricot-zebra-13",
+            "id": "magikarp-apricot-zebra-15",
             "pokemon": "magikarp magikarp_jump=apricot-zebra",
             "type": "pokemon",
             "context": "fishing",
@@ -694,7 +757,7 @@
             }
         },
         {
-            "id": "magikarp-apricot-stripes-13",
+            "id": "magikarp-apricot-stripes-15",
             "pokemon": "magikarp magikarp_jump=apricot-stripes",
             "type": "pokemon",
             "context": "fishing",
@@ -727,7 +790,7 @@
             }
         },
         {
-            "id": "magikarp-brown-tiger-14",
+            "id": "magikarp-brown-tiger-16",
             "pokemon": "magikarp magikarp_jump=brown-tiger",
             "type": "pokemon",
             "context": "fishing",
@@ -760,7 +823,7 @@
             }
         },
         {
-            "id": "magikarp-brown-zebra-14",
+            "id": "magikarp-brown-zebra-16",
             "pokemon": "magikarp magikarp_jump=brown-zebra",
             "type": "pokemon",
             "context": "fishing",
@@ -793,7 +856,7 @@
             }
         },
         {
-            "id": "magikarp-brown-stripes-14",
+            "id": "magikarp-brown-stripes-16",
             "pokemon": "magikarp magikarp_jump=brown-stripes",
             "type": "pokemon",
             "context": "fishing",
@@ -826,7 +889,7 @@
             }
         },
         {
-            "id": "magikarp-orange-forehead-15",
+            "id": "magikarp-orange-forehead-17",
             "pokemon": "magikarp magikarp_jump=orange-forehead",
             "type": "pokemon",
             "context": "fishing",
@@ -842,8 +905,7 @@
                 }
             },
             "condition": {
-                "minSkyLight": 8,
-                "maxSkyLight": 15,
+                "canSeeSky": true,
                 "biomes": [
                     "#cobblemon:is_overworld"
                 ],
@@ -851,7 +913,7 @@
             }
         },
         {
-            "id": "magikarp-orange-mask-15",
+            "id": "magikarp-orange-mask-17",
             "pokemon": "magikarp magikarp_jump=orange-mask",
             "type": "pokemon",
             "context": "fishing",
@@ -867,8 +929,7 @@
                 }
             },
             "condition": {
-                "minSkyLight": 8,
-                "maxSkyLight": 15,
+                "canSeeSky": true,
                 "biomes": [
                     "#cobblemon:is_overworld"
                 ],
@@ -876,7 +937,7 @@
             }
         },
         {
-            "id": "magikarp-orange-forehead-16",
+            "id": "magikarp-orange-forehead-18",
             "pokemon": "magikarp magikarp_jump=orange-forehead",
             "type": "pokemon",
             "context": "fishing",
@@ -893,7 +954,7 @@
             }
         },
         {
-            "id": "magikarp-orange-mask-16",
+            "id": "magikarp-orange-mask-18",
             "pokemon": "magikarp magikarp_jump=orange-mask",
             "type": "pokemon",
             "context": "fishing",
@@ -910,7 +971,59 @@
             }
         },
         {
-            "id": "magikarp-black-forehead-17",
+            "id": "magikarp-orange-forehead-19",
+            "pokemon": "magikarp magikarp_jump=orange-forehead",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "uncommon",
+            "level": "1-20",
+            "weight": 2.0,
+            "weightMultiplier": {
+                "multiplier": 3.0,
+                "condition": {
+                    "biomes": [
+                        "#cobblemon:is_desert, #cobblemon:is_savanna, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                    ]
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ],
+                "minLureLevel": 1
+            }
+        },
+        {
+            "id": "magikarp-orange-mask-19",
+            "pokemon": "magikarp magikarp_jump=orange-mask",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "uncommon",
+            "level": "1-20",
+            "weight": 2.0,
+            "weightMultiplier": {
+                "multiplier": 3.0,
+                "condition": {
+                    "biomes": [
+                        "#cobblemon:is_desert, #cobblemon:is_savanna, #cobblemon:is_snowy, #cobblemon:is_tundra"
+                    ]
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ],
+                "minLureLevel": 1
+            }
+        },
+        {
+            "id": "magikarp-black-forehead-20",
             "pokemon": "magikarp magikarp_jump=black-forehead",
             "type": "pokemon",
             "context": "fishing",
@@ -936,8 +1049,7 @@
                 }
             ],
             "condition": {
-                "minSkyLight": 8,
-                "maxSkyLight": 15,
+                "canSeeSky": true,
                 "biomes": [
                     "#cobblemon:is_overworld"
                 ],
@@ -945,7 +1057,7 @@
             }
         },
         {
-            "id": "magikarp-black-mask-17",
+            "id": "magikarp-black-mask-20",
             "pokemon": "magikarp magikarp_jump=black-mask",
             "type": "pokemon",
             "context": "fishing",
@@ -971,8 +1083,7 @@
                 }
             ],
             "condition": {
-                "minSkyLight": 8,
-                "maxSkyLight": 15,
+                "canSeeSky": true,
                 "biomes": [
                     "#cobblemon:is_overworld"
                 ],
@@ -980,7 +1091,7 @@
             }
         },
         {
-            "id": "magikarp-black-forehead-18",
+            "id": "magikarp-black-forehead-21",
             "pokemon": "magikarp magikarp_jump=black-forehead",
             "type": "pokemon",
             "context": "fishing",
@@ -997,7 +1108,7 @@
             }
         },
         {
-            "id": "magikarp-black-mask-18",
+            "id": "magikarp-black-mask-21",
             "pokemon": "magikarp magikarp_jump=black-mask",
             "type": "pokemon",
             "context": "fishing",
@@ -1014,7 +1125,79 @@
             }
         },
         {
-            "id": "magikarp-blue-saucy-19",
+            "id": "magikarp-black-forehead-22",
+            "pokemon": "magikarp magikarp_jump=black-forehead",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "uncommon",
+            "level": "1-20",
+            "weight": 2.0,
+            "weightMultipliers": [
+                {
+                    "multiplier": 3.0,
+                    "condition": {
+                        "biomes": [
+                            "#cobblemon:is_badlands, #cobblemon:is_spooky"
+                        ]
+                    }
+                },
+                {
+                    "multiplier": 5.0,
+                    "condition": {
+                        "biomes": [
+                            "#cobblemon:is_taiga"
+                        ]
+                    }
+                }
+            ],
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ],
+                "minLureLevel": 1
+            }
+        },
+        {
+            "id": "magikarp-black-mask-22",
+            "pokemon": "magikarp magikarp_jump=black-mask",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "uncommon",
+            "level": "1-20",
+            "weight": 2.0,
+            "weightMultipliers": [
+                {
+                    "multiplier": 3.0,
+                    "condition": {
+                        "biomes": [
+                            "#cobblemon:is_badlands, #cobblemon:is_spooky"
+                        ]
+                    }
+                },
+                {
+                    "multiplier": 5.0,
+                    "condition": {
+                        "biomes": [
+                            "#cobblemon:is_taiga"
+                        ]
+                    }
+                }
+            ],
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_overworld"
+                ],
+                "minLureLevel": 1
+            }
+        },
+        {
+            "id": "magikarp-blue-saucy-23",
             "pokemon": "magikarp magikarp_jump=blue-saucy",
             "type": "pokemon",
             "context": "fishing",
@@ -1047,7 +1230,7 @@
             }
         },
         {
-            "id": "magikarp-blue-raindrops-19",
+            "id": "magikarp-blue-raindrops-23",
             "pokemon": "magikarp magikarp_jump=blue-raindrops",
             "type": "pokemon",
             "context": "fishing",
@@ -1080,7 +1263,7 @@
             }
         },
         {
-            "id": "magikarp-violet-saucy-20",
+            "id": "magikarp-violet-saucy-24",
             "pokemon": "magikarp magikarp_jump=violet-saucy",
             "type": "pokemon",
             "context": "fishing",
@@ -1113,7 +1296,7 @@
             }
         },
         {
-            "id": "magikarp-violet-raindrops-20",
+            "id": "magikarp-violet-raindrops-24",
             "pokemon": "magikarp magikarp_jump=violet-raindrops",
             "type": "pokemon",
             "context": "fishing",

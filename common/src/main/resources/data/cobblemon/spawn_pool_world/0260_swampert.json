@@ -203,6 +203,98 @@
                 ],
                 "minLureLevel": 3
             }
+        },
+        {
+            "id": "swampert-11",
+            "pokemon": "swampert",
+            "presets": [
+                "underwater"
+            ],
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "ultra-rare",
+            "level": "36-53",
+            "weight": 0.4,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_swamp"
+                ]
+            }
+        },
+        {
+            "id": "swampert-12",
+            "pokemon": "swampert",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "ultra-rare",
+            "level": "36-53",
+            "weight": 6.0,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_badlands",
+                    "#cobblemon:is_forest",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_mushroom",
+                    "#cobblemon:is_savanna",
+                    "#cobblemon:is_swamp"
+                ]
+            },
+            "anticondition": {
+                "minLureLevel": 2
+            }
+        },
+        {
+            "id": "swampert-13",
+            "pokemon": "swampert",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "rare",
+            "level": "36-53",
+            "weight": 7.5,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_badlands",
+                    "#cobblemon:is_forest",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_mushroom",
+                    "#cobblemon:is_savanna",
+                    "#cobblemon:is_swamp"
+                ],
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "swampert-14",
+            "pokemon": "swampert",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "36-53",
+            "weight": 1.8,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_badlands",
+                    "#cobblemon:is_forest",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_mushroom",
+                    "#cobblemon:is_savanna",
+                    "#cobblemon:is_swamp"
+                ],
+                "minLureLevel": 3
+            }
         }
     ]
 }

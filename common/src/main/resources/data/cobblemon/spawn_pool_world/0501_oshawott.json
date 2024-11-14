@@ -60,7 +60,8 @@
             "level": "5-31",
             "weight": 6.0,
             "condition": {
-                "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_beach",
                     "#cobblemon:is_ocean",
@@ -83,7 +84,8 @@
             "level": "5-31",
             "weight": 7.5,
             "condition": {
-                "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_beach",
                     "#cobblemon:is_ocean",
@@ -107,7 +109,8 @@
             "level": "5-31",
             "weight": 1.8,
             "condition": {
-                "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_beach",
                     "#cobblemon:is_ocean",
@@ -216,7 +219,8 @@
             "level": "5-31",
             "weight": 6.0,
             "condition": {
-                "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_coast",
                     "#cobblemon:is_cold_ocean"
@@ -238,7 +242,8 @@
             "level": "5-31",
             "weight": 7.5,
             "condition": {
-                "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_coast",
                     "#cobblemon:is_cold_ocean"
@@ -261,7 +266,8 @@
             "level": "5-31",
             "weight": 1.8,
             "condition": {
-                "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_coast",
                     "#cobblemon:is_cold_ocean"

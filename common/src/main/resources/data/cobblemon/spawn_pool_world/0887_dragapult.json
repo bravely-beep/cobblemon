@@ -121,6 +121,84 @@
                 ],
                 "minLureLevel": 3
             }
+        },
+        {
+            "id": "dragapult-6",
+            "pokemon": "dragapult",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "ultra-rare",
+            "level": "60-65",
+            "weight": 0.4,
+            "weightMultiplier": {
+                "multiplier": 5.0,
+                "condition": {
+                    "timeRange": "dusk"
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_coast",
+                    "#cobblemon:is_ocean"
+                ]
+            },
+            "anticondition": {
+                "minLureLevel": 2
+            }
+        },
+        {
+            "id": "dragapult-7",
+            "pokemon": "dragapult",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "rare",
+            "level": "60-65",
+            "weight": 0.25,
+            "weightMultiplier": {
+                "multiplier": 5.0,
+                "condition": {
+                    "timeRange": "dusk"
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_coast",
+                    "#cobblemon:is_ocean"
+                ],
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "dragapult-8",
+            "pokemon": "dragapult",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "60-65",
+            "weight": 0.02,
+            "weightMultiplier": {
+                "multiplier": 5.0,
+                "condition": {
+                    "timeRange": "dusk"
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_coast",
+                    "#cobblemon:is_ocean"
+                ],
+                "minLureLevel": 3
+            }
         }
     ]
 }

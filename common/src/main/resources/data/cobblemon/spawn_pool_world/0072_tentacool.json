@@ -134,6 +134,70 @@
                     "#cobblemon:is_lush"
                 ]
             }
+        },
+        {
+            "id": "tentacool-7",
+            "pokemon": "tentacool",
+            "presets": [
+                "underwater"
+            ],
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "9-34",
+            "weight": 9.0,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_deep_ocean"
+                ],
+                "maxY": 48
+            }
+        },
+        {
+            "id": "tentacool-8",
+            "pokemon": "tentacool",
+            "presets": [
+                "underwater"
+            ],
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "9-34",
+            "weight": 5.4,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_ocean"
+                ],
+                "maxY": 48
+            },
+            "anticondition": {
+                "biomes": [
+                    "#cobblemon:is_deep_ocean"
+                ]
+            }
+        },
+        {
+            "id": "tentacool-9",
+            "pokemon": "tentacool",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "9-34",
+            "weight": 9.0,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_ocean"
+                ]
+            }
         }
     ]
 }

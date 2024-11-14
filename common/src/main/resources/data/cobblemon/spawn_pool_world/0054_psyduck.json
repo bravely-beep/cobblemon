@@ -66,6 +66,7 @@
             "level": "7-32",
             "weight": 5.4,
             "condition": {
+                "canSeeSky": true,
                 "minSkyLight": 8,
                 "maxSkyLight": 15,
                 "biomes": [
@@ -107,6 +108,8 @@
             ],
             "condition": {
                 "canSeeSky": true,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_forest",
                     "#cobblemon:is_freshwater",

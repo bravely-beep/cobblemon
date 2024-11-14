@@ -169,6 +169,53 @@
                     "#cobblemon:is_deep_dark"
                 ]
             }
+        },
+        {
+            "id": "wimpod-8",
+            "pokemon": "wimpod",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "uncommon",
+            "level": "1-23",
+            "weight": 8.4,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_coast",
+                    "#cobblemon:is_tropical_island"
+                ]
+            },
+            "anticondition": {
+                "minLureLevel": 1
+            }
+        },
+        {
+            "id": "wimpod-9",
+            "pokemon": "wimpod",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "1-23",
+            "weight": 9.0,
+            "weightMultiplier": {
+                "multiplier": 0.6,
+                "condition": {
+                    "minLureLevel": "1",
+                    "maxLureLevel": "2"
+                }
+            },
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_coast",
+                    "#cobblemon:is_tropical_island"
+                ],
+                "minLureLevel": 1
+            }
         }
     ]
 }

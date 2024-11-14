@@ -113,6 +113,48 @@
                     "#cobblemon:is_lush"
                 ]
             }
+        },
+        {
+            "id": "seismitoad-7",
+            "pokemon": "seismitoad",
+            "presets": [
+                "underwater"
+            ],
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "36-51",
+            "weight": 0.1,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_swamp"
+                ]
+            }
+        },
+        {
+            "id": "seismitoad-8",
+            "pokemon": "seismitoad",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "36-51",
+            "weight": 0.1,
+            "condition": {
+                "canSeeSky": false,
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:is_arid",
+                    "#cobblemon:is_forest",
+                    "#cobblemon:is_hills",
+                    "#cobblemon:is_jungle",
+                    "#cobblemon:is_mushroom",
+                    "#cobblemon:is_swamp"
+                ]
+            }
         }
     ]
 }
