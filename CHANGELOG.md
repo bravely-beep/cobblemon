@@ -47,6 +47,8 @@
 - Added `/spawnnpc` and `/spawnnpcat` commands.
 - Pokémon are now animated when seen in any GUI that isn't the party GUI.
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
+- Added `fishing boat` structures that contain a map to a shipwreck cove and a pokerod smithing template.
+- Added `submerged_shipwreck_cove` and `lush_shipwreck_cove` structures.
 
 ### Pokémon Added
 #### Gen 1
