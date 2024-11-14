@@ -9,14 +9,11 @@
 package com.cobblemon.mod.common.battles
 
 import com.cobblemon.mod.common.Cobblemon.LOGGER
-import com.cobblemon.mod.common.api.battles.interpreter.BasicContext
-import com.cobblemon.mod.common.api.battles.interpreter.BattleContext
-import com.cobblemon.mod.common.api.battles.interpreter.BattleMessage
-import com.cobblemon.mod.common.api.battles.interpreter.Effect
-import com.cobblemon.mod.common.api.battles.interpreter.MissingContext
+import com.cobblemon.mod.common.api.battles.interpreter.*
 import com.cobblemon.mod.common.api.battles.model.PokemonBattle
 import com.cobblemon.mod.common.api.battles.model.actor.BattleActor
 import com.cobblemon.mod.common.api.battles.model.actor.EntityBackedBattleActor
+import com.cobblemon.mod.common.api.text.red
 import com.cobblemon.mod.common.api.text.yellow
 import com.cobblemon.mod.common.battles.dispatch.InstructionSet
 import com.cobblemon.mod.common.battles.dispatch.InterpreterInstruction
@@ -63,12 +60,12 @@ object ShowdownInterpreter {
         updateInstructionParser["-ability"]              = { _, instructionSet, message, _ -> AbilityInstruction(instructionSet, message) }
         updateInstructionParser["-activate"]             = { _, instructionSet, message, _ -> ActivateInstruction(instructionSet, message) }
         updateInstructionParser["bagitem"]               = { _, _, message, _ -> BagItemInstruction(message) }
-        updateInstructionParser["-boost"]                = { _, instructionSet, message, remainingLines -> BoostInstruction(instructionSet, message, remainingLines, true) }
+        updateInstructionParser["-boost"]                = { battle, _, message, _ -> BoostInstruction(battle, message, true) }
         updateInstructionParser["-block"]                = { _, _, message, _ -> BlockInstruction(message) }
         updateInstructionParser["cant"]                  = { _, _, message, _ -> CantInstruction(message) }
         updateInstructionParser["-clearallboost"]        = { _, _, message, _ -> ClearAllBoostInstruction(message) }
         updateInstructionParser["-clearnegativeboost"]   = { _, _, message, _ -> ClearNegativeBoostInstruction(message) }
-        updateInstructionParser["-clearboost"]        = {  _, _, message, _ -> ClearBoostInstruction(message) }
+        updateInstructionParser["-clearboost"]           = {  _, _, message, _ -> ClearBoostInstruction(message) }
         updateInstructionParser["-copyboost"]            = { _, _, message, _ -> CopyBoostInstruction(message) }
         updateInstructionParser["-crit"]                 = { _, instructionSet, message, _ -> CritInstruction(message, instructionSet) }
         updateInstructionParser["-curestatus"]           = { _, _, message, _ -> CureStatusInstruction(message) }
@@ -108,7 +105,7 @@ object ShowdownInterpreter {
         updateInstructionParser["-terastallize"]         = { _, _, message, _ -> TerastallizeInstruction(message) }
         updateInstructionParser["-transform"]            = { battle, _, message, _ -> TransformInstruction(battle, message) }
         updateInstructionParser["turn"]                  = { _, _, message, _ -> TurnInstruction(message) }
-        updateInstructionParser["-unboost"]              = { _, instructionSet, message, remainingLines -> BoostInstruction(instructionSet, message, remainingLines, false) }
+        updateInstructionParser["-unboost"]              = { battle, _, message, _ -> BoostInstruction(battle, message, false) }
         updateInstructionParser["upkeep"]                = { _, _, _, _ -> UpkeepInstruction() }
         updateInstructionParser["-weather"]              = { _, _, message, _ -> WeatherInstruction(message) }
         updateInstructionParser["win"]                   = { _, _, message, _ -> WinInstruction(message) }
@@ -279,8 +276,16 @@ object ShowdownInterpreter {
             }
             instructionSet.execute(battle)
         }
+        catch (e: InvalidInstructionException) {
+            e.message?.let {
+                battle.broadcastChatMessage(it.red())
+                LOGGER.error(it)
+            }
+
+        }
         catch (e: Exception) {
-            LOGGER.error("Caught exception interpreting {}", e)
+            battle.broadcastChatMessage("A fatal error occurred. Please report to developers.".red())
+            LOGGER.error("Caught exception interpreting battle instructions.", e)
         }
     }
 

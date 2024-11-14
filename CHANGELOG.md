@@ -401,6 +401,7 @@
 - Fixed text row selection highlight in battle log.
 - Fixed top black border rendering in scroll interfaces in summary UI.
 - Fixed aspect tracking for Advancements.
+- Fixed illusion not copying aspects or caught ball.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
