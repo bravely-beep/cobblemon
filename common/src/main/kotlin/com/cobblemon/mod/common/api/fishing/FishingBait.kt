@@ -16,6 +16,7 @@ import com.cobblemon.mod.common.util.cobblemonResource
 import net.minecraft.core.Registry
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.nbt.ListTag
+import net.minecraft.nbt.StringTag
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.item.Item
@@ -87,7 +88,8 @@ data class FishingBait(
         val BITE_TIME = cobblemonResource("bite_time")
         val GENDER_CHANCE = cobblemonResource("gender_chance")
         val LEVEL_RAISE = cobblemonResource("level_raise")
-        val TERA = cobblemonResource("tera")
+        val TYPING = cobblemonResource("typing")
+        val EGG_GROUP = cobblemonResource("egg_group")
         val SHINY_REROLL = cobblemonResource("shiny_reroll")
         val HIDDEN_ABILITY_CHANCE = cobblemonResource("ha_chance")
         val POKEMON_CHANCE = cobblemonResource("pokemon_chance")
@@ -108,7 +110,6 @@ data class FishingBait(
             EFFECT_FUNCTIONS[SHINY_REROLL] = { entity, effect -> FishingSpawnCause.shinyReroll(entity, effect) }
             EFFECT_FUNCTIONS[GENDER_CHANCE] = { entity, effect -> FishingSpawnCause.alterGenderAttempt(entity, effect) }
             EFFECT_FUNCTIONS[LEVEL_RAISE] = { entity, effect -> FishingSpawnCause.alterLevelAttempt(entity, effect) }
-            EFFECT_FUNCTIONS[TERA] = { entity, effect -> FishingSpawnCause.alterTeraAttempt(entity, effect) }
             EFFECT_FUNCTIONS[HIDDEN_ABILITY_CHANCE] = { entity, _ -> FishingSpawnCause.alterHAAttempt(entity) }
             EFFECT_FUNCTIONS[FRIENDSHIP] = { entity, effect -> FishingSpawnCause.alterFriendshipAttempt(entity, effect) }
             CobblemonEvents.BAIT_EFFECT_REGISTRATION.post(BaitEffectFunctionRegistryEvent()) { event ->
