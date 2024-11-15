@@ -39,8 +39,7 @@
     "sleep": {
       "poseTypes": ["SLEEP"],
       "isTouchingWater": false,
-      "animations": ["q.bedrock('alomomola', 'sleep')"],
-      "quirks": ["q.bedrock_quirk('alomomola', 'ground_sleep_quirk')"]
+      "animations": ["q.bedrock('alomomola', 'sleep')"]
     }
   }
 }
