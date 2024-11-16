@@ -38,9 +38,10 @@
     }
   ],
   "names": [
-    "Vera",
-    "Hiro",
-    "John Cobblemon"
+    "Red",
+    "Green",
+    "Blue",
+    "Yellow"
   ],
   "interaction": {
     "type": "dialogue",

@@ -62,9 +62,10 @@ any number of presets and the properties of those presets will be merged into th
         }
       ],
       "names": [
-        "Vera",
-        "Hiro",
-        "John Cobblemon"
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow"
       ],
       "interaction": {
         "type": "dialogue",
