@@ -133,7 +133,7 @@ fun createPlayerInteractGui(optionsPacket: PlayerInteractOptionsPacket): Interac
                 ))
             }
         }
-        if (it.equals(PlayerInteractOptionsPacket.Options.SPECTATE_BATTLE)) {
+        if (it.key == PlayerInteractOptionsPacket.Options.SPECTATE_BATTLE) {
             if(!hasChallenge) {
                 options.put(Orientation.TOP_RIGHT, spectate)
             }
