@@ -56,7 +56,6 @@ import net.minecraft.server.level.ServerPlayer
 import net.minecraft.tags.TagKey
 import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.damagesource.DamageTypes
-import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.Level
@@ -218,7 +217,7 @@ object MoLangFunctions {
             map.put("entity_size") { DoubleValue(entity.boundingBox.run { if (xsize > ysize) xsize else ysize }) }
             map.put("entity_width") { DoubleValue(entity.boundingBox.xsize) }
             map.put("entity_height") { DoubleValue(entity.boundingBox.ysize) }
-
+            map.put("id_modulo") { params -> DoubleValue(entity.uuid.hashCode() % params.getDouble(0)) }
             map.put("horizontal_velocity") { _ -> DoubleValue(entity.deltaMovement.horizontalDistance()) }
             map.put("vertical_velocity") { DoubleValue(entity.deltaMovement.y) }
             map.put("is_on_ground") { _ -> DoubleValue(entity.onGround()) }
@@ -284,10 +283,10 @@ object MoLangFunctions {
                     )
                     npc.actionEffect = context
                     npc.brain.setMemory(CobblemonMemories.ACTIVE_ACTION_EFFECT, context)
-                    npc.brain.setActiveActivityIfPossible(CobblemonActivities.NPC_ACTION_EFFECT)
+                    npc.brain.setActiveActivityIfPossible(CobblemonActivities.ACTION_EFFECT)
                     actionEffect.run(context).thenRun {
                         val npcActionEffect = npc.brain.getMemory(CobblemonMemories.ACTIVE_ACTION_EFFECT).orElse(null)
-                        if (npcActionEffect == context && npc.brain.isActive(CobblemonActivities.NPC_ACTION_EFFECT)) {
+                        if (npcActionEffect == context && npc.brain.isActive(CobblemonActivities.ACTION_EFFECT)) {
                             npc.brain.eraseMemory(CobblemonMemories.ACTIVE_ACTION_EFFECT)
                             npc.actionEffect = null
                         }

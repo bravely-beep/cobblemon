@@ -58,8 +58,8 @@ class PoolPartyProvider : NPCPartyProvider {
             if (it is JsonPrimitive) {
                 return@map DynamicPokemon(
                     PokemonProperties.parse(it.asString),
-                    0..0,
-                    0..100,
+                    "0".asExpression(),
+                    1..100,
                     "1".asExpression(),
                     "1".asExpression()
                 )
@@ -68,8 +68,8 @@ class PoolPartyProvider : NPCPartyProvider {
             it as JsonObject
             DynamicPokemon(
                 PokemonProperties.parse(it.getAsJsonPrimitive("pokemon").asString),
-                it.getAsJsonPrimitive("levelVariation")?.asString?.split("-")?.let { it[0].toInt()..it[1].toInt() } ?: 0..0,
-                it.getAsJsonPrimitive("npcLevels")?.asString?.split("-")?.let { it[0].toInt()..it[1].toInt() } ?: 0..100,
+                it.getAsJsonPrimitive("levelVariation")?.asString?.asExpression() ?: "0".asExpression(),
+                it.getAsJsonPrimitive("npcLevels")?.asString?.split("-")?.let { it[0].toInt()..it[1].toInt() } ?: 1..100,
                 it.getAsJsonPrimitive("selectableTimes")?.asString?.asExpression() ?: "1".asExpression(),
                 it.getAsJsonPrimitive("weight")?.asString?.asExpression() ?: "1".asExpression()
             )
@@ -79,7 +79,7 @@ class PoolPartyProvider : NPCPartyProvider {
 
     class DynamicPokemon(
         val pokemon: PokemonProperties,
-        val levelVariation: IntRange,
+        val levelVariation: Expression,
         val npcLevels: IntRange,
         val selectableTimes: Expression,
         val weight: Expression = "1".asExpression()
@@ -114,7 +114,8 @@ class PoolPartyProvider : NPCPartyProvider {
             desiredPokemonCount--
 
             // If the Pokémon's props specifies a level then use that, otherwise choose a random level within the range
-            val randomLevel = (level + selected.levelVariation.random())
+            val levelVariation = (0..runtime.resolveInt(selected.levelVariation)).random()
+            val randomLevel = level + levelVariation
             val instance = selected.pokemon.copy().also { it.level = it.level ?: randomLevel }.create()
             party.add(instance)
         }
