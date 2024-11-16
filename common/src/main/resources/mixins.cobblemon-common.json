@@ -22,7 +22,6 @@
     "accessor.KeyBindingAccessor",
     "client.AbstractClientPlayerMixin",
     "client.EntryListWidgetMixin",
-    "client.GuiMixin",
     "invoker.ClientPlayNetworkHandlerInvoker"
   ],
   "mixins": [
