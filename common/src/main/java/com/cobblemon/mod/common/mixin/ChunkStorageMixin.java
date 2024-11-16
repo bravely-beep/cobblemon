@@ -43,6 +43,9 @@ public class ChunkStorageMixin {
         CompoundTag vanillaFixed
     ) {
         int curVersion = vanillaFixed.contains(VERSION_KEY) ? vanillaFixed.getInt(VERSION_KEY) : 0;
-        return DataFixTypes.CHUNK.update(CobblemonSchemas.getDATA_FIXER(), vanillaFixed, curVersion, CobblemonSchemas.DATA_VERSION);
+        if (curVersion < CobblemonSchemas.DATA_VERSION) {
+            return DataFixTypes.CHUNK.update(CobblemonSchemas.getDATA_FIXER(), vanillaFixed, curVersion, CobblemonSchemas.DATA_VERSION);
+        }
+        return vanillaFixed;
     }
 }
