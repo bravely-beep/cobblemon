@@ -380,7 +380,7 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
 
         after(seconds = 0.8F) {
             if (pokemon.pokemon.shiny) {
-                SpawnSnowstormEntityParticlePacket(cobblemonResource("wild_shiny_ring"), pokemon.id, listOf("shiny_particles", "middle"))
+                SpawnSnowstormEntityParticlePacket(cobblemonResource("shiny_ring"), pokemon.id, listOf("shiny_particles", "middle"))
                     .sendToPlayersAround(pokemon.x, pokemon.y, pokemon.z, 32.0, pokemon.level().dimension())
             }
             discard()
