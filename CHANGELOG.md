@@ -18,6 +18,7 @@
 - Moves impacted by the abilities Pixelate, Refrigerate, Aerilate, Galvanize, and Normalize now display as their altered typing.
 - Added Polished Tumblestone and Tumblestone Brick block sets from Tumblestone, Black Tumblestone, and Sky Tumblestone.
 - Added Metronome, Protective Pads, Punching Glove, Room Service, Scope Lens, Shed Shell, Terrain Extender, Throat Spray, Utility Umbrella, Wide Lens, and Zoom Lens held items
+- Added particles for moves: Watersport, Mud Sport, and Psychic.
 - Added Fire, Water, Thunder, Leaf, Ice, Sun, Moon, Shiny, Dawn, and Dusk Stone storage blocks.
 - Added Eject Pack, Metronome, Protective Pads, Punching Glove, Room Service, Scope Lens, Shed Shell, Terrain Extender, Throat Spray, Utility Umbrella, Wide Lens, and Zoom Lens held items
 - Added `stonjourner_henge_ruins`, `luna_henge_ruins`, and `sol_henge_ruins` structures.
@@ -31,10 +32,14 @@
 - New config setting `displayEntityNameLabel` and `displayEntityLabelsWhenCrouchingOnly` to control what and when is displayed for the pokemon label
 - `/freezepokemon` command to pause a Pokémon's animation at a specific point in time.
 - Added `no_ai` and `freeze_frame` options to the `/spawnpokemon` command.
-- Added `moves` option to Pokémon properties, allowing you to set the moves of a Pokémon in commands and spawn files using comma-separated move names.
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
 - Added effects for the moves: Psychic, Water Sport, and Mud Sport.
+- Added a new universal locator called "top".
+- Added `moves` option to Pokémon properties, allowing you to set the moves of a Pokémon in commands and spawn files using comma-separated move names.
+- Added shiny Pokémon effects.
+- Added effects for the burn status effect.
+- Added effects for the moves: Seismic Toss, Withdraw, Bite, Crunch, Super Fang, Hyper Fang, Pursuit, Mist, Haze, Lick, Kinesis, Psychic, Water Sport, and Mud Sport.
 - Added a new universal locator called `top`.
 - Added shiny Pokémon particles with sound effects.
 - Added animation for trading.
@@ -42,6 +47,8 @@
 - Added `/spawnnpc` and `/spawnnpcat` commands.
 - Pokémon are now animated when seen in any GUI that isn't the party GUI.
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
+- Added `fishing boat` structures that contain a map to a shipwreck cove and a pokerod smithing template.
+- Added `submerged_shipwreck_cove` and `lush_shipwreck_cove` structures.
 
 ### Pokémon Added
 #### Gen 1
@@ -394,6 +401,7 @@
 - Fixed text row selection highlight in battle log.
 - Fixed top black border rendering in scroll interfaces in summary UI.
 - Fixed aspect tracking for Advancements.
+- Fixed illusion not copying aspects or caught ball.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
@@ -424,6 +432,7 @@
   - Pokémon Heal (with context)
     - Added HealingSource, an interface applied to all sources of healing from player actions, for easier tracking of healing sources.
   - Move Change
+  - Shiny Chance Calculation Event (with player context)
 - Rebuilt large swaths of the model animation code to simplify it.
 - Renamed a bunch of things from %Poseable% to %Posable% because spelling.
 - Renamed StatelessAnimation to PoseAnimation.
