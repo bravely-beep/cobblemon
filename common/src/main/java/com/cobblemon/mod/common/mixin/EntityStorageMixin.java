@@ -33,11 +33,8 @@ public class EntityStorageMixin {
         CompoundTag vanillaFixed
     ) {
         int curVersion = vanillaFixed.contains(VERSION_KEY) ? vanillaFixed.getInt(VERSION_KEY) : 0;
-        if (curVersion < CobblemonSchemas.DATA_VERSION) {
-            CompoundTag newTag =  DataFixTypes.ENTITY_CHUNK.update(CobblemonSchemas.getDATA_FIXER(), vanillaFixed, curVersion, CobblemonSchemas.DATA_VERSION);
-            newTag.put(VERSION_KEY, IntTag.valueOf(CobblemonSchemas.DATA_VERSION));
-            return newTag;
-        }
-        return vanillaFixed;
+        CompoundTag newTag =  DataFixTypes.ENTITY_CHUNK.update(CobblemonSchemas.getDATA_FIXER(), vanillaFixed, curVersion, CobblemonSchemas.DATA_VERSION);
+        newTag.put(VERSION_KEY, IntTag.valueOf(CobblemonSchemas.DATA_VERSION));
+        return newTag;
     }
 }
