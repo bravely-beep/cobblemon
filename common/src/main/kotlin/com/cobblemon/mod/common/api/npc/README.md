@@ -62,9 +62,10 @@ any number of presets and the properties of those presets will be merged into th
         }
       ],
       "names": [
-        "Vera",
-        "Hiro",
-        "John Cobblemon"
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow"
       ],
       "interaction": {
         "type": "dialogue",
@@ -75,6 +76,7 @@ any number of presets and the properties of those presets will be merged into th
       },
       "canDespawn": false,
       "skill": 5,
+      "autoHealParty": true,
       "party": {
         "type": "simple",
         "pokemon": [
@@ -248,22 +250,24 @@ spawning system, it will use a seed level that is based on the player's party's 
 spawned using the NPC command, the seed level can be defined in the command and is otherwise set to 1.
 
 A party provider produces either 'static' or 'dynamic' parties. A static party is one that is generated
-when the NPC is initialized and will not change. A dynamic party is one that may be configured using the
+when the NPC is initialized then does not change. A dynamic party is one that may be configured using the
 seed level but can be different any time the NPC is challenged.
 
 A dynamic party prevents the NPC from doing several actions, such as using healing machines, having
 persistent health of their party that changes between battles, and keeping their Pokémon out of their
-balls. This is because the NPC's party is not stored in the world.
+balls. This is because a NPC's dynamic party is not stored in the world and is generated every time
+they are challenged.
 
 #### simple
 The "simple" party type is a way to define a party of Pokémon in a simple list format. Each string in the
 list should be a set of Pokémon properties, as used in commands and spawn files.
 
-This party provider type is considered 'static'. Any level that is not mentioned in the Pokémon properties
-will be set to the seed level.
+This party provider type can be static or dynamic depending on the value of `isStatic`. Any level that 
+is not mentioned in the Pokémon properties will be set to the seed level.
 
     "party": {
       "type": "simple",
+      "isStatic": true,
       "pokemon": [
         "spiritomb moves=splash,firepunch,flamethrower,swift",
         "porygonz speed_ev=252",
@@ -274,5 +278,77 @@ will be set to the seed level.
       ]
     }
 
-#### dynamic
-To be implemented
+#### pool
+The "pool" party type is a way to define a party of Pokémon using a more complicated format that involves some
+randomization and weighting to different Pokémon options.
+
+A pool party provider can be static or dynamic depending on the value of `isStatic`. It specifies the minimum
+and maximum number of Pokémon that can be in the party using `minPokemon` and `maxPokemon`. The `pool` property dictates all of the possible Pokémon, with
+each being an object with several properties.
+
+- The `pokemon` property is the Pokémon properties as used in commands and spawn files that will generate the Pokémon. 
+- The `weight` property is a decimal number that represents how likely that Pokémon is to be chosen. If the weight is -1, it will be guaranteed to be selected. Defaults to 1. The larger the value, the more likely it will be chosen.
+- The `selectableTimes` property is the maximum number of times that the entry can be selected in the party. Defaults to 1.
+- The `npcLevels` property is a range of seed levels that the Pokémon can be generated at. For example, if the NPC is spawned with seed level 10, and the range is 5-9, the Pokémon will not be selected. The actual level of the Pokémon will be the seed level. Defaults to "1-100".
+- The `levelVariation` property is the amount of variation the Pokémon's level can have from the NPC seed level. For example, a value of 2 will mean that for an NPC generated with seed level 10, the Pokémon will be generated somewhere between level 8 and 12 inclusive. Defaults to zero.
+
+For `minPokemon`, `maxPokemon`, `weight`, `selectableTimes`, and `levelVariation`, the values can be a simple number or be full MoLang expressions. At the time
+of seeding an NPC, the cosmetic variations have already been applied. Therefore, it's possible to make these properties
+depend on visual aspects of the NPC. For example, if the NPC has a variation for "dirt", you could set a
+certain Pokémon to be `"weight": "q.npc.has_aspect('dirty') ? -1 : 0"` which would make it a guaranteed party Pokémon for "dirty" NPCs
+and impossible for all other variations of the NPC.
+
+      "party": {
+        "type": "pool",
+        "minPokemon": "3",
+        "maxPokemon": "6",
+        "isStatic": true,
+        "pool": [
+          {
+            "pokemon": "weedle",
+            "weight": "10",
+            "selectableTimes": "2",
+            "levelVariation": "2"
+            "npcLevels": "1-8"
+          },
+          {
+            "pokemon": "caterpie",
+            "weight": "5",
+            "npcLevels": "1-8",
+            "selectableTimes": "2"
+          },
+          {
+            "pokemon": "kakuna",
+            "weight": "7",
+            "selectableTimes": "2",
+            "npcLevels": "8-10"
+          },
+          {
+            "pokemon": "metapod",
+            "weight": "7",
+            "npcLevels": "8-10",
+            "selectableTimes": "2"
+          },
+          {
+            "pokemon": "beedrill",
+            "weight": "5",
+            "npcLevels": "10-15",
+            "selectableTimes": "1"
+          },
+          {
+            "pokemon": "butterfree",
+            "weight": "5",
+            "npcLevels": "10-15",
+            "selectableTimes": "1"
+          }
+        ]
+      }
+
+### autoHealParty
+Whether or not the NPC's party will be healed between battles. If the NPC has a dynamic party, this option will
+do nothing. If the NPC has a static party and this option is false, their Pokémon will not be healed and the
+NPC will have to use healing machines to heal them if they have that enabled in their AI.
+
+### ai
+The AI property is an array of brain configurations. This is used to configure the behaviours of the NPC. See
+the documentation for brain configurations at [AI Configuration](../ai/config/README.md).

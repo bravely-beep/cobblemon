@@ -15,6 +15,7 @@ import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.entity.PokemonSideDelegate
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.addFunctions
+import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies
 import com.cobblemon.mod.common.api.scheduling.ScheduledTask
 import com.cobblemon.mod.common.api.scheduling.SchedulingTracker
@@ -31,10 +32,7 @@ import com.cobblemon.mod.common.client.render.models.blockbench.repository.Pokem
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer.Companion.ease
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.cobblemon.mod.common.util.MovingSoundInstance
-import com.cobblemon.mod.common.util.asExpressionLike
-import com.cobblemon.mod.common.util.cobblemonResource
-import com.cobblemon.mod.common.util.resolve
+import com.cobblemon.mod.common.util.*
 import com.mojang.blaze3d.vertex.PoseStack
 import net.minecraft.client.Minecraft
 import net.minecraft.network.syncher.EntityDataAccessor
@@ -106,6 +104,10 @@ class PokemonClientDelegate : PosableState(), PokemonSideDelegate {
             } else if (data == PokemonEntity.ASPECTS) {
                 currentAspects = currentEntity.entityData.get(PokemonEntity.ASPECTS)
                 currentEntity.pokemon.shiny = currentAspects.contains("shiny")
+            } else if (data == PokemonEntity.CAUGHT_BALL) {
+                PokeBalls.getPokeBall(currentEntity.entityData.get(PokemonEntity.CAUGHT_BALL).asIdentifierDefaultingNamespace())?.let {
+                    currentEntity.pokemon.caughtBall = it
+                }
             } else if (data == PokemonEntity.DYING_EFFECTS_STARTED) {
                 val isDying = currentEntity.entityData.get(PokemonEntity.DYING_EFFECTS_STARTED)
                 if (isDying) {

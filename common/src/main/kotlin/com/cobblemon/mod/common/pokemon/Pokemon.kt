@@ -509,7 +509,7 @@ open class Pokemon : ShowdownIdentifiable {
     internal var heldItem: ItemStack = ItemStack.EMPTY
 
     init {
-        storeCoordinates.subscribe { if (it != null && it.store !is PCStore && this.tetheringId != null) afterOnServer(ticks = 1) { this.tetheringId = null } }
+        storeCoordinates.subscribe { if (it != null && it.store !is PCStore && this.tetheringId != null) afterOnServer(seconds = 0.05F) { this.tetheringId = null } }
         storeCoordinates.subscribe {
             it?.store?.getObservingPlayers()?.forEach {
                 CobblemonEvents.POKEMON_GAINED.post(PokemonGainedEvent(it.uuid, this))

@@ -126,7 +126,7 @@ class FossilMultiblockStructure (
                     stack?.shrink(1)
                 }
 
-                val pokemon = this.resultingFossil?.result?.create()
+                val pokemon = this.resultingFossil?.result?.create(player)
 
                 if(pokemon != null) {
                     pokemon.caughtBall = ballType

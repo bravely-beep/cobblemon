@@ -14,6 +14,8 @@ import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.api.abilities.Abilities
 import com.cobblemon.mod.common.api.abilities.Ability
+import com.cobblemon.mod.common.api.events.CobblemonEvents
+import com.cobblemon.mod.common.api.events.pokemon.ShinyChanceCalculationEvent
 import com.cobblemon.mod.common.api.moves.Moves
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.api.pokemon.aspect.AspectProvider
@@ -56,6 +58,8 @@ import net.minecraft.nbt.Tag
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.server.level.ServerPlayer
+import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 
@@ -573,18 +577,24 @@ open class PokemonProperties {
         return true
     }
 
-    fun create(): Pokemon {
+    @JvmOverloads
+    fun create(player: ServerPlayer? = null): Pokemon {
         val pokemon = Pokemon()
         apply(pokemon)
         pokemon.initialize()
-        roll(pokemon)
+        roll(pokemon, player)
         return pokemon
     }
 
     // TEST YOUR LUCK!
-    fun roll(pokemon: Pokemon) {
+    @JvmOverloads
+    fun roll(pokemon: Pokemon, player: ServerPlayer? = null) {
         val baseTypes = pokemon.form.types.toList()
-        if (this.shiny == null) pokemon.shiny = Cobblemon.config.shinyRate.checkRate()
+        var shinyRate = Cobblemon.config.shinyRate
+        CobblemonEvents.SHINY_CHANCE_CALCULATION.post(ShinyChanceCalculationEvent(shinyRate, pokemon)) { event ->
+            shinyRate = event.calculate(player)
+        }
+        if (this.shiny == null) pokemon.shiny = shinyRate.checkRate()
         if (this.teraType == null) pokemon.teraType =
             if (Cobblemon.config.teraTypeRate.checkRate()) {
                 var picked = TeraTypes.random(true)
@@ -596,8 +606,9 @@ open class PokemonProperties {
             else TeraTypes.forElementalType(baseTypes.random())
     }
 
-    fun createEntity(world: Level): PokemonEntity {
-        return PokemonEntity(world, create()).also { applyCustomProperties(it) }
+    @JvmOverloads
+    fun createEntity(world: Level, player: ServerPlayer? = null): PokemonEntity {
+        return PokemonEntity(world, create(player)).also { applyCustomProperties(it) }
     }
 
     // TODO Codecs at some point
@@ -783,7 +794,7 @@ open class PokemonProperties {
     }
 
     // If the config value is at least 1, then do 1/x and use that as the property chance
-    private fun Float.checkRate(): Boolean = this >= 1 && (Random.Default.nextFloat() < 1 / this)
+    private fun Float.checkRate(): Boolean = if (this >= 1) (Random.Default.nextFloat() < 1 / this) else Random.Default.nextFloat() < this
 
     /**
      * Attempts to find an ability by ID and resolve if it should be forced or if it's legal for the given form.

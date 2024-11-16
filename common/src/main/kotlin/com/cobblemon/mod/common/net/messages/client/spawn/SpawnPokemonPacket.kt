@@ -63,7 +63,7 @@ class SpawnPokemonPacket(
         entity.entityData.get(PokemonEntity.POSE_TYPE),
         entity.entityData.get(PokemonEntity.UNBATTLEABLE),
         entity.entityData.get(PokemonEntity.HIDE_LABEL),
-        entity.pokemon.caughtBall.name,
+        entity.exposedBall.name,
         entity.entityData.get(PokemonEntity.SPAWN_DIRECTION),
         entity.entityData.get(PokemonEntity.FRIENDSHIP),
         entity.entityData.get(PokemonEntity.FREEZE_FRAME),

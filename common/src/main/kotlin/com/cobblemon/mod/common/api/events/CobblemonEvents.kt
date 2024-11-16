@@ -55,6 +55,10 @@ import net.minecraft.server.level.ServerPlayer
 object CobblemonEvents {
 
     @JvmField
+    val POKEMON_PROPERTY_INITIALISED = SimpleObservable<Unit>()
+    @JvmField
+    val COBBLEMON_INITIALISED = SimpleObservable<Unit>()
+    @JvmField
     val DATA_SYNCHRONIZED = SimpleObservable<ServerPlayer>()
     @JvmField
     val SHOULDER_MOUNT = CancelableObservable<ShoulderMountEvent>()
@@ -129,6 +133,8 @@ object CobblemonEvents {
     val POKEMON_ENTITY_SAVE_TO_WORLD = CancelableObservable<PokemonEntitySaveToWorldEvent>()
     @JvmField
     val ENTITY_SPAWN = CancelableObservable<SpawnEvent<*>>()
+    @JvmField
+    val SHINY_CHANCE_CALCULATION = EventObservable<ShinyChanceCalculationEvent>()
 
     @JvmField
     val POKEMON_ENTITY_SPAWN = ENTITY_SPAWN
