@@ -671,7 +671,6 @@
 
   "cobblemon.ui.stats": "Stats",
   "cobblemon.ui.stats.stat": "Stat",
-  "cobblemon.ui.stats.base": "Base",
   "cobblemon.ui.stats.ivs": "IVs",
   "cobblemon.ui.stats.evs": "EVs",
   "cobblemon.ui.stats.other": "Other",
