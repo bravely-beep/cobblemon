@@ -1,15 +1,14 @@
 # Changelog
-## [1.6.0 - The Bass Pro Fishing Update (Month Xth, 2024)](#1-6-0)
+## [1.6.0 - The Record Catch Update (Month Xth, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
 
 ### Additions
-- Added the Poké Dex as a craftable item.
-- Poké Dexes can be placed on lecterns.
+- Added the Pokédex as a craftable item that can be placed on lecterns.
 - Added Pokémon (and item) fishing using modified fishing rods - Poké Rods! You'll need a Poké Rod smithing template, a fishing rod, and some type of Poké Ball. Each Poké Ball makes a differently themed rod. Why not?
 - Added Lure Ball functionality, increasing the catch rate of Pokémon that were caught on a fishing rod.
 - Added Repeat Ball functionality, increasing the catch rate of Pokémon that are already registered as caught in a player's Pokédex.
 - Added property chaining support for duplicate CustomPokemonPropertyType elements.
-- Added flat level battling with options to set all Pokemon to level 50, 100, or 5 for the duration of a battle. No experience or EVs are granted for a flat battle.
+- Added flat level battling with options to set all Pokémon to level 50, 100, or 5 for the duration of a battle. No experience or EVs are granted for a flat battle.
 - Added `aspect` and `unaspect` PokemonProperty arguments (which also includes commands such as `/pokemonedit`, `/spawnpokemon`, and `/givepokemon`) to allow forcing or un-forcing an aspect on a Pokémon.
 - Added `type` alternatively `elemental_type` PokemonProperty argument, this is only used for filtering and is not applied to Pokémon. Example `type=fire` would be true for Charmander but false for Squirtle.
 - Added support for Double Battles, Triple Battles, and Multi-battles.
@@ -27,7 +26,7 @@
 - Added battle log messages for switching out Pokémon.
 - Added Evolution particles and sounds for Pokémon that are sent out when evolution is started.
 - Added a Nurse profession that can be unlocked by having villagers claim a healing machine block.
-- Added pokecenters to all 5 village types.
+- Added Pokémon Centers to all 5 village types.
 - Added a `natural` block state property for the healing machine block; when property is set to true, the block will have a different texture and drop an iron ingot instead of itself.
 - New config setting `displayEntityNameLabel` and `displayEntityLabelsWhenCrouchingOnly` to control what and when is displayed for the pokemon label
 - `/freezepokemon` command to pause a Pokémon's animation at a specific point in time.
@@ -35,7 +34,7 @@
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
 - Added effects for the moves: Psychic, Water Sport, and Mud Sport.
-- Added a new universal locator called "top".
+- Added a new universal locator called `top`.
 - Added `moves` option to Pokémon properties, allowing you to set the moves of a Pokémon in commands and spawn files using comma-separated move names.
 - Added shiny Pokémon effects.
 - Added effects for the burn status effect.
@@ -47,7 +46,7 @@
 - Added `/spawnnpc` and `/spawnnpcat` commands.
 - Pokémon are now animated when seen in any GUI that isn't the party GUI.
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
-- Added `fishing boat` structures that contain a map to a shipwreck cove and a pokerod smithing template.
+- Added `fishing boat` structures that contain an Explorer Map leading to a shipwreck cove and a Poké Rod Smithing Template.
 - Added `submerged_shipwreck_cove` and `lush_shipwreck_cove` structures.
 
 ### Pokémon Added
@@ -324,7 +323,10 @@
 - Updated particles for status effects: Paralysis, Poison, and Sleep.
 - Updated particles on Gastly.
 - Revamped stat buff and de-buff particles.
-- Improved the performance of display cases that contain Pokémon photos.
+- Improved the performance of display cases that contain Pokémon Model items.
+- Removed species Base Stats from the summary interface as it is now viewable within the Pokédex.
+- Changed summary tab text labels to icons.
+- Clicking the summary interface exit button while the swap moves or evolve screen is open will cause the interface to switch back to the party screen. The button will exit the interface otherwise.
 
 ### Fixes
 - Scaled down Amaura's fetus model to avoid clipping through the tank while animating.
@@ -402,6 +404,7 @@
 - Fixed top black border rendering in scroll interfaces in summary UI.
 - Fixed aspect tracking for Advancements.
 - Fixed illusion not copying aspects or caught ball.
+- Prevent summary stats tab from making sounds when clicking on an already open tab.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
