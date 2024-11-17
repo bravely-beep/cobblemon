@@ -52,7 +52,10 @@ class InitializeInstruction(val instructionSet: InstructionSet, val message: Bat
         battle.actors.filterIsInstance<PlayerBattleActor>().forEach { actor ->
             val initializePacket = BattleInitializePacket(battle, actor.getSide())
             actor.sendUpdate(initializePacket)
-            actor.sendUpdate(BattleMusicPacket(actor.battleTheme))
+            // Delay accounts for some cases when the packet is sent before the battleTheme is known, this happens with forceBattle
+            afterOnServer(0.1F) {
+                actor.sendUpdate(BattleMusicPacket(actor.battleTheme))
+            }
         }
 
         battle.actors.forEach { actor ->
