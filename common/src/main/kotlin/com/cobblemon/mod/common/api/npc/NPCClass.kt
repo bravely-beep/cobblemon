@@ -47,9 +47,10 @@ class NPCClass {
     var variables = mutableMapOf<String, MoValue>() // Questionable whether this should be here.
     var party: NPCPartyProvider? = null
     var skill: Int = 0
-    var autoHealParty: Boolean = false
+    var autoHealParty: Boolean = true
     var battleTheme: ResourceLocation? = null
     var ai: MutableList<BrainConfig> = mutableListOf()
+    var isMovable: Boolean = true
 
     // If you're adding stuff here, add it to NPCPreset and NPCClassAdapter too
 
@@ -84,6 +85,7 @@ class NPCClass {
             buffer.writeString(value.asString())
         }
         buffer.writeNullable(battleTheme) { _, v -> buffer.writeIdentifier(v) }
+        buffer.writeBoolean(isMovable)
     }
 
     fun decode(buffer: RegistryFriendlyByteBuf) {
@@ -129,5 +131,6 @@ class NPCClass {
             }
         }
         battleTheme = buffer.readNullable { buffer.readIdentifier() }
+        isMovable = buffer.readBoolean()
     }
 }

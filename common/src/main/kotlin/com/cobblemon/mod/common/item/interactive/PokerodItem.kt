@@ -223,16 +223,6 @@ class PokerodItem(val pokeRodId: ResourceLocation, settings: Properties) : Fishi
                     PokerodCastEvent.Pre(itemStack, bobberEntity, getBaitStackOnRod(itemStack)),
                     { event -> return InteractionResultHolder.fail(itemStack) },
                     { event ->
-                        // play the Rod casting sound and set it
-                        world.playSoundServer(
-                            Vec3(user.x,
-                                user.y,
-                                user.z),
-                            CobblemonSounds.FISHING_ROD_CAST,
-                            SoundSource.PLAYERS,
-                            1.0f,
-                            1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f)
-                        )
                         world.addFreshEntity(bobberEntity)
                         CobblemonCriteria.CAST_POKE_ROD.trigger(user as ServerPlayer, baitOnRod != null)
 

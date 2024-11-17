@@ -164,7 +164,7 @@ class GildedChestBlock(settings: Properties, val type: Type = Type.RED) : BaseEn
         world.addFreshEntity(entity)
 
         world.removeBlock(pos, false)
-        afterOnServer(ticks = 2) {
+        afterOnServer(seconds = 0.1F) {
             if (player !in player.level().players()) {
                 return@afterOnServer
             }

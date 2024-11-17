@@ -662,7 +662,7 @@
     "sounds": [ { "name": "cobblemon:move/seismic_toss/seismic_toss_actor", "volume": 0.8 } ]
   },
   "move.seismictoss.target": {
-      "sounds": [ { "name": "cobblemon:move/seismic_toss/seismic_toss_target", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:move/seismic_toss/seismic_toss_target_1", "volume": 0.8 } ]
   },
   "move.seismictoss.target2": {
     "sounds": [ { "name": "cobblemon:move/seismic_toss/seismic_toss_target_2", "volume": 0.8 } ]
