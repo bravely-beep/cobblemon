@@ -76,6 +76,12 @@ class FormDexRecord {
             .addFunction("has_seen_gender") { params -> genders.contains(Gender.valueOf(params.getString(0).uppercase())) }
     }
 
+    fun clone() = FormDexRecord().also {
+        it.genders.addAll(genders)
+        it.seenShinyStates.addAll(seenShinyStates)
+        it.knowledge = knowledge
+    }
+
     fun encountered(pokemon: Pokemon) {
         if (wouldBeDifferent(pokemon, PokedexEntryProgress.ENCOUNTERED)) {
             addInformation(pokemon, PokedexEntryProgress.ENCOUNTERED)
