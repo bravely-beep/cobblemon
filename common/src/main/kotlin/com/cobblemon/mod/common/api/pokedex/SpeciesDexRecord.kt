@@ -51,6 +51,10 @@ class SpeciesDexRecord {
     private val aspects: MutableSet<String> = mutableSetOf()
     private val formRecords: MutableMap<String, FormDexRecord> = mutableMapOf()
 
+    fun describe(): String {
+        return "SpeciesDexRecord(aspects=$aspects, formRecords=$formRecords)"
+    }
+
     @Transient
     val struct = QueryStruct(hashMapOf()).addStandardFunctions()
         .addFunction("get_form_record") { params ->
@@ -107,7 +111,6 @@ class SpeciesDexRecord {
         return formRecords.getOrPut(formName.lowercase()) {
             val record = FormDexRecord()
             record.initialize(this, formName)
-            onFormRecordUpdated(record)
             // Some more stuff eventually
             record
         }
@@ -119,6 +122,11 @@ class SpeciesDexRecord {
 
     fun deleteFormRecord(formName: String) {
         formRecords.remove(formName)
+    }
+
+    fun clone() = SpeciesDexRecord().also {
+        it.aspects.addAll(aspects)
+        it.formRecords.putAll(formRecords.mapValues { it.value.clone() })
     }
 
     fun getAspects(): Set<String> = this.aspects
