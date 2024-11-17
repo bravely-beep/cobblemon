@@ -1822,7 +1822,7 @@
   "cobblemon.battle.heal.generic": "%1$s restored its HP.",
   "cobblemon.battle.heal.bagitempotion": "It restored %1$s's HP.",
   "cobblemon.battle.heal.bagitemrevive": "%1$s recovered from fainting!",
-  "cobblemon.battle.heal.bagitemfullrestore": "%It fully restored %1$s's HP!",
+  "cobblemon.battle.heal.bagitemfullrestore": "It fully restored %1$s's HP!",
   "cobblemon.battle.heal.poisonheal": "%1$s restored HP from Poison Heal!",
   "cobblemon.battle.heal.cheekpouch": "%1$s restored HP from its Cheek Pouch!",
   "cobblemon.battle.heal.dryskin": "%1$s restored HP from its Dry Skin!",

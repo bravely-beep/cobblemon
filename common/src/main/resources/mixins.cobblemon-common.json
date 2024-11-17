@@ -11,9 +11,9 @@
     "ItemRendererMixin",
     "ModelLoaderMixin",
     "ModelPartMixin",
+    "MouseHandlerMixin",
     "MusicManagerMixin",
     "ParticleManagerMixin",
-    "MouseHandlerMixin",
     "PlayerRendererMixin",
     "SoundEngineMixin",
     "SoundManagerMixin",
@@ -22,7 +22,6 @@
     "accessor.KeyBindingAccessor",
     "client.AbstractClientPlayerMixin",
     "client.EntryListWidgetMixin",
-    "client.GuiMixin",
     "invoker.ClientPlayNetworkHandlerInvoker"
   ],
   "mixins": [
@@ -36,6 +35,7 @@
     "LecternBlockMixin",
     "LivingEntityMixin",
     "MinecraftDedicatedServerMixin",
+    "NbtUtilsMixin",
     "PiglinBarterMixin",
     "PiglinEntityMixin",
     "PlayerMixin",
