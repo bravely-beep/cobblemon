@@ -72,6 +72,7 @@ object NPCClassAdapter : JsonDeserializer<NPCClass> {
         obj.get("autoHealParty")?.let { npcClass.autoHealParty = it.asBoolean }
         obj.get("battleTheme")?.let { npcClass.battleTheme = it.asString.asIdentifierDefaultingNamespace() }
         obj.get("ai")?.let { npcClass.ai.addAll(it.asJsonArray.map<JsonElement, BrainConfig> { ctx.deserialize(it, BrainConfig::class.java) }.toMutableList()) }
+        obj.get("isMovable")?.let { npcClass.isMovable = it.asBoolean }
 
         return npcClass
     }
