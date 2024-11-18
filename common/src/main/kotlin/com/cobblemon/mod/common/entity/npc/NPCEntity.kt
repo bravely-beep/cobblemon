@@ -52,7 +52,6 @@ import com.google.common.collect.ImmutableList
 import com.mojang.authlib.GameProfile
 import com.mojang.authlib.ProfileLookupCallback
 import com.mojang.serialization.Dynamic
-import java.lang.Exception
 import java.net.URI
 import java.util.UUID
 import java.util.concurrent.CompletableFuture
@@ -66,6 +65,7 @@ import net.minecraft.network.protocol.Packet
 import net.minecraft.network.protocol.common.ClientboundCustomPayloadPacket
 import net.minecraft.network.protocol.game.ClientGamePacketListener
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket
+import net.minecraft.network.protocol.game.DebugPackets
 import net.minecraft.network.syncher.EntityDataAccessor
 import net.minecraft.network.syncher.EntityDataSerializers
 import net.minecraft.network.syncher.SynchedEntityData
@@ -203,7 +203,8 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
             SensorType.HURT_BY,
             SensorType.NEAREST_PLAYERS,
             CobblemonSensors.BATTLING_POKEMON,
-            CobblemonSensors.NPC_BATTLING
+            CobblemonSensors.NPC_BATTLING,
+            SensorType.VILLAGER_HOSTILES
         )
 
         val MEMORY_MODULES: List<MemoryModuleType<*>> = ImmutableList.of(
@@ -223,6 +224,7 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
             MemoryModuleType.ATTACK_COOLING_DOWN,
             CobblemonMemories.DIALOGUES,
             CobblemonMemories.ACTIVE_ACTION_EFFECT,
+            MemoryModuleType.NEAREST_HOSTILE
         )
 
         const val SEND_OUT_ANIMATION = "send_out"
@@ -292,6 +294,13 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
     override fun customServerAiStep() {
         super.customServerAiStep()
         getBrain().tick(level() as ServerLevel, this)
+    }
+
+    override fun sendDebugPackets() {
+        super.sendDebugPackets()
+        DebugPackets.sendEntityBrain(this)
+        DebugPackets.sendGoalSelector(level(), this, this.goalSelector)
+        DebugPackets.sendPathFindingPacket(level(), this, this.navigation.path, this.navigation.path?.distToTarget ?: 0F)
     }
 
     override fun saveWithoutId(nbt: CompoundTag): CompoundTag {
