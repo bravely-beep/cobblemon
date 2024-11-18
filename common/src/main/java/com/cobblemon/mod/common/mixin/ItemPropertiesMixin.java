@@ -22,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ItemProperties.class)
 public class ItemPropertiesMixin {
 
+    // Mixins into the fishing rod's register() lambda expression
     // Without this, the fishing rod item model appears cast when using a PokeRod in the other hand
     @Inject(method = "method_27883", at = @At(value = "RETURN", ordinal = 1), cancellable = true)
     private static void cobblemon$preventRodMixup(ItemStack itemStack, ClientLevel clientLevel, LivingEntity livingEntity, int i, CallbackInfoReturnable<Float> cir) {
