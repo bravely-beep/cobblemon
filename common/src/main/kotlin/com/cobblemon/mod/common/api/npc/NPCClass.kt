@@ -51,7 +51,7 @@ class NPCClass {
     var battleTheme: ResourceLocation? = null
     var ai: MutableList<BrainConfig> = mutableListOf()
     var isMovable: Boolean = true
-    var isInvulnerable = true
+    var isInvulnerable = false
     var isLeashable = true
     var allowProjectileHits = true
 
