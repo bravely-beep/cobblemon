@@ -286,7 +286,7 @@ object Cobblemon {
         CustomPokemonProperty.register(FreezeFrameProperty)
         CustomPokemonProperty.register(NoAIProperty)
 
-        CobblemonEvents.POKEMON_PROPERTY_INITIALISED.emit()
+        CobblemonEvents.POKEMON_PROPERTY_INITIALISED.emit(Unit)
 
         ifDedicatedServer {
             isDedicatedServer = true
@@ -389,7 +389,7 @@ object Cobblemon {
 
         registerEventHandlers()
 
-        CobblemonEvents.COBBLEMON_INITIALISED.emit()
+        CobblemonEvents.COBBLEMON_INITIALISED.emit(Unit)
 
     }
 
