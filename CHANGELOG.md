@@ -441,6 +441,7 @@
 - Renamed StatelessAnimation to PoseAnimation.
 - Renamed StatefulAnimation to ActiveAnimation.
 - Documented the animation system.
+- Allowed for SpawnSnowstormEntityParticleHandler to handle non-posable entities (due to being non-posable, locators are useless, to set the offset use the settings in the particle itself)
 
 ### Data Pack & Resource Pack Creators
 - Added support for "shedders" similar to Shedinja's evolution logic.
