@@ -1392,7 +1392,7 @@
   "cobblemon.battle.side_subject.ally": "your",
   "cobblemon.battle.side_subject.opponent": "the opposing",
   "cobblemon.battle.transform": "%1$s transformed into %2$s",
-  "cobblemon.battle.endability": "%1$s's Ability was suppressed!",
+  "cobblemon.battle.endability": "%1$s's ability was suppressed!",
   "cobblemon.battle.select_target": "Select Target",
 
   "cobblemon.battle.weather.raindance.start": "It started to rain!",
@@ -1739,6 +1739,7 @@
   "cobblemon.battle.ability.receiver": "%1$s's %2$s was taken over!",
   "cobblemon.battle.ability.generic": "%1$s's %2$s activated!",
   "cobblemon.battle.ability.magicbounce": "%1$s bounced the %2$s back!",
+  "cobblemon.battle.ability.replace": "%1$s's ability became %2$s!",
 
   "cobblemon.battle.errors.busy": "%1$s is busy!",
   "cobblemon.battle.error.in_battle": "%1$s is already in a battle.",
