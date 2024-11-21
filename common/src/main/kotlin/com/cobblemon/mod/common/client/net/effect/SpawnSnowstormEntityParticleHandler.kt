@@ -28,7 +28,7 @@ object SpawnSnowstormEntityParticleHandler : ClientNetworkPacketHandler<SpawnSno
         val world = Minecraft.getInstance().level ?: return
         val effect = BedrockParticleOptionsRepository.getEffect(packet.effectId) ?: return
         val entity = world.getEntity(packet.entityId)
-        if(entity is PosableEntity) {
+        if (entity is PosableEntity) {
             val state = entity.delegate as PosableState
             val locators = packet.locator.firstNotNullOfOrNull { state.getMatchingLocators(it).takeIf { it.isNotEmpty() } } ?: return
 
@@ -49,7 +49,7 @@ object SpawnSnowstormEntityParticleHandler : ClientNetworkPacketHandler<SpawnSno
 
                 storm.spawn()
             }
-        } else if(entity is LivingEntity) {
+        } else if (entity is LivingEntity) {
             val matrixWrapper = MatrixWrapper()
             matrixWrapper.updateFunction = { it.updatePosition(entity.position()) }
             val particleRuntime = MoLangRuntime().setup().setupClient()
