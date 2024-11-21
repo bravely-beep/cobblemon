@@ -405,6 +405,7 @@
 - Fixed aspect tracking for Advancements.
 - Fixed illusion not copying aspects or caught ball.
 - Prevent summary stats tab from making sounds when clicking on an already open tab.
+- Fixed display case not being able to be fed items from underneath.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
