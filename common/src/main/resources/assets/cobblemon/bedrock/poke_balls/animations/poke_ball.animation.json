@@ -59,7 +59,7 @@
 			},
 			"sound_effects": {
 				"0.0": {
-					"effect": "poke_ball.shake"
+					"effect": "poke_ball.open"
 				}
 			}
 		},
@@ -601,13 +601,31 @@
 			}
 		},
 		"animation.poke_ball.break": {
-			"animation_length": 1,
+			"animation_length": 1.2,
 			"bones": {
 				"ball": {
 					"rotation": {
 						"0.0": [0, 0, 0],
 						"0.3333": [0, -15, 0],
 						"0.4583": [0, -15, 0]
+					},
+					"position": {
+						"0.75": [0, 0, 0],
+						"1.0": {
+							"pre": [0, -0.6, 0],
+							"post": [0, -0.6, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.125": [0, -4, 0]
+					},
+					"scale": {
+						"0.75": [1, 1, 1],
+						"1.0": {
+							"pre": [0.82, 0.82, 0.82],
+							"post": [0.82, 0.82, 0.82],
+							"lerp_mode": "catmullrom"
+						},
+						"1.125": [0, 0, 0]
 					}
 				},
 				"bottom": {

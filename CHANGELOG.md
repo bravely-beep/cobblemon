@@ -49,6 +49,8 @@
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
 - Added `fishing boat` structures that contain a map to a shipwreck cove and a pokerod smithing template.
 - Added `submerged_shipwreck_cove` and `lush_shipwreck_cove` structures.
+- Added a new sound for Poké Balls bouncing off of Pokémon.
+- Added a new set of sounds for Ancient Poké Balls.
 
 ### Pokémon Added
 #### Gen 1
@@ -325,6 +327,8 @@
 - Updated particles on Gastly.
 - Revamped stat buff and de-buff particles.
 - Improved the performance of display cases that contain Pokémon photos.
+- Updated sounds for Poké Balls.
+- Updated the Poké Ball animation for Pokémon breaking out.
 
 ### Fixes
 - Scaled down Amaura's fetus model to avoid clipping through the tank while animating.
@@ -402,6 +406,7 @@
 - Fixed top black border rendering in scroll interfaces in summary UI.
 - Fixed aspect tracking for Advancements.
 - Fixed illusion not copying aspects or caught ball.
+- Delay when successfully catching a Pokémon in an Ancient Poké Ball has been increased to account for the new sounds and particles.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
@@ -454,6 +459,7 @@
 - Sound events for all blocks now start with "block."
 - Gimmighoul chest and item interaction sounds have been moved to where its cry is.
 - Unused sound files and sound events have been removed.
+- Poké Ball sounds are now in their animation files, making them more flexible to edit.
 - Added MoLang compatibility in the isVisible property for transformed parts.
 - Added q.has_aspect('some_aspect') function to animations, posers, and entity particle effects.
 - Added support for conditional pose animations.

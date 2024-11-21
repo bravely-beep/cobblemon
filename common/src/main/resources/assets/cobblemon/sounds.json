@@ -63,6 +63,9 @@
   "poke_ball.break": {
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_break", "volume":  0.9 } ]
   },
+  "poke_ball.break.ancient": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_break_ancient", "volume":  0.9 } ]
+  },
   "poke_ball.recall": {
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_recall", "volume":  0.7 } ]
   },
@@ -73,7 +76,7 @@
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_send_out_shiny", "volume":  0.7 } ]
   },
   "poke_ball.hit": {
-    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_hit", "volume":  0.6 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_hit", "volume":  0.4 } ]
   },
   "poke_ball.throw": {
     "sounds": [
