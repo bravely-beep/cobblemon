@@ -353,7 +353,7 @@ NPC will have to use healing machines to heal them if they have that enabled in 
 Controls whether the NPC can be moved by players or other entities. If disabled, the NPC will remain 
 stationary.
 
-### isInvincible
+### isInvulnerable
 Controls whether the NPC is immune to all damage sources.
 
 ### isLeashable
