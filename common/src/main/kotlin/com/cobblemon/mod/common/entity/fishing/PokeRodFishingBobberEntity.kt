@@ -68,6 +68,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams
 import net.minecraft.world.phys.EntityHitResult
 import net.minecraft.world.phys.Vec3
+import kotlin.time.Duration.Companion.milliseconds
 
 
 class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity>, world: Level) : FishingHook(type, world) {
@@ -367,7 +368,7 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
                 val j = this.z + (Mth.cos(g) * h).toDouble() * 0.1 // randomized Z value
                 val blockState = serverWorld.getBlockState(BlockPos.containing(d, e - 1.0, j))
                 if (blockState.`is`(Blocks.WATER)) {
-                    val currentTime = System.currentTimeMillis()
+                    val currentTime = serverWorld.gameTime.milliseconds.inWholeMilliseconds
                     if (currentTime - lastRippleSpawnTime >= rippleCooldown) {
                         particleEntityHandler(this, ResourceLocation.fromNamespaceAndPath("cobblemon", "fishing_bobber_ripple"))
                         lastRippleSpawnTime = currentTime
