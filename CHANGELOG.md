@@ -329,6 +329,7 @@
 - Clicking the summary interface exit button while the swap moves or evolve screen is open will cause the interface to switch back to the party screen. The button will exit the interface otherwise.
 
 ### Fixes
+- Fixed awarding Pokémon experience upon forfeiting battles.
 - Scaled down Amaura's fetus model to avoid clipping through the tank while animating.
 - Fixed Cubone's cry not having a sound.
 - Fixed the sendout sound erroneously playing when a wild Pokémon breaks out of a Poké ball.

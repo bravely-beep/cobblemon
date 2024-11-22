@@ -271,12 +271,13 @@ open class PokemonBattle(
                             else -> continue
                         }
                         val experience = Cobblemon.experienceCalculator.calculate(opponentPokemon, faintedPokemon, multiplier)
-                        if (experience > 0) {
+                        if (experience > 0 && actor.pokemonList.all { it.health <= 0 }) {
                             opponent.awardExperience(opponentPokemon, experience)
                         }
                         Cobblemon.evYieldCalculator.calculate(opponentPokemon, faintedPokemon).forEach { (stat, amount) ->
                             pokemon.evs.add(stat, amount)
                         }
+
                     }
                 }
             }
@@ -287,6 +288,14 @@ open class PokemonBattle(
                             .forEach { player?.giveOrDropItemStack(ItemStack(it))}
                 }
             }
+
+            // Heal NPC's team if enabled
+            if (actor is NPCBattleActor) {
+                if (actor.npc.npc.autoHealParty) {
+                    actor.npc.party?.heal()
+                }
+            }
+
         }
         // Heal Mon if wild
         actors.filter { it.type == ActorType.WILD }
