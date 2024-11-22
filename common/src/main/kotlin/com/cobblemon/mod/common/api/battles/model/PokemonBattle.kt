@@ -11,7 +11,6 @@ package com.cobblemon.mod.common.api.battles.model
 import com.bedrockk.molang.runtime.MoLangRuntime
 import com.bedrockk.molang.runtime.struct.QueryStruct
 import com.bedrockk.molang.runtime.value.DoubleValue
-import com.bedrockk.molang.runtime.value.MoValue
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.Cobblemon.LOGGER
 import com.cobblemon.mod.common.CobblemonNetwork
@@ -22,7 +21,6 @@ import com.cobblemon.mod.common.api.battles.model.actor.EntityBackedBattleActor
 import com.cobblemon.mod.common.api.battles.model.actor.FleeableBattleActor
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.battles.BattleFledEvent
-import com.cobblemon.mod.common.api.moves.Moves
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.asMoLangValue
 import com.cobblemon.mod.common.api.net.NetworkPacket
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore
@@ -51,17 +49,16 @@ import com.cobblemon.mod.common.net.messages.client.battle.BattleMessagePacket
 import com.cobblemon.mod.common.pokemon.evolution.progress.DefeatEvolutionProgress
 import com.cobblemon.mod.common.pokemon.evolution.progress.LastBattleCriticalHitsEvolutionProgress
 import com.cobblemon.mod.common.pokemon.evolution.requirements.DefeatRequirement
-import com.cobblemon.mod.common.pokemon.helditem.CobblemonHeldItemManager
 import com.cobblemon.mod.common.util.battleLang
 import com.cobblemon.mod.common.util.getPlayer
-import net.minecraft.network.chat.Component
 import com.cobblemon.mod.common.util.giveOrDropItemStack
 import com.cobblemon.mod.common.util.itemRegistry
-import net.minecraft.resources.ResourceLocation
 import java.io.File
 import java.util.UUID
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.ConcurrentLinkedDeque
+import net.minecraft.network.chat.Component
+import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.item.ItemStack
 
@@ -281,7 +278,7 @@ open class PokemonBattle(
                     }
                 }
             }
-            if(actor.itemsUsed.isNotEmpty() && actor.getPlayerUUIDs().count() > 0) {
+            if (actor.itemsUsed.isNotEmpty() && actor.getPlayerUUIDs().count() > 0) {
                 val player = actor.getPlayerUUIDs().first().getPlayer()
                 player?.level()?.itemRegistry.let { registry ->
                     actor.itemsUsed.mapNotNull { registry?.get(ResourceLocation.tryBySeparator(it.itemName.substringAfter('.'), '.')) }
