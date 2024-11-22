@@ -75,6 +75,7 @@ import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
+import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.AgeableMob
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.Pose
@@ -118,6 +119,12 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
     var party: NPCPartyStore? = null
 
     var isMovable: Boolean? = null
+
+    var isInvulnerable: Boolean? = null
+
+    var isLeashable: Boolean? = null
+
+    var allowProjectileHits: Boolean? = null
 
     fun getPartyForChallenge(player: ServerPlayer): NPCPartyStore? {
         val party = this.party
@@ -333,6 +340,18 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
         if (isMovable != null) {
             nbt.putBoolean(DataKeys.NPC_IS_MOVABLE, isMovable)
         }
+        val isInvulnerable = isInvulnerable
+        if (isInvulnerable != null) {
+            nbt.putBoolean(DataKeys.NPC_IS_INVULNERABLE, isInvulnerable)
+        }
+        val isLeashable = isLeashable
+        if (isLeashable != null) {
+            nbt.putBoolean(DataKeys.NPC_IS_LEASHABLE, isLeashable)
+        }
+        val allowProjectileHits = allowProjectileHits
+        if (allowProjectileHits != null) {
+            nbt.putBoolean(DataKeys.NPC_ALLOW_PROJECTILE_HITS, allowProjectileHits)
+        }
         return nbt
     }
 
@@ -367,6 +386,10 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
             entityData.set(NPC_PLAYER_TEXTURE, NPCPlayerTexture(texture, model))
         }
         this.isMovable = if (nbt.contains(DataKeys.NPC_IS_MOVABLE)) nbt.getBoolean(DataKeys.NPC_IS_MOVABLE) else null
+        this.isInvulnerable = if (nbt.contains(DataKeys.NPC_IS_INVULNERABLE)) nbt.getBoolean(DataKeys.NPC_IS_INVULNERABLE) else null
+        this.isLeashable = if (nbt.contains(DataKeys.NPC_IS_LEASHABLE)) nbt.getBoolean(DataKeys.NPC_IS_LEASHABLE) else null
+        this.allowProjectileHits = if (nbt.contains(DataKeys.NPC_ALLOW_PROJECTILE_HITS)) nbt.getBoolean(DataKeys.NPC_ALLOW_PROJECTILE_HITS) else null
+
         updateAspects()
     }
 
@@ -402,6 +425,18 @@ class NPCEntity(world: Level) : AgeableMob(CobblemonEntities.NPC, world), Npc, P
 
     override fun isPushable(): Boolean {
         return isMovable ?: npc.isMovable
+    }
+
+    override fun isInvulnerableTo(source: DamageSource): Boolean {
+        return isInvulnerable ?: npc.isInvulnerable
+    }
+
+    override fun canBeLeashed(): Boolean {
+        return isLeashable ?: npc.isLeashable
+    }
+
+    override fun canBeHitByProjectile(): Boolean {
+        return allowProjectileHits ?: npc.allowProjectileHits
     }
 
     fun initialize(level: Int) {
