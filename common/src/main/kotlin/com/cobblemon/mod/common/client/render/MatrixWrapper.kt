@@ -33,10 +33,6 @@ class MatrixWrapper {
         this.position = position
     }
 
-    fun update(updateFunction: (MatrixWrapper) -> Unit) = apply {
-        this.updateFunction = updateFunction
-    }
-
     fun getOrigin(): Vec3 {
         updateFunction?.invoke(this)
         return position.add(matrix.getOrigin())
