@@ -41,15 +41,15 @@
 - Added effects for the moves: Seismic Toss, Withdraw, Bite, Crunch, Super Fang, Hyper Fang, Pursuit, Mist, Haze, Lick, Kinesis, Psychic, Water Sport, and Mud Sport.
 - Added a new universal locator called `top`.
 - Added shiny Pokémon particles with sound effects.
-- Added animation for trading.
+- Added animation and sounds for trading.
 - Added icons for pending trade, team-up, and battle requests from other players.
 - Added `/spawnnpc` and `/spawnnpcat` commands.
 - Pokémon are now animated when seen in any GUI that isn't the party GUI.
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
 - Added `fishing boat` structures that contain an Explorer Map leading to a shipwreck cove and a Poké Rod Smithing Template.
 - Added `submerged_shipwreck_cove` and `lush_shipwreck_cove` structures.
-- Added a new sound for Poké Balls bouncing off of Pokémon.
-- Added a new set of sounds for Ancient Poké Balls.
+- Added new sounds for Poké Balls bouncing off of Pokémon and landing on the ground during capture.
+- Added a unique set of sounds for Ancient Poké Balls.
 
 ### Pokémon Added
 #### Gen 1

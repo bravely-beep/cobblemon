@@ -31,11 +31,11 @@
   },
   "poke_ball.capture_succeeded": {
     "subtitle": "cobblemon.subtitle.pokeball.capture_succeeded",
-    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded", "volume":  0.8 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded", "volume":  0.7 } ]
   },
   "poke_ball.capture_succeeded.ancient": {
     "subtitle": "cobblemon.subtitle.pokeball.capture_succeeded",
-    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded_ancient", "volume":  0.8 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded_ancient", "volume":  0.7 } ]
   },
   "poke_ball.shake": {
     "sounds": [
@@ -47,6 +47,12 @@
   },
   "poke_ball.shake.critical": {
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_shake_critical", "volume":  0.6 } ]
+  },
+  "poke_ball.bounce": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_bounce", "volume":  0.1 } ]
+  },
+  "poke_ball.bounce.ancient": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_bounce_ancient", "volume":  0.1 } ]
   },
   "poke_ball.open": {
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_open", "volume":  0.7 } ]

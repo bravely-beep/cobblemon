@@ -267,6 +267,11 @@
 						"0.2083": [0, 0, 0]
 					}
 				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "poke_ball.bounce"
+				}
 			}
 		},
 		"animation.poke_ball.bob1": {
