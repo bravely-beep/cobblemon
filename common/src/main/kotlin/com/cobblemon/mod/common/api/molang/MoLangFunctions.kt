@@ -29,6 +29,7 @@ import com.cobblemon.mod.common.api.moves.animations.ActionEffects
 import com.cobblemon.mod.common.api.moves.animations.NPCProvider
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.cobblemon.mod.common.api.scripting.CobblemonScripts
+import com.cobblemon.mod.common.api.spawning.context.SpawningContext
 import com.cobblemon.mod.common.api.storage.PokemonStore
 import com.cobblemon.mod.common.api.storage.party.PartyStore
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore
@@ -451,12 +452,12 @@ object MoLangFunctions {
                 return@put DoubleValue(store.count { props.matches(it) })
             }
             map.put("highest_level") {
-                val highest = store.maxByOrNull { it.level }
-                return@put highest?.asStruct() ?: DoubleValue.ZERO
+                val highest = store.maxOfOrNull { it.level } ?: 0
+                return@put DoubleValue(highest)
             }
             map.put("lowest_level") {
-                val lowest = store.minByOrNull { it.level }
-                return@put lowest?.asStruct() ?: DoubleValue.ZERO
+                val lowest = store.minOfOrNull { it.level } ?: 0
+                return@put DoubleValue(lowest)
             }
             map.put("heal") {
                 for (pokemon in store) {
@@ -504,6 +505,33 @@ object MoLangFunctions {
             }
             map.put("get_box_count") { _ -> DoubleValue(pc.boxes.size.toDouble()) }
             return@mutableListOf map
+        }
+    )
+
+    val spawningContextFunctions = mutableListOf<(SpawningContext) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
+        { spawningContext ->
+            val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
+            val worldValue = spawningContext.world.registryAccess().registryOrThrow(Registries.DIMENSION).wrapAsHolder(spawningContext.world).asWorldMoLangValue()
+            val biomeValue = spawningContext.biomeRegistry.wrapAsHolder(spawningContext.biome).asBiomeMoLangValue()
+            map.put("biome") { _ -> biomeValue }
+            map.put("world") { _ -> worldValue }
+            map.put("light") { _ -> DoubleValue(spawningContext.light.toDouble()) }
+            map.put("x") { _ -> DoubleValue(spawningContext.position.x.toDouble()) }
+            map.put("y") { _ -> DoubleValue(spawningContext.position.y.toDouble()) }
+            map.put("z") { _ -> DoubleValue(spawningContext.position.z.toDouble()) }
+            map.put("moon_phase") { _ -> DoubleValue(spawningContext.moonPhase.toDouble()) }
+            map.put("can_see_sky") { _ -> DoubleValue(spawningContext.canSeeSky) }
+            map.put("sky_light") { _ -> DoubleValue(spawningContext.skyLight.toDouble()) }
+            map.put("bucket") { _ -> StringValue(spawningContext.cause.bucket.name) }
+            map.put("player") { _ ->
+                val causeEntity = spawningContext.cause.entity ?: return@put DoubleValue.ZERO
+                if (causeEntity is ServerPlayer) {
+                    return@put causeEntity.asMoLangValue()
+                } else {
+                    return@put DoubleValue.ZERO
+                }
+            }
+            map
         }
     )
 
@@ -564,6 +592,15 @@ object MoLangFunctions {
             stringify = { it.battleId.toString() }
         )
         value.addFunctions(battleFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+        return value
+    }
+
+    fun SpawningContext.asMoLangValue(): ObjectValue<SpawningContext> {
+        val value = ObjectValue(
+            obj = this,
+            stringify = { it.toString() }
+        )
+        value.addFunctions(spawningContextFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
         return value
     }
 
