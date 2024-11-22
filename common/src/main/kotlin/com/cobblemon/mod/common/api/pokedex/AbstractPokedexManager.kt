@@ -42,7 +42,6 @@ abstract class AbstractPokedexManager {
         return speciesRecords.getOrPut(speciesId) {
             val record = SpeciesDexRecord()
             record.initialize(this, speciesId)
-            onSpeciesRecordUpdated(record)
             record
         }
     }

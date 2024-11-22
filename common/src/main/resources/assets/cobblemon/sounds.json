@@ -576,10 +576,10 @@
     "sounds": [ { "name": "cobblemon:move/flamethrower/flamethrower_target", "volume": 0.8 } ]
   },
   "move.sandattack.actor": {
-    "sounds": [ { "name": "cobblemon:move/sandattack/sand_attack_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:move/sand_attack/sand_attack_actor", "volume": 0.8 } ]
   },
   "move.sandattack.target": {
-    "sounds": [ { "name": "cobblemon:move/sandattack/sand_attack_target", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:move/sand_attack/sand_attack_target", "volume": 0.8 } ]
   },
   "move.confusion.actor": {
     "sounds": [ { "name": "cobblemon:move/confusion/confusion_actor", "volume": 0.9 } ]
@@ -945,10 +945,10 @@
   },
   "particle.shiny_ambient_chime": {
     "sounds": [
-      { "name": "cobblemon:shiny/shiny_ambient_chime_1", "volume": 0.05 },
-      { "name": "cobblemon:shiny/shiny_ambient_chime_2", "volume": 0.05 },
-      { "name": "cobblemon:shiny/shiny_ambient_chime_3", "volume": 0.05 },
-      { "name": "cobblemon:shiny/shiny_ambient_chime_4", "volume": 0.05 }
+      { "name": "cobblemon:shiny/shiny_ambient_chime_1", "volume": 0.3 },
+      { "name": "cobblemon:shiny/shiny_ambient_chime_2", "volume": 0.3 },
+      { "name": "cobblemon:shiny/shiny_ambient_chime_3", "volume": 0.3 },
+      { "name": "cobblemon:shiny/shiny_ambient_chime_4", "volume": 0.3 }
     ]
   },
   "particle.wild_shiny_ambient_chime": {
