@@ -72,6 +72,8 @@ import net.minecraft.world.phys.Vec3
 
 class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity>, world: Level) : FishingHook(type, world) {
 
+    private var lastRippleSpawnTime: Long = 0
+    private val rippleCooldown: Long = 1000
     private val velocityRandom = RandomSource.create()
     private var caughtFish = false
     private var outOfOpenWaterTicks = 0
@@ -306,8 +308,7 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
                     val l = h * 0.04f
 
                     // todo the fish trail that leads to the bobber
-                    serverWorld.sendParticles(ParticleTypes.FISHING, offsetX, offsetY, j, 0, l.toDouble(), 0.01, -k.toDouble(), 1.0)
-                    serverWorld.sendParticles(ParticleTypes.FISHING, offsetX, offsetY, j, 0, -l.toDouble(), 0.01, k.toDouble(), 1.0)
+                    particleCatchHandler(offsetX, offsetY, j, this, ResourceLocation.fromNamespaceAndPath("cobblemon", "fishing_wake"))
                     // create tiny splash particles for fishing trail
                     //particleEntityHandler(this, Identifier.of("cobblemon","bob_splash"))
                 }
@@ -318,6 +319,7 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
 
                 // create tiny splash particle when there is a bite
                 particleEntityHandler(this, ResourceLocation.fromNamespaceAndPath("cobblemon", "bob_splash"))
+                particleEntityHandler(this, ResourceLocation.fromNamespaceAndPath("cobblemon", "fishing_bobber_big_ripple"))
 
                 val m = this.y + 0.5
                 serverWorld.sendParticles(ParticleTypes.BUBBLE, this.x, m, this.z, (1.0f + this.bbWidth * 20.0f).toInt(), this.bbWidth.toDouble(), 0.0, this.bbWidth.toDouble(), 0.2)
@@ -365,7 +367,12 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
                 val j = this.z + (Mth.cos(g) * h).toDouble() * 0.1 // randomized Z value
                 val blockState = serverWorld.getBlockState(BlockPos.containing(d, e - 1.0, j))
                 if (blockState.`is`(Blocks.WATER)) {
-                    serverWorld.sendParticles(ParticleTypes.SPLASH, d, e, j, 2 + random.nextInt(2), 0.10000000149011612, 0.0, 0.10000000149011612, 0.0)
+                    val currentTime = System.currentTimeMillis()
+                    if (currentTime - lastRippleSpawnTime >= rippleCooldown) {
+                        particleEntityHandler(this, ResourceLocation.fromNamespaceAndPath("cobblemon", "fishing_bobber_ripple"))
+                        lastRippleSpawnTime = currentTime
+                    }
+                    particleEntityHandler(this, ResourceLocation.fromNamespaceAndPath("cobblemon", "fishing_surface_ripple"))
                 }
             }
             if (this.waitCountdown <= 0) {
@@ -775,6 +782,12 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
     // Particle Stuff
     private fun particleEntityHandler(entity: Entity, particle: ResourceLocation) {
         val spawnSnowstormParticlePacket = SpawnSnowstormParticlePacket(particle, entity.position())
+        spawnSnowstormParticlePacket.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+    }
+
+    private fun particleCatchHandler(x: Double, y: Double, z: Double, entity: Entity, particle: ResourceLocation) {
+        var particlePosition = Vec3(x, y, z)
+        val spawnSnowstormParticlePacket = SpawnSnowstormParticlePacket(particle, particlePosition)
         spawnSnowstormParticlePacket.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
     }
 
