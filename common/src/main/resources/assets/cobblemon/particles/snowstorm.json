@@ -107,6 +107,8 @@
     "cobblemon:spiral",
     "cobblemon:mud_bubble",
     "cobblemon:mud_splash",
-    "cobblemon:splash"
+    "cobblemon:splash",
+    "cobblemon:rain_splash",
+    "cobblemon:water_ripple"
   ]
 }

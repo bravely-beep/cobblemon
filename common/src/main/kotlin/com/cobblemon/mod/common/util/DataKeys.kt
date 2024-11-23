@@ -211,6 +211,11 @@ object DataKeys {
     const val NPC_PLAYER_TEXTURE_MODEL = "Model"
     const val NPC_PLAYER_TEXTURE_TEXTURE = "Texture"
     const val NPC_LEVEL = "Level"
+    const val NPC_IS_MOVABLE = "IsMovable"
+    const val NPC_SKILL = "Skill"
+    const val NPC_IS_INVULNERABLE = "IsInvulnerable"
+    const val NPC_IS_LEASHABLE = "IsLeashable"
+    const val NPC_ALLOW_PROJECTILE_HITS = "AllowProjectileHits"
 
     // PokemonProperties
     const val ELEMENTAL_TYPE = "ElementalType"
