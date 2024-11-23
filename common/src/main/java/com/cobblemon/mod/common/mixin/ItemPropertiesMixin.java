@@ -26,7 +26,8 @@ public class ItemPropertiesMixin {
     // Without this, the fishing rod item model appears cast when using a PokeRod in the other hand
     @Inject(method = "method_27883", at = @At(value = "RETURN", ordinal = 1), cancellable = true)
     private static void cobblemon$preventRodMixup(ItemStack itemStack, ClientLevel clientLevel, LivingEntity livingEntity, int i, CallbackInfoReturnable<Float> cir) {
-        Player player = (Player) livingEntity;
-        if (player.fishing instanceof PokeRodFishingBobberEntity) cir.setReturnValue(0.0f);
+        if (!(livingEntity instanceof Player) || ((Player) livingEntity).fishing instanceof PokeRodFishingBobberEntity) {
+            cir.setReturnValue(0.0f);
+        }
     }
 }
