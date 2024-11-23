@@ -17,7 +17,7 @@
       "quirks": ["q.bedrock_quirk('popplio', 'blink')"]
     },
     "standing": {
-      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE", "SHOULDER_LEFT", "SHOULDER_RIGHT"],
       "isBattle": false,
       "animations": ["q.look('head')", "q.bedrock('popplio', 'ground_idle')"],
       "quirks": ["q.bedrock_quirk('popplio', 'blink')"]
