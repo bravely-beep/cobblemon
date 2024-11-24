@@ -46,7 +46,7 @@ import com.cobblemon.mod.common.client.gui.pokedex.widgets.PokemonInfoWidget
 import com.cobblemon.mod.common.client.gui.pokedex.widgets.SearchWidget
 import com.cobblemon.mod.common.client.gui.pokedex.widgets.SizeWidget
 import com.cobblemon.mod.common.client.gui.pokedex.widgets.StatsWidget
-import com.cobblemon.mod.common.client.pokedex.PokedexTypes
+import com.cobblemon.mod.common.client.pokedex.PokedexType
 import com.cobblemon.mod.common.client.render.drawScaledText
 import com.cobblemon.mod.common.pokemon.abilities.HiddenAbility
 import com.cobblemon.mod.common.util.cobblemonResource
@@ -68,7 +68,7 @@ import net.minecraft.sounds.SoundEvent
  * @since February 24, 2024
  */
 class PokedexGUI private constructor(
-    val type: PokedexTypes,
+    val type: PokedexType,
     val initSpecies: ResourceLocation?
 ): Screen(Component.translatable("cobblemon.ui.pokedex.title")) {
     var oldDragPosX = 0.0
@@ -534,7 +534,7 @@ class PokedexGUI private constructor(
         /**
          * Attempts to open this screen for a client.
          */
-        fun open(pokedex: ClientPokedexManager, type: PokedexTypes, species: ResourceLocation? = null) {
+        fun open(pokedex: ClientPokedexManager, type: PokedexType, species: ResourceLocation? = null) {
             val mc = Minecraft.getInstance()
             val screen = PokedexGUI(type, species)
             mc.setScreen(screen)

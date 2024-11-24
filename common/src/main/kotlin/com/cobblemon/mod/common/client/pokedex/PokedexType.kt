@@ -10,14 +10,16 @@ package com.cobblemon.mod.common.client.pokedex
 
 import com.cobblemon.mod.common.util.cobblemonResource
 
-enum class PokedexTypes {
-    BLACK,
-    BLUE,
-    GREEN,
-    PINK,
+enum class PokedexType {
     RED,
+    YELLOW,
+    GREEN,
+    BLUE,
+    PINK,
     WHITE,
-    YELLOW;
+    BLACK;
 
     fun getTexturePath() = cobblemonResource("textures/gui/pokedex/pokedex_base_${this.name.lowercase()}.png")
+    fun getItemModelPath() = cobblemonResource("item/pokedex_${this.name.lowercase()}_model")
+    fun getItemSpritePath() = cobblemonResource("pokedex_${this.name.lowercase()}")
 }
