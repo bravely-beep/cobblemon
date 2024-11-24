@@ -81,6 +81,11 @@ import net.minecraft.world.phys.Vec3
  */
 object MoLangFunctions {
     val generalFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>(
+        "run_command" to java.util.function.Function { params ->
+            val command = params.getString(0)
+            val server = server() ?: return@Function DoubleValue(0)
+            server.commandManager.executeWithPrefix(server.commandSource, command)
+        },
         "is_int" to java.util.function.Function { params -> DoubleValue(params.get<MoValue>(0).asString().isInt()) },
         "is_number" to java.util.function.Function { params -> DoubleValue(params.get<MoValue>(0).asString().toDoubleOrNull() != null) },
         "to_number" to java.util.function.Function { params -> DoubleValue(params.get<MoValue>(0).asString().toDoubleOrNull() ?: 0.0) },
@@ -166,6 +171,11 @@ object MoLangFunctions {
                 val environment = MoLangEnvironment()
                 environment.query = player.asMoLangValue()
                 environment
+            }
+            map.put("run_command") { params ->
+                val command = params.getString(0)
+                val server = server() ?: return@put DoubleValue(0)
+                server.commandManager.executeWithPrefix(player.commandSource, command)
             }
             if (player is ServerPlayer) {
                 map.put("is_party_at_full_health") { _ ->

@@ -14,6 +14,9 @@ import com.bedrockk.molang.ast.NumberExpression
 import com.bedrockk.molang.runtime.MoLangEnvironment
 import com.bedrockk.molang.runtime.MoLangRuntime
 import com.bedrockk.molang.runtime.MoParams
+import com.bedrockk.molang.runtime.MoScope
+import com.bedrockk.molang.runtime.struct.ArrayStruct
+import com.bedrockk.molang.runtime.struct.QueryStruct
 import com.bedrockk.molang.runtime.struct.ArrayStruct
 import com.bedrockk.molang.runtime.struct.ContextStruct
 import com.bedrockk.molang.runtime.value.DoubleValue
@@ -41,7 +44,7 @@ fun MoLangRuntime.resolve(expression: Expression, context: Map<String, MoValue> 
     }
 //    expression.evaluate(MoScope(), environment)
 } catch (e: Exception) {
-    throw IllegalArgumentException("Unable to parse expression: ${expression.getString()}", e)
+    throw IllegalArgumentException("Unable to evaluate expression: ${expression.getString()}", e)
 }
 fun MoLangRuntime.resolveDouble(expression: Expression, context: Map<String, MoValue> = contextOrEmpty): Double = resolve(expression, context).asDouble()
 fun MoLangRuntime.resolveFloat(expression: Expression, context: Map<String, MoValue> = contextOrEmpty): Float = resolve(expression, context).asDouble().toFloat()
@@ -214,4 +217,10 @@ fun BlockPos.toArrayStruct() = ArrayStruct().apply {
     map["0"] = DoubleValue(x)
     map["1"] = DoubleValue(y)
     map["2"] = DoubleValue(z)
+}
+
+fun <T> Collection<T>.asArrayValue(mapper: (T) -> MoValue): ArrayStruct {
+    val array = ArrayStruct()
+    forEachIndexed { index, value -> array.setDirectly("$index", mapper(value)) }
+    return array
 }

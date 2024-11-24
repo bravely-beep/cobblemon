@@ -26,6 +26,7 @@ import com.cobblemon.mod.common.api.molang.MoLangFunctions.addPokemonFunctions
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.addStandardFunctions
 import com.cobblemon.mod.common.api.net.serializers.PoseTypeDataSerializer
 import com.cobblemon.mod.common.api.net.serializers.StringSetDataSerializer
+import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies
 import com.cobblemon.mod.common.api.pokemon.feature.ChoiceSpeciesFeatureProvider
 import com.cobblemon.mod.common.api.pokemon.feature.FlagSpeciesFeature
