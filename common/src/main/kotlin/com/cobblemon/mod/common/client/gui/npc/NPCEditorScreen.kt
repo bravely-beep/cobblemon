@@ -10,6 +10,7 @@ package com.cobblemon.mod.common.client.gui.npc
 
 import com.cobblemon.mod.common.api.gui.blitk
 import com.cobblemon.mod.common.api.text.text
+import com.cobblemon.mod.common.client.gui.npc.widgets.ConfigVariableList
 import com.cobblemon.mod.common.client.gui.npc.widgets.NPCRenderWidget
 import com.cobblemon.mod.common.client.gui.npc.widgets.SimpleNPCTextInputWidget
 import com.cobblemon.mod.common.net.messages.client.npc.dto.NPCConfigurationDTO
@@ -73,21 +74,23 @@ class NPCEditorScreen(
                     SaveNPCPacket(npcId, dto).sendToServer()
                     this.minecraft!!.setScreen(null)
                 }
-                .pos(leftX + BASE_WIDTH - 42, topY + BASE_HEIGHT - 18)
+                .pos(leftX + BASE_WIDTH - 42, topY + BASE_HEIGHT - 14)
                 .size(40, 16)
                 .build()
         )
+
+        addRenderableWidget(ConfigVariableList(leftX + 214, topY + 30, this))
     }
 
     override fun render(context: GuiGraphics, mouseX: Int, mouseY: Int, delta: Float) {
-        blitk(
-            matrixStack = context.pose(),
-            texture = baseResource,
-            x = leftX,
-            y = topY,
-            height = BASE_HEIGHT,
-            width = BASE_WIDTH
-        )
+//        blitk(
+//            matrixStack = context.pose(),
+//            texture = baseResource,
+//            x = leftX,
+//            y = topY,
+//            height = BASE_HEIGHT,
+//            width = BASE_WIDTH
+//        )
         super.render(context, mouseX, mouseY, delta)
     }
 }

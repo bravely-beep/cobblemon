@@ -124,10 +124,17 @@ object MoLangFunctions {
             } ?: return@Function DoubleValue.ZERO
         }
     )
-    val biomeFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
-    val worldFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
-    val dimensionTypeFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
-    val blockFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
+    val biomeFunctions = mutableListOf<(Holder<Biome>) -> HashMap<String, java.util.function.Function<MoParams, Any>>>()
+    val worldFunctions = mutableListOf<(Holder<Level>) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
+        { worldHolder ->
+            val world = worldHolder.value()
+            val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
+            map.put("game_time") { _ -> DoubleValue(world.gameTime.toDouble()) }
+            return@mutableListOf map
+        }
+    )
+    val dimensionTypeFunctions = mutableListOf<(Holder<DimensionType>) -> HashMap<String, java.util.function.Function<MoParams, Any>>>()
+    val blockFunctions = mutableListOf<(Holder<Block>) -> HashMap<String, java.util.function.Function<MoParams, Any>>>()
     val playerFunctions = mutableListOf<(Player) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
         { player ->
             val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
@@ -141,7 +148,7 @@ object MoLangFunctions {
             map.put("saturation_level") { _ -> DoubleValue(player.foodData.saturationLevel) }
             map.put("tell") { params ->
                 val message = params.getString(0).text()
-                val overlay = params.getBooleanOrNull(1) ?: false
+                val overlay = params.getBooleanOrNull(1) == true
                 player.displayClientMessage(message, overlay)
             }
             map.put("teleport") { params ->
@@ -188,6 +195,17 @@ object MoLangFunctions {
                 map.put("save_data") { _ -> Cobblemon.molangData.save(player.uuid) }
                 map.put("in_battle") { DoubleValue(player.isInBattle()) }
                 map.put("battle") { player.getBattleState()?.first?.struct ?: DoubleValue.ZERO }
+                map.put("get_npc_data") { params ->
+                    val npcId = (params.get<MoValue>(0) as? ObjectValue<NPCEntity>)?.obj?.stringUUID ?: params.getString(0)
+                    val data = Cobblemon.molangData.load(player.uuid)
+                    if (data.map.containsKey(npcId)) {
+                        return@put data.map[npcId]!!
+                    } else {
+                        val vars = VariableStruct()
+                        data.map[npcId] = vars
+                        return@put vars
+                    }
+                }
             }
             map
         }
@@ -535,10 +553,10 @@ object MoLangFunctions {
         }
     )
 
-    fun Holder<Biome>.asBiomeMoLangValue() = asMoLangValue(Registries.BIOME).addFunctions(biomeFunctions)
-    fun Holder<Level>.asWorldMoLangValue() = asMoLangValue(Registries.DIMENSION).addFunctions(worldFunctions)
-    fun Holder<Block>.asBlockMoLangValue() = asMoLangValue(Registries.BLOCK).addFunctions(blockFunctions)
-    fun Holder<DimensionType>.asDimensionTypeMoLangValue() = asMoLangValue(Registries.DIMENSION_TYPE).addFunctions(dimensionTypeFunctions)
+    fun Holder<Biome>.asBiomeMoLangValue() = asMoLangValue(Registries.BIOME).addFunctions(biomeFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+    fun Holder<Level>.asWorldMoLangValue() = asMoLangValue(Registries.DIMENSION).addFunctions(worldFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+    fun Holder<Block>.asBlockMoLangValue() = asMoLangValue(Registries.BLOCK).addFunctions(blockFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+    fun Holder<DimensionType>.asDimensionTypeMoLangValue() = asMoLangValue(Registries.DIMENSION_TYPE).addFunctions(dimensionTypeFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
     fun Player.asMoLangValue(): ObjectValue<Player> {
         val value = ObjectValue(
             obj = this,

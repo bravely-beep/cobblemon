@@ -53,9 +53,13 @@
             "action": [
               "q.dialogue.close();",
               "v.battle = q.npc.start_battle(q.player);",
-              "v.npc = q.npc;",
-              "v.reward = 'A new reward!!! POGGERS';",
-              "q.run_script('set_npc_battle_reward');"
+              "t.npc_data = q.player.get_npc_data(q.npc);",
+              "t.npc_data.last_challenged_time = q.npc.world.game_time;",
+              "q.player.save_data();"
+            ],
+            "isSelectable": [
+              "t.npc_data = q.player.get_npc_data(q.npc);",
+              "t.npc_data.last_challenged_time == 0 || (q.npc.world.game_time - t.npc_data.last_challenged_time) >= 180;"
             ]
           },
           {
