@@ -317,6 +317,17 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
         schedulingTracker.update(1/20F)
     }
 
+    private fun ancientBallShake(animations: Set<String>) {
+        val pktShakeAncientAnimation = PlayPosableAnimationPacket(this.id, animations, emptyList())
+        pktShakeAncientAnimation.sendToPlayersAround(
+            x = this.x,
+            y = this.y,
+            z = this.z,
+            worldKey = this.level().dimension(),
+            distance = 64.0
+        )
+    }
+
     private fun shakeBall(task: ScheduledTask, rollsRemaining: Int, captureResult: CaptureContext) {
         if (this.capturingPokemon?.isAlive != true || !this.isAlive || this.owner == null|| owner?.isAlive != true) {
             if (this.capturingPokemon?.isAlive == true) {
@@ -354,10 +365,18 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
             }
             return
         }
-
         // Emits a shake by changing the value to the opposite of what it currently is. Sends an update to the client basically.
         // We could replace this with a packet, but it feels awfully excessive when we already have 5 bajillion packets.
-        entityData.update(SHAKE) { !it }
+        if (this.pokeBall.ancient) {
+            when (captureResult.numberOfShakes) {
+                1 -> ancientBallShake(setOf("q.bedrock_stateful('ancient_poke_ball', 'weirdhop')"))
+                2 -> ancientBallShake(setOf("q.bedrock_stateful('ancient_poke_ball', 'bighop')"))
+                3 -> ancientBallShake(setOf("q.bedrock_stateful('ancient_poke_ball', 'midhop1')", "q.bedrock_stateful('ancient_poke_ball', 'midhop2')"))
+                4 -> ancientBallShake(setOf("q.bedrock_stateful('ancient_poke_ball', 'smallhop1')", "q.bedrock_stateful('ancient_poke_ball', 'smallhop2')"))
+            }
+        } else {
+            entityData.update(SHAKE) { !it }
+        }
     }
 
     private fun breakFree() {
@@ -483,6 +502,9 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
             .delay(SECONDS_BEFORE_SHAKE)
             .interval(SECONDS_BETWEEN_SHAKES)
             .execute {
+                if (pokeBall.ancient && rollsRemaining > 1) {
+                    rollsRemaining = 1
+                }
                 shakeBall(it, rollsRemaining, captureResult)
                 rollsRemaining--
             }
