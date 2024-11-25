@@ -56,6 +56,8 @@
   "item.cobblemon.poke_rod": "Poké Rod",
   "cobblemon.pokerod.bobber": "Bobber: %1$s",
   "cobblemon.pokerod.bait": "Bait: %1$s ×%2$s",
+  "cobblemon.pokerod.apply": "Right-click to apply bait",
+  "cobblemon.pokerod.remove": "Right click to remove bait",
 
   "item.cobblemon.black_apricorn_seed": "Black Apricorn Sprout",
   "item.cobblemon.blue_apricorn_seed": "Blue Apricorn Sprout",
