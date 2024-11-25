@@ -18,6 +18,7 @@ import com.cobblemon.mod.common.client.gui.pokedex.PokedexGUIConstants.HALF_OVER
 import com.cobblemon.mod.common.client.gui.pokedex.PokedexGUIConstants.SCALE
 import com.cobblemon.mod.common.client.render.drawScaledText
 import com.cobblemon.mod.common.util.cobblemonResource
+import com.cobblemon.mod.common.util.lang
 import net.minecraft.Util
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiGraphics
@@ -42,10 +43,8 @@ class SearchWidget(
     var focusedTime: Long = 0
 
     init {
-        this.setMaxLength(24)
-        this.setResponder {
-            update.invoke()
-        }
+        this.setMaxLength(23)
+        this.setResponder { update.invoke() }
         focusedTime = Util.getMillis()
     }
 
@@ -82,7 +81,7 @@ class SearchWidget(
 
         val showCursor = isFocused && ((Util.getMillis() - this.focusedTime) / 300L % 2L == 0L)
         val input = if (isFocused) "${value}${if ((cursorPosition == value.length) && showCursor) "_" else ""}".text()
-            else (if(value.isEmpty()) Component.translatable("cobblemon.ui.pokedex.search") else value.text())
+            else (if(value.isEmpty()) lang("ui.pokedex.search") else value.text())
         val startX = posX.toInt() + 13
         val startY = posY.toInt() + 1
         drawScaledText(
