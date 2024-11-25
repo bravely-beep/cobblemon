@@ -41,13 +41,15 @@
 - Added effects for the moves: Seismic Toss, Withdraw, Bite, Crunch, Super Fang, Hyper Fang, Pursuit, Mist, Haze, Lick, Kinesis, Psychic, Water Sport, and Mud Sport.
 - Added a new universal locator called `top`.
 - Added shiny Pokémon particles with sound effects.
-- Added animation for trading.
+- Added animation and sounds for trading.
 - Added icons for pending trade, team-up, and battle requests from other players.
 - Added `/spawnnpc` and `/spawnnpcat` commands.
 - Pokémon are now animated when seen in any GUI that isn't the party GUI.
 - Quirk animations can now occur for Pokémon that are shoulder mounted.
 - Added `fishing boat` structures that contain an Explorer Map leading to a shipwreck cove and a Poké Rod Smithing Template.
 - Added `submerged_shipwreck_cove` and `lush_shipwreck_cove` structures.
+- Added new sounds for Poké Balls bouncing off of Pokémon and landing on the ground during capture.
+- Added a unique set of sounds for Ancient Poké Balls.
 
 ### Pokémon Added
 #### Gen 1
@@ -323,6 +325,9 @@
 - Updated particles for status effects: Paralysis, Poison, and Sleep.
 - Updated particles on Gastly.
 - Revamped stat buff and de-buff particles.
+- Improved the performance of display cases that contain Pokémon photos.
+- Updated sounds for Poké Balls.
+- Updated the Poké Ball animation for Pokémon breaking out.
 - Improved the performance of display cases that contain Pokémon Model items.
 - Removed species Base Stats from the summary interface as it is now viewable within the Pokédex.
 - Changed summary tab text labels to icons.
@@ -405,6 +410,7 @@
 - Fixed top black border rendering in scroll interfaces in summary UI.
 - Fixed aspect tracking for Advancements.
 - Fixed illusion not copying aspects or caught ball.
+- Delay when successfully catching a Pokémon in an Ancient Poké Ball has been increased to account for the new sounds and particles.
 - Prevent summary stats tab from making sounds when clicking on an already open tab.
 - Fixed display case not being able to be fed items from underneath.
 
@@ -460,6 +466,7 @@
 - Sound events for all blocks now start with "block."
 - Gimmighoul chest and item interaction sounds have been moved to where its cry is.
 - Unused sound files and sound events have been removed.
+- Poké Ball sounds are now in their animation files, making them more flexible to edit.
 - Added MoLang compatibility in the isVisible property for transformed parts.
 - Added q.has_aspect('some_aspect') function to animations, posers, and entity particle effects.
 - Added support for conditional pose animations.

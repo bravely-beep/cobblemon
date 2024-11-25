@@ -29,44 +29,71 @@
   "pc.click": {
     "sounds": [ "cobblemon:pc/pc_click" ]
   },
-  "poke_ball.capture_started": {
-    "sounds": [ "cobblemon:pokeball/capture_started" ]
-  },
   "poke_ball.capture_succeeded": {
-    "subtitle": "cobblemon.subtitle.poke_ball.capture_succeeded",
-    "sounds": [ "cobblemon:pokeball/capture_succeeded" ]
+    "subtitle": "cobblemon.subtitle.pokeball.capture_succeeded",
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded", "volume":  0.7 } ]
+  },
+  "poke_ball.capture_succeeded.ancient": {
+    "subtitle": "cobblemon.subtitle.pokeball.capture_succeeded",
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded_ancient", "volume":  0.7 } ]
   },
   "poke_ball.shake": {
-    "sounds": [ "cobblemon:pokeball/shake_1", "cobblemon:pokeball/shake_2", "cobblemon:pokeball/shake_3", "cobblemon:pokeball/shake_4" ]
+    "sounds": [
+      { "name": "cobblemon:poke_ball/poke_ball_shake_1", "volume": 0.7 },
+      { "name": "cobblemon:poke_ball/poke_ball_shake_2", "volume": 0.7 },
+      { "name": "cobblemon:poke_ball/poke_ball_shake_3", "volume": 0.7 },
+      { "name": "cobblemon:poke_ball/poke_ball_shake_4", "volume": 0.7 }
+    ]
+  },
+  "poke_ball.shake.critical": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_shake_critical", "volume":  0.6 } ]
+  },
+  "poke_ball.bounce": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_bounce", "volume":  0.1 } ]
+  },
+  "poke_ball.bounce.ancient": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_bounce_ancient", "volume":  0.1 } ]
   },
   "poke_ball.open": {
-    "sounds": [ "cobblemon:pokeball/open" ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_open", "volume":  0.7 } ]
   },
-  "poke_ball.shiny_open": {
-    "sounds": [ "cobblemon:pokeball/shiny_open" ]
+  "poke_ball.shut": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_shut", "volume":  0.7 } ]
+  },
+  "poke_ball.open.ancient": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_open_ancient", "volume":  0.7 } ]
+  },
+  "poke_ball.shut.ancient": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_shut_ancient", "volume":  0.7 } ]
+  },
+  "poke_ball.break": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_break", "volume":  0.9 } ]
+  },
+  "poke_ball.break.ancient": {
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_break_ancient", "volume":  0.9 } ]
   },
   "poke_ball.recall": {
-    "sounds": [ { "name": "cobblemon:pokeball/recall", "volume":  0.7 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_recall", "volume":  0.7 } ]
   },
   "poke_ball.send_out": {
-    "sounds": [ { "name": "cobblemon:pokeball/send_out", "volume":  0.7 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_send_out", "volume":  0.7 } ]
   },
   "poke_ball.shiny_send_out": {
-    "sounds": [ { "name": "cobblemon:pokeball/send_out_shiny", "volume":  0.7 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_send_out_shiny", "volume":  0.7 } ]
   },
   "poke_ball.hit": {
-    "sounds": [ "cobblemon:pokeball/hit" ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_hit", "volume":  0.4 } ]
   },
   "poke_ball.throw": {
     "sounds": [
-      { "name": "cobblemon:pokeball/throw_1", "volume": 0.8 },
-      { "name": "cobblemon:pokeball/throw_2", "volume": 0.8 },
-      { "name": "cobblemon:pokeball/throw_3", "volume": 0.8 },
-      { "name": "cobblemon:pokeball/throw_4", "volume": 0.8 }
+      { "name": "cobblemon:poke_ball/poke_ball_throw_1", "volume": 0.8 },
+      { "name": "cobblemon:poke_ball/poke_ball_throw_2", "volume": 0.8 },
+      { "name": "cobblemon:poke_ball/poke_ball_throw_3", "volume": 0.8 },
+      { "name": "cobblemon:poke_ball/poke_ball_throw_4", "volume": 0.8 }
     ]
   },
   "poke_ball.trail": {
-    "sounds": [ { "name": "cobblemon:pokeball/trail", "volume":  0.8 } ]
+    "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_trail", "volume":  0.8 } ]
   },
   "item.use": {
     "sounds": [ "cobblemon:use_item" ]

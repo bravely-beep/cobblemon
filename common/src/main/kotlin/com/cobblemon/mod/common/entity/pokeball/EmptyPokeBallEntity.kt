@@ -331,11 +331,11 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
             if (captureResult.isSuccessfulCapture) {
                 captureState = if (captureResult.isCriticalCapture) CaptureState.CAPTURED_CRITICAL else CaptureState.CAPTURED
                 // Do a capture
-                level().playSoundServer(position(), CobblemonSounds.POKE_BALL_CAPTURE_SUCCEEDED, volume = 0.8F, pitch = 1F)
                 val pokemon = capturingPokemon ?: return
                 val player = this.owner as? ServerPlayer ?: return
+                val captureTime = if (pokeBall.ancient == true) 1.8F else 1F
 
-                after(seconds = 1F) {
+                after(seconds = captureTime) {
                     // Dupes occurred by double-adding Pokémon, this hopefully prevents it triple-condom style
                     if (pokemon.pokemon.isWild() && pokemon.isAlive && !captureFuture.isDone) {
                         pokemon.discard()
@@ -355,7 +355,6 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
             return
         }
 
-        level().playSoundServer(position(), CobblemonSounds.POKE_BALL_SHAKE, volume = 0.8F)
         // Emits a shake by changing the value to the opposite of what it currently is. Sends an update to the client basically.
         // We could replace this with a packet, but it feels awfully excessive when we already have 5 bajillion packets.
         entityData.update(SHAKE) { !it }
@@ -372,17 +371,15 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
         }
 
         captureState = CaptureState.BROKEN_FREE
-        if (pokemon.pokemon.shiny) {
-            level().playSoundServer(position(), CobblemonSounds.POKE_BALL_SHINY_OPEN, volume = 0.8F)
-        } else {
-            level().playSoundServer(position(), CobblemonSounds.POKE_BALL_OPEN, volume = 0.8F)
-        }
 
-        after(seconds = 0.8F) {
+        after(seconds = 0.5F) {
             if (pokemon.pokemon.shiny) {
                 SpawnSnowstormEntityParticlePacket(cobblemonResource("shiny_ring"), pokemon.id, listOf("shiny_particles", "middle"))
                     .sendToPlayersAround(pokemon.x, pokemon.y, pokemon.z, 32.0, pokemon.level().dimension())
             }
+        }
+
+        after(seconds = 1.2F) {
             discard()
         }
 
@@ -415,7 +412,7 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
         val displace = deltaMovement
         captureState = CaptureState.HIT
         val mul = if (random.nextBoolean()) 1 else -1
-        level().playSoundServer(position(), CobblemonSounds.POKE_BALL_HIT, volume = 0.4F)
+        level().playSoundServer(position(), CobblemonSounds.POKE_BALL_HIT, volume = 1F)
 
         // Hit Pokémon plays recoil animation
         val pkt = PlayPosableAnimationPacket(pokemonEntity.id, setOf("recoil"), emptyList())
@@ -434,7 +431,7 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
             // Start beaming them up.
             deltaMovement = Vec3.ZERO
             setNoGravity(true)
-            level().playSoundServer(position(), CobblemonSounds.POKE_BALL_CAPTURE_STARTED, volume = 0.6F)
+            level().playSoundServer(position(), CobblemonSounds.POKE_BALL_RECALL, volume = 0.6F)
             pokemonEntity.beamMode = 3
         }
 
