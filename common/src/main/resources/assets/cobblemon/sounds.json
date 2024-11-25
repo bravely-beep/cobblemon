@@ -45,6 +45,20 @@
       { "name": "cobblemon:poke_ball/poke_ball_shake_4", "volume": 0.7 }
     ]
   },
+  "poke_ball.shake.ancient": {
+    "sounds": [
+      { "name": "cobblemon:poke_ball/poke_ball_shake_ancient_1", "volume": 0.7 },
+      { "name": "cobblemon:poke_ball/poke_ball_shake_ancient_2", "volume": 0.7 },
+      { "name": "cobblemon:poke_ball/poke_ball_shake_ancient_3", "volume": 0.7 },
+      { "name": "cobblemon:poke_ball/poke_ball_shake_ancient_4", "volume": 0.7 }
+    ]
+  },
+  "poke_ball.land.ancient": {
+    "sounds": [
+      { "name": "cobblemon:poke_ball/poke_ball_land_ancient_1", "volume": 0.08 },
+      { "name": "cobblemon:poke_ball/poke_ball_land_ancient_2", "volume": 0.08 }
+    ]
+  },
   "poke_ball.shake.critical": {
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_shake_critical", "volume":  0.6 } ]
   },

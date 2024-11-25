@@ -332,6 +332,12 @@
 - Removed species Base Stats from the summary interface as it is now viewable within the Pokédex.
 - Changed summary tab text labels to icons.
 - Clicking the summary interface exit button while the swap moves or evolve screen is open will cause the interface to switch back to the party screen. The button will exit the interface otherwise.
+- Ancient Poke Balls now jump once rather than shaking 3 times when capturing Pokémon.
+  - The jump height indicate the number of shakes that would have occurred.
+    - A high wobbly jump indicates 1 shake.
+    - A high jump indicates 2 shakes.
+    - A medium jump indicates 3 shakes.
+    - A short jump indicates that you caught the Pokémon.
 
 ### Fixes
 - Fixed awarding Pokémon experience upon forfeiting battles.
