@@ -31,7 +31,7 @@
       "quirks": [
         "q.bedrock_quirk('porygon2', 'blink')",
         "q.bedrock_quirk('porygon2', 'quirk')",
-        "q.bedrock_primary_quirk('porygon2', q.array('idle_quirk', 'idle_quirk2'), 20, 40, 1, q.curve('symmetrical_wide'))"
+        "q.bedrock_primary_quirk('porygon2', q.array('idle_quirk', 'idle_quirk2'), 20, 40, 1, q.curve('symmetrical'))"
       ]
     },
     "walking": {
