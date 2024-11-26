@@ -35,9 +35,9 @@ class ConfigVariableList(
     SLOT_HEIGHT + SLOT_SPACING
 ) {
     companion object {
-        const val WIDTH = 140
+        const val WIDTH = 200
         const val HEIGHT = 120
-        const val SLOT_WIDTH = 124
+        const val SLOT_WIDTH = 160
         const val SLOT_HEIGHT = 33
         const val SLOT_SPACING = 0
     }
@@ -129,16 +129,16 @@ class ConfigVariableList(
 
         val editBox = EditBox(
             client.font,
-            parent.listX + 4,
+            parent.listX,
             parent.listY + 4,
-            SLOT_WIDTH - 8,
+            if (variable.type == NPCVariableType.NUMBER) SLOT_WIDTH - 100 else SLOT_WIDTH,
             SLOT_HEIGHT - 8,
             variable.displayName,
         ).also {
             it.tooltip = Tooltip.create(variable.description)
             it.height = SLOT_HEIGHT - 16
+            it.setMaxLength(250)
             it.value = value
-            it.setMaxLength(200)
             it.setResponder {
                 textValue = it
                 parent.parent.dto.variables[variable.variableName] = it
@@ -201,17 +201,17 @@ class ConfigVariableList(
 //            )
 
             if (variable.type == NPCVariableType.BOOLEAN) {
-                cycleButton.x = x + 4
+                cycleButton.x = x
                 cycleButton.y = y + 6
                 cycleButton.render(context, mouseX, mouseY, partialTicks)
             } else {
                 drawScaledText(
                     context = context,
                     text = variable.displayName.visualOrderText,
-                    x = x + 4,
+                    x = x,
                     y = y + 4
                 )
-                editBox.x = x + 4
+                editBox.x = x
                 editBox.y = y + 14
                 editBox.render(context, mouseX, mouseY, partialTicks)
             }

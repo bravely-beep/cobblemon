@@ -48,19 +48,16 @@
         "vertical": false,
         "options": [
           {
-            "text": "Battle",
+            "text": {
+              "type": "expression",
+              "expression": "q.run_script('cobblemon:npc_battle_cooling_down') ? 'Battle (cooling down)' : 'Battle';"
+            },
             "value": "battle",
             "action": [
               "q.dialogue.close();",
-              "v.battle = q.npc.start_battle(q.player);",
-              "t.npc_data = q.player.get_npc_data(q.npc);",
-              "t.npc_data.last_challenged_time = q.npc.world.game_time;",
-              "q.player.save_data();"
+              "q.npc.start_battle(q.player);"
             ],
-            "isSelectable": [
-              "t.npc_data = q.player.get_npc_data(q.npc);",
-              "t.npc_data.last_challenged_time == 0 || (q.npc.world.game_time - t.npc_data.last_challenged_time) >= 180;"
-            ]
+            "isSelectable": "!q.run_script('cobblemon:npc_battle_cooling_down') && c.npc.can_battle;"
           },
           {
             "text": "Trade",

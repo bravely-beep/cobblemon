@@ -8,7 +8,6 @@
 
 package com.cobblemon.mod.common.client.gui.npc
 
-import com.cobblemon.mod.common.api.gui.blitk
 import com.cobblemon.mod.common.api.text.text
 import com.cobblemon.mod.common.client.gui.npc.widgets.ConfigVariableList
 import com.cobblemon.mod.common.client.gui.npc.widgets.NPCRenderWidget
@@ -28,8 +27,6 @@ class NPCEditorScreen(
     companion object {
         const val BASE_WIDTH = 331
         const val BASE_HEIGHT = 161
-
-        private val baseResource = cobblemonResource("textures/gui/npc/editor_base.png")
     }
 
     val middleX: Int
@@ -44,13 +41,13 @@ class NPCEditorScreen(
 
     override fun init() {
         super.init()
-        addRenderableOnly(NPCRenderWidget(leftX + 6, topY + 32, dto.npcClass, dto.aspects))
+        addRenderableOnly(NPCRenderWidget(leftX + 6, topY + 22, dto.npcClass, dto.aspects))
         addRenderableWidget(SimpleNPCTextInputWidget(
             texture = cobblemonResource("textures/gui/npc/basic_text_input.png"),
             getter = { dto.npcName.string },
             setter = { dto.npcName = it.text() },
-            x = leftX + 79,
-            y = topY + 14,
+            x = leftX + 6,
+            y = topY + 80,
             width = 130,
             height = 22
         ))
@@ -61,8 +58,8 @@ class NPCEditorScreen(
                 dto.aspects.clear()
                 dto.aspects.addAll(it.split(",").map { it.trim() })
             },
-            x = leftX + 79,
-            y = topY + 36,
+            x = leftX + 6,
+            y = topY + 100,
             width = 130,
             height = 40,
             maxLength = 75,
@@ -74,12 +71,12 @@ class NPCEditorScreen(
                     SaveNPCPacket(npcId, dto).sendToServer()
                     this.minecraft!!.setScreen(null)
                 }
-                .pos(leftX + BASE_WIDTH - 42, topY + BASE_HEIGHT - 14)
+                .pos(leftX + BASE_WIDTH - 42, topY + BASE_HEIGHT - 8)
                 .size(40, 16)
                 .build()
         )
 
-        addRenderableWidget(ConfigVariableList(leftX + 214, topY + 30, this))
+        addRenderableWidget(ConfigVariableList(leftX + 200, topY + 30, this))
     }
 
     override fun render(context: GuiGraphics, mouseX: Int, mouseY: Int, delta: Float) {

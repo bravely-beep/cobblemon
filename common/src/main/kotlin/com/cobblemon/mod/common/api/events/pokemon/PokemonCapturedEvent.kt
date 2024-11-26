@@ -13,7 +13,7 @@ import com.cobblemon.mod.common.api.molang.MoLangFunctions.asMoLangValue
 import com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.util.itemRegistry
-import net.minecraft.registry.RegistryKeys
+import net.minecraft.core.registries.Registries
 import net.minecraft.server.level.ServerPlayer
 
 data class PokemonCapturedEvent (
@@ -25,6 +25,6 @@ data class PokemonCapturedEvent (
         "pokemon" to pokemon.struct,
         "player" to player.asMoLangValue(),
         "poke_ball" to pokeBallEntity.struct,
-        "item" to player.world.itemRegistry.getEntry(pokeBallEntity.pokeBall.item).asMoLangValue(RegistryKeys.ITEM)
+        "item" to player.level().itemRegistry.wrapAsHolder(pokeBallEntity.pokeBall.item).asMoLangValue(Registries.ITEM)
     )
 }

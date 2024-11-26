@@ -22,6 +22,8 @@ import com.cobblemon.mod.common.CobblemonActivities
 import com.cobblemon.mod.common.CobblemonBlockEntities
 import com.cobblemon.mod.common.CobblemonMemories
 import com.cobblemon.mod.common.api.battles.model.PokemonBattle
+import com.cobblemon.mod.common.api.battles.model.actor.ActorType
+import com.cobblemon.mod.common.api.battles.model.actor.BattleActor
 import com.cobblemon.mod.common.api.dialogue.PlayerDialogueFaceProvider
 import com.cobblemon.mod.common.api.dialogue.ReferenceDialogueFaceProvider
 import com.cobblemon.mod.common.api.moves.animations.ActionEffectContext
@@ -37,17 +39,22 @@ import com.cobblemon.mod.common.api.storage.pc.PCPosition
 import com.cobblemon.mod.common.api.storage.pc.PCStore
 import com.cobblemon.mod.common.api.text.text
 import com.cobblemon.mod.common.battles.BattleRegistry
+import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
 import com.cobblemon.mod.common.client.render.models.blockbench.wavefunction.WaveFunctions
+import com.cobblemon.mod.common.entity.PosableEntity
+import com.cobblemon.mod.common.entity.npc.NPCBattleActor
 import com.cobblemon.mod.common.entity.npc.NPCEntity
 import com.cobblemon.mod.common.entity.pokemon.PokemonBehaviourFlag
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.entity.pokemon.ai.PokemonMoveControl
+import com.cobblemon.mod.common.net.messages.client.animation.PlayPosableAnimationPacket
 import com.cobblemon.mod.common.net.messages.client.effect.RunPosableMoLangPacket
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.util.*
 import com.mojang.datafixers.util.Either
 import java.util.UUID
 import net.minecraft.commands.arguments.EntityAnchorArgument
+import net.minecraft.core.BlockPos
 import net.minecraft.core.Holder
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
@@ -59,14 +66,18 @@ import net.minecraft.nbt.StringTag
 import net.minecraft.nbt.Tag
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.server.MinecraftServer
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.tags.TagKey
 import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.damagesource.DamageTypes
+import net.minecraft.world.entity.EntityType
+import net.minecraft.world.entity.LightningBolt
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.Level
+import net.minecraft.world.level.Level.ExplosionInteraction
 import net.minecraft.world.level.biome.Biome
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.dimension.DimensionType
@@ -81,10 +92,24 @@ import net.minecraft.world.phys.Vec3
  */
 object MoLangFunctions {
     val generalFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>(
+        "print" to java.util.function.Function { params ->
+            val message = params.getString(0)
+            Cobblemon.LOGGER.info(message)
+        },
+        "replace" to java.util.function.Function { params ->
+            val text = params.getString(0)
+            val search = params.getString(1)
+            val replace = params.getString(2)
+            return@Function StringValue(text.replace(search, replace))
+        },
+        "is_blank" to java.util.function.Function { params ->
+            val arg = params.get<MoValue>(0)
+            return@Function DoubleValue((arg is StringValue && (arg.value.isBlank() || arg.value.toDoubleOrNull() == 0.0)) || (arg is DoubleValue && arg.value == 0.0))
+        },
         "run_command" to java.util.function.Function { params ->
             val command = params.getString(0)
-            val server = server() ?: return@Function DoubleValue(0)
-            server.commandManager.executeWithPrefix(server.commandSource, command)
+            val server = server() ?: return@Function DoubleValue.ZERO
+            server.commands.performPrefixedCommand(server.createCommandSourceStack(), command)
         },
         "is_int" to java.util.function.Function { params -> DoubleValue(params.get<MoValue>(0).asString().isInt()) },
         "is_number" to java.util.function.Function { params -> DoubleValue(params.get<MoValue>(0).asString().toDoubleOrNull() != null) },
@@ -120,14 +145,16 @@ object MoLangFunctions {
             runtime.environment.variable = params.environment.variable
             runtime.environment.context = params.environment.context
             val script = params.getString(0).asIdentifierDefaultingNamespace()
-            CobblemonScripts.run(script, runtime) ?: DoubleValue(0)
+            CobblemonScripts.run(script, runtime) ?: DoubleValue.ZERO
         },
-        "run_command" to java.util.function.Function { params ->
-            val command = params.getString(0)
-            server()?.let {
-                return@Function DoubleValue(it.commands.dispatcher.execute(command, it.createCommandSourceStack()))
-            } ?: return@Function DoubleValue.ZERO
-        }
+        "run_molang" to java.util.function.Function { params ->
+            val runtime = MoLangRuntime()
+            runtime.environment.query = params.environment.query
+            runtime.environment.variable = params.environment.variable
+            runtime.environment.context = params.environment.context
+            val expression = params.getString(0).asExpression()
+            runtime.resolve(expression)
+        },
     )
     val biomeFunctions = mutableListOf<(Holder<Biome>) -> HashMap<String, java.util.function.Function<MoParams, Any>>>()
     val worldFunctions = mutableListOf<(Holder<Level>) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
@@ -135,6 +162,61 @@ object MoLangFunctions {
             val world = worldHolder.value()
             val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
             map.put("game_time") { _ -> DoubleValue(world.gameTime.toDouble()) }
+            map.put("server") { _ -> server()?.asMoLangValue() ?: DoubleValue.ZERO }
+            map.put("is_raining_at") { params ->
+                val x = params.getInt(0)
+                val y = params.getInt(1)
+                val z = params.getInt(2)
+                return@put DoubleValue(world.isRainingAt(BlockPos(x, y, z)))
+            }
+            map.put("is_thundering") { _ -> DoubleValue(world.isThundering) }
+            map.put("is_raining") { _ -> DoubleValue(world.isRaining) }
+            map.put("set_block") { params ->
+                val x = params.getInt(0)
+                val y = params.getInt(1)
+                val z = params.getInt(2)
+                val block = world.blockRegistry.get(params.getString(3).asIdentifierDefaultingNamespace())
+                    ?: run {
+                        Cobblemon.LOGGER.error("Unknown block: ${params.getString(3)}")
+                        return@put DoubleValue.ZERO
+                    }
+                world.setBlock(BlockPos(x, y, z), block.defaultBlockState(), Block.UPDATE_ALL)
+            }
+            map.put("get_block") { params ->
+                val x = params.getInt(0)
+                val y = params.getInt(1)
+                val z = params.getInt(2)
+                val block = world.getBlockState(BlockPos(x, y, z)).block
+                return@put world.blockRegistry.wrapAsHolder(block).asMoLangValue(Registries.BLOCK)
+            }
+            map.put("spawn_explosion") { params ->
+                val x = params.getDouble(0)
+                val y = params.getDouble(1)
+                val z = params.getDouble(2)
+                val range = params.getDouble(3).toFloat()
+                world.explode(null, x, y, z, range, ExplosionInteraction.valueOf(params.getStringOrNull(4)?.uppercase() ?: ExplosionInteraction.TNT.name))
+            }
+            map.put("spawn_lightning") { params ->
+                val x = params.getDouble(0)
+                val y = params.getDouble(1)
+                val z = params.getDouble(2)
+                val lightning = LightningBolt(EntityType.LIGHTNING_BOLT, world)
+                lightning.setPos(x, y, z)
+                world.addFreshEntity(lightning)
+                return@put DoubleValue.ONE
+            }
+            map.put("get_entities_around") { params ->
+                val x = params.getDouble(0)
+                val y = params.getDouble(1)
+                val z = params.getDouble(2)
+                val range = params.getDouble(3) * 2
+                val entities = world.getEntities(null, AABB.ofSize(Vec3(x, y, z), range, range, range))
+                return@put entities
+                    .filterIsInstance<LivingEntity>()
+                    .map { it.asMostSpecificMoLangValue() }
+                    .asArrayValue()
+            }
+
             return@mutableListOf map
         }
     )
@@ -172,12 +254,12 @@ object MoLangFunctions {
                 environment.query = player.asMoLangValue()
                 environment
             }
-            map.put("run_command") { params ->
-                val command = params.getString(0)
-                val server = server() ?: return@put DoubleValue(0)
-                server.commandManager.executeWithPrefix(player.commandSource, command)
-            }
+            map.put("is_player") { DoubleValue.ONE }
             if (player is ServerPlayer) {
+                map.put("run_command") { params ->
+                    val command = params.getString(0)
+                    player.server.commands.performPrefixedCommand(player.createCommandSourceStack(), command)
+                }
                 map.put("is_party_at_full_health") { _ ->
                     DoubleValue(player.party().none(Pokemon::canBeHealed)) }
                 map.put("can_heal_at_healer") { params ->
@@ -220,7 +302,7 @@ object MoLangFunctions {
             map
         }
     )
-    val entityFunctions = mutableListOf<(LivingEntity) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
+    val entityFunctions: MutableList<(LivingEntity) -> HashMap<String, java.util.function.Function<MoParams, Any>>> = mutableListOf<(LivingEntity) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
         { entity ->
             val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
             map.put("uuid") { _ -> StringValue(entity.uuid.toString()) }
@@ -283,6 +365,22 @@ object MoLangFunctions {
                     return@put DoubleValue.ZERO
                 }
             }
+            map.put("get_nearby_entities") { params ->
+                val distance = params.getDouble(0)
+                val entities = entity.level().getEntities(entity, AABB.ofSize(entity.position(), distance, distance, distance))
+                return@put entities
+                    .filterIsInstance<LivingEntity>()
+                    .map { it.asMostSpecificMoLangValue() }
+                    .asArrayValue()
+            }
+            if (entity is PosableEntity) {
+                map.put("play_animation") { params ->
+                    val animation = params.getString(0)
+                    val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
+                    packet.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                    (animation)
+                }
+            }
             map
         }
     )
@@ -343,9 +441,9 @@ object MoLangFunctions {
                         }
                     }
 
-                    return@put DoubleValue(1)
+                    return@put DoubleValue.ONE
                 }
-                return@put DoubleValue(0)
+                return@put DoubleValue.ZERO
             }
             map.put("put_pokemon_in_healer") { params ->
                 val healer = npc.level().getBlockEntity(params.get<ArrayStruct>(0).asBlockPos(), CobblemonBlockEntities.HEALING_MACHINE).orElse(null) ?: return@put DoubleValue.ZERO
@@ -364,6 +462,8 @@ object MoLangFunctions {
             map.put("environment") { _ -> npc.runtime.environment }
             map.put("party") { npc.party?.struct ?: DoubleValue.ZERO }
             map.put("has_party") { DoubleValue(npc.party != null) }
+            map.put("is_npc") { DoubleValue.ONE }
+            map.put("can_battle") { DoubleValue(npc.party?.any { it.currentHealth > 0 } == true) }
             map
         }
     )
@@ -383,7 +483,23 @@ object MoLangFunctions {
                 return@put actor.struct
             }
             map.put("stop") { _ -> battle.stop() }
+            map.put("actors") { battle.actors.toList().asArrayValue { it.struct } }
             map
+        }
+    )
+
+    val battleActorFunctions = mutableListOf<(BattleActor) -> HashMap<String, java.util.function.Function<MoParams, Any>>>(
+        { battleActor ->
+            val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
+            map.put("is_npc") { DoubleValue(battleActor.type == ActorType.NPC) }
+            map.put("is_player") { DoubleValue(battleActor.type == ActorType.PLAYER) }
+            map.put("is_wild") { DoubleValue(battleActor.type == ActorType.WILD) }
+            if (battleActor is NPCBattleActor) {
+                map.put("npc") { battleActor.entity.struct }
+            } else if (battleActor is PlayerBattleActor) {
+                map.put("player") { battleActor.entity?.asMoLangValue() ?: DoubleValue.ZERO }
+            }
+            return@mutableListOf map
         }
     )
 
@@ -425,6 +541,7 @@ object MoLangFunctions {
             map.put("is_moving") { DoubleValue((pokemonEntity.moveControl as? PokemonMoveControl)?.hasWanted() == true) }
             map.put("is_flying") { DoubleValue(pokemonEntity.getBehaviourFlag(PokemonBehaviourFlag.FLYING)) }
             map.put("has_aspect") { DoubleValue(it.getString(0) in pokemonEntity.aspects) }
+            map.put("is_pokemon") { DoubleValue.ONE }
             map
         }
     )
@@ -563,9 +680,66 @@ object MoLangFunctions {
         }
     )
 
+    val serverFunctions: MutableList<(MinecraftServer) -> HashMap<String, java.util.function.Function<MoParams, Any>>> = mutableListOf(
+        { server ->
+            val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
+
+            map.put("get_world") { params ->
+                val world = server.getLevel(
+                    ResourceKey.create(
+                        Registries.DIMENSION,
+                        params.getString(0).asIdentifierDefaultingNamespace(namespace = "minecraft")
+                    )
+                ) ?: return@put DoubleValue.ZERO
+
+                return@put world
+                    .registryAccess()
+                    .registryOrThrow(Registries.DIMENSION)
+                    .wrapAsHolder(world)
+                    .asWorldMoLangValue()
+            }
+
+            map.put("broadcast") { params ->
+                val message = params.getString(0)
+                server.playerList.broadcastSystemMessage(message.text(), params.getBooleanOrNull(1) == true)
+                return@put DoubleValue.ONE
+            }
+
+            map.put("get_player_by_uuid") { params ->
+                val uuid = UUID.fromString(params.getString(0))
+                val player = server.playerList.getPlayer(uuid) ?: return@put DoubleValue.ZERO
+                return@put player.asMoLangValue()
+            }
+
+            map.put("get_player_by_username") { params ->
+                val username = params.getString(0)
+                val player = server.playerList.getPlayerByName(username) ?: return@put DoubleValue.ZERO
+                return@put player.asMoLangValue()
+            }
+
+            map.put("data") { params ->
+                val data = Cobblemon.molangData.load(UUID(0L, 0L))
+                return@put data
+            }
+
+            map.put("save_data") {
+                Cobblemon.molangData.save(UUID(0L, 0L))
+                return@put DoubleValue.ONE
+            }
+
+            map.put("stop") { params ->
+                Cobblemon.LOGGER.warn("Server is being stopped from a MoLang script.")
+                server.stopServer()
+            }
+
+            return@mutableListOf map
+        }
+    )
+
     fun Holder<Biome>.asBiomeMoLangValue() = asMoLangValue(Registries.BIOME).addFunctions(biomeFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
     fun Holder<Level>.asWorldMoLangValue() = asMoLangValue(Registries.DIMENSION).addFunctions(worldFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
     fun Holder<Block>.asBlockMoLangValue() = asMoLangValue(Registries.BLOCK).addFunctions(blockFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+    fun MinecraftServer.asMoLangValue() = ObjectValue(this).addStandardFunctions().addFunctions(serverFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
     fun Holder<DimensionType>.asDimensionTypeMoLangValue() = asMoLangValue(Registries.DIMENSION_TYPE).addFunctions(dimensionTypeFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
     fun Player.asMoLangValue(): ObjectValue<Player> {
         val value = ObjectValue(
@@ -614,12 +788,32 @@ object MoLangFunctions {
         return value
     }
 
+    fun PokemonEntity.asMoLangValue(): ObjectValue<PokemonEntity> {
+        val value = ObjectValue(
+            obj = this,
+            stringify = { it.pokemon.uuid.toString() }
+        )
+        value.addFunctions(entityFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+        value.addFunctions(pokemonFunctions.flatMap { it(this.pokemon).entries.map { it.key to it.value } }.toMap()) // Convenience
+        value.addFunctions(pokemonEntityFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+        return value
+    }
+
     fun PokemonBattle.asMoLangValue(): ObjectValue<PokemonBattle> {
         val value = ObjectValue(
             obj = this,
             stringify = { it.battleId.toString() }
         )
         value.addFunctions(battleFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
+        return value
+    }
+
+    fun BattleActor.asMoLangValue(): ObjectValue<BattleActor> {
+        val value = ObjectValue(
+            obj = this,
+            stringify = { it.toString() }
+        )
+        value.addFunctions(battleActorFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
         return value
     }
 
@@ -630,6 +824,18 @@ object MoLangFunctions {
         )
         value.addFunctions(spawningContextFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap())
         return value
+    }
+
+    /**
+     * Different functions exist depending on
+     */
+    fun LivingEntity.asMostSpecificMoLangValue(): ObjectValue<out LivingEntity> {
+        return when (this) {
+            is Player -> asMoLangValue()
+            is PokemonEntity -> asMoLangValue()
+            is NPCEntity -> asMoLangValue()
+            else -> ObjectValue(this).also { it.addStandardFunctions().addFunctions(entityFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap()) }
+        }
     }
 
     fun <T> Holder<T>.asMoLangValue(key: ResourceKey<Registry<T>>): ObjectValue<Holder<T>> {

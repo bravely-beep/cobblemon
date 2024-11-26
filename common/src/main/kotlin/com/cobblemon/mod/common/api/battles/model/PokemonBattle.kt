@@ -93,7 +93,6 @@ open class PokemonBattle(
                     .filterIsInstance<LastBattleCriticalHitsEvolutionProgress>()
                     .forEach { it.reset() }
             }
-            actor.setupStruct()
         }
     }
 

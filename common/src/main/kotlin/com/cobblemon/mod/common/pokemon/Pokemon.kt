@@ -8,10 +8,6 @@
 
 package com.cobblemon.mod.common.pokemon
 
-import com.bedrockk.molang.runtime.struct.QueryStruct
-import com.bedrockk.molang.runtime.struct.VariableStruct
-import com.bedrockk.molang.runtime.value.DoubleValue
-import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.CobblemonNetwork.sendPacketToPlayers
 import com.cobblemon.mod.common.CobblemonSounds
@@ -23,21 +19,6 @@ import com.cobblemon.mod.common.api.entity.PokemonSender
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.CobblemonEvents.FRIENDSHIP_UPDATED
 import com.cobblemon.mod.common.api.events.CobblemonEvents.POKEMON_FAINTED
-import com.cobblemon.mod.common.api.events.pokemon.ExperienceGainedPostEvent
-import com.cobblemon.mod.common.api.events.pokemon.ExperienceGainedPreEvent
-import com.cobblemon.mod.common.api.events.pokemon.FriendshipUpdatedEvent
-import com.cobblemon.mod.common.api.events.pokemon.HeldItemEvent
-import com.cobblemon.mod.common.api.events.pokemon.LevelUpEvent
-import com.cobblemon.mod.common.api.events.pokemon.PokemonFaintedEvent
-import com.cobblemon.mod.common.api.events.pokemon.PokemonRecalledEvent
-import com.cobblemon.mod.common.api.events.pokemon.PokemonSentPostEvent
-import com.cobblemon.mod.common.api.events.pokemon.PokemonSentPreEvent
-import com.cobblemon.mod.common.api.moves.BenchedMove
-import com.cobblemon.mod.common.api.moves.BenchedMoves
-import com.cobblemon.mod.common.api.moves.Move
-import com.cobblemon.mod.common.api.moves.MoveSet
-import com.cobblemon.mod.common.api.moves.MoveTemplate
-import com.cobblemon.mod.common.api.moves.Moves
 import com.cobblemon.mod.common.api.events.pokemon.*
 import com.cobblemon.mod.common.api.events.pokemon.healing.PokemonHealedEvent
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.addPokemonFunctions
@@ -111,15 +92,6 @@ import com.cobblemon.mod.common.pokemon.properties.BattleCloneProperty
 import com.cobblemon.mod.common.pokemon.properties.UncatchableProperty
 import com.cobblemon.mod.common.pokemon.status.PersistentStatus
 import com.cobblemon.mod.common.pokemon.status.PersistentStatusContainer
-import com.cobblemon.mod.common.util.DataKeys
-import com.cobblemon.mod.common.util.asIdentifierDefaultingNamespace
-import com.cobblemon.mod.common.util.cobblemonResource
-import com.cobblemon.mod.common.util.lang
-import com.cobblemon.mod.common.util.playSoundServer
-import com.cobblemon.mod.common.util.server
-import com.cobblemon.mod.common.util.setPositionSafely
-import com.cobblemon.mod.common.util.toBlockPos
-import com.google.gson.JsonArray
 import com.cobblemon.mod.common.util.DataKeys
 import com.cobblemon.mod.common.util.cobblemonResource
 import com.cobblemon.mod.common.util.codec.internal.ClientPokemonP1

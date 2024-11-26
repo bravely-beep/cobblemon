@@ -18,5 +18,8 @@ import com.cobblemon.mod.common.util.cobblemonResource
 object FlowHandler {
     fun setup() {
         CobblemonEvents.POKEMON_CAPTURED.subscribe { CobblemonFlows.run(cobblemonResource("pokemon_captured"), it.context) }
+        CobblemonEvents.BATTLE_VICTORY.subscribe { CobblemonFlows.run(cobblemonResource("battle_victory"), it.context) }
     }
 }
+
+

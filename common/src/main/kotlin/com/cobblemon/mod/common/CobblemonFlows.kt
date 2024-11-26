@@ -19,14 +19,14 @@ import com.cobblemon.mod.common.util.asExpressionLike
 import com.cobblemon.mod.common.util.cobblemonResource
 import com.cobblemon.mod.common.util.endsWith
 import java.util.concurrent.ExecutionException
-import net.minecraft.resource.ResourceManager
-import net.minecraft.resource.ResourceType
-import net.minecraft.server.network.ServerPlayerEntity
-import net.minecraft.util.Identifier
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.server.level.ServerPlayer
+import net.minecraft.server.packs.PackType
+import net.minecraft.server.packs.resources.ResourceManager
 
 /**
  * Holds all the flows that are loaded from the server's data packs. A flow is foldered under the event identifier,
- * which can be cobblemon's namespace but can also be minecraft or any other namespace someone has added hooks for.
+ * which can be Cobblemon's namespace but can also be minecraft or any other namespace someone has added hooks for.
  * The value of the map is a list of MoLang scripts that will execute when that event occurs.
  *
  * @author Hiroku
@@ -35,27 +35,27 @@ import net.minecraft.util.Identifier
 object CobblemonFlows : DataRegistry {
     override val id = cobblemonResource("flows")
     override val observable = SimpleObservable<CobblemonFlows>()
-    override val type = ResourceType.SERVER_DATA
-    override fun sync(player: ServerPlayerEntity) {}
+    override val type = PackType.SERVER_DATA
+    override fun sync(player: ServerPlayer) {}
 
-    val runtime by lazy { MoLangRuntime().setup() }
+    val runtime by lazy { MoLangRuntime().setup() } // Lazy for if someone adds to generalFunctions in MoLangFunctions
 
-    val clientFlows = hashMapOf<Identifier, MutableList<ExpressionLike>>()
-    val flows = hashMapOf<Identifier, MutableList<ExpressionLike>>()
+    val clientFlows = hashMapOf<ResourceLocation, MutableList<ExpressionLike>>()
+    val flows = hashMapOf<ResourceLocation, MutableList<ExpressionLike>>()
 
     override fun reload(manager: ResourceManager) {
         val folderBeforeNameRegex = ".*\\/([^\\/]+)\\/[^\\/]+\$".toRegex()
-        manager.findResources("flows") { path -> path.endsWith(CobblemonScripts.MOLANG_EXTENSION) }.forEach { (identifier, resource) ->
-            resource.inputStream.use { stream ->
-                stream.bufferedReader().use { reader ->
+        manager.listResources("flows") { path -> path.endsWith(CobblemonScripts.MOLANG_EXTENSION) }.forEach { (identifier, resource) ->
+            resource.openAsReader().use { stream ->
+                stream.buffered().use { reader ->
                     try {
                         val expression = reader.readText().asExpressionLike()
                         val event = folderBeforeNameRegex.find(identifier.path)?.groupValues?.get(1)
                             ?: throw IllegalArgumentException("Invalid flow path: $identifier. Should have a folder structure that includes the name of the event being flowed.")
                         if (identifier.path.startsWith("flows/client/")) {
-                            clientFlows.getOrPut(Identifier(identifier.namespace, event)) { mutableListOf() }.add(expression)
+                            clientFlows.getOrPut(ResourceLocation.fromNamespaceAndPath(identifier.namespace, event)) { mutableListOf() }.add(expression)
                         } else {
-                            flows.getOrPut(Identifier(identifier.namespace, event)) { mutableListOf() }.add(expression)
+                            flows.getOrPut(ResourceLocation.fromNamespaceAndPath(identifier.namespace, event)) { mutableListOf() }.add(expression)
                         }
                     } catch (exception: Exception) {
                         throw ExecutionException("Error loading MoLang script for flow: $identifier", exception)
@@ -68,7 +68,7 @@ object CobblemonFlows : DataRegistry {
         observable.emit(this)
     }
 
-    fun run(eventIdentifier: Identifier, context: Map<String, MoValue>) {
-        flows[eventIdentifier]?.forEach { it.resolve(runtime, context) }
+    fun run(eventResourceLocation: ResourceLocation, context: Map<String, MoValue>) {
+        flows[eventResourceLocation]?.forEach { it.resolve(runtime, context) }
     }
 }

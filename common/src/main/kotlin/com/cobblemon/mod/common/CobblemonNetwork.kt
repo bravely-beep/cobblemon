@@ -66,6 +66,7 @@ import com.cobblemon.mod.common.net.messages.client.dialogue.DialogueOpenedPacke
 import com.cobblemon.mod.common.net.messages.client.effect.RunPosableMoLangPacket
 import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormEntityParticlePacket
 import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormParticlePacket
+import com.cobblemon.mod.common.net.messages.client.fishing.FishingBaitRegistrySyncPacket
 import com.cobblemon.mod.common.net.messages.client.fossil.FossilRegistrySyncPacket
 import com.cobblemon.mod.common.net.messages.client.fossil.NaturalMaterialRegistrySyncPacket
 import com.cobblemon.mod.common.net.messages.client.npc.CloseNPCEditorPacket
@@ -300,7 +301,7 @@ object CobblemonNetwork {
         list.add(PacketRegisterInfo(PokedexDexSyncPacket.ID, PokedexDexSyncPacket::decode, DataRegistrySyncPacketHandler()))
         list.add(PacketRegisterInfo(DexEntrySyncPacket.ID, DexEntrySyncPacket::decode, DataRegistrySyncPacketHandler()))
         list.add(PacketRegisterInfo(FishingBaitRegistrySyncPacket.ID, FishingBaitRegistrySyncPacket::decode, DataRegistrySyncPacketHandler()))
-        this.createClientBound(FlowRegistrySyncPacket.ID, FlowRegistrySyncPacket::decode, DataRegistrySyncPacketHandler())
+        list.add(PacketRegisterInfo(FlowRegistrySyncPacket.ID, FlowRegistrySyncPacket::decode, DataRegistrySyncPacketHandler()))
 
         // Effects
         list.add(PacketRegisterInfo(SpawnSnowstormParticlePacket.ID, SpawnSnowstormParticlePacket::decode, SpawnSnowstormParticleHandler))

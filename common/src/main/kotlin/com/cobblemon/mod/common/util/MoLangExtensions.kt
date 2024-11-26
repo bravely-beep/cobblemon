@@ -14,9 +14,6 @@ import com.bedrockk.molang.ast.NumberExpression
 import com.bedrockk.molang.runtime.MoLangEnvironment
 import com.bedrockk.molang.runtime.MoLangRuntime
 import com.bedrockk.molang.runtime.MoParams
-import com.bedrockk.molang.runtime.MoScope
-import com.bedrockk.molang.runtime.struct.ArrayStruct
-import com.bedrockk.molang.runtime.struct.QueryStruct
 import com.bedrockk.molang.runtime.struct.ArrayStruct
 import com.bedrockk.molang.runtime.struct.ContextStruct
 import com.bedrockk.molang.runtime.value.DoubleValue
@@ -213,14 +210,16 @@ fun MoLangEnvironment.cloneFrom(other: MoLangEnvironment): MoLangEnvironment {
     return this
 }
 
-fun BlockPos.toArrayStruct() = ArrayStruct().apply {
-    map["0"] = DoubleValue(x)
-    map["1"] = DoubleValue(y)
-    map["2"] = DoubleValue(z)
-}
+fun BlockPos.toArrayStruct() = listOf(x, y, z).asArrayValue(::DoubleValue)
 
 fun <T> Collection<T>.asArrayValue(mapper: (T) -> MoValue): ArrayStruct {
     val array = ArrayStruct()
     forEachIndexed { index, value -> array.setDirectly("$index", mapper(value)) }
+    return array
+}
+
+fun Iterable<MoValue>.asArrayValue(): ArrayStruct {
+    val array = ArrayStruct()
+    forEachIndexed { index, value -> array.setDirectly("$index", value) }
     return array
 }
