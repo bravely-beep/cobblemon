@@ -30,11 +30,11 @@
     "sounds": [ "cobblemon:pc/pc_click" ]
   },
   "poke_ball.capture_succeeded": {
-    "subtitle": "cobblemon.subtitle.pokeball.capture_succeeded",
+    "subtitle": "cobblemon.subtitle.poke_ball.capture_succeeded",
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded", "volume":  0.7 } ]
   },
   "poke_ball.capture_succeeded.ancient": {
-    "subtitle": "cobblemon.subtitle.pokeball.capture_succeeded",
+    "subtitle": "cobblemon.subtitle.poke_ball.capture_succeeded",
     "sounds": [ { "name": "cobblemon:poke_ball/poke_ball_capture_succeeded_ancient", "volume":  0.7 } ]
   },
   "poke_ball.shake": {
