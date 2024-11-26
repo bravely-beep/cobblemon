@@ -56,6 +56,8 @@
   "item.cobblemon.poke_rod": "Poké Rod",
   "cobblemon.pokerod.bobber": "Bobber: %1$s",
   "cobblemon.pokerod.bait": "Bait: %1$s ×%2$s",
+  "cobblemon.pokerod.apply": "Right-click to apply bait",
+  "cobblemon.pokerod.remove": "Right click to remove bait",
 
   "item.cobblemon.black_apricorn_seed": "Black Apricorn Sprout",
   "item.cobblemon.blue_apricorn_seed": "Blue Apricorn Sprout",
@@ -754,6 +756,11 @@
   "cobblemon.ui.pokedex.region.sinnoh": "Sinnoh",
   "cobblemon.ui.pokedex.region.unknown": "Unknown",
   "cobblemon.ui.pokedex.region.unova": "Unova",
+
+  "cobblemon.ui.pokedex.search.search_by": "Search by %1$s",
+  "cobblemon.ui.pokedex.search.type.species": "Species Name",
+  "cobblemon.ui.pokedex.search.type.abilities": "Ability",
+  "cobblemon.ui.pokedex.search.type.drops": "Drops",
 
   "cobblemon.ui.pokedex.info.ability": "Ability: %1$s",
   "cobblemon.ui.pokedex.info.entry": "Entry",
