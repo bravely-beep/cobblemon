@@ -160,6 +160,9 @@
   "gui.trade": {
     "sounds": [ { "name": "cobblemon:gui/trade", "volume": 0.6 } ]
   },
+  "item.medicine.candy.use": {
+    "sounds": [ "cobblemon:item/medicine/medicine_candy_use" ]
+  },
   "item.medicine.herb.use": {
     "sounds": [ "cobblemon:item/medicine/medicine_herb_use" ]
   },
