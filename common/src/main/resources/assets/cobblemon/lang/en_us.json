@@ -307,7 +307,7 @@
   "item.cobblemon.safari_ball.tooltip": "1.5× outside of battle",
   "item.cobblemon.fast_ball.tooltip": "4× on Pokémon with 100 or more Base Speed",
   "item.cobblemon.level_ball.tooltip": "1× to 4×, increases the higher the player's Pokémon level is compared to the target",
-  "item.cobblemon.lure_ball.tooltip": "2× on Water-types, until fishing is added",
+  "item.cobblemon.lure_ball.tooltip": "4× on Pokémon reeled in with a Poké Rod",
   "item.cobblemon.heavy_ball.tooltip": "1× to 4×, increases by target's weight",
   "item.cobblemon.love_ball.tooltip": "2.5× if the target is the opposite gender of the player's Pokémon, 8× if also the same species",
   "item.cobblemon.friend_ball.tooltip": "1×, caught Pokémon start with 150 Friendship",
