@@ -277,10 +277,7 @@ class PokedexGUI private constructor(
     }
 
     override fun onClose() {
-        println("CLOSED DEX UI")
-        if (blockPos != null) {
-            AdjustBlockEntityViewerCountPacket(blockPos, false).sendToServer()
-        }
+        if (blockPos != null) AdjustBlockEntityViewerCountPacket(blockPos, false).sendToServer()
         playSound(CobblemonSounds.POKEDEX_CLOSE)
         super.onClose()
     }

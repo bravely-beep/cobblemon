@@ -11,6 +11,7 @@ package com.cobblemon.mod.common.block
 import com.cobblemon.mod.common.CobblemonBlockEntities
 import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.block.entity.LecternBlockEntity
+import com.cobblemon.mod.common.block.entity.ViewerCountBlockEntity
 import com.cobblemon.mod.common.item.PokedexItem
 import com.cobblemon.mod.common.net.messages.client.ui.PokedexUIPacket
 import com.cobblemon.mod.common.util.playSoundServer
@@ -56,7 +57,7 @@ class LecternBlock(properties: Properties): BaseEntityBlock(properties) {
 
     override fun codec() = CODEC
 
-    override fun <T : BlockEntity> getTicker(world: Level, blockState: BlockState, BlockWithEntityType: BlockEntityType<T>) = createTickerHelper(BlockWithEntityType, CobblemonBlockEntities.LECTERN, LecternBlockEntity.TICKER::tick)
+    override fun <T : BlockEntity> getTicker(world: Level, blockState: BlockState, BlockWithEntityType: BlockEntityType<T>) = createTickerHelper(BlockWithEntityType, CobblemonBlockEntities.LECTERN, ViewerCountBlockEntity.TICKER::tick)
 
     override fun getRenderShape(blockState: BlockState?) = RenderShape.MODEL
 
@@ -131,7 +132,7 @@ class LecternBlock(properties: Properties): BaseEntityBlock(properties) {
                 }
             }
         }
-        return InteractionResult.CONSUME
+        return InteractionResult.SUCCESS_NO_ITEM_USED
     }
 
     override fun isPathfindable(blockState: BlockState?, pathComputationType: PathComputationType?) = false
