@@ -100,9 +100,9 @@ class PokedexGUI private constructor(
         /**
          * Attempts to open this screen for a client.
          */
-        fun open(pokedex: ClientPokedexManager, type: PokedexTypes, species: ResourceLocation? = null) {
+        fun open(pokedex: ClientPokedexManager, type: PokedexType, species: ResourceLocation? = null, blockPos: BlockPos? = null) {
             val mc = Minecraft.getInstance()
-            val screen = PokedexGUI(type, species)
+            val screen = PokedexGUI(type, species, blockPos)
             mc.setScreen(screen)
         }
     }
