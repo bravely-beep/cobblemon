@@ -165,6 +165,10 @@ object CobblemonNeoForgeClient : CobblemonClientImplementation {
         }
         PokedexType.entries.toList().forEach { pokedex ->
             event.register(ModelResourceLocation(pokedex.getItemModelPath(), "standalone"))
+            event.register(ModelResourceLocation(pokedex.getItemModelPath("scanning"), "standalone"))
+            event.register(ModelResourceLocation(pokedex.getItemModelPath("flat"), "standalone"))
+            event.register(ModelResourceLocation(pokedex.getItemModelPath("flat_off"), "standalone"))
+            event.register(ModelResourceLocation(pokedex.getItemModelPath("off"), "standalone"))
         }
     }
 

@@ -48,6 +48,7 @@ import com.cobblemon.mod.common.client.gui.pokedex.widgets.SizeWidget
 import com.cobblemon.mod.common.client.gui.pokedex.widgets.StatsWidget
 import com.cobblemon.mod.common.client.pokedex.PokedexType
 import com.cobblemon.mod.common.client.render.drawScaledText
+import com.cobblemon.mod.common.net.messages.server.block.AdjustBlockEntityViewerCountPacket
 import com.cobblemon.mod.common.pokemon.abilities.HiddenAbility
 import com.cobblemon.mod.common.util.cobblemonResource
 import net.minecraft.client.Minecraft
@@ -57,6 +58,7 @@ import net.minecraft.client.gui.components.events.GuiEventListener
 import net.minecraft.client.gui.narration.NarratableEntry
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.resources.sounds.SimpleSoundInstance
+import net.minecraft.core.BlockPos
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.sounds.SoundEvent
@@ -69,7 +71,8 @@ import net.minecraft.sounds.SoundEvent
  */
 class PokedexGUI private constructor(
     val type: PokedexType,
-    val initSpecies: ResourceLocation?
+    val initSpecies: ResourceLocation?,
+    val blockPos: BlockPos?
 ): Screen(Component.translatable("cobblemon.ui.pokedex.title")) {
     var oldDragPosX = 0.0
     var canDragRender = false
@@ -274,6 +277,10 @@ class PokedexGUI private constructor(
     }
 
     override fun onClose() {
+        println("CLOSED DEX UI")
+        if (blockPos != null) {
+            AdjustBlockEntityViewerCountPacket(blockPos, false).sendToServer()
+        }
         playSound(CobblemonSounds.POKEDEX_CLOSE)
         super.onClose()
     }
@@ -534,9 +541,9 @@ class PokedexGUI private constructor(
         /**
          * Attempts to open this screen for a client.
          */
-        fun open(pokedex: ClientPokedexManager, type: PokedexType, species: ResourceLocation? = null) {
+        fun open(pokedex: ClientPokedexManager, type: PokedexType, species: ResourceLocation? = null, blockPos: BlockPos? = null) {
             val mc = Minecraft.getInstance()
-            val screen = PokedexGUI(type, species)
+            val screen = PokedexGUI(type, species, blockPos)
             mc.setScreen(screen)
         }
     }

@@ -8,10 +8,13 @@
 
 package com.cobblemon.mod.common.block
 
+import com.cobblemon.mod.common.CobblemonBlockEntities
 import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.block.entity.LecternBlockEntity
 import com.cobblemon.mod.common.item.PokedexItem
 import com.cobblemon.mod.common.net.messages.client.ui.PokedexUIPacket
+import com.cobblemon.mod.common.util.playSoundServer
+import com.cobblemon.mod.common.util.toVec3d
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
@@ -29,6 +32,7 @@ import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.entity.BlockEntity
+import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
 import net.minecraft.world.level.block.state.properties.DirectionProperty
@@ -51,6 +55,8 @@ class LecternBlock(properties: Properties): BaseEntityBlock(properties) {
     }
 
     override fun codec() = CODEC
+
+    override fun <T : BlockEntity> getTicker(world: Level, blockState: BlockState, BlockWithEntityType: BlockEntityType<T>) = createTickerHelper(BlockWithEntityType, CobblemonBlockEntities.LECTERN, LecternBlockEntity.TICKER::tick)
 
     override fun getRenderShape(blockState: BlockState?) = RenderShape.MODEL
 
@@ -117,9 +123,12 @@ class LecternBlock(properties: Properties): BaseEntityBlock(properties) {
             if (!itemStack.isEmpty && itemStack.item is PokedexItem) {
                 if (!level.isClientSide) {
                     if (player.isCrouching) takeStoredItem(blockEntity, blockState, level, blockPos, player)
-                    else PokedexUIPacket((blockEntity.getItemStack().item as PokedexItem).type).sendToPlayer(player as ServerPlayer)
+                    else {
+                        blockEntity.incrementViewerCount()
+                        PokedexUIPacket(type = (blockEntity.getItemStack().item as PokedexItem).type, blockPos = blockPos).sendToPlayer(player as ServerPlayer)
+                        level.playSoundServer(position = blockPos.toVec3d(), sound = CobblemonSounds.POKEDEX_OPEN, volume = 0.25F)
+                    }
                 }
-                else if (!player.isCrouching) player.playSound(CobblemonSounds.POKEDEX_OPEN)
             }
         }
         return InteractionResult.CONSUME

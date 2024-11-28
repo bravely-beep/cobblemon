@@ -16,10 +16,10 @@ enum class PokedexType {
     GREEN,
     BLUE,
     PINK,
-    WHITE,
-    BLACK;
+    BLACK,
+    WHITE;
 
     fun getTexturePath() = cobblemonResource("textures/gui/pokedex/pokedex_base_${this.name.lowercase()}.png")
-    fun getItemModelPath() = cobblemonResource("item/pokedex_${this.name.lowercase()}_model")
+    fun getItemModelPath(additionalState: String? = null) = cobblemonResource("item/pokedex_${this.name.lowercase()}_model${if (additionalState != null) "_$additionalState" else ""}")
     fun getItemSpritePath() = cobblemonResource("pokedex_${this.name.lowercase()}")
 }

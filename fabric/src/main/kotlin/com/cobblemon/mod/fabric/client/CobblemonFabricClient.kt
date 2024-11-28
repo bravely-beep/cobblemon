@@ -70,7 +70,15 @@ class CobblemonFabricClient: ClientModInitializer, CobblemonClientImplementation
         CobblemonClient.initialize(this)
         ModelLoadingPlugin.register {
             PokeBalls.all().forEach { pokeBall -> it.addModels(pokeBall.model3d) }
-            PokedexType.entries.toList().forEach { pokedex -> it.addModels(pokedex.getItemModelPath()) }
+            PokedexType.entries.toList().forEach { pokedex ->
+                it.addModels(
+                    pokedex.getItemModelPath(),
+                    pokedex.getItemModelPath("scanning"),
+                    pokedex.getItemModelPath("flat"),
+                    pokedex.getItemModelPath("flat_off"),
+                    pokedex.getItemModelPath("off")
+                )
+            }
         }
 
         CobblemonFabric.networkManager.registerClientHandlers()
