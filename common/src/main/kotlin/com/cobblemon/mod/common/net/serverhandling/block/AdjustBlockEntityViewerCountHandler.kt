@@ -9,7 +9,7 @@
 package com.cobblemon.mod.common.net.serverhandling.block
 
 import com.cobblemon.mod.common.api.net.ServerNetworkPacketHandler
-import com.cobblemon.mod.common.block.entity.LecternBlockEntity
+import com.cobblemon.mod.common.block.entity.ViewerCountBlockEntity
 import com.cobblemon.mod.common.net.messages.server.block.AdjustBlockEntityViewerCountPacket
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.level.ServerPlayer
@@ -17,7 +17,7 @@ import net.minecraft.server.level.ServerPlayer
 object AdjustBlockEntityViewerCountHandler : ServerNetworkPacketHandler<AdjustBlockEntityViewerCountPacket> {
     override fun handle(packet: AdjustBlockEntityViewerCountPacket, server: MinecraftServer, player: ServerPlayer) {
         val blockEntity = player.level().getBlockEntity(packet.blockPos)
-        if (blockEntity != null && blockEntity is LecternBlockEntity) {
+        if (blockEntity != null && blockEntity is ViewerCountBlockEntity) {
             if (packet.increment) blockEntity.incrementViewerCount()
             else blockEntity.decrementViewerCount()
         }
