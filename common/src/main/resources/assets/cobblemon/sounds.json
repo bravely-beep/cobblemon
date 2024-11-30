@@ -697,29 +697,11 @@
   "move.cottonguard.actor": {
     "sounds": [ { "name": "cobblemon:move/cotton_guard/cotton_guard_actor", "volume": 0.8 } ]
   },
-  "move.gust.actor": {
-    "sounds": [ { "name": "cobblemon:move/gust/gust_actor", "volume": 0.8 } ]
-  },
-  "move.gust.target": {
-    "sounds": [ { "name": "cobblemon:move/gust/gust_target", "volume": 0.8 } ]
-  },
   "move.haze.actor": {
     "sounds": [ { "name": "cobblemon:move/haze/haze_actor", "volume": 0.8 } ]
   },
   "move.lick.target": {
     "sounds": [ { "name": "cobblemon:move/lick/lick_target", "volume": 0.8 } ]
-  },
-  "move.mudbomb.actor": {
-    "sounds": [ { "name": "cobblemon:move/mud_bomb/mud_bomb_actor", "volume": 0.8 } ]
-  },
-  "move.mudbomb.target": {
-      "sounds": [ { "name": "cobblemon:move/mud_bomb/mud_bomb_target", "volume": 0.8 } ]
-  },
-  "move.powdersnow.actor": {
-    "sounds": [ { "name": "cobblemon:move/powder_snow/powder_snow_actor", "volume": 0.8 } ]
-  },
-  "move.powdersnow.target": {
-      "sounds": [ { "name": "cobblemon:move/powder_snow/powder_snow_target", "volume": 0.8 } ]
   },
   "move.pursuit.target": {
     "sounds": [ { "name": "cobblemon:move/pursuit/pursuit_target", "volume": 0.8 } ]
@@ -740,7 +722,7 @@
     "sounds": [ { "name": "cobblemon:move/seismic_toss/seismic_toss_target_2", "volume": 1.0 } ]
   },
   "move.sing.actor": {
-    "sounds": [ { "name": "cobblemon:move/sing/sing_actor", "volume": 0.8 } ]
+    "sounds": [ { "name": "cobblemon:move/sing/sing_actor", "volume": 0.6 } ]
   },
   "move.withdraw.actor": {
     "sounds": [ { "name": "cobblemon:move/withdraw/withdraw_actor", "volume": 0.8 } ]
