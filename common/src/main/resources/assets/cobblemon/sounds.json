@@ -614,11 +614,14 @@
       "cobblemon:block/gilded_chest/gilded_chest_step_4"
     ]
   },
-  "move.watersport.actor": {
-    "sounds": [ { "name": "cobblemon:move/water_sport/water_sport_actor", "volume": 0.8 } ]
+  "move.bite.target": {
+    "sounds": [ { "name": "cobblemon:move/bite/bite_target", "volume": 0.8 } ]
   },
-  "move.mudsport.actor": {
-    "sounds": [ { "name": "cobblemon:move/mud_sport/mud_sport_actor", "volume": 0.8 } ]
+  "move.cottonguard.actor": {
+    "sounds": [ { "name": "cobblemon:move/cotton_guard/cotton_guard_actor", "volume": 0.8 } ]
+  },
+  "move.crunch.target": {
+    "sounds": [ { "name": "cobblemon:move/crunch/crunch_target", "volume": 0.8 } ]
   },
   "move.flamethrower.actor": {
     "sounds": [ { "name": "cobblemon:move/flamethrower/flamethrower_actor", "volume": 0.8 } ]
@@ -626,11 +629,32 @@
   "move.flamethrower.target": {
     "sounds": [ { "name": "cobblemon:move/flamethrower/flamethrower_target", "volume": 0.8 } ]
   },
+  "move.hyperfang.target": {
+    "sounds": [ { "name": "cobblemon:move/hyper_fang/hyper_fang_target", "volume": 0.8 } ]
+  },
+  "move.psychic.actor": {
+    "sounds": [ { "name": "cobblemon:move/psychic/psychic_actor", "volume": 0.8 } ]
+  },
+  "move.psychic.target": {
+    "sounds": [ { "name": "cobblemon:move/psychic/psychic_target", "volume": 0.8 } ]
+  },
+  "move.watersport.actor": {
+    "sounds": [ { "name": "cobblemon:move/water_sport/water_sport_actor", "volume": 0.8 } ]
+  },
+  "move.mudsport.actor": {
+    "sounds": [ { "name": "cobblemon:move/mud_sport/mud_sport_actor", "volume": 0.8 } ]
+  },
   "move.sandattack.actor": {
     "sounds": [ { "name": "cobblemon:move/sand_attack/sand_attack_actor", "volume": 0.8 } ]
   },
   "move.sandattack.target": {
     "sounds": [ { "name": "cobblemon:move/sand_attack/sand_attack_target", "volume": 0.8 } ]
+  },
+  "move.superfang.actor": {
+    "sounds": [ { "name": "cobblemon:move/super_fang/super_fang_actor", "volume": 0.6 } ]
+  },
+  "move.superfang.target": {
+    "sounds": [ { "name": "cobblemon:move/super_fang/super_fang_target", "volume": 0.8 } ]
   },
   "move.confusion.actor": {
     "sounds": [ { "name": "cobblemon:move/confusion/confusion_actor", "volume": 0.9 } ]
@@ -693,9 +717,6 @@
       { "name": "cobblemon:move/spore/spore_mushroom_3", "volume": 0.1 },
       { "name": "cobblemon:move/spore/spore_mushroom_4", "volume": 0.1 }
     ]
-  },
-  "move.cottonguard.actor": {
-    "sounds": [ { "name": "cobblemon:move/cotton_guard/cotton_guard_actor", "volume": 0.8 } ]
   },
   "move.haze.actor": {
     "sounds": [ { "name": "cobblemon:move/haze/haze_actor", "volume": 0.8 } ]
