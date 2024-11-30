@@ -35,8 +35,13 @@
       "expressions": ["q.play_animation(q.bedrock_stateful('psychic', 'target'))"]
     },
     {
+      "type": "entity_sound",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "sound": "move.psychic.target"
+    },
+    {
       "type": "pause",
-      "pause": 0.95
+      "pause": 0.65
     },
     {
       "type": "entity_particles",

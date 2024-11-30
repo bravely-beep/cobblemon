@@ -262,6 +262,8 @@ object CobblemonSounds : PlatformRegistry<Registry<SoundEvent>, ResourceKey<Regi
     val MOVE_QUICKATTACK_TARGET = this.create("move.quickattack.target")
     @JvmField
     val MOVE_PURSUIT_TARGET = this.create("move.pursuit.target")
+    @JvmField
+    val MOVE_PSYCHIC_TARGET = this.create("move.psychic.target")
 
     @JvmField
     val IMPACT_NORMAL = this.create("impact.normal")

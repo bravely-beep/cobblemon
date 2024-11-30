@@ -8,13 +8,6 @@
 				"texture": "textures/particles/spiral"
 			}
 		},
-		"events": {
-			"event_sound": {
-				"sound_effect": {
-					"event_name": "cobblemon:move.psychic.target"
-				}
-			}
-		},
 		"components": {
 			"minecraft:emitter_rate_steady": {
 				"spawn_rate": "math.clamp(40*q.entity_height,15,40)",
@@ -22,9 +15,6 @@
 			},
 			"minecraft:emitter_lifetime_looping": {
 				"active_time": 1.13
-			},
-			"minecraft:emitter_lifetime_events": {
-				"creation_event": "event_sound"
 			},
 			"minecraft:emitter_shape_disc": {
 				"offset": [0, "math.random(0.2,(q.entity_height*0.9))/math.clamp(q.entity_scale*1.1-0.1,1,9)", 0],
