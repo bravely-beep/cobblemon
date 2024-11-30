@@ -623,6 +623,12 @@
   "move.crunch.target": {
     "sounds": [ { "name": "cobblemon:move/crunch/crunch_target", "volume": 0.8 } ]
   },
+  "move.ember.actor": {
+    "sounds": [ { "name": "cobblemon:move/ember/ember_actor", "volume": 0.8 } ]
+  },
+  "move.ember.target": {
+    "sounds": [ { "name": "cobblemon:move/ember/ember_target", "volume": 0.8 } ]
+  },
   "move.flamethrower.actor": {
     "sounds": [ { "name": "cobblemon:move/flamethrower/flamethrower_actor", "volume": 0.8 } ]
   },

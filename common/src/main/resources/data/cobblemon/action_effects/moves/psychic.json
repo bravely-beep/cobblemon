@@ -21,7 +21,7 @@
     },
     {
       "type": "pause",
-      "pause": 0.65
+      "pause": 0.35
     },
     {
       "type": "entity_particles",
@@ -33,6 +33,10 @@
       "type": "entity_molang",
       "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
       "expressions": ["q.play_animation(q.bedrock_stateful('psychic', 'target'))"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.30
     },
     {
       "type": "entity_sound",
