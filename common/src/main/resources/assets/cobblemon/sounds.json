@@ -638,6 +638,9 @@
   "move.hyperfang.target": {
     "sounds": [ { "name": "cobblemon:move/hyper_fang/hyper_fang_target", "volume": 0.8 } ]
   },
+  "move.kinesis.actor": {
+    "sounds": [ { "name": "cobblemon:move/kinesis/kinesis_actor", "volume": 0.7 } ]
+  },
   "move.psychic.actor": {
     "sounds": [ { "name": "cobblemon:move/psychic/psychic_actor", "volume": 0.7 } ]
   },
