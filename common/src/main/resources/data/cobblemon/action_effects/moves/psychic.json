@@ -36,7 +36,7 @@
     },
     {
       "type": "pause",
-      "pause": 0.30
+      "pause": 0.25
     },
     {
       "type": "entity_sound",
@@ -45,7 +45,7 @@
     },
     {
       "type": "pause",
-      "pause": 0.65
+      "pause": 0.70
     },
     {
       "type": "entity_particles",
