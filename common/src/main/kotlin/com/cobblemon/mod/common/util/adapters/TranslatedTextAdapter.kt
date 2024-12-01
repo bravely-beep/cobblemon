@@ -12,8 +12,10 @@ import com.cobblemon.mod.common.util.asTranslated
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
+import com.mojang.serialization.JsonOps
 import java.lang.reflect.Type
 import net.minecraft.network.chat.Component
+import net.minecraft.network.chat.ComponentSerialization
 
 /**
  * Kinda like [TextAdapter] but it treats them as translatables.
@@ -22,5 +24,11 @@ import net.minecraft.network.chat.Component
  * @since November 26th, 2024
  */
 object TranslatedTextAdapter : JsonDeserializer<Component> {
-    override fun deserialize(json: JsonElement, typeOfT: Type, ctx: JsonDeserializationContext) = json.asString.asTranslated()
+    override fun deserialize(json: JsonElement, typeOfT: Type, ctx: JsonDeserializationContext) : Component {
+        return if (json.isJsonObject) {
+            ComponentSerialization.CODEC.decode(JsonOps.INSTANCE, json).result().get().first
+        } else {
+            json.asString.asTranslated()
+        }
+    }
 }

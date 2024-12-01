@@ -169,6 +169,12 @@ object MoLangFunctions {
                 val z = params.getInt(2)
                 return@put DoubleValue(world.isRainingAt(BlockPos(x, y, z)))
             }
+            map.put("is_chunk_loaded_at") { params ->
+                val x = params.getInt(0)
+                val y = params.getInt(1)
+                val z = params.getInt(2)
+                return@put DoubleValue(world.isLoaded(BlockPos(x, y, z)))
+            }
             map.put("is_thundering") { _ -> DoubleValue(world.isThundering) }
             map.put("is_raining") { _ -> DoubleValue(world.isRaining) }
             map.put("set_block") { params ->
