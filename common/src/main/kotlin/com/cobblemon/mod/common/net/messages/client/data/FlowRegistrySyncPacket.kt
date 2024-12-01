@@ -49,7 +49,7 @@ class FlowRegistrySyncPacket(entries: Collection<Map.Entry<ResourceLocation, Lis
 
     override fun synchronizeDecoded(entries: Collection<Map.Entry<ResourceLocation, List<ExpressionLike>>>) {
         entries.map { (identifier, flows) ->
-            val existing = CobblemonFlows.flows.getOrPut(identifier) { mutableListOf() }
+            val existing = CobblemonFlows.clientFlows.getOrPut(identifier) { mutableListOf() }
             existing += flows
         }
     }

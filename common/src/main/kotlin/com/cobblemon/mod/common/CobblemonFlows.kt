@@ -10,11 +10,13 @@ package com.cobblemon.mod.common
 
 import com.bedrockk.molang.runtime.MoLangRuntime
 import com.bedrockk.molang.runtime.value.MoValue
+import com.cobblemon.mod.common.CobblemonNetwork.sendPacket
 import com.cobblemon.mod.common.api.data.DataRegistry
 import com.cobblemon.mod.common.api.molang.ExpressionLike
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.setup
 import com.cobblemon.mod.common.api.reactive.SimpleObservable
 import com.cobblemon.mod.common.api.scripting.CobblemonScripts
+import com.cobblemon.mod.common.net.messages.client.data.FlowRegistrySyncPacket
 import com.cobblemon.mod.common.util.asExpressionLike
 import com.cobblemon.mod.common.util.cobblemonResource
 import com.cobblemon.mod.common.util.endsWith
@@ -36,7 +38,9 @@ object CobblemonFlows : DataRegistry {
     override val id = cobblemonResource("flows")
     override val observable = SimpleObservable<CobblemonFlows>()
     override val type = PackType.SERVER_DATA
-    override fun sync(player: ServerPlayer) {}
+    override fun sync(player: ServerPlayer) {
+        player.sendPacket(FlowRegistrySyncPacket(clientFlows.entries))
+    }
 
     val runtime by lazy { MoLangRuntime().setup() } // Lazy for if someone adds to generalFunctions in MoLangFunctions
 

@@ -21,7 +21,7 @@ data class PokemonCapturedEvent (
     val player: ServerPlayer,
     val pokeBallEntity: EmptyPokeBallEntity
 ) {
-    val context = mapOf<String, MoValue>(
+    val context = mutableMapOf<String, MoValue>(
         "pokemon" to pokemon.struct,
         "player" to player.asMoLangValue(),
         "poke_ball" to pokeBallEntity.struct,

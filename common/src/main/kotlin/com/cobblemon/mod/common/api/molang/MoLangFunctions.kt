@@ -378,7 +378,6 @@ object MoLangFunctions {
                     val animation = params.getString(0)
                     val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
                     packet.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
-                    (animation)
                 }
             }
             map
@@ -727,10 +726,11 @@ object MoLangFunctions {
                 return@put DoubleValue.ONE
             }
 
-            map.put("stop") { params ->
-                Cobblemon.LOGGER.warn("Server is being stopped from a MoLang script.")
-                server.stopServer()
-            }
+            // Maybe later...
+//            map.put("stop") { params ->
+//                Cobblemon.LOGGER.warn("Server is being stopped from a MoLang script.")
+//                server.stopServer()
+//            }
 
             return@mutableListOf map
         }

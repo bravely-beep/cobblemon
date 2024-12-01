@@ -9,6 +9,7 @@
 package com.cobblemon.mod.common.pokemon
 
 import com.bedrockk.molang.runtime.struct.QueryStruct
+import com.bedrockk.molang.runtime.value.DoubleValue
 import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.CobblemonSounds
@@ -165,18 +166,17 @@ class Species : ClientDataSynchronizer<Species>, ShowdownIdentifiable {
 
     @Transient
     val struct = QueryStruct(hashMapOf())
-        .addFunction("name") { StringValue(this.resourceIdentifier.toString()) }
-        .addFunction("national_pokedex_number") { StringValue(this.nationalPokedexNumber.toString()) }
+        .addFunction("identifier") { StringValue(this.resourceIdentifier.toString()) }
         .addFunction("primary_type") { StringValue(this.primaryType.name) }
         .addFunction("secondary_type") { StringValue(this.secondaryType?.name ?: "null") }
         .addFunction("experience_group") { StringValue(this.experienceGroup.name) }
-        .addFunction("height") { StringValue(this.height.toString()) }
-        .addFunction("weight") { StringValue(this.weight.toString()) }
-        .addFunction("base_scale") { StringValue(this.baseScale.toString()) }
-        .addFunction("hitbox_width") { StringValue(this.hitbox.width.toString()) }
-        .addFunction("hitbox_height") { StringValue(this.hitbox.height.toString()) }
-        .addFunction("hitbox_fixed") { StringValue(this.hitbox.fixed.toString()) }
-        .addFunction("catch_rate") { StringValue(this.catchRate.toString()) }
+        .addFunction("height") { DoubleValue(this.height) }
+        .addFunction("weight") { DoubleValue(this.weight) }
+        .addFunction("base_scale") { DoubleValue(this.baseScale) }
+        .addFunction("hitbox_width") { DoubleValue(this.hitbox.width) }
+        .addFunction("hitbox_height") { DoubleValue(this.hitbox.height) }
+        .addFunction("hitbox_fixed") { DoubleValue(this.hitbox.fixed) }
+        .addFunction("catch_rate") { DoubleValue(this.catchRate) }
 
 
     fun initialize() {
