@@ -37,7 +37,6 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity.Companion.SPAWN_DIR
 import com.cobblemon.mod.common.pokeball.PokeBall
 import com.cobblemon.mod.common.util.*
 import com.cobblemon.mod.common.util.math.DoubleRange
-import com.cobblemon.mod.common.util.math.geometry.toDegrees
 import com.cobblemon.mod.common.util.math.geometry.toRadians
 import com.cobblemon.mod.common.util.math.remap
 import com.mojang.blaze3d.vertex.PoseStack
@@ -362,7 +361,7 @@ class PokemonRenderer(
             val matrix4f = matrices.last().pose()
             val opacity = (Minecraft.getInstance().options.getBackgroundOpacity(0.25F) * 255.0F).toInt() shl 24
             var label = if (ServerSettings.displayEntityNameLabel &&
-                !Cobblemon.config.diplayNameForUnknownPokemon &&
+                !Cobblemon.config.displayNameForUnknownPokemon &&
                 CobblemonClient.clientPokedexData.getKnowledgeForSpecies(entity.pokemon.species.resourceIdentifier) == PokedexEntryProgress.NONE) {
                 Component.literal("???")
             } else if (ServerSettings.displayEntityNameLabel) {
