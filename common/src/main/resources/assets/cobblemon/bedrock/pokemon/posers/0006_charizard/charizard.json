@@ -42,7 +42,7 @@
         "q.bedrock_quirk('charizard', 'blink')"
       ],
       "namedAnimations": {
-        "cry": "q.bedrock_primary('charizard', 'air_status', q.curve('symmetrical_wide'))",
+        "cry": "q.bedrock_primary('charizard', 'air_battle_cry', q.curve('symmetrical_wide'))",
         "recoil": "q.bedrock_stateful('charizard', 'air_recoil')",
         "physical": "q.bedrock_primary('charizard', 'air_physical', q.curve('symmetrical'))",
         "special": "q.bedrock_primary('charizard', 'air_special', q.curve('symmetrical_wide'))",
@@ -66,9 +66,11 @@
     },
     "sleep": {
       "poseTypes": ["SLEEP"],
-      "isTouchingWater": false,
       "animations": ["q.bedrock('charizard', 'sleep')"],
-      "quirks": ["q.bedrock_quirk('charizard', 'sleep_quirk')"]
+      "quirks": ["q.bedrock_quirk('charizard', 'sleep_quirk')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
     },
     "hover": {
       "poseTypes": ["HOVER"],
