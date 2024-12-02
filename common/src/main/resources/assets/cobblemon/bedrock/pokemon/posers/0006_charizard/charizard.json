@@ -26,7 +26,28 @@
       "quirks": [
         "q.bedrock_quirk('charizard', 'blink')",
         "q.bedrock_quirk('charizard', 'battle_quirk')"
-      ]
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('charizard', 'battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "battle-flying": {
+      "poseTypes": ["HOVER"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('charizard', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('charizard', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('charizard', 'air_status', q.curve('symmetrical_wide'))",
+        "recoil": "q.bedrock_stateful('charizard', 'air_recoil')",
+        "physical": "q.bedrock_primary('charizard', 'air_physical', q.curve('symmetrical'))",
+        "special": "q.bedrock_primary('charizard', 'air_special', q.curve('symmetrical_wide'))",
+        "status": "q.bedrock_primary('charizard', 'air_status', q.curve('symmetrical_wide'))"
+      }
     },
     "standing": {
       "poseTypes": ["STAND", "NONE", "FLOAT"],
@@ -34,8 +55,7 @@
       "isTouchingWater": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'ground_idle')"],
       "quirks": [
-        "q.bedrock_quirk('charizard', 'blink')",
-        "q.bedrock_quirk('charizard', 'ground_quirk')"
+        "q.bedrock_quirk('charizard', 'blink')"
       ]
     },
     "walking": {
@@ -53,12 +73,14 @@
     "hover": {
       "poseTypes": ["HOVER"],
       "isTouchingWater": false,
+      "isBattle": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'air_idle')"],
       "quirks": ["q.bedrock_quirk('charizard', 'blink')"]
     },
     "fly": {
       "poseTypes": ["FLY"],
       "isTouchingWater": false,
+      "isBattle": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'air_fly')"],
       "quirks": [
         "q.bedrock_quirk('charizard', 'blink')",
