@@ -22,6 +22,7 @@
     "battle-standing": {
       "poseTypes": ["STAND"],
       "isBattle": true,
+      "isTouchingWater": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'battle_idle')"],
       "quirks": [
         "q.bedrock_quirk('charizard', 'blink')",
@@ -50,7 +51,7 @@
       }
     },
     "standing": {
-      "poseTypes": ["STAND", "NONE", "FLOAT"],
+      "poseTypes": ["STAND", "NONE"],
       "isBattle": false,
       "isTouchingWater": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'ground_idle')"],
@@ -74,14 +75,12 @@
     },
     "hover": {
       "poseTypes": ["HOVER"],
-      "isTouchingWater": false,
       "isBattle": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'air_idle')"],
       "quirks": ["q.bedrock_quirk('charizard', 'blink')"]
     },
     "fly": {
       "poseTypes": ["FLY"],
-      "isTouchingWater": false,
       "isBattle": false,
       "animations": ["q.look('head')", "q.bedrock('charizard', 'air_fly')"],
       "quirks": [
@@ -90,7 +89,7 @@
       ]
     },
     "surface_idle": {
-      "poseTypes": ["STAND"],
+      "poseTypes": ["STAND", "FLOAT"],
       "isTouchingWater": true,
       "isUnderWater": false,
       "animations": [
@@ -106,7 +105,7 @@
       ]
     },
     "surface_swim": {
-      "poseTypes": ["WALK"],
+      "poseTypes": ["WALK", "SWIM"],
       "isTouchingWater": true,
       "isUnderWater": false,
       "animations": [
