@@ -790,7 +790,36 @@ open class PokemonProperties {
     }
 
     fun copy(): PokemonProperties {
-        return PokemonProperties().loadFromJSON(saveToJSON())
+        return PokemonProperties().also {
+            it.originalString = this.originalString
+
+            it.species = this.species
+            it.evs = this.evs
+            it.ivs = this.ivs
+
+            it.nickname = this.nickname
+            it.form = this.form
+            it.shiny = this.shiny
+            it.gender = this.gender
+            it.level = this.level
+            it.friendship = this.friendship
+            it.pokeball = this.pokeball
+            it.nature = this.nature
+            it.ability = this.ability
+            it.aspects = this.aspects
+            it.status = this.status
+            it.type = this.type
+            it.teraType = this.teraType
+            it.dmaxLevel = this.dmaxLevel
+            it.gmaxFactor = this.gmaxFactor
+            it.tradeable = this.tradeable
+            it.originalTrainerType = this.originalTrainerType
+            it.originalTrainer = this.originalTrainer // Original Trainer by Username or UUID
+            it.moves = this.moves
+            it.heldItem = this.heldItem
+
+            it.customProperties = this.customProperties
+        }
     }
 
     // If the config value is at least 1, then do 1/x and use that as the property chance
