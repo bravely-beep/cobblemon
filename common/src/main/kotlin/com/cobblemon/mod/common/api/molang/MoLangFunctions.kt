@@ -53,6 +53,7 @@ import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.util.*
 import com.mojang.datafixers.util.Either
 import java.util.UUID
+import kotlin.math.sqrt
 import net.minecraft.commands.arguments.EntityAnchorArgument
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Holder
@@ -75,6 +76,11 @@ import net.minecraft.world.damagesource.DamageTypes
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.LightningBolt
 import net.minecraft.world.entity.LivingEntity
+import net.minecraft.world.entity.PathfinderMob
+import net.minecraft.world.entity.ai.behavior.BlockPosTracker
+import net.minecraft.world.entity.ai.memory.MemoryModuleType
+import net.minecraft.world.entity.ai.memory.MemoryStatus
+import net.minecraft.world.entity.ai.memory.WalkTarget
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.Level.ExplosionInteraction
@@ -93,7 +99,7 @@ import net.minecraft.world.phys.Vec3
 object MoLangFunctions {
     val generalFunctions = hashMapOf<String, java.util.function.Function<MoParams, Any>>(
         "print" to java.util.function.Function { params ->
-            val message = params.getString(0)
+            val message = params.get<MoValue>(0).asString()
             Cobblemon.LOGGER.info(message)
         },
         "replace" to java.util.function.Function { params ->
@@ -162,6 +168,10 @@ object MoLangFunctions {
             val world = worldHolder.value()
             val map = hashMapOf<String, java.util.function.Function<MoParams, Any>>()
             map.put("game_time") { _ -> DoubleValue(world.gameTime.toDouble()) }
+            map.put("time_of_day") {
+                val time = world.dayTime % 24000
+                return@put DoubleValue(time.toDouble())
+            }
             map.put("server") { _ -> server()?.asMoLangValue() ?: DoubleValue.ZERO }
             map.put("is_raining_at") { params ->
                 val x = params.getInt(0)
@@ -317,6 +327,28 @@ object MoLangFunctions {
                 val source = DamageSource(entity.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolder(DamageTypes.GENERIC).get())
                 entity.hurt(source, amount.toFloat())
             }
+            map.put("walk_to") { params ->
+                val x = params.getDouble(0)
+                val y = params.getDouble(1)
+                val z = params.getDouble(2)
+                val speedMultiplier = params.getDoubleOrNull(3) ?: 0.35
+                if (entity is PathfinderMob) {
+                    if (entity.brain.checkMemory(MemoryModuleType.WALK_TARGET, MemoryStatus.REGISTERED)) {
+                        entity.brain.setMemory(MemoryModuleType.WALK_TARGET, WalkTarget(Vec3(x, y, z), speedMultiplier.toFloat(), 1))
+                        entity.brain.setMemory(MemoryModuleType.LOOK_TARGET, BlockPosTracker(Vec3(x, y + entity.eyeHeight, z)))
+                    } else {
+                        entity.navigation.moveTo(x, y, z, speedMultiplier)
+                        entity.lookControl.setLookAt(Vec3(x, y + entity.eyeHeight, z))
+                    }
+                }
+            }
+            map.put("has_walk_target") { _ ->
+                if (entity is PathfinderMob) {
+                    DoubleValue(entity.brain.getMemory(MemoryModuleType.WALK_TARGET).isPresent || entity.isPathFinding)
+                } else {
+                    DoubleValue.ZERO
+                }
+            }
             map.put("is_sneaking") { _ -> DoubleValue(entity.isShiftKeyDown) }
             map.put("is_sprinting") { _ -> DoubleValue(entity.isSprinting) }
             map.put("is_flying") { _ -> DoubleValue(entity.isFallFlying) }
@@ -328,8 +360,14 @@ object MoLangFunctions {
             map.put("is_on_fire") { _ -> DoubleValue(entity.isOnFire) }
             map.put("is_invisible") { _ -> DoubleValue(entity.isInvisible) }
             map.put("is_sleeping") { _ -> DoubleValue(entity.isSleeping) }
-            map.put("is_riding") { _ -> DoubleValue(entity.isPassenger()) }
+            map.put("is_riding") { _ -> DoubleValue(entity.isPassenger) }
             map.put("health") { _ -> DoubleValue(entity.health) }
+            map.put("distance_to_pos") { params ->
+                val x = params.getDouble(0)
+                val y = params.getDouble(1)
+                val z = params.getDouble(2)
+                return@put DoubleValue(sqrt(entity.distanceToSqr(Vec3(x, y, z))))
+            }
             map.put("max_health") { _ -> DoubleValue(entity.maxHealth) }
             map.put("name") { _ -> StringValue(entity.effectiveName().string) }
             map.put("yaw") { _ -> DoubleValue(entity.yRot.toDouble()) }
@@ -468,7 +506,7 @@ object MoLangFunctions {
             map.put("party") { npc.party?.struct ?: DoubleValue.ZERO }
             map.put("has_party") { DoubleValue(npc.party != null) }
             map.put("is_npc") { DoubleValue.ONE }
-            map.put("can_battle") { DoubleValue(npc.party?.any { it.currentHealth > 0 } == true) }
+            map.put("can_battle") { DoubleValue(npc.party?.any { it.currentHealth > 0 } == true || npc.npc.party?.isStatic == false) }
             map
         }
     )
@@ -838,8 +876,8 @@ object MoLangFunctions {
     fun LivingEntity.asMostSpecificMoLangValue(): ObjectValue<out LivingEntity> {
         return when (this) {
             is Player -> asMoLangValue()
-            is PokemonEntity -> asMoLangValue()
-            is NPCEntity -> asMoLangValue()
+            is PokemonEntity -> struct
+            is NPCEntity -> struct
             else -> ObjectValue(this).also { it.addStandardFunctions().addFunctions(entityFunctions.flatMap { it(this).entries.map { it.key to it.value } }.toMap()) }
         }
     }

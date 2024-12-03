@@ -10,11 +10,13 @@ package com.cobblemon.mod.common.api.npc.partyproviders
 
 import com.bedrockk.molang.Expression
 import com.bedrockk.molang.runtime.MoLangRuntime
+import com.cobblemon.mod.common.api.molang.MoLangFunctions.asMoLangValue
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.setup
 import com.cobblemon.mod.common.api.npc.NPCPartyProvider
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
 import com.cobblemon.mod.common.api.storage.party.NPCPartyStore
 import com.cobblemon.mod.common.entity.npc.NPCEntity
+import com.cobblemon.mod.common.util.asArrayValue
 import com.cobblemon.mod.common.util.asExpression
 import com.cobblemon.mod.common.util.resolveFloat
 import com.cobblemon.mod.common.util.resolveInt
@@ -23,6 +25,7 @@ import com.cobblemon.mod.common.util.withQueryValue
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
+import net.minecraft.server.level.ServerPlayer
 
 /**
  * A provider of a party for battling the NPC. It generates a party using a more complex process
@@ -93,16 +96,21 @@ class PoolPartyProvider : NPCPartyProvider {
         }
     }
 
-    fun formulateParty(npc: NPCEntity, level: Int, party: NPCPartyStore) {
+    fun formulateParty(npc: NPCEntity, level: Int, players: List<ServerPlayer>, party: NPCPartyStore) {
         val runtime = MoLangRuntime().setup().withQueryValue("npc", npc.struct)
+        runtime.withQueryValue("players", players.asArrayValue { it.asMoLangValue() })
+        if (players.size == 1) {
+            // This is for the convenience, most cases will be pvn one player
+            runtime.withQueryValue("player", players.first().asMoLangValue())
+        }
         val minPokemon = runtime.resolveInt(this.minPokemon)
         val maxPokemon = runtime.resolveInt(this.maxPokemon)
         var desiredPokemonCount = (minPokemon..maxPokemon).random()
 
-        val workingPool = pool.filter { level in it.npcLevels }.toMutableList()
+        val workingPool = pool.filter { level in it.npcLevels && runtime.resolveInt(it.selectableTimes) > 0 }.toMutableList()
         val useCounts = mutableMapOf<DynamicPokemon, Int>()
 
-        while (desiredPokemonCount > 0 && workingPool.filter { it.hasWeight(runtime) }.isNotEmpty()) {
+        while (desiredPokemonCount > 0 && workingPool.any { it.hasWeight(runtime) }) {
             val selected = workingPool.filter { it.getWeight(runtime) == -1F }.randomOrNull()
                 ?: workingPool.weightedSelection { it.getWeight(runtime) }
                 ?: break
@@ -121,9 +129,9 @@ class PoolPartyProvider : NPCPartyProvider {
         }
     }
 
-    override fun provide(npc: NPCEntity, level: Int): NPCPartyStore {
+    override fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>?): NPCPartyStore {
         val party = NPCPartyStore(npc)
-        formulateParty(npc, level, party)
+        formulateParty(npc, level, players ?: emptyList(), party)
         return party
     }
 }

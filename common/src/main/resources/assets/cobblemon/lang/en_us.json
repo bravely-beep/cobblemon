@@ -2329,6 +2329,20 @@
   "npc.variable.on_player_loses.name": "On Player Loses MoLang",
   "npc.variable.on_player_loses.desc": "MoLang expression to run when the player loses a battle. This has v.player as the player entity.",
 
+  "npc.variable.home_x.name": "Home X",
+  "npc.variable.home_x.desc": "X coordinate of the NPC's home location.",
+  "npc.variable.home_y.name": "Home Y",
+  "npc.variable.home_y.desc": "Y coordinate of the NPC's home location.",
+  "npc.variable.home_z.name": "Home Z",
+  "npc.variable.home_z.desc": "Z coordinate of the NPC's home location.",
+  "npc.variable.home_radius.name": "Home Radius",
+  "npc.variable.home_radius.desc": "Maximum distance they can be from their home position before they path back to it.",
+
+  "npc.variable.yaw.name": "Yaw",
+  "npc.variable.yaw.desc": "Yaw rotation (degrees) of the NPC.",
+  "npc.variable.pitch.name": "Pitch",
+  "npc.variable.pitch.desc": "Pitch rotation (degrees) of the NPC.",
+
   "cobblemon.move.10000000voltthunderbolt": "10,000,000 Volt Thunderbolt",
   "cobblemon.move.10000000voltthunderbolt.desc": "The user, Pikachu wearing a cap, powers up a jolt of electricity using its Z-Power and unleashes it. Critical hits land more easily.",
   "cobblemon.move.absorb": "Absorb",

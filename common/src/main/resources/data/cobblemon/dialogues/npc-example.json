@@ -50,7 +50,7 @@
           {
             "text": {
               "type": "expression",
-              "expression": "q.run_script('cobblemon:npc_battle_cooling_down') ? 'Battle (cooling down)' : 'Battle';"
+              "expression": "q.run_script('cobblemon:npc_battle_cooling_down') ? 'Battle (cooldown)' : 'Battle';"
             },
             "value": "battle",
             "action": [

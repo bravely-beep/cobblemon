@@ -144,7 +144,7 @@ class ConfigVariableList(
                 parent.parent.dto.variables[variable.variableName] = it
             }
             if (variable.type == NPCVariableType.NUMBER) {
-                it.setFilter { value -> value.toDoubleOrNull() != null || value.isBlank() }
+                it.setFilter { value -> value.toDoubleOrNull() != null || value.isBlank() || value == "." || value == "-" }
             }
         }
         val cycleButton = CycleButton.onOffBuilder(booleanValue).create(variable.displayName) { _, value ->

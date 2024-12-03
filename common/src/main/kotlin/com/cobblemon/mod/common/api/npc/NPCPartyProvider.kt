@@ -13,6 +13,7 @@ import com.cobblemon.mod.common.api.npc.partyproviders.SimplePartyProvider
 import com.cobblemon.mod.common.api.storage.party.NPCPartyStore
 import com.cobblemon.mod.common.entity.npc.NPCEntity
 import com.google.gson.JsonElement
+import net.minecraft.server.level.ServerPlayer
 
 /**
  * A provider of a party for battling the NPC. Completely custom party providers will only display
@@ -31,7 +32,7 @@ interface NPCPartyProvider {
 
     val type: String
     val isStatic: Boolean
-    fun provide(npc: NPCEntity, level: Int): NPCPartyStore
+    fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>? = null): NPCPartyStore
     // Why did I opt for manual JSON loading??? I must have had a reason but I can't remember. Maybe for S2C? Use a codec doofus
     fun loadFromJSON(json: JsonElement)
 }
