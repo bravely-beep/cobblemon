@@ -344,6 +344,7 @@
 - Pokémon sent out outside a battle will spawn facing their trainer.
 
 ### Fixes
+- Fixed Ability Patches not reverting Hidden Abilities back to Normal Abilities.
 - Fixed awarding Pokémon experience upon forfeiting battles.
 - Scaled down Amaura's fetus model to avoid clipping through the tank while animating.
 - Fixed Cubone's cry not having a sound.
