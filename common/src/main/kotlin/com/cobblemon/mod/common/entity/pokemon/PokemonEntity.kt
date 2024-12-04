@@ -371,7 +371,7 @@ open class PokemonEntity(
             // Deploy a platform if touching water but not underwater.
             // This can't be done in the BattleMovementGoal as the sleep goal will override it.
             if (ticksLived > 5 && platform == PlatformType.NONE && isInWater && !isUnderWater && !exposedSpecies.behaviour.moving.swim.canBreatheUnderwater) {
-                        platform = PlatformType.GetPlatformTypeForPokemon((exposedForm))
+                platform = PlatformType.GetPlatformTypeForPokemon((exposedForm))
             }
         } else {
             // Battle clone destruction
