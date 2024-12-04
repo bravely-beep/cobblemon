@@ -9,6 +9,7 @@
 package com.cobblemon.mod.common.api.npc
 
 import com.cobblemon.mod.common.api.npc.partyproviders.PoolPartyProvider
+import com.cobblemon.mod.common.api.npc.partyproviders.ScriptPartyProvider
 import com.cobblemon.mod.common.api.npc.partyproviders.SimplePartyProvider
 import com.cobblemon.mod.common.api.storage.party.NPCPartyStore
 import com.cobblemon.mod.common.entity.npc.NPCEntity
@@ -26,7 +27,8 @@ interface NPCPartyProvider {
     companion object {
         val types = mutableMapOf<String, (String) -> NPCPartyProvider>(
             SimplePartyProvider.TYPE to { SimplePartyProvider() },
-            PoolPartyProvider.TYPE to { PoolPartyProvider() }
+            PoolPartyProvider.TYPE to { PoolPartyProvider() },
+            ScriptPartyProvider.TYPE to { ScriptPartyProvider() }
         )
     }
 

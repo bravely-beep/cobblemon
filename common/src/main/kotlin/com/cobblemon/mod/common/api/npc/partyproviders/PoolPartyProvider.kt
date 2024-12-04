@@ -10,6 +10,7 @@ package com.cobblemon.mod.common.api.npc.partyproviders
 
 import com.bedrockk.molang.Expression
 import com.bedrockk.molang.runtime.MoLangRuntime
+import com.bedrockk.molang.runtime.value.DoubleValue
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.asMoLangValue
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.setup
 import com.cobblemon.mod.common.api.npc.NPCPartyProvider
@@ -98,6 +99,7 @@ class PoolPartyProvider : NPCPartyProvider {
 
     fun formulateParty(npc: NPCEntity, level: Int, players: List<ServerPlayer>, party: NPCPartyStore) {
         val runtime = MoLangRuntime().setup().withQueryValue("npc", npc.struct)
+        runtime.withQueryValue("level", DoubleValue(level))
         runtime.withQueryValue("players", players.asArrayValue { it.asMoLangValue() })
         if (players.size == 1) {
             // This is for the convenience, most cases will be pvn one player
