@@ -178,19 +178,19 @@ An example situation of using this is if there is an NPC class preset that defin
 challenging a player when they come within a certain range. Inside that class preset, the AI script may
 need to know at what distance the player will be engaged. This can be defined in the NPC class preset as
 a config variable, and therefore any NPC class that relies on this preset will have that config variable
-and present it to users when they setup an NPC of that class.
+and present it to users when they set up an NPC of that class.
 
     "config": [
       {
         "variableName": "challenge_distance",
-        "displayName": "cobblemon.npc.challenge_distance",
-        "description": "cobblemon.npc.challenge_distance.description",
-        "type": "number",
-        "default": "5"
+        "displayName": "cobblemon.npc.challenge_distance.name",
+        "description": "cobblemon.npc.challenge_distance.desc",
+        "type": "NUMBER",
+        "defaultValue": "5"
       }
     ]
 
-The "type" of variable is one of: `string`, `number`, or `boolean`. The type is used to preset a more
+The "type" of variable is one of: `STRING`, `NUMBER`, or `BOOLEAN`. The type is used to preset a more
 appropriate input field for the user when they are setting up the NPC.
 
 ### names

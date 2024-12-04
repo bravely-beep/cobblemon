@@ -53,7 +53,7 @@ class SimplePartyProvider : NPCPartyProvider {
         }
     }
 
-    override fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>?): NPCPartyStore {
+    override fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>): NPCPartyStore {
         val pokemon = pokemon.map { it.copy().also { it.level = it.level ?: level }.create() }
         val party = NPCPartyStore(npc)
         pokemon.forEach(party::add)

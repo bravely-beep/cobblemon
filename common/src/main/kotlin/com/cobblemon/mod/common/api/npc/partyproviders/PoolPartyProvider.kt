@@ -129,9 +129,9 @@ class PoolPartyProvider : NPCPartyProvider {
         }
     }
 
-    override fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>?): NPCPartyStore {
+    override fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>): NPCPartyStore {
         val party = NPCPartyStore(npc)
-        formulateParty(npc, level, players ?: emptyList(), party)
+        formulateParty(npc, level, players, party)
         return party
     }
 }

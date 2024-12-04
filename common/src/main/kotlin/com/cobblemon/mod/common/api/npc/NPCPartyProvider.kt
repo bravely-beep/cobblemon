@@ -32,7 +32,7 @@ interface NPCPartyProvider {
 
     val type: String
     val isStatic: Boolean
-    fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer>? = null): NPCPartyStore
+    fun provide(npc: NPCEntity, level: Int, players: List<ServerPlayer> = emptyList()): NPCPartyStore
     // Why did I opt for manual JSON loading??? I must have had a reason but I can't remember. Maybe for S2C? Use a codec doofus
     fun loadFromJSON(json: JsonElement)
 }

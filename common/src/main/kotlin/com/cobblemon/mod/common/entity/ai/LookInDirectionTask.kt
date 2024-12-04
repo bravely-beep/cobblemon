@@ -32,7 +32,7 @@ class LookInDirectionTask(
     }
 
     override fun checkExtraStartConditions(level: ServerLevel, owner: LivingEntity): Boolean {
-        return owner is PathfinderMob
+        return owner is PathfinderMob && !owner.brain.getMemory(MemoryModuleType.LOOK_TARGET).isPresent
     }
 
     override fun stop(level: ServerLevel, entity: LivingEntity, gameTime: Long) {
