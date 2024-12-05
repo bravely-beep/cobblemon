@@ -158,7 +158,7 @@ object MoLangFunctions {
             runtime.environment.query = params.environment.query
             runtime.environment.variable = params.environment.variable
             runtime.environment.context = params.environment.context
-            val expression = params.getString(0).asExpression()
+            val expression = params.getString(0).asExpressionLike()
             runtime.resolve(expression)
         },
     )
