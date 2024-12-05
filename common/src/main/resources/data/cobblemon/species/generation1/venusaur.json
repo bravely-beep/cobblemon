@@ -304,6 +304,8 @@
   ],
   "preEvolution": "ivysaur",
   "evolutions": [],
+  "standingEyeHeight": 0.4,
+  "swimmingEyeHeight": 0.4,
   "baseScale": 1.2,
   "hitbox": {
     "width": 2.2,
