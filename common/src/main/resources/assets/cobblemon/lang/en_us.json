@@ -2318,16 +2318,16 @@
   "npc.variable.player_lose_command.desc": "Command to run when a player loses against the NPC. Use {{player}} where the player name should be.",
 
   "npc.variable.on_defeat.name": "On Defeat MoLang",
-  "npc.variable.on_defeat.desc": "MoLang expression to run when the NPC loses a battle.",
+  "npc.variable.on_defeat.desc": "MoLang expression to run when the NPC loses a battle. This has v.npc as the NPC entity.",
 
   "npc.variable.on_victory.name": "On Victory MoLang",
-  "npc.variable.on_victory.desc": "MoLang expression to run when the NPC wins a battle.",
+  "npc.variable.on_victory.desc": "MoLang expression to run when the NPC wins a battle. This has v.npc as the NPC entity.",
 
   "npc.variable.on_player_wins.name": "On Player Wins MoLang",
-  "npc.variable.on_player_wins.desc": "MoLang expression to run when the player wins a battle. This has v.player as the player entity.",
+  "npc.variable.on_player_wins.desc": "MoLang expression to run when a player wins a battle against the NPC. This has v.player as the player entity and v.npc as the NPC entity.",
 
   "npc.variable.on_player_loses.name": "On Player Loses MoLang",
-  "npc.variable.on_player_loses.desc": "MoLang expression to run when the player loses a battle. This has v.player as the player entity.",
+  "npc.variable.on_player_loses.desc": "MoLang expression to run when a player loses a battle against the NPC. This has v.player as the player entity and v.npc as the NPC entity.",
 
   "npc.variable.home_x.name": "Home X",
   "npc.variable.home_x.desc": "X coordinate of the NPC's home location.",
