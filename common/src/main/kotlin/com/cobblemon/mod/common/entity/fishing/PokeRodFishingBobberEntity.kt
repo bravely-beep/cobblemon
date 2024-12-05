@@ -736,7 +736,7 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
             if (player !in player.level().players()) {
                 return@afterOnServer
             }
-            spawnedPokemon?.forceBattle(player as ServerPlayer)
+            spawnedPokemon?.forceBattle(player as ServerPlayer, )
         }
     }
 

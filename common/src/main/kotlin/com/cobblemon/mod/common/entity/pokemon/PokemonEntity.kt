@@ -43,6 +43,7 @@ import com.cobblemon.mod.common.api.types.ElementalTypes
 import com.cobblemon.mod.common.battles.BagItems
 import com.cobblemon.mod.common.battles.BattleBuilder
 import com.cobblemon.mod.common.battles.BattleRegistry
+import com.cobblemon.mod.common.battles.SuccessfulBattleStart
 import com.cobblemon.mod.common.block.entity.PokemonPastureBlockEntity
 import com.cobblemon.mod.common.client.entity.PokemonClientDelegate
 import com.cobblemon.mod.common.entity.PosableEntity
@@ -156,6 +157,7 @@ open class PokemonEntity(
         @JvmStatic val CAUGHT_BALL = SynchedEntityData.defineId(PokemonEntity::class.java, EntityDataSerializers.STRING)
 
         const val BATTLE_LOCK = "battle"
+        const val EVOLUTION_LOCK = "evolving"
 
         fun createAttributes(): AttributeSupplier.Builder = LivingEntity.createLivingAttributes()
             .add(Attributes.FOLLOW_RANGE)
@@ -1294,9 +1296,8 @@ open class PokemonEntity(
         if (!canBattle(player)) {
             return false
         }
-        var isSuccessful = false
-        BattleBuilder.pve(player, this).ifSuccessful { isSuccessful = true }
-        return isSuccessful
+        val lead = player.party().firstOrNull { it.entity != null }?.uuid
+        return BattleBuilder.pve(player, this, lead) is SuccessfulBattleStart
     }
 
     /**

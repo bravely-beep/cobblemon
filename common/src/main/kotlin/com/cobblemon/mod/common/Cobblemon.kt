@@ -383,8 +383,13 @@ object Cobblemon {
                 BattleFormat.GEN_9_SINGLES,
                 BattleSide(PokemonBattleActor(UUID.randomUUID(), BattlePokemon(Pokemon().initialize()), -1F)),
                 BattleSide(PokemonBattleActor(UUID.randomUUID(), BattlePokemon(Pokemon().initialize()), -1F)),
-                true
-            ).ifSuccessful { it.mute = true }
+                false
+            ).ifSuccessful {
+                it.mute = true
+            }.ifErrored {
+                val errors = it.errors.joinToString("\n") { it.javaClass.name }
+                LOGGER.error("Failed to start dummy Showdown battle: $errors")
+            }
         }
 
         registerEventHandlers()
