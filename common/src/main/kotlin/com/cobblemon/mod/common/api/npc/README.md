@@ -178,19 +178,19 @@ An example situation of using this is if there is an NPC class preset that defin
 challenging a player when they come within a certain range. Inside that class preset, the AI script may
 need to know at what distance the player will be engaged. This can be defined in the NPC class preset as
 a config variable, and therefore any NPC class that relies on this preset will have that config variable
-and present it to users when they setup an NPC of that class.
+and present it to users when they set up an NPC of that class.
 
     "config": [
       {
         "variableName": "challenge_distance",
-        "displayName": "cobblemon.npc.challenge_distance",
-        "description": "cobblemon.npc.challenge_distance.description",
-        "type": "number",
-        "default": "5"
+        "displayName": "cobblemon.npc.challenge_distance.name",
+        "description": "cobblemon.npc.challenge_distance.desc",
+        "type": "NUMBER",
+        "defaultValue": "5"
       }
     ]
 
-The "type" of variable is one of: `string`, `number`, or `boolean`. The type is used to preset a more
+The "type" of variable is one of: `STRING`, `NUMBER`, or `BOOLEAN`. The type is used to preset a more
 appropriate input field for the user when they are setting up the NPC.
 
 ### names
@@ -298,6 +298,10 @@ depend on visual aspects of the NPC. For example, if the NPC has a variation for
 certain Pokémon to be `"weight": "q.npc.has_aspect('dirty') ? -1 : 0"` which would make it a guaranteed party Pokémon for "dirty" NPCs
 and impossible for all other variations of the NPC.
 
+The MoLang environment used for the pool party provider contains q.level for the seed level, q.npc for the NPC, as well as q.players for
+an array of all players that are challenging the NPC. The players list is only present for dynamic parties. If it is specifically
+a single battle challenge and this is a dynamic party, there will also be a `q.player`, for convenience.
+
       "party": {
         "type": "pool",
         "minPokemon": "3",
@@ -343,6 +347,33 @@ and impossible for all other variations of the NPC.
           }
         ]
       }
+
+#### script
+The "script" party type is a way to define a party of Pokémon using a MoLang script. The script can modify a q.party struct,
+primarily using function calls such as `q.party.add_by_properties('pikachu shiny)`.
+
+There is an `isStatic` property to control whether the party is static or dynamic. There is a `script` property which is a
+resource location pointing to the script that should be located in the `molang` datapack folder.
+
+The MoLang environment used for the script party provider contains q.level for the seed level, q.npc for the NPC, as well as q.players for
+an array of all players that are challenging the NPC. The players list is only present for dynamic parties. If it is specifically
+a single battle challenge and this is a dynamic party, there will also be a `q.player`, for convenience.
+
+        "party": {
+            "type": "script",
+            "isStatic": true,
+            "script": "cobblemon:npc_party"
+        }
+
+An example script might be:
+
+        t.use_butterfree = math.random_integer(1, 2) == 1;
+        t.use_butterfree ? {
+            q.party.add_by_properties('butterfree level=' + (q.level + 3));
+        } : {
+            q.party.add_by_properties('beedrill level=' + (q.level + 3));
+        };
+        q.party.add_by_properties('pidgey');
 
 ### autoHealParty
 Whether or not the NPC's party will be healed between battles. If the NPC has a dynamic party, this option will
