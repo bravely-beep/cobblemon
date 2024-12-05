@@ -389,9 +389,18 @@ open class PokemonEntity(
     override fun tick() {
         super.tick()
 
-        if (!this.isBattling && this.beamMode == 0 && this.isBattleClone()) {
-            discard()
-            return
+        if (isBattling) {
+            // Deploy a platform if touching water but not underwater.
+            // This can't be done in the BattleMovementGoal as the sleep goal will override it.
+            if (ticksLived > 5 && platform == PlatformType.NONE && isInWater && !isUnderWater && !exposedSpecies.behaviour.moving.swim.canBreatheUnderwater) {
+                platform = PlatformType.getPlatformTypeForPokemon((exposedForm))
+            }
+        } else {
+            // Battle clone destruction
+            if (this.beamMode == 0 && this.isBattleClone()) {
+                discard()
+                return
+            }
         }
 
         // We will be handling idle logic ourselves thank you
@@ -1224,7 +1233,7 @@ open class PokemonEntity(
                 }
                 result = Vec3(result.x, result.y + halfHeight - halfHeight.toInt(), result.z)
             } else {
-                platform = if (species.behaviour.moving.swim.canWalkOnWater || collidesWithBlock(Vec3(result.x, result.y, result.z))) PlatformType.NONE else PlatformType.GetPlatformTypeForPokemon(form)
+                platform = if (species.behaviour.moving.swim.canWalkOnWater || collidesWithBlock(Vec3(result.x, result.y, result.z))) PlatformType.NONE else PlatformType.getPlatformTypeForPokemon(form)
             }
         }
         this.platform = platform
