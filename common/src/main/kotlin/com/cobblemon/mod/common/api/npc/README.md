@@ -57,8 +57,8 @@ any number of presets and the properties of those presets will be merged into th
           "variableName": "challenge_distance",
           "displayName": "cobblemon.npc.challenge_distance",
           "description": "cobblemon.npc.challenge_distance.description",
-          "type": "number",
-          "default": "5"
+          "type": "NUMBER",
+          "defaultValue": "5"
         }
       ],
       "names": [
