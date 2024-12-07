@@ -81,6 +81,7 @@ import com.cobblemon.mod.common.net.messages.client.pokemon.update.*
 import com.cobblemon.mod.common.net.serverhandling.storage.SendOutPokemonHandler.SEND_OUT_DURATION
 import com.cobblemon.mod.common.net.serverhandling.storage.SendOutPokemonHandler.THROW_DURATION
 import com.cobblemon.mod.common.pokeball.PokeBall
+import com.cobblemon.mod.common.pokedex.scanner.DexDataSource
 import com.cobblemon.mod.common.pokemon.activestate.ActivePokemonState
 import com.cobblemon.mod.common.pokemon.activestate.InactivePokemonState
 import com.cobblemon.mod.common.pokemon.activestate.PokemonState
@@ -164,7 +165,7 @@ enum class OriginalTrainerType : StringRepresentable {
     }
 }
 
-open class Pokemon : ShowdownIdentifiable {
+open class Pokemon : ShowdownIdentifiable, DexDataSource {
     var uuid = UUID.randomUUID()
     var species = PokemonSpecies.random()
         set(value) {

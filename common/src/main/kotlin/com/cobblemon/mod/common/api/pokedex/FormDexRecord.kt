@@ -11,6 +11,8 @@ package com.cobblemon.mod.common.api.pokedex
 import com.bedrockk.molang.runtime.struct.QueryStruct
 import com.bedrockk.molang.runtime.struct.VariableStruct
 import com.bedrockk.molang.runtime.value.StringValue
+import com.cobblemon.mod.common.api.events.CobblemonEvents
+import com.cobblemon.mod.common.api.events.pokemon.DexInformationChangedEvent
 import com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData
 import com.cobblemon.mod.common.pokemon.Gender
 import com.cobblemon.mod.common.pokemon.Pokemon
@@ -23,6 +25,7 @@ import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.ListCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.minecraft.network.RegistryFriendlyByteBuf
+import java.util.UUID
 
 /**
  * A record of a form in the Pokédex. There are a number of tracked properties regarding the form and what
@@ -82,21 +85,21 @@ class FormDexRecord {
         it.knowledge = knowledge
     }
 
-    fun encountered(pokemon: Pokemon) {
+    fun encountered(pokemon: Pokemon, uuid: UUID? = null) {
         if (wouldBeDifferent(pokemon, PokedexEntryProgress.ENCOUNTERED)) {
-            addInformation(pokemon, PokedexEntryProgress.ENCOUNTERED)
+            addInformation(pokemon, PokedexEntryProgress.ENCOUNTERED, uuid)
         }
     }
 
-    fun encountered(pokedexEntityData: PokedexEntityData) {
+    fun encountered(pokedexEntityData: PokedexEntityData, uuid: UUID? = null) {
         if (wouldBeDifferent(pokedexEntityData, PokedexEntryProgress.ENCOUNTERED)) {
-            addInformation(pokedexEntityData, PokedexEntryProgress.ENCOUNTERED)
+            addInformation(pokedexEntityData, PokedexEntryProgress.ENCOUNTERED, uuid)
         }
     }
 
-    fun caught(pokemon: Pokemon) {
+    fun caught(pokemon: Pokemon, uuid: UUID? = null) {
         if (wouldBeDifferent(pokemon, PokedexEntryProgress.CAUGHT)) {
-            addInformation(pokemon, PokedexEntryProgress.CAUGHT)
+            addInformation(pokemon, PokedexEntryProgress.CAUGHT, uuid)
         }
     }
 
@@ -115,7 +118,7 @@ class FormDexRecord {
         speciesDexRecord.onFormRecordUpdated(this)
     }
 
-    private fun addInformation(pokemon: Pokemon, knowledge: PokedexEntryProgress) {
+    private fun addInformation(pokemon: Pokemon, knowledge: PokedexEntryProgress, uuid: UUID? = null) {
         genders.add(pokemon.gender)
         seenShinyStates.add(if (pokemon.shiny) "shiny" else "normal")
         if (knowledge.ordinal > this.knowledge.ordinal) {
@@ -123,9 +126,12 @@ class FormDexRecord {
         }
         speciesDexRecord.addInformation(pokemon, knowledge)
         speciesDexRecord.onFormRecordUpdated(this)
+        uuid?.let {
+            CobblemonEvents.DEX_INFO_GAINED.post(DexInformationChangedEvent(pokemon, knowledge, it, this))
+        }
     }
 
-    private fun addInformation(pokedexEntityData: PokedexEntityData, knowledge: PokedexEntryProgress) {
+    private fun addInformation(pokedexEntityData: PokedexEntityData, knowledge: PokedexEntryProgress, uuid: UUID? = null) {
         genders.add(pokedexEntityData.gender)
         seenShinyStates.add(if (pokedexEntityData.shiny) "shiny" else "normal")
         if (knowledge.ordinal > this.knowledge.ordinal) {
@@ -133,6 +139,9 @@ class FormDexRecord {
         }
         speciesDexRecord.addInformation(pokedexEntityData, knowledge)
         speciesDexRecord.onFormRecordUpdated(this)
+        uuid?.let {
+            CobblemonEvents.DEX_INFO_GAINED.post(DexInformationChangedEvent(pokedexEntityData, knowledge, it, this))
+        }
     }
 
     /** Returns whether the given [Pokemon] and [knowledge] would add new information to the Pokédex.*/

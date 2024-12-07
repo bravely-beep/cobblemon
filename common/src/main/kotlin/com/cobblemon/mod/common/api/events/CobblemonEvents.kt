@@ -192,6 +192,8 @@ object CobblemonEvents {
     val POKEMON_GAINED = EventObservable<PokemonGainedEvent>()
     @JvmField
     val POKEMON_SEEN = EventObservable<PokemonSeenEvent>()
+    @JvmField
+    val DEX_INFO_GAINED = EventObservable<DexInformationChangedEvent>()
 
     // Fishing
     @JvmField

@@ -9,18 +9,10 @@
 package com.cobblemon.mod.common.pokedex.scanner
 
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties
-import com.cobblemon.mod.common.pokemon.FormData
-import com.cobblemon.mod.common.pokemon.Gender
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.cobblemon.mod.common.pokemon.Species
-import java.util.UUID
 
-data class PokedexEntityData(
-    val species: Species,
-    val form: FormData,
-    val gender: Gender,
-    val aspects: Set<String>,
-    val shiny: Boolean,
-    val level: Int,
-    val ownerUUID: UUID = UUID.randomUUID()
-) : DexDataSource
+/**
+ * A data source for the dex scanner.
+ * Currently, is just a marker interface for [Pokemon] and [PokedexEntityData].
+ */
+interface DexDataSource
