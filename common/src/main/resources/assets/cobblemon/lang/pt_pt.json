@@ -1888,5 +1888,11 @@
     "cobblemon.move.smokescreen.desc": "O utilizador liberta uma nuvem de fumo ou tinta que o obscurece. Isto diminui a precisão do alvo.",
     "cobblemon.move.skullbash.desc": "O utilizador recolhe a sua cabeça para dentro para aumentar o seu estatuto de Defesa no primeiro turno, depois ataca o alvo no turno seguinte.",
     "cobblemon.move.skyattack": "Ataque do Céu",
-    "cobblemon.move.smog.desc": "O alvo é atacado com uma descarga de gases nojentos. Isto pode também envenenar o alvo."
+    "cobblemon.move.smog.desc": "O alvo é atacado com uma descarga de gases nojentos. Isto pode também envenenar o alvo.",
+    "cobblemon.species.volbeat.name": "Volbeat",
+    "cobblemon.species.illumise.name": "Illumise",
+    "cobblemon.species.gulpin.name": "Gulpin",
+    "cobblemon.species.plusle.name": "Plusle",
+    "cobblemon.species.minun.name": "Minun",
+    "cobblemon.species.roselia.name": "Roselia"
 }
