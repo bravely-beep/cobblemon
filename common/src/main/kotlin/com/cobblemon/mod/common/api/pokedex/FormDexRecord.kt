@@ -21,6 +21,7 @@ import com.cobblemon.mod.common.util.readString
 import com.cobblemon.mod.common.util.writeEnumConstant
 import com.cobblemon.mod.common.util.writeString
 import com.google.common.collect.Sets
+import com.mojang.datafixers.util.Either
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.ListCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
@@ -127,7 +128,7 @@ class FormDexRecord {
         speciesDexRecord.addInformation(pokemon, knowledge)
         speciesDexRecord.onFormRecordUpdated(this)
         uuid?.let {
-            CobblemonEvents.DEX_INFO_GAINED.post(DexInformationChangedEvent(pokemon, knowledge, it, this))
+            CobblemonEvents.DEX_INFO_CHANGED.post(DexInformationChangedEvent(Either.right(pokemon), knowledge, it, this))
         }
     }
 
@@ -140,7 +141,7 @@ class FormDexRecord {
         speciesDexRecord.addInformation(pokedexEntityData, knowledge)
         speciesDexRecord.onFormRecordUpdated(this)
         uuid?.let {
-            CobblemonEvents.DEX_INFO_GAINED.post(DexInformationChangedEvent(pokedexEntityData, knowledge, it, this))
+            CobblemonEvents.DEX_INFO_CHANGED.post(DexInformationChangedEvent(Either.left(pokedexEntityData), knowledge, it, this))
         }
     }
 

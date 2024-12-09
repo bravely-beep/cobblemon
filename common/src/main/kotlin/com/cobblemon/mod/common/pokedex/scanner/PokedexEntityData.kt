@@ -23,4 +23,4 @@ data class PokedexEntityData(
     val shiny: Boolean,
     val level: Int,
     val ownerUUID: UUID = UUID.randomUUID()
-) : DexDataSource
+)
