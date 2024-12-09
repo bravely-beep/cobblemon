@@ -9,6 +9,7 @@
 package com.cobblemon.mod.common.entity.pokemon.ai.goals
 
 import com.cobblemon.mod.common.battles.BattleRegistry
+import com.cobblemon.mod.common.entity.PlatformType
 import com.cobblemon.mod.common.entity.PoseType
 import com.cobblemon.mod.common.entity.pokemon.PokemonBehaviourFlag
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
@@ -53,6 +54,10 @@ class PokemonInBattleMovementGoal(val entity: PokemonEntity, val range: Int) : G
                 // Let flyers fly in battle if they're in the air
                 entity.setBehaviourFlag(PokemonBehaviourFlag.FLYING, true)
             }
+        }
+        if (entity.platform != PlatformType.NONE && entity.onGround()) {
+            // If the pokemon is on a non-fluid surface, remove the platform.
+            entity.platform = PlatformType.NONE
         }
     }
 }

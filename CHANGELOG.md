@@ -52,6 +52,7 @@
 - Added a unique set of sounds for Ancient Poké Balls.
 - Added a sound for using Exp Candy and Rare Candy items.
 - Added raft platforms for non-swimming, non-flying Pokémon to stand on during battles that take place on the water's surface. (Flying Pokémon will fly over water in battle, and water breathing Pokémon will swim in water during battle.)
+- Added `hiddenability=false` option to `/spawnpokemon` and `/pokemonedit` commands, allowing the Pokémon's ability to be reverted to a normal ability.
 
 ### Pokémon Added
 #### Gen 1
