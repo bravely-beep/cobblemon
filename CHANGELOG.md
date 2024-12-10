@@ -398,6 +398,7 @@
 - Fixed Timburr duplicating its log while fainting.
 - Fixed hitbox sizes for Grotle and Torterra being set to default values.
 - Fixed Hisuian Sneasel using Johtonian Sneasel's cry
+- Fixed Trevenant t-posing after 8 seconds of sleep.
 - Fixed reviving items throwing an exception when used in battle.
 - Fixed messages for Focus Sash, Confusion, Mummy, Ice Face, Own Tempo, and Revive.
 - Improve error handling when loading spawn-sets to ensure invalid configurations don't crash the server.
