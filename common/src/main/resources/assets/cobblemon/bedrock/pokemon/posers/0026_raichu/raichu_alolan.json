@@ -11,7 +11,6 @@
     "standing": {
       "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
       "isTouchingWater": false,
-      "isBattle": false,
       "animations": [
         "q.look('head')",
         "q.bedrock('raichu_alolan', 'ground_idle')"
@@ -38,7 +37,6 @@
     "surface_sleep": {
       "poseTypes": ["SLEEP"],
       "isTouchingWater": true,
-      "isUnderWater": false,
       "animations": [
         "q.look('head')",
         "q.bedrock('raichu_alolan', 'ground_sleep')"
@@ -52,9 +50,8 @@
       ]
     },
     "surface_idle": {
-      "poseTypes": ["STAND"],
+      "poseTypes": ["STAND", "FLOAT"],
       "isTouchingWater": true,
-      "isUnderWater": false,
       "animations": [
         "q.look('head')",
         "q.bedrock('raichu_alolan', 'ground_idle')"
@@ -68,9 +65,8 @@
       ]
     },
     "surface_swim": {
-      "poseTypes": ["WALK"],
+      "poseTypes": ["WALK", "SWIM"],
       "isTouchingWater": true,
-      "isUnderWater": false,
       "animations": [
         "q.look('head')",
         "q.bedrock('raichu_alolan', 'ground_walk')"
