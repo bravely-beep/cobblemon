@@ -141,7 +141,6 @@ object PokemonModelRepository : VaryingModelRepository<PokemonPosableModel>() {
         inbuilt("ponyta", ::PonytaModel)
         inbuilt("psyduck", ::PsyduckModel)
         inbuilt("raichu", ::RaichuModel)
-        inbuilt("raichu_alolan", ::RaichuAlolanModel)
         inbuilt("rapidash", ::RapidashModel)
         inbuilt("sandshrew", ::SandshrewModel)
         inbuilt("sandslash", ::SandslashModel)
