@@ -20,7 +20,7 @@
       "poseName": "walking",
       "poseTypes": ["WALK", "SWIM"],
       "animations": [
-        "q.bedrock('corsola', 'ground_idle')"
+        "q.bedrock('corsola', 'ground_walk')"
       ],
       "quirks": ["q.bedrock_quirk('corsola', 'blink')"]
     }
