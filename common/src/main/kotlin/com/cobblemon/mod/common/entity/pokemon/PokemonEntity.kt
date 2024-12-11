@@ -390,9 +390,12 @@ open class PokemonEntity(
         super.tick()
 
         if (isBattling) {
-            // Deploy a platform if touching water but not underwater.
+            // Deploy a platform if a non-wild Pokemon is touching water but not underwater.
             // This can't be done in the BattleMovementGoal as the sleep goal will override it.
-            if (ticksLived > 5 && platform == PlatformType.NONE && isInWater && !isUnderWater && !exposedSpecies.behaviour.moving.swim.canBreatheUnderwater) {
+            if (ticksLived > 5 && platform == PlatformType.NONE
+                    && this.ownerUUID != null
+                    && isInWater && !isUnderWater
+                    && !exposedForm.behaviour.moving.swim.canBreatheUnderwater && !exposedForm.behaviour.moving.swim.canWalkOnWater) {
                 platform = PlatformType.getPlatformTypeForPokemon((exposedForm))
             }
         } else {
@@ -1169,13 +1172,12 @@ open class PokemonEntity(
         var blockPos = BlockPos(pos.x.toInt(), pos.y.toInt(), pos.z.toInt())
         var blockLookCount = 5
         var foundSurface = false
-        val species = this.exposedSpecies
         val form = this.exposedForm
         var result = pos
         if (this.level().isWaterAt(blockPos)) {
             // look upward for a water surface
             var testPos = blockPos
-            if (!species.behaviour.moving.swim.canBreatheUnderwater) {
+            if (!form.behaviour.moving.swim.canBreatheUnderwater || form.behaviour.moving.fly.canFly) {
                 // move sendout pos to surface if it's near
                 for (i in 0..blockLookCount) {
                     // Try to find a surface...
@@ -1216,15 +1218,15 @@ open class PokemonEntity(
             }
         }
         if (foundSurface) {
-            val canFly = species.behaviour.moving.fly.canFly
+            val canFly = form.behaviour.moving.fly.canFly
             if (canFly) {
                 val hasHeadRoom = !collidesWithBlock(Vec3(blockPos.x.toDouble(), (result.y + 1), (blockPos.z).toDouble()))
                 if (hasHeadRoom) {
                     result = Vec3(result.x, result.y + 1.0, result.z)
                 }
-            } else if (species.behaviour.moving.swim.canBreatheUnderwater && !species.behaviour.moving.swim.canWalkOnWater) {
+            } else if (form.behaviour.moving.swim.canBreatheUnderwater && !form.behaviour.moving.swim.canWalkOnWater) {
                 // Use half hitbox height for swimmers
-                val halfHeight = species.hitbox.height * species.baseScale / 2.0
+                val halfHeight = form.hitbox.height * form.baseScale / 2.0
                 for (i in 1..halfHeight.toInt()) {
                     blockPos = blockPos.below()
                     if (!this.level().isWaterAt(blockPos) || !this.level().getBlockState(blockPos).getCollisionShape(this.level(), blockPos).isEmpty) {
@@ -1233,7 +1235,7 @@ open class PokemonEntity(
                 }
                 result = Vec3(result.x, result.y + halfHeight - halfHeight.toInt(), result.z)
             } else {
-                platform = if (species.behaviour.moving.swim.canWalkOnWater || collidesWithBlock(Vec3(result.x, result.y, result.z))) PlatformType.NONE else PlatformType.getPlatformTypeForPokemon(form)
+                platform = if (form.behaviour.moving.swim.canWalkOnWater || collidesWithBlock(Vec3(result.x, result.y, result.z))) PlatformType.NONE else PlatformType.getPlatformTypeForPokemon(form)
             }
         }
         this.platform = platform
