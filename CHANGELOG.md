@@ -489,6 +489,7 @@
 - Added support for conditional pose animations.
 - Added a new universal locator called "top".
 - Added `eggs_collected` and `eggs_hatched` Advancement triggers.
+- Added missing `minYaw` configuration to the `q.look()` function for JSON posers.
 
 ### Localization
 - Updated translations for:
