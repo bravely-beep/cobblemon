@@ -490,6 +490,9 @@
 - Added a new universal locator called "top".
 - Added `eggs_collected` and `eggs_hatched` Advancement triggers.
 - Added missing `minYaw` configuration to the `q.look()` function for JSON posers.
+- Some pose condition names have been changed: 
+  - `isTouchingWaterOrRain` has been changed to `isInWaterOrRain`
+  - `isSubermegedInWater` has been changed to `isUnderWater`
 
 ### Localization
 - Updated translations for:
