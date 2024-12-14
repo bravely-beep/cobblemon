@@ -320,6 +320,8 @@ object MoLangFunctions {
                     val data = Cobblemon.molangData.load(player.uuid)
                     if (data.map.containsKey(npcId)) {
                         return@put (data.map[npcId] as VariableStruct).map[variable] ?: DoubleValue.ZERO
+                    } else {
+                        return@put DoubleValue.ZERO
                     }
                 }
                 map.put("set_npc_variable") { params ->
