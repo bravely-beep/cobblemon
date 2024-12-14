@@ -330,15 +330,12 @@ object MoLangFunctions {
                     val value = params.get<MoValue>(2)
                     val saveAfterwards = params.getBooleanOrNull(3) != false
                     val data = Cobblemon.molangData.load(player.uuid)
-                    if (data.map.containsKey(npcId)) {
-                        (data.map[npcId] as VariableStruct).map[variable] = value
-                        if (saveAfterwards) {
-                            Cobblemon.molangData.save(player.uuid)
-                        }
-                        return@put DoubleValue.ONE
-                    } else {
-                        return@put DoubleValue.ZERO
+                    val npcData = data.map.getOrPut(npcId) { VariableStruct() } as VariableStruct
+                    npcData.map[variable] = value
+                    if (saveAfterwards) {
+                        Cobblemon.molangData.save(player.uuid)
                     }
+                    return@put DoubleValue.ONE
                 }
             }
             map
