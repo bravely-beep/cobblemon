@@ -865,7 +865,7 @@ open class PokemonEntity(
                     pokemon.lastFlowerFed = itemStack
                     return InteractionResult.sidedSuccess(level().isClientSide)
                 }
-            } else if(!player.isShiftKeyDown && StashHandler.interactMob(player, pokemon, itemStack)) {
+            } else if (!player.isShiftKeyDown && StashHandler.interactMob(player, pokemon, itemStack)) {
                 return InteractionResult.SUCCESS
             } else if (itemStack.item is DyeItem && colorFeatureType != null) {
                 val currentColor = colorFeature?.value ?: ""
@@ -1184,7 +1184,7 @@ open class PokemonEntity(
                     // Try to find a surface...
                     val blockState = this.level().getBlockState(testPos)
                     if (blockState.fluidState.isEmpty) {
-                        if(blockState.getCollisionShape(this.level(), testPos).isEmpty) {
+                        if (blockState.getCollisionShape(this.level(), testPos).isEmpty) {
                             foundSurface = true
                         }
                         // No space above the water surface
@@ -1575,8 +1575,6 @@ open class PokemonEntity(
     }
 
     private fun clampRotationsAsNecessary() {
-        if(this.yRot.isInfinite())
-
         this.yRotO = this.clampRotationIfNecessary("yRot0", this.yRotO)
         this.yRot = this.clampRotationIfNecessary("yRot", this.yRot)
         this.xRotO = this.clampRotationIfNecessary("xRot0", this.xRotO)
