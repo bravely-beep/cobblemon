@@ -427,6 +427,7 @@
 - Prevent summary stats tab from making sounds when clicking on an already open tab.
 - Fixed display case not being able to be fed items from underneath.
 - Fixed Pokémon battling in water continuously sinking to the bottom.
+- Fixed passive healing and wake from faint not disabling when their config values are set to 0.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
