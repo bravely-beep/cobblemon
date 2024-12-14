@@ -102,6 +102,12 @@ object MoLangFunctions {
             val message = params.get<MoValue>(0).asString()
             Cobblemon.LOGGER.info(message)
         },
+        "set_query" to java.util.function.Function { params ->
+            val variable = params.getString(0)
+            val value = params.get<MoValue>(1)
+            params.environment.query.addFunction(variable) { value }
+            return@Function value
+        },
         "replace" to java.util.function.Function { params ->
             val text = params.getString(0)
             val search = params.getString(1)
