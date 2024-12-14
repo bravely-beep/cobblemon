@@ -10,6 +10,7 @@ package com.cobblemon.mod.common.api.events.pokemon
 
 import com.cobblemon.mod.common.api.pokedex.FormDexRecord
 import com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress
+import com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager
 import com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.mojang.datafixers.util.Either
@@ -24,5 +25,6 @@ data class DexInformationChangedEvent(
     val playerUUID: UUID,
     val record: FormDexRecord
 ) {
-    fun getDexManager() = record.speciesDexRecord.pokedexManager
+    val pokedexManager: AbstractPokedexManager
+        get() = record.speciesDexRecord.pokedexManager
 }
