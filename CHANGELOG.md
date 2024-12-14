@@ -397,6 +397,9 @@
 - Fixed Alolan Exeggutor's tail not showing in the party UI. It will now also stand in front of all Pokémon in the party menu :)
 - Fixed Timburr duplicating its log while fainting.
 - Fixed hitbox sizes for Grotle and Torterra being set to default values.
+- Fixed Hisuian Sneasel using Johtonian Sneasel's cry
+- Fixed Trevenant t-posing after 8 seconds of sleep.
+- Fixed Bewear t-posing for a bit if a wild one fainted.
 - Fixed reviving items throwing an exception when used in battle.
 - Fixed messages for Focus Sash, Confusion, Mummy, Ice Face, Own Tempo, and Revive.
 - Improve error handling when loading spawn-sets to ensure invalid configurations don't crash the server.
@@ -486,6 +489,10 @@
 - Added support for conditional pose animations.
 - Added a new universal locator called "top".
 - Added `eggs_collected` and `eggs_hatched` Advancement triggers.
+- Added missing `minYaw` configuration to the `q.look()` function for JSON posers.
+- Some pose condition names have been changed: 
+  - `isTouchingWaterOrRain` has been changed to `isInWaterOrRain`
+  - `isSubermegedInWater` has been changed to `isUnderWater`
 
 ### Localization
 - Updated translations for:
