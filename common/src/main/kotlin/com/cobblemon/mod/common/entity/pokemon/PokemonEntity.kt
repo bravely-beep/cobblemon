@@ -387,6 +387,7 @@ open class PokemonEntity(
     }
 
     override fun tick() {
+        this.clampRotationsAsNecessary()
         super.tick()
 
         if (isBattling) {
@@ -1571,5 +1572,25 @@ open class PokemonEntity(
 
     override fun resolveEntityScan(): LivingEntity {
         return this
+    }
+
+    private fun clampRotationsAsNecessary() {
+        if(this.yRot.isInfinite())
+
+        this.yRotO = this.clampRotationIfNecessary("yRot0", this.yRotO)
+        this.yRot = this.clampRotationIfNecessary("yRot", this.yRot)
+        this.xRotO = this.clampRotationIfNecessary("xRot0", this.xRotO)
+        this.xRot = this.clampRotationIfNecessary("xRot", this.xRot)
+        this.yHeadRot = this.clampRotationIfNecessary("yHeadRot", this.yHeadRot)
+        this.yBodyRot = this.clampRotationIfNecessary("yBodyRot", this.yBodyRot)
+    }
+
+    private fun clampRotationIfNecessary(name: String, input: Float) : Float {
+        if (!input.isFinite()) {
+            Cobblemon.LOGGER.warn("Invalid entity rotation: $name (${this.pokemon.species.resourceIdentifier})")
+            return Math.clamp(input, -180F, 180F)
+        }
+
+        return input
     }
 }
