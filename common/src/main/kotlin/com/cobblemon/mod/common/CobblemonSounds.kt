@@ -99,6 +99,8 @@ object CobblemonSounds : PlatformRegistry<Registry<SoundEvent>, ResourceKey<Regi
     val PVW_BATTLE = this.create("battle.pvw.default")
 
     @JvmField
+    val MEDICINE_CANDY_USE = this.create("item.medicine.candy.use")
+    @JvmField
     val MEDICINE_HERB_USE = this.create("item.medicine.herb.use")
     @JvmField
     val MEDICINE_LIQUID_USE = this.create("item.medicine.liquid.use")
@@ -255,6 +257,13 @@ object CobblemonSounds : PlatformRegistry<Registry<SoundEvent>, ResourceKey<Regi
         RELIC_COIN_SACK_HIT,
         RELIC_COIN_SACK_STEP
     )
+
+    @JvmField
+    val MOVE_QUICKATTACK_TARGET = this.create("move.quickattack.target")
+    @JvmField
+    val MOVE_PURSUIT_TARGET = this.create("move.pursuit.target")
+    @JvmField
+    val MOVE_PSYCHIC_TARGET = this.create("move.psychic.target")
 
     @JvmField
     val IMPACT_NORMAL = this.create("impact.normal")
