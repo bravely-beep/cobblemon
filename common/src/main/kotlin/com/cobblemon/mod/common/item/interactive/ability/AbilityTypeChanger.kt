@@ -27,7 +27,7 @@ open class AbilityTypeChanger<T : PotentialAbility>(
 
         return pokemon.form.abilities
             .filter { it.type == targetType && it.template != pokemon.ability.template }
-            .map { Pair(it.template, it.priority) }
+            .map { it.template to it.priority }
             .toSet()
     }
 
