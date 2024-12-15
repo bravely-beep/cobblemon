@@ -1565,7 +1565,7 @@ open class PokemonEntity(
                 aspects = this.aspects,
                 shiny = this.pokemon.shiny,
                 level = this.labelLevel(),
-                ownerUUID = this.ownerUUID ?: UUID.randomUUID()
+                ownerUUID = this.ownerUUID
             )
         }
     }
