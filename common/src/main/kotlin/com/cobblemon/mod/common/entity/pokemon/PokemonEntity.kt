@@ -387,6 +387,7 @@ open class PokemonEntity(
     }
 
     override fun tick() {
+        this.clampRotationsAsNecessary()
         super.tick()
 
         if (isBattling) {
@@ -423,9 +424,8 @@ open class PokemonEntity(
 
         if (ticksLived <= 20) {
             clearRestriction()
-            val spawnDirection = entityData.get(SPAWN_DIRECTION)
+            val spawnDirection = entityData.get(SPAWN_DIRECTION).coerceIn(-360F, 360F).takeIf { it.isFinite() } ?: 0F
             yBodyRot = spawnDirection
-            yBodyRotO = spawnDirection
         }
 
         if (this.tethering != null && !this.tethering!!.box.contains(this.x, this.y, this.z)) {
@@ -864,7 +864,7 @@ open class PokemonEntity(
                     pokemon.lastFlowerFed = itemStack
                     return InteractionResult.sidedSuccess(level().isClientSide)
                 }
-            } else if(!player.isShiftKeyDown && StashHandler.interactMob(player, pokemon, itemStack)) {
+            } else if (!player.isShiftKeyDown && StashHandler.interactMob(player, pokemon, itemStack)) {
                 return InteractionResult.SUCCESS
             } else if (itemStack.item is DyeItem && colorFeatureType != null) {
                 val currentColor = colorFeature?.value ?: ""
@@ -1183,7 +1183,7 @@ open class PokemonEntity(
                     // Try to find a surface...
                     val blockState = this.level().getBlockState(testPos)
                     if (blockState.fluidState.isEmpty) {
-                        if(blockState.getCollisionShape(this.level(), testPos).isEmpty) {
+                        if (blockState.getCollisionShape(this.level(), testPos).isEmpty) {
                             foundSurface = true
                         }
                         // No space above the water surface
@@ -1564,12 +1564,32 @@ open class PokemonEntity(
                 aspects = this.aspects,
                 shiny = this.pokemon.shiny,
                 level = this.labelLevel(),
-                ownerUUID = this.ownerUUID ?: UUID.randomUUID()
+                ownerUUID = this.ownerUUID
             )
         }
     }
 
     override fun resolveEntityScan(): LivingEntity {
         return this
+    }
+
+    private fun clampRotationsAsNecessary() {
+//        this.yRotO = this.clampRotationIfNecessary("yRot0", this.yRotO)
+//        this.yRot = this.clampRotationIfNecessary("yRot", this.yRot)
+//        this.xRotO = this.clampRotationIfNecessary("xRot0", this.xRotO)
+//        this.xRot = this.clampRotationIfNecessary("xRot", this.xRot)
+//        this.yHeadRot = this.clampRotationIfNecessary("yHeadRot", this.yHeadRot)
+//        this.yBodyRot = this.clampRotationIfNecessary("yBodyRot", this.yBodyRot)
+//        this.yHeadRotO = this.clampRotationIfNecessary("yHeadRotO", this.yHeadRotO)
+//        this.yBodyRotO = this.clampRotationIfNecessary("yBodyRotO", this.yBodyRotO)
+    }
+
+    private fun clampRotationIfNecessary(name: String, input: Float) : Float {
+        if (!(input >= -9999F && input <= 9999F)) {
+            Cobblemon.LOGGER.warn("Invalid entity rotation: $name $input (${this.pokemon.species.resourceIdentifier})")
+            return Math.clamp(input, -180F, 180F)
+        }
+
+        return input
     }
 }
