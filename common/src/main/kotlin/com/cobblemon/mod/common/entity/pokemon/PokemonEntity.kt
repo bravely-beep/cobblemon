@@ -1581,6 +1581,8 @@ open class PokemonEntity(
         this.xRot = this.clampRotationIfNecessary("xRot", this.xRot)
         this.yHeadRot = this.clampRotationIfNecessary("yHeadRot", this.yHeadRot)
         this.yBodyRot = this.clampRotationIfNecessary("yBodyRot", this.yBodyRot)
+        this.yHeadRotO = this.clampRotationIfNecessary("yHeadRotO", this.yHeadRotO)
+        this.yBodyRotO = this.clampRotationIfNecessary("yBodyRotO", this.yBodyRotO)
     }
 
     private fun clampRotationIfNecessary(name: String, input: Float) : Float {
