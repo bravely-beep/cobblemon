@@ -8,6 +8,9 @@
 
 package com.cobblemon.mod.common.api.events.pokemon
 
+import com.bedrockk.molang.runtime.value.DoubleValue
+import com.bedrockk.molang.runtime.value.MoValue
+import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.api.pokedex.FormDexRecord
 import com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress
 import com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager
@@ -19,7 +22,7 @@ import java.util.UUID
 /**
  * Event that fires when a Pokémon's information is gained or updated in the Pokédex.
  */
-data class DexInformationChangedEvent(
+data class PokedexDataChangedEvent(
     val dataSource: Either<PokedexEntityData, Pokemon>,
     val knowledge: PokedexEntryProgress,
     val playerUUID: UUID,
@@ -27,4 +30,11 @@ data class DexInformationChangedEvent(
 ) {
     val pokedexManager: AbstractPokedexManager
         get() = record.speciesDexRecord.pokedexManager
+
+    val context = mutableMapOf<String, MoValue>(
+        "pokemon" to dataSource.map({ DoubleValue.ZERO }, { it.struct }),
+        "data" to dataSource.map({ it.struct }, { DoubleValue.ZERO }),
+        "knowledge" to StringValue(knowledge.name.lowercase()),
+        "pokedex" to pokedexManager.struct
+    )
 }

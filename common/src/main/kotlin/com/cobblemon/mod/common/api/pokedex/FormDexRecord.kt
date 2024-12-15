@@ -12,7 +12,7 @@ import com.bedrockk.molang.runtime.struct.QueryStruct
 import com.bedrockk.molang.runtime.struct.VariableStruct
 import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.api.events.CobblemonEvents
-import com.cobblemon.mod.common.api.events.pokemon.DexInformationChangedEvent
+import com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent
 import com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData
 import com.cobblemon.mod.common.pokemon.Gender
 import com.cobblemon.mod.common.pokemon.Pokemon
@@ -26,7 +26,6 @@ import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.ListCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.minecraft.network.RegistryFriendlyByteBuf
-import java.util.UUID
 
 /**
  * A record of a form in the Pokédex. There are a number of tracked properties regarding the form and what
@@ -86,21 +85,21 @@ class FormDexRecord {
         it.knowledge = knowledge
     }
 
-    fun encountered(pokemon: Pokemon, uuid: UUID? = null) {
+    fun encountered(pokemon: Pokemon) {
         if (wouldBeDifferent(pokemon, PokedexEntryProgress.ENCOUNTERED)) {
-            addInformation(pokemon, PokedexEntryProgress.ENCOUNTERED, uuid)
+            addInformation(pokemon, PokedexEntryProgress.ENCOUNTERED)
         }
     }
 
-    fun encountered(pokedexEntityData: PokedexEntityData, uuid: UUID? = null) {
+    fun encountered(pokedexEntityData: PokedexEntityData) {
         if (wouldBeDifferent(pokedexEntityData, PokedexEntryProgress.ENCOUNTERED)) {
-            addInformation(pokedexEntityData, PokedexEntryProgress.ENCOUNTERED, uuid)
+            addInformation(pokedexEntityData, PokedexEntryProgress.ENCOUNTERED)
         }
     }
 
-    fun caught(pokemon: Pokemon, uuid: UUID? = null) {
+    fun caught(pokemon: Pokemon) {
         if (wouldBeDifferent(pokemon, PokedexEntryProgress.CAUGHT)) {
-            addInformation(pokemon, PokedexEntryProgress.CAUGHT, uuid)
+            addInformation(pokemon, PokedexEntryProgress.CAUGHT)
         }
     }
 
@@ -119,7 +118,7 @@ class FormDexRecord {
         speciesDexRecord.onFormRecordUpdated(this)
     }
 
-    private fun addInformation(pokemon: Pokemon, knowledge: PokedexEntryProgress, uuid: UUID? = null) {
+    private fun addInformation(pokemon: Pokemon, knowledge: PokedexEntryProgress) {
         genders.add(pokemon.gender)
         seenShinyStates.add(if (pokemon.shiny) "shiny" else "normal")
         if (knowledge.ordinal > this.knowledge.ordinal) {
@@ -127,12 +126,13 @@ class FormDexRecord {
         }
         speciesDexRecord.addInformation(pokemon, knowledge)
         speciesDexRecord.onFormRecordUpdated(this)
-        uuid?.let {
-            CobblemonEvents.DEX_INFO_CHANGED.post(DexInformationChangedEvent(Either.right(pokemon), knowledge, it, this))
+
+        (speciesDexRecord.pokedexManager as? PokedexManager)?.let { pokedexManager ->
+            CobblemonEvents.POKEDEX_DATA_CHANGED.post(PokedexDataChangedEvent(Either.right(pokemon), knowledge, pokedexManager.uuid, this))
         }
     }
 
-    private fun addInformation(pokedexEntityData: PokedexEntityData, knowledge: PokedexEntryProgress, uuid: UUID? = null) {
+    private fun addInformation(pokedexEntityData: PokedexEntityData, knowledge: PokedexEntryProgress) {
         genders.add(pokedexEntityData.gender)
         seenShinyStates.add(if (pokedexEntityData.shiny) "shiny" else "normal")
         if (knowledge.ordinal > this.knowledge.ordinal) {
@@ -140,8 +140,9 @@ class FormDexRecord {
         }
         speciesDexRecord.addInformation(pokedexEntityData, knowledge)
         speciesDexRecord.onFormRecordUpdated(this)
-        uuid?.let {
-            CobblemonEvents.DEX_INFO_CHANGED.post(DexInformationChangedEvent(Either.left(pokedexEntityData), knowledge, it, this))
+
+        (speciesDexRecord.pokedexManager as? PokedexManager)?.let { pokedexManager ->
+            CobblemonEvents.POKEDEX_DATA_CHANGED.post(PokedexDataChangedEvent(Either.left(pokedexEntityData), knowledge, pokedexManager.uuid, this))
         }
     }
 
