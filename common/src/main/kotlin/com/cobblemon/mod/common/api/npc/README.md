@@ -307,7 +307,7 @@ a single battle challenge and this is a dynamic party, there will also be a `q.p
         "type": "pool",
         "minPokemon": "3",
         "maxPokemon": "6",
-        "isStatic": true,
+        "isStatic": false,
         "pool": [
           {
             "pokemon": "weedle",
@@ -345,7 +345,8 @@ a single battle challenge and this is a dynamic party, there will also be a `q.p
             "weight": "5",
             "npcLevels": "10-15",
             "selectableTimes": "1",
-            "level": "q.player.highest_level"
+            "level": "q.player.party.highest_level"
+
           }
         ]
       }
