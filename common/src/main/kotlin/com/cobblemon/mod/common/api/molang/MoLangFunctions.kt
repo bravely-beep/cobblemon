@@ -853,6 +853,7 @@ object MoLangFunctions {
             map.put("seen_percent") { DoubleValue(pokedex.getGlobalCalculatedValue(SeenPercent)) }
 
             if (pokedex is PokedexManager) {
+                map.put("player_id") { StringValue(pokedex.uuid.toString()) }
                 map.put("see") { params ->
                     val pokemon = params.get<ObjectValue<Pokemon>>(0).obj
                     pokedex.encounter(pokemon)
