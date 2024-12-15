@@ -1574,6 +1574,12 @@ open class PokemonEntity(
     }
 
     private fun clampRotationsAsNecessary() {
+        Cobblemon.LOGGER.info(
+            """
+                Ticking PokemonEntity ${exposedSpecies.name} at $x $y $z. Alive for $age. It has rotation data: $yRotO $yRot $xRotO $xRot $yHeadRot $yBodyRot $yHeadRotO $yBodyRotO     
+            """.trimIndent()
+        )
+
 //        this.yRotO = this.clampRotationIfNecessary("yRot0", this.yRotO)
 //        this.yRot = this.clampRotationIfNecessary("yRot", this.yRot)
 //        this.xRotO = this.clampRotationIfNecessary("xRot0", this.xRotO)
