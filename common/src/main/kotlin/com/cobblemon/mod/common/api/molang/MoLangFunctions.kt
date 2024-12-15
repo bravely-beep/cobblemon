@@ -110,6 +110,12 @@ object MoLangFunctions {
             val message = params.get<MoValue>(0).asString()
             Cobblemon.LOGGER.info(message)
         },
+        "set_query" to java.util.function.Function { params ->
+            val variable = params.getString(0)
+            val value = params.get<MoValue>(1)
+            params.environment.query.addFunction(variable) { value }
+            return@Function value
+        },
         "replace" to java.util.function.Function { params ->
             val text = params.getString(0)
             val search = params.getString(1)
@@ -328,6 +334,8 @@ object MoLangFunctions {
                     val data = Cobblemon.molangData.load(player.uuid)
                     if (data.map.containsKey(npcId)) {
                         return@put (data.map[npcId] as VariableStruct).map[variable] ?: DoubleValue.ZERO
+                    } else {
+                        return@put DoubleValue.ZERO
                     }
                 }
                 map.put("set_npc_variable") { params ->
@@ -336,15 +344,12 @@ object MoLangFunctions {
                     val value = params.get<MoValue>(2)
                     val saveAfterwards = params.getBooleanOrNull(3) != false
                     val data = Cobblemon.molangData.load(player.uuid)
-                    if (data.map.containsKey(npcId)) {
-                        (data.map[npcId] as VariableStruct).map[variable] = value
-                        if (saveAfterwards) {
-                            Cobblemon.molangData.save(player.uuid)
-                        }
-                        return@put DoubleValue.ONE
-                    } else {
-                        return@put DoubleValue.ZERO
+                    val npcData = data.map.getOrPut(npcId) { VariableStruct() } as VariableStruct
+                    npcData.map[variable] = value
+                    if (saveAfterwards) {
+                        Cobblemon.molangData.save(player.uuid)
                     }
+                    return@put DoubleValue.ONE
                 }
                 map.put("pokedex") { player.pokedex().struct }
             }
