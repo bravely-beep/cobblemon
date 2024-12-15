@@ -49,6 +49,7 @@ class NPCClass {
     var party: NPCPartyProvider? = null
     var skill: Int = 0
     var autoHealParty: Boolean = true
+    var randomizePartyOrder: Boolean = false
     var battleTheme: ResourceLocation? = null
     var ai: MutableList<BrainConfig> = mutableListOf()
     var isMovable: Boolean = true
@@ -84,6 +85,7 @@ class NPCClass {
         }
         buffer.writeInt(skill)
         buffer.writeBoolean(autoHealParty)
+        buffer.writeBoolean(randomizePartyOrder)
         buffer.writeMapK(size = IntSize.U_BYTE, map = variables) { (key, value) ->
             buffer.writeString(key)
             buffer.writeString(value.asString())
@@ -128,6 +130,7 @@ class NPCClass {
         }.toMutableList()
         skill = buffer.readInt()
         autoHealParty = buffer.readBoolean()
+        randomizePartyOrder = buffer.readBoolean()
         buffer.readMapK(size = IntSize.U_BYTE, map = variables) {
             val key = buffer.readString()
             val value = buffer.readString()

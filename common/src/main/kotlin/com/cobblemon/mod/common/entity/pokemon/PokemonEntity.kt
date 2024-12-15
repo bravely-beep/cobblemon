@@ -1584,7 +1584,7 @@ open class PokemonEntity(
     }
 
     private fun clampRotationIfNecessary(name: String, input: Float) : Float {
-        if (!(input >= -720F && input <= 720F)) {
+        if (!(input >= -9999F && input <= 9999F)) {
             Cobblemon.LOGGER.warn("Invalid entity rotation: $name $input (${this.pokemon.species.resourceIdentifier})")
             return Math.clamp(input, -180F, 180F)
         }
