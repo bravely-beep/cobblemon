@@ -56,6 +56,8 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.entity.pokemon.ai.PokemonMoveControl
 import com.cobblemon.mod.common.net.messages.client.animation.PlayPosableAnimationPacket
 import com.cobblemon.mod.common.net.messages.client.effect.RunPosableMoLangPacket
+import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormEntityParticlePacket
+import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormParticlePacket
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.cobblemon.mod.common.pokemon.Species
 import com.cobblemon.mod.common.util.*
@@ -458,8 +460,48 @@ object MoLangFunctions {
             if (entity is PosableEntity) {
                 map.put("play_animation") { params ->
                     val animation = params.getString(0)
-                    val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
-                    packet.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                    val target = params.getStringOrNull(1)
+                    if(target != null) {
+                        val targetPlayer: ServerPlayer? = if(target.asUUID != null) entity.level().getPlayerByUUID(target.asUUID!!) as ServerPlayer else if (entity.level() is ServerLevel) entity.level().server!!.playerList.getPlayerByName(target) else null
+                        if(targetPlayer != null) {
+                            val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
+                            packet.sendToPlayer(targetPlayer)
+                        }
+                    } else {
+                        val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
+                        packet.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                    }
+                }
+            }
+            map.put("send_snowstorm_particle") { params ->
+                val particle = params.getString(0).asResource()
+                if(params.params.size > 3) {
+                    val x = params.getDouble(2)
+                    val y = params.getDouble(3)
+                    val z = params.getDouble(4)
+                    val pos = Vec3(x, y, z)
+                    SpawnSnowstormParticlePacket(particle, pos).sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                } else {
+                    val uuid = params.getString(2).asUUID ?: return@put DoubleValue.ZERO
+                    val locator = params.getString(3) ?: "root"
+                    val entity = (entity.level() as ServerLevel).getEntity(uuid) ?: return@put DoubleValue.ZERO
+                    SpawnSnowstormEntityParticlePacket(particle, entity.id, listOf(locator)).sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                }
+            }
+            map.put("send_snowstorm_particle_to_player") { params ->
+                val particle = params.getString(0).asResource()
+                val player: ServerPlayer = params.getString(1).asUUID?.let { entity.level().getPlayerByUUID(it) as ServerPlayer } ?: return@put DoubleValue.ZERO
+                if(params.params.size == 5) {
+                    val x = params.getDouble(2)
+                    val y = params.getDouble(3)
+                    val z = params.getDouble(4)
+                    val pos = Vec3(x, y, z)
+                    SpawnSnowstormParticlePacket(particle, pos).sendToPlayer(player)
+                } else {
+                    val uuid = params.getString(2).asUUID ?: return@put DoubleValue.ZERO
+                    val locator = params.getString(3) ?: "root"
+                    val entity = (entity.level() as ServerLevel).getEntity(uuid) ?: return@put DoubleValue.ZERO
+                    SpawnSnowstormEntityParticlePacket(particle, entity.id, listOf(locator)).sendToPlayer(player)
                 }
             }
             map
