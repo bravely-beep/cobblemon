@@ -480,7 +480,7 @@ object MoLangFunctions {
                     val y = params.getDouble(3)
                     val z = params.getDouble(4)
                     val pos = Vec3(x, y, z)
-                    SpawnSnowstormParticlePacket(particle, pos).sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                    SpawnSnowstormParticlePacket(particle, pos).sendToPlayersAround(x, y, z, 64.0, entity.level().dimension())
                 } else {
                     val uuid = params.getString(2).asUUID ?: return@put DoubleValue.ZERO
                     val locator = params.getString(3) ?: "root"
