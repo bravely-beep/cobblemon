@@ -6770,7 +6770,7 @@
   "cobblemon.ability.schooling": "Schooling",
   "cobblemon.ability.schooling.desc": "When it has a lot of HP, the Pokémon forms a powerful school. It stops schooling when its HP is low.",
   "cobblemon.ability.scrappy": "Scrappy",
-  "cobblemon.ability.scrappy.desc": "The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.",
+  "cobblemon.ability.scrappy.desc": "The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves. It also grants immunity to Intimidate.",
   "cobblemon.ability.screencleaner": "Screen Cleaner",
   "cobblemon.ability.screencleaner.desc": "When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.",
   "cobblemon.ability.seedsower": "Seed Sower",
