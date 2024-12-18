@@ -400,6 +400,7 @@
 - Fixed Hisuian Sneasel using Johtonian Sneasel's cry
 - Fixed Trevenant t-posing after 8 seconds of sleep.
 - Fixed Bewear t-posing for a bit if a wild one fainted.
+- Fixed Noctowl's placeholder fly animation.
 - Fixed reviving items throwing an exception when used in battle.
 - Fixed messages for Focus Sash, Confusion, Mummy, Ice Face, Own Tempo, and Revive.
 - Improve error handling when loading spawn-sets to ensure invalid configurations don't crash the server.
