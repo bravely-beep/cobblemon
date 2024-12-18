@@ -93,6 +93,7 @@ import java.util.EnumSet
 import java.util.Optional
 import java.util.UUID
 import java.util.concurrent.CompletableFuture
+import kotlin.math.roundToInt
 import net.minecraft.core.BlockPos
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
@@ -387,7 +388,6 @@ open class PokemonEntity(
     }
 
     override fun tick() {
-        this.clampRotationsAsNecessary()
         super.tick()
 
         if (isBattling) {
@@ -419,14 +419,11 @@ open class PokemonEntity(
         }
         delegate.tick(this)
         ticksLived++
-        if (this.ticksLived % 20 == 0) {
-            //this.updateEyeHeight()
-        }
 
         if (ticksLived <= 20) {
             clearRestriction()
-            val spawnDirection = entityData.get(SPAWN_DIRECTION).coerceIn(-360F, 360F).takeIf { it.isFinite() } ?: 0F
-            yBodyRot = spawnDirection
+            val spawnDirection = entityData.get(SPAWN_DIRECTION).takeIf { it.isFinite() } ?: 0F
+            yBodyRot = (spawnDirection * 1000F).toInt() / 1000F
         }
 
         if (this.tethering != null && !this.tethering!!.box.contains(this.x, this.y, this.z)) {
@@ -1573,30 +1570,5 @@ open class PokemonEntity(
     override fun resolveEntityScan(): LivingEntity {
         return this
     }
-
-    private fun clampRotationsAsNecessary() {
-        Cobblemon.LOGGER.info(
-            """
-                Ticking PokemonEntity ${exposedSpecies.name} at $x $y $z. Alive for $age. It has rotation data: $yRotO $yRot $xRotO $xRot $yHeadRot $yBodyRot $yHeadRotO $yBodyRotO     
-            """.trimIndent()
-        )
-
-//        this.yRotO = this.clampRotationIfNecessary("yRot0", this.yRotO)
-//        this.yRot = this.clampRotationIfNecessary("yRot", this.yRot)
-//        this.xRotO = this.clampRotationIfNecessary("xRot0", this.xRotO)
-//        this.xRot = this.clampRotationIfNecessary("xRot", this.xRot)
-//        this.yHeadRot = this.clampRotationIfNecessary("yHeadRot", this.yHeadRot)
-//        this.yBodyRot = this.clampRotationIfNecessary("yBodyRot", this.yBodyRot)
-//        this.yHeadRotO = this.clampRotationIfNecessary("yHeadRotO", this.yHeadRotO)
-//        this.yBodyRotO = this.clampRotationIfNecessary("yBodyRotO", this.yBodyRotO)
-    }
-
-    private fun clampRotationIfNecessary(name: String, input: Float) : Float {
-        if (!(input >= -9999F && input <= 9999F)) {
-            Cobblemon.LOGGER.warn("Invalid entity rotation: $name $input (${this.pokemon.species.resourceIdentifier})")
-            return Math.clamp(input, -180F, 180F)
-        }
-
-        return input
-    }
 }
+
