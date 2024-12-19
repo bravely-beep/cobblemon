@@ -393,7 +393,8 @@ open class PokemonEntity(
         if (isBattling) {
             // Deploy a platform if a non-wild Pokemon is touching water but not underwater.
             // This can't be done in the BattleMovementGoal as the sleep goal will override it.
-            if (ticksLived > 5 && platform == PlatformType.NONE
+            // Clients also don't seem to have correct info about behavior
+            if (!level().isClientSide && ticksLived > 5 && platform == PlatformType.NONE
                     && ownerUUID != null
                     && isInWater && !isUnderWater
                     && !exposedForm.behaviour.moving.swim.canBreatheUnderwater && !exposedForm.behaviour.moving.swim.canWalkOnWater
