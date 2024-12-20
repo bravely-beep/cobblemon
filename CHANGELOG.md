@@ -71,6 +71,7 @@
 - Octillery
 - Mantine
 - Smeargle
+- Delibird
 
 #### Gen 3
 - Slakoth
