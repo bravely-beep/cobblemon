@@ -234,7 +234,7 @@ class PCBlock(properties: Properties): BaseEntityBlock(properties), SimpleWaterl
 
     @Deprecated("Deprecated in Java")
     override fun isPathfindable(
-        blockState: BlockState?,
+        blockState: BlockState,
         pathComputationType: PathComputationType
     ): Boolean = false
 
