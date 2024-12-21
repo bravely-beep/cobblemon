@@ -31,31 +31,31 @@ internal object CobblemonNeoForgeBrewingRegistry {
             e.builder.addRecipe(
                 object : IBrewingRecipe {
                     override fun isInput(arg: ItemStack): Boolean {
-                        if (input is CobblemonItemIngredient) {
-                            return input.item == arg.item
-                        }
-                        else if (input is CobblemonPotionIngredient) {
-                            return input.matches(arg)
-                        }
-                        else {
-                            return false
+                        return if (input is CobblemonItemIngredient) {
+                            input.item == arg.item
+                        } else if (input is CobblemonPotionIngredient) {
+                            input.matches(arg)
+                        } else {
+                            false
                         }
                     }
 
                     override fun isIngredient(arg: ItemStack): Boolean {
-                        if (ingredient is CobblemonItemIngredient) {
-                            return ingredient.item == arg.item
-                        }
-                        else if (ingredient is CobblemonPotionIngredient) {
-                            return ingredient.matches(arg)
-                        }
-                        else {
-                            return false
+                        return if (ingredient is CobblemonItemIngredient) {
+                            ingredient.item == arg.item
+                        } else if (ingredient is CobblemonPotionIngredient) {
+                            ingredient.matches(arg)
+                        } else {
+                            false
                         }
                     }
 
-                    override fun getOutput(arg: ItemStack, arg2: ItemStack): ItemStack {
-                        return output.defaultInstance
+                    override fun getOutput(input: ItemStack, ingredient: ItemStack): ItemStack {
+                        return if (isInput(input) && isIngredient(ingredient)) {
+                            output.defaultInstance
+                        } else {
+                            ItemStack.EMPTY
+                        }
                     }
 
                 }
