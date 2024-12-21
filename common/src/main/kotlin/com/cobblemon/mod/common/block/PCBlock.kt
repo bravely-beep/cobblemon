@@ -55,7 +55,6 @@ class PCBlock(properties: Properties): BaseEntityBlock(properties), SimpleWaterl
         val CODEC = simpleCodec(::PCBlock)
         val PART = EnumProperty.create("part", PCPart::class.java)
         val ON = BooleanProperty.create("on")
-        val WATERLOGGED = BooleanProperty.create("waterlogged")
         val NATURAL = BooleanProperty.create("natural")
 
         private val NORTH_AABB_TOP = Shapes.or(
