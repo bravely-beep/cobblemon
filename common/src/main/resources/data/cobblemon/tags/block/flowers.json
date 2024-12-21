@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:flowers",
+  "#minecraft:flowers"
 	"#cobblemon:small_flowers",
 	{
       "id": "#c:flowers",
