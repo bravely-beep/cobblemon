@@ -71,6 +71,7 @@
 - Octillery
 - Mantine
 - Smeargle
+- Delibird
 
 #### Gen 3
 - Slakoth
@@ -250,6 +251,7 @@
 ### Model updates for the following Pokémon
 - Bulbasaur, Ivysaur, Venusaur
 - Charmander, Charmeleon, Charizard
+- Caterpie
 - Kakuna, Beedrill
 - Lapras
 - Porygon, Porygon2, Porygon-Z
@@ -285,9 +287,11 @@
 - Phantump, Trevenant
 - Litten, Torracat, Incineroar
 - Popplio, Brionne, Primarina
+- Mudbray
 - Lurantis
 - Scorbunny, Cinderace
 - Quaxly
+- Skeledirge
 - Tatsugiri
 
 ### Changes
@@ -343,6 +347,7 @@
     - A short jump indicates that you caught the Pokémon.
 - Pokémon sent out during battle will spawn facing their opponent.
 - Pokémon sent out outside a battle will spawn facing their trainer.
+- Wailord is now 25% bigger
 
 ### Fixes
 - Fixed Ability Patches not reverting Hidden Abilities back to Normal Abilities.
@@ -400,6 +405,8 @@
 - Fixed Hisuian Sneasel using Johtonian Sneasel's cry
 - Fixed Trevenant t-posing after 8 seconds of sleep.
 - Fixed Bewear t-posing for a bit if a wild one fainted.
+- Fixed Noctowl's placeholder fly animation.
+- Corrected Lotad's kotlin poser to use its own blink animation instead of Charmander's. 
 - Fixed reviving items throwing an exception when used in battle.
 - Fixed messages for Focus Sash, Confusion, Mummy, Ice Face, Own Tempo, and Revive.
 - Improve error handling when loading spawn-sets to ensure invalid configurations don't crash the server.
