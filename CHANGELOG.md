@@ -71,6 +71,7 @@
 - Octillery
 - Mantine
 - Smeargle
+- Delibird
 
 #### Gen 3
 - Slakoth
@@ -250,6 +251,7 @@
 ### Model updates for the following Pokémon
 - Bulbasaur, Ivysaur, Venusaur
 - Charmander, Charmeleon, Charizard
+- Caterpie
 - Kakuna, Beedrill
 - Lapras
 - Porygon, Porygon2, Porygon-Z
@@ -285,9 +287,11 @@
 - Phantump, Trevenant
 - Litten, Torracat, Incineroar
 - Popplio, Brionne, Primarina
+- Mudbray
 - Lurantis
 - Scorbunny, Cinderace
 - Quaxly
+- Skeledirge
 - Tatsugiri
 
 ### Changes
@@ -343,6 +347,7 @@
     - A short jump indicates that you caught the Pokémon.
 - Pokémon sent out during battle will spawn facing their opponent.
 - Pokémon sent out outside a battle will spawn facing their trainer.
+- Wailord is now 25% bigger
 
 ### Fixes
 - Fixed Ability Patches not reverting Hidden Abilities back to Normal Abilities.
@@ -397,6 +402,11 @@
 - Fixed Alolan Exeggutor's tail not showing in the party UI. It will now also stand in front of all Pokémon in the party menu :)
 - Fixed Timburr duplicating its log while fainting.
 - Fixed hitbox sizes for Grotle and Torterra being set to default values.
+- Fixed Hisuian Sneasel using Johtonian Sneasel's cry
+- Fixed Trevenant t-posing after 8 seconds of sleep.
+- Fixed Bewear t-posing for a bit if a wild one fainted.
+- Fixed Noctowl's placeholder fly animation.
+- Corrected Lotad's kotlin poser to use its own blink animation instead of Charmander's. 
 - Fixed reviving items throwing an exception when used in battle.
 - Fixed messages for Focus Sash, Confusion, Mummy, Ice Face, Own Tempo, and Revive.
 - Improve error handling when loading spawn-sets to ensure invalid configurations don't crash the server.
@@ -427,6 +437,8 @@
 - Prevent summary stats tab from making sounds when clicking on an already open tab.
 - Fixed display case not being able to be fed items from underneath.
 - Fixed Pokémon battling in water continuously sinking to the bottom.
+- Fixed passive healing and wake from faint not disabling when their config values are set to 0.
+- Fixed an issue where rebinding the R key to a mouse button prevented players from closing the battle interface using that button.
 
 ### Developer
 - `SpawnCause` is now an implementation of `SpawningInfluence`.
@@ -458,6 +470,7 @@
     - Added HealingSource, an interface applied to all sources of healing from player actions, for easier tracking of healing sources.
   - Move Change
   - Shiny Chance Calculation Event (with player context)
+  - Dex Information Changed; this event is fired when the Pokédex is updated with new information.
 - Rebuilt large swaths of the model animation code to simplify it.
 - Renamed a bunch of things from %Poseable% to %Posable% because spelling.
 - Renamed StatelessAnimation to PoseAnimation.
@@ -486,6 +499,10 @@
 - Added support for conditional pose animations.
 - Added a new universal locator called "top".
 - Added `eggs_collected` and `eggs_hatched` Advancement triggers.
+- Added missing `minYaw` configuration to the `q.look()` function for JSON posers.
+- Some pose condition names have been changed: 
+  - `isTouchingWaterOrRain` has been changed to `isInWaterOrRain`
+  - `isSubermegedInWater` has been changed to `isUnderWater`
 
 ### Localization
 - Updated translations for:
@@ -1720,6 +1737,7 @@ Thank you so much to all of our community translators that bring the mod to the 
 - Lowered spawn rate of Tauros.
 - Sableye now spawns near gem ores as well as amethyst.
 - Added evolution stones and items to item tags
+- Pokémon now play their cry animations when clicked on the starter selection screen.
 
 ### Fixes
 - Fixed catch rates being entirely too difficult.
