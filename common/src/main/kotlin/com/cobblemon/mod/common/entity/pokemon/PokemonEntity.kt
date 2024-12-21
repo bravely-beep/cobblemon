@@ -79,15 +79,7 @@ import com.cobblemon.mod.common.pokemon.ai.FormPokemonBehaviour
 import com.cobblemon.mod.common.pokemon.evolution.variants.ItemInteractionEvolution
 import com.cobblemon.mod.common.pokemon.feature.StashHandler
 import com.cobblemon.mod.common.pokemon.properties.UncatchableProperty
-import com.cobblemon.mod.common.util.DataKeys
-import com.cobblemon.mod.common.util.getBitForByte
-import com.cobblemon.mod.common.util.giveOrDropItemStack
-import com.cobblemon.mod.common.util.isPokemonEntity
-import com.cobblemon.mod.common.util.lang
-import com.cobblemon.mod.common.util.party
-import com.cobblemon.mod.common.util.playSoundServer
-import com.cobblemon.mod.common.util.setBitForByte
-import com.cobblemon.mod.common.util.toNbtList
+import com.cobblemon.mod.common.util.*
 import com.cobblemon.mod.common.world.gamerules.CobblemonGameRules
 import com.mojang.serialization.Codec
 import java.util.EnumSet
@@ -179,6 +171,7 @@ open class PokemonEntity(
         @JvmStatic val FRIENDSHIP = SynchedEntityData.defineId(PokemonEntity::class.java, EntityDataSerializers.INT)
         @JvmStatic val FREEZE_FRAME = SynchedEntityData.defineId(PokemonEntity::class.java, EntityDataSerializers.FLOAT)
         @JvmStatic val CAUGHT_BALL = SynchedEntityData.defineId(PokemonEntity::class.java, EntityDataSerializers.STRING)
+        @JvmStatic val EVOLUTION_STARTED = SynchedEntityData.defineId(PokemonEntity::class.java, EntityDataSerializers.BOOLEAN)
 
         const val BATTLE_LOCK = "battle"
         const val EVOLUTION_LOCK = "evolving"
@@ -216,6 +209,8 @@ open class PokemonEntity(
     /** The player that caused this Pokémon to faint. */
     var killer: ServerPlayer? = null
 
+    val isEvolving: Boolean
+        get() = entityData.get(EVOLUTION_STARTED)
     var evolutionEntity: GenericBedrockEntity? = null
 
     var ticksLived = 0
@@ -328,6 +323,7 @@ open class PokemonEntity(
         builder.define(FRIENDSHIP, 0)
         builder.define(FREEZE_FRAME, -1F)
         builder.define(CAUGHT_BALL, "")
+        builder.define(EVOLUTION_STARTED, false)
     }
 
     override fun onSyncedDataUpdated(data: EntityDataAccessor<*>) {
@@ -355,6 +351,15 @@ open class PokemonEntity(
                     busyLocks.add(BATTLE_LOCK)
                 } else {
                     busyLocks.remove(BATTLE_LOCK)
+                }
+            }
+
+            EVOLUTION_STARTED -> {
+                if (isEvolving) {
+                    busyLocks.remove(EVOLUTION_LOCK)
+                    busyLocks.add(EVOLUTION_LOCK)
+                } else {
+                    busyLocks.remove(EVOLUTION_LOCK)
                 }
             }
         }
@@ -975,6 +980,8 @@ open class PokemonEntity(
         } else if (ownerUUID != null) {
             return false
         } else if (health <= 0F || isDeadOrDying) {
+            return false
+        } else if (player.isPartyBusy()) {
             return false
         }
 

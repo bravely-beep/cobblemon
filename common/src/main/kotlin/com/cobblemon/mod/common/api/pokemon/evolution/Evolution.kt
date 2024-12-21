@@ -163,7 +163,7 @@ interface Evolution : EvolutionLike {
             evolutionMethod(pokemon)
             pokemon.getOwnerPlayer()?.sendSystemMessage(lang("ui.evolve.into", preEvoName, pokemon.species.translatedName))
         } else {
-            pokemonEntity.busyLocks.add(PokemonEntity.EVOLUTION_LOCK)
+            pokemonEntity.entityData.set(PokemonEntity.EVOLUTION_STARTED, true)
             pokemonEntity.navigation.stop()
             pokemonEntity.after(1F) {
                 evolutionAnimation(pokemonEntity)
@@ -173,7 +173,7 @@ interface Evolution : EvolutionLike {
             }
             pokemonEntity.after( seconds = 12F ) {
                 cryAnimation(pokemonEntity)
-                pokemonEntity.busyLocks.remove(PokemonEntity.EVOLUTION_LOCK)
+                pokemonEntity.entityData.set(PokemonEntity.EVOLUTION_STARTED, false)
                 pokemon.getOwnerPlayer()?.sendSystemMessage(lang("ui.evolve.into", preEvoName, pokemon.species.translatedName))
             }
         }
