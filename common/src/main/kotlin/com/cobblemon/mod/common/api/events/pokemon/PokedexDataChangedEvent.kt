@@ -11,6 +11,7 @@ package com.cobblemon.mod.common.api.events.pokemon
 import com.bedrockk.molang.runtime.value.DoubleValue
 import com.bedrockk.molang.runtime.value.MoValue
 import com.bedrockk.molang.runtime.value.StringValue
+import com.cobblemon.mod.common.api.events.Cancelable
 import com.cobblemon.mod.common.api.molang.MoLangFunctions.asMoLangValue
 import com.cobblemon.mod.common.api.pokedex.FormDexRecord
 import com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress
@@ -24,20 +25,30 @@ import java.util.UUID
 /**
  * Event that fires when a Pokémon's information is gained or updated in the Pokédex.
  */
-data class PokedexDataChangedEvent(
-    val dataSource: Either<PokedexEntityData, Pokemon>,
-    val knowledge: PokedexEntryProgress,
-    val playerUUID: UUID,
-    val record: FormDexRecord
-) {
-    val pokedexManager: AbstractPokedexManager
-        get() = record.speciesDexRecord.pokedexManager
+interface PokedexDataChangedEvent {
+    class Data(val dataSource: Either<PokedexEntityData, Pokemon>, val knowledge: PokedexEntryProgress, val playerUUID: UUID, val record: FormDexRecord)
+    class Pre(val data: Data) : PokedexDataChangedEvent, Cancelable() {
+        val pokedexManager: AbstractPokedexManager
+            get() = data.record.speciesDexRecord.pokedexManager
 
-    val context = mutableMapOf<String, MoValue>(
-        "player" to (playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
-        "pokemon" to dataSource.map({ DoubleValue.ZERO }, { it.struct }),
-        "data" to dataSource.map({ it.struct }, { DoubleValue.ZERO }),
-        "knowledge" to StringValue(knowledge.name.lowercase()),
-        "pokedex" to pokedexManager.struct
-    )
+        val context = mutableMapOf<String, MoValue>(
+            "player" to (data.playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
+            "pokemon" to data.dataSource.map({ DoubleValue.ZERO }, { it.struct }),
+            "data" to data.dataSource.map({ it.struct }, { DoubleValue.ZERO }),
+            "knowledge" to StringValue(data.knowledge.name.lowercase()),
+            "pokedex" to pokedexManager.struct
+        )
+    }
+    class Post(val data: Data) : PokedexDataChangedEvent {
+        val pokedexManager: AbstractPokedexManager
+            get() = data.record.speciesDexRecord.pokedexManager
+
+        val context = mutableMapOf<String, MoValue>(
+            "player" to (data.playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
+            "pokemon" to data.dataSource.map({ DoubleValue.ZERO }, { it.struct }),
+            "data" to data.dataSource.map({ it.struct }, { DoubleValue.ZERO }),
+            "knowledge" to StringValue(data.knowledge.name.lowercase()),
+            "pokedex" to pokedexManager.struct
+        )
+    }
 }

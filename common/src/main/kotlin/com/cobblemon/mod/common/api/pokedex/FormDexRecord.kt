@@ -53,8 +53,11 @@ class FormDexRecord {
 
     /** The genders that the dex is aware of. */
     private val genders: MutableSet<Gender> = mutableSetOf()
+
     /** Shiny states could be shiny or non-shiny - on the off chance they only saw the shiny, they shouldn't know what the normal looks like. */
-    private val seenShinyStates = mutableSetOf<String>() // consider: radiants in the future (radiants should just be a resource pack tbh)
+    private val seenShinyStates =
+        mutableSetOf<String>() // consider: radiants in the future (radiants should just be a resource pack tbh)
+
     /** The current awareness of the form that the dex has. */
     var knowledge = PokedexEntryProgress.NONE
         private set
@@ -76,7 +79,13 @@ class FormDexRecord {
         struct = QueryStruct(hashMapOf())
             .addFunction("data") { data }
             .addFunction("knowledge") { StringValue(knowledge.name) }
-            .addFunction("has_seen_gender") { params -> genders.contains(Gender.valueOf(params.getString(0).uppercase())) }
+            .addFunction("has_seen_gender") { params ->
+                genders.contains(
+                    Gender.valueOf(
+                        params.getString(0).uppercase()
+                    )
+                )
+            }
     }
 
     fun clone() = FormDexRecord().also {
@@ -119,40 +128,71 @@ class FormDexRecord {
     }
 
     private fun addInformation(pokemon: Pokemon, knowledge: PokedexEntryProgress) {
-        genders.add(pokemon.gender)
-        seenShinyStates.add(if (pokemon.shiny) "shiny" else "normal")
-        if (knowledge.ordinal > this.knowledge.ordinal) {
-            this.knowledge = knowledge
-        }
-        speciesDexRecord.addInformation(pokemon, knowledge)
-        speciesDexRecord.onFormRecordUpdated(this)
-
         (speciesDexRecord.pokedexManager as? PokedexManager)?.let { pokedexManager ->
-            CobblemonEvents.POKEDEX_DATA_CHANGED.post(PokedexDataChangedEvent(Either.right(pokemon), knowledge, pokedexManager.uuid, this))
+            CobblemonEvents.POKEDEX_DATA_CHANGED_PRE.postThen(
+                PokedexDataChangedEvent.Pre(
+                    PokedexDataChangedEvent.Data(
+                        Either.right(pokemon),
+                        knowledge,
+                        pokedexManager.uuid,
+                        this
+                    )
+                ),
+                ifCanceled = { return },
+                ifSucceeded = {
+                    genders.add(pokemon.gender)
+                    seenShinyStates.add(if (pokemon.shiny) "shiny" else "normal")
+                    if (knowledge.ordinal > this.knowledge.ordinal) {
+                        this.knowledge = knowledge
+                    }
+                    speciesDexRecord.addInformation(pokemon, knowledge)
+                    speciesDexRecord.onFormRecordUpdated(this)
+                })
         }
     }
 
     private fun addInformation(pokedexEntityData: PokedexEntityData, knowledge: PokedexEntryProgress) {
-        genders.add(pokedexEntityData.gender)
-        seenShinyStates.add(if (pokedexEntityData.shiny) "shiny" else "normal")
-        if (knowledge.ordinal > this.knowledge.ordinal) {
-            this.knowledge = knowledge
-        }
-        speciesDexRecord.addInformation(pokedexEntityData, knowledge)
-        speciesDexRecord.onFormRecordUpdated(this)
-
         (speciesDexRecord.pokedexManager as? PokedexManager)?.let { pokedexManager ->
-            CobblemonEvents.POKEDEX_DATA_CHANGED.post(PokedexDataChangedEvent(Either.left(pokedexEntityData), knowledge, pokedexManager.uuid, this))
+            CobblemonEvents.POKEDEX_DATA_CHANGED_PRE.postThen(
+                PokedexDataChangedEvent.Pre(
+                    PokedexDataChangedEvent.Data(
+                        Either.left(pokedexEntityData),
+                        knowledge,
+                        pokedexManager.uuid,
+                        this
+                    )
+                ),
+                ifCanceled = { return },
+                ifSucceeded = {
+                    genders.add(pokedexEntityData.gender)
+                    seenShinyStates.add(if (pokedexEntityData.shiny) "shiny" else "normal")
+                    if (knowledge.ordinal > this.knowledge.ordinal) {
+                        this.knowledge = knowledge
+                    }
+                    speciesDexRecord.addInformation(pokedexEntityData, knowledge)
+                    speciesDexRecord.onFormRecordUpdated(this)
+                    CobblemonEvents.POKEDEX_DATA_CHANGED_POST.post(
+                        PokedexDataChangedEvent.Post(
+                            PokedexDataChangedEvent.Data(
+                                Either.left(pokedexEntityData),
+                                knowledge,
+                                pokedexManager.uuid,
+                                this
+                            )
+                        )
+                    )
+                }
+            )
         }
     }
 
     /** Returns whether the given [Pokemon] and [knowledge] would add new information to the Pokédex.*/
     fun wouldBeDifferent(pokemon: Pokemon, knowledge: PokedexEntryProgress): Boolean {
         return pokemon.gender !in genders
-            || (pokemon.shiny && "shiny" !in seenShinyStates)
-            || (!pokemon.shiny && "normal" !in seenShinyStates)
-            || knowledge.ordinal > this.knowledge.ordinal
-            || speciesDexRecord.wouldBeDifferent(pokemon)
+                || (pokemon.shiny && "shiny" !in seenShinyStates)
+                || (!pokemon.shiny && "normal" !in seenShinyStates)
+                || knowledge.ordinal > this.knowledge.ordinal
+                || speciesDexRecord.wouldBeDifferent(pokemon)
     }
 
     fun wouldBeDifferent(pokedexEntityData: PokedexEntityData, knowledge: PokedexEntryProgress): Boolean {
