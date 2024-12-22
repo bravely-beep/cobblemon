@@ -488,16 +488,25 @@ object MoLangFunctions {
             if (entity is PosableEntity) {
                 map.put("play_animation") { params ->
                     val animation = params.getString(0)
+                    val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
                     val target = params.getStringOrNull(1)
                     if (target != null) {
-                        val targetPlayer: ServerPlayer? = if(target.asUUID != null) entity.level().getPlayerByUUID(target.asUUID!!) as ServerPlayer else if (entity.level() is ServerLevel) entity.level().server!!.playerList.getPlayerByName(target) else null
-                        if(targetPlayer != null) {
-                            val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
+                        val targetPlayer = if (target.asUUID != null) {
+                            entity.level().getPlayerByUUID(target.asUUID!!) as ServerPlayer
+                        } else if (entity.level() is ServerLevel) {
+                            entity.level().server!!.playerList.getPlayerByName(target)
+                        } else {
+                            null
+                        }
+                        if (targetPlayer != null) {
                             packet.sendToPlayer(targetPlayer)
+                            return@put DoubleValue.ONE
+                        } else {
+                            return@put DoubleValue.ZERO
                         }
                     } else {
-                        val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
                         packet.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
+                        return@put DoubleValue.ONE
                     }
                 }
             }
