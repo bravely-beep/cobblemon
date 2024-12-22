@@ -984,12 +984,12 @@ open class Pokemon : ShowdownIdentifiable {
     fun clone(newUUID: Boolean = true): Pokemon {
         // NBT is faster, ops type doesn't really matter
         val encoded = CODEC.encodeStart(NbtOps.INSTANCE, this).orThrow
-        if (newUUID) {
-            NbtOps.INSTANCE.set(encoded, DataKeys.POKEMON_UUID, StringTag.valueOf(UUID.randomUUID().toString()))
-            NbtOps.INSTANCE.remove(encoded, DataKeys.TETHERING_ID)
-        }
         val result = CODEC.decode(NbtOps.INSTANCE, encoded).orThrow.first
         result.isClient = this.isClient
+        if (newUUID) {
+            result.uuid = UUID.randomUUID()
+            result.tetheringId = null
+        }
         return result
     }
 
