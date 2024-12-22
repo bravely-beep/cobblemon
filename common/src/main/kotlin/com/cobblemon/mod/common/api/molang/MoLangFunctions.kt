@@ -47,6 +47,8 @@ import com.cobblemon.mod.common.api.storage.pc.PCStore
 import com.cobblemon.mod.common.api.text.text
 import com.cobblemon.mod.common.battles.BattleRegistry
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
+import com.cobblemon.mod.common.client.particle.BedrockParticleOptionsRepository
+import com.cobblemon.mod.common.client.particle.ParticleStorm
 import com.cobblemon.mod.common.client.render.models.blockbench.wavefunction.WaveFunctions
 import com.cobblemon.mod.common.entity.PosableEntity
 import com.cobblemon.mod.common.entity.npc.NPCBattleActor
@@ -64,6 +66,7 @@ import com.cobblemon.mod.common.util.*
 import com.mojang.datafixers.util.Either
 import java.util.UUID
 import kotlin.math.sqrt
+import net.minecraft.client.multiplayer.ClientLevel
 import net.minecraft.commands.arguments.EntityAnchorArgument
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Holder
@@ -236,6 +239,31 @@ object MoLangFunctions {
                 lightning.setPos(x, y, z)
                 world.addFreshEntity(lightning)
                 return@put DoubleValue.ONE
+            }
+            // q.entity.world.spawn_bedrock_particles(effect, x, y, z, [player]) - sends to everyone nearby or just to the player if they're set.
+            map.put("spawn_bedrock_particles") { params ->
+                val particle = params.getString(0).asResource()
+                val x = params.getDouble(1)
+                val y = params.getDouble(2)
+                val z = params.getDouble(3)
+                val player = params.getOrNull<MoValue>(4)?.let {
+                    if (it is StringValue) world.getPlayerByUUID(UUID.fromString(it.value))
+                    else if (it is ObjectValue<*>) it.obj
+                    else null
+                } as? ServerPlayer
+                val pos = Vec3(x, y, z)
+
+                if (world !is ClientLevel) {
+                    val packet = SpawnSnowstormParticlePacket(particle, pos)
+                    if (player != null) {
+                        packet.sendToPlayer(player)
+                    } else {
+                        packet.sendToPlayersAround(x, y, z, 64.0, world.dimension())
+                    }
+                } else {
+                    val effect = BedrockParticleOptionsRepository.getEffect(particle) ?: return@put DoubleValue.ZERO
+                    ParticleStorm.createAtPosition(world, effect, pos).spawn()
+                }
             }
             map.put("get_entities_around") { params ->
                 val x = params.getDouble(0)
@@ -461,7 +489,7 @@ object MoLangFunctions {
                 map.put("play_animation") { params ->
                     val animation = params.getString(0)
                     val target = params.getStringOrNull(1)
-                    if(target != null) {
+                    if (target != null) {
                         val targetPlayer: ServerPlayer? = if(target.asUUID != null) entity.level().getPlayerByUUID(target.asUUID!!) as ServerPlayer else if (entity.level() is ServerLevel) entity.level().server!!.playerList.getPlayerByName(target) else null
                         if(targetPlayer != null) {
                             val packet = PlayPosableAnimationPacket(entity.id, setOf(animation), emptyList())
@@ -473,35 +501,21 @@ object MoLangFunctions {
                     }
                 }
             }
-            map.put("send_snowstorm_particle") { params ->
+            // q.entity.spawn_bedrock_particles(effect, locator, [player]) - sends to everyone nearby or just to the player if they're set. Locator is necessary even if unused on non-posables.
+            map.put("spawn_bedrock_particles") { params ->
                 val particle = params.getString(0).asResource()
-                if(params.params.size > 3) {
-                    val x = params.getDouble(2)
-                    val y = params.getDouble(3)
-                    val z = params.getDouble(4)
-                    val pos = Vec3(x, y, z)
-                    SpawnSnowstormParticlePacket(particle, pos).sendToPlayersAround(x, y, z, 64.0, entity.level().dimension())
+                val locator = params.getString(1)
+                val player = params.getOrNull<MoValue>(2)?.let {
+                    if (it is StringValue) entity.level().getPlayerByUUID(UUID.fromString(it.value))
+                    else if (it is ObjectValue<*>) it.obj
+                    else null
+                } as? ServerPlayer
+
+                val packet = SpawnSnowstormEntityParticlePacket(particle, entity.id, listOf(locator))
+                if (player == null) {
+                    packet.sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
                 } else {
-                    val uuid = params.getString(2).asUUID ?: return@put DoubleValue.ZERO
-                    val locator = params.getString(3) ?: "root"
-                    val entity = (entity.level() as ServerLevel).getEntity(uuid) ?: return@put DoubleValue.ZERO
-                    SpawnSnowstormEntityParticlePacket(particle, entity.id, listOf(locator)).sendToPlayersAround(entity.x, entity.y, entity.z, 64.0, entity.level().dimension())
-                }
-            }
-            map.put("send_snowstorm_particle_to_player") { params ->
-                val particle = params.getString(0).asResource()
-                val player: ServerPlayer = params.getString(1).asUUID?.let { entity.level().getPlayerByUUID(it) as ServerPlayer } ?: return@put DoubleValue.ZERO
-                if(params.params.size == 5) {
-                    val x = params.getDouble(2)
-                    val y = params.getDouble(3)
-                    val z = params.getDouble(4)
-                    val pos = Vec3(x, y, z)
-                    SpawnSnowstormParticlePacket(particle, pos).sendToPlayer(player)
-                } else {
-                    val uuid = params.getString(2).asUUID ?: return@put DoubleValue.ZERO
-                    val locator = params.getString(3) ?: "root"
-                    val entity = (entity.level() as ServerLevel).getEntity(uuid) ?: return@put DoubleValue.ZERO
-                    SpawnSnowstormEntityParticlePacket(particle, entity.id, listOf(locator)).sendToPlayer(player)
+                    packet.sendToPlayer(player)
                 }
             }
             map
