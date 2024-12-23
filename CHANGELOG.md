@@ -143,8 +143,8 @@
 - Dondozo
 
 #### Unique Forms
-- Magikarp Jump Variants
-- Gyarados Jump Variants
+- Magikarp Jump Variants (in-built resource pack)
+- Gyarados Jump Variants (in-built resource pack, disabled by default)
 
 ### Added cries to the following Pokémon
 - Sandshrew, Sandslash
@@ -347,6 +347,7 @@
 - Pokémon sent out during battle will spawn facing their opponent.
 - Pokémon sent out outside a battle will spawn facing their trainer.
 - Wailord is now 25% bigger
+- Region-biased Pokémon forms are now optional to an in-built resource pack. For NeoForge users, all our in-built resource packs default to disabled.
 
 ### Fixes
 - Fixed Ability Patches not reverting Hidden Abilities back to Normal Abilities.
