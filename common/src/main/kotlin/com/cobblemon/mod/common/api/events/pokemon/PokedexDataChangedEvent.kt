@@ -26,28 +26,27 @@ import java.util.UUID
  * Event that fires when a Pokémon's information is gained or updated in the Pokédex.
  */
 interface PokedexDataChangedEvent {
-    class Data(val dataSource: Either<PokedexEntityData, Pokemon>, val knowledge: PokedexEntryProgress, val playerUUID: UUID, val record: FormDexRecord)
-    class Pre(val data: Data) : PokedexDataChangedEvent, Cancelable() {
+    class Pre(val dataSource: Either<PokedexEntityData, Pokemon>, val knowledge: PokedexEntryProgress, val playerUUID: UUID, val record: FormDexRecord) : PokedexDataChangedEvent, Cancelable() {
         val pokedexManager: AbstractPokedexManager
-            get() = data.record.speciesDexRecord.pokedexManager
+            get() = record.speciesDexRecord.pokedexManager
 
         val context = mutableMapOf<String, MoValue>(
-            "player" to (data.playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
-            "pokemon" to data.dataSource.map({ DoubleValue.ZERO }, { it.struct }),
-            "data" to data.dataSource.map({ it.struct }, { DoubleValue.ZERO }),
-            "knowledge" to StringValue(data.knowledge.name.lowercase()),
+            "player" to (playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
+            "pokemon" to dataSource.map({ DoubleValue.ZERO }, { it.struct }),
+            "data" to dataSource.map({ it.struct }, { DoubleValue.ZERO }),
+            "knowledge" to StringValue(knowledge.name.lowercase()),
             "pokedex" to pokedexManager.struct
         )
     }
-    class Post(val data: Data) : PokedexDataChangedEvent {
+    class Post(val dataSource: Either<PokedexEntityData, Pokemon>, val knowledge: PokedexEntryProgress, val playerUUID: UUID, val record: FormDexRecord) : PokedexDataChangedEvent {
         val pokedexManager: AbstractPokedexManager
-            get() = data.record.speciesDexRecord.pokedexManager
+            get() = record.speciesDexRecord.pokedexManager
 
         val context = mutableMapOf<String, MoValue>(
-            "player" to (data.playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
-            "pokemon" to data.dataSource.map({ DoubleValue.ZERO }, { it.struct }),
-            "data" to data.dataSource.map({ it.struct }, { DoubleValue.ZERO }),
-            "knowledge" to StringValue(data.knowledge.name.lowercase()),
+            "player" to (playerUUID.getPlayer()?.asMoLangValue() ?: DoubleValue.ZERO),
+            "pokemon" to dataSource.map({ DoubleValue.ZERO }, { it.struct }),
+            "data" to dataSource.map({ it.struct }, { DoubleValue.ZERO }),
+            "knowledge" to StringValue(knowledge.name.lowercase()),
             "pokedex" to pokedexManager.struct
         )
     }

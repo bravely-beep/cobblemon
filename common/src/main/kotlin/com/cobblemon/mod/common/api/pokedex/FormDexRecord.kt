@@ -79,13 +79,7 @@ class FormDexRecord {
         struct = QueryStruct(hashMapOf())
             .addFunction("data") { data }
             .addFunction("knowledge") { StringValue(knowledge.name) }
-            .addFunction("has_seen_gender") { params ->
-                genders.contains(
-                    Gender.valueOf(
-                        params.getString(0).uppercase()
-                    )
-                )
-            }
+            .addFunction("has_seen_gender") { params -> genders.contains(Gender.valueOf(params.getString(0).uppercase())) }
     }
 
     fun clone() = FormDexRecord().also {
@@ -131,14 +125,11 @@ class FormDexRecord {
         (speciesDexRecord.pokedexManager as? PokedexManager)?.let { pokedexManager ->
             CobblemonEvents.POKEDEX_DATA_CHANGED_PRE.postThen(
                 PokedexDataChangedEvent.Pre(
-                    PokedexDataChangedEvent.Data(
                         Either.right(pokemon),
                         knowledge,
                         pokedexManager.uuid,
                         this
-                    )
                 ),
-                ifCanceled = { return },
                 ifSucceeded = {
                     genders.add(pokemon.gender)
                     seenShinyStates.add(if (pokemon.shiny) "shiny" else "normal")
@@ -147,6 +138,14 @@ class FormDexRecord {
                     }
                     speciesDexRecord.addInformation(pokemon, knowledge)
                     speciesDexRecord.onFormRecordUpdated(this)
+                    CobblemonEvents.POKEDEX_DATA_CHANGED_POST.post(
+                        PokedexDataChangedEvent.Post(
+                                Either.right(pokemon),
+                                knowledge,
+                                pokedexManager.uuid,
+                                this
+                        )
+                    )
                 })
         }
     }
@@ -155,14 +154,11 @@ class FormDexRecord {
         (speciesDexRecord.pokedexManager as? PokedexManager)?.let { pokedexManager ->
             CobblemonEvents.POKEDEX_DATA_CHANGED_PRE.postThen(
                 PokedexDataChangedEvent.Pre(
-                    PokedexDataChangedEvent.Data(
                         Either.left(pokedexEntityData),
                         knowledge,
                         pokedexManager.uuid,
                         this
-                    )
                 ),
-                ifCanceled = { return },
                 ifSucceeded = {
                     genders.add(pokedexEntityData.gender)
                     seenShinyStates.add(if (pokedexEntityData.shiny) "shiny" else "normal")
@@ -173,12 +169,10 @@ class FormDexRecord {
                     speciesDexRecord.onFormRecordUpdated(this)
                     CobblemonEvents.POKEDEX_DATA_CHANGED_POST.post(
                         PokedexDataChangedEvent.Post(
-                            PokedexDataChangedEvent.Data(
                                 Either.left(pokedexEntityData),
                                 knowledge,
                                 pokedexManager.uuid,
                                 this
-                            )
                         )
                     )
                 }
