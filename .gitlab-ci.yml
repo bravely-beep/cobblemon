@@ -3,10 +3,12 @@ image: amazoncorretto:21
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
 
-#TODO add client reference test process, search for import com.cobblemon.mod.common.client
+# TODO add client reference test process, search for import com.cobblemon.mod.common.client
 
 stages:
   - preprocessing
+  - packsquash
+  - replaceresources
   - build
   - deploy
 
@@ -39,19 +41,18 @@ check_assets_cache:
     # Save the current hash for future runs
     - echo "Saving current hash to cache";
     - cp current_hash.txt assets_data_hash.txt
-  cache:
-    key: "${CI_COMMIT_REF_NAME}-data-hash"
+  artifacts:
     paths:
       - current_hash.txt
       - assets_data_hash.txt
       - run_packsquash.flag
-  artifacts:
+    expire_in: 7 days
+  cache:
+    key: "cache-${CI_COMMIT_REF_NAME}"
     paths:
       - assets_data_hash.txt
-    expire_in: 7 days
+      - ./compressed_pack.zip
 
-
-# Creates a fake resource pack with Cobblemon's assets & data. PackSquash will compress this in run_packsquash
 setup_resource_pack:
   stage: preprocessing
   script:
@@ -59,26 +60,13 @@ setup_resource_pack:
     - mkdir ./fake_resource_pack
     - cp -r common/src/main/resources/assets common/src/main/resources/data ./fake_resource_pack/
     - echo '{"pack":{"pack_format":34,"description":"Fake Cobblemon Pack"}}' > ./fake_resource_pack/pack.mcmeta
-  cache:
-    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-    policy: pull-push
+  artifacts:
     paths:
       - ./fake_resource_pack/
+    expire_in: 7 days
 
-# Downloads & Installs PackSquash.
-# Also setups up PackSquash's config, points towards the fake resource pack,
-# the output pack path, and 'zip_spec_conformance_level' to 'high', which
-# enables caching when rerunning PackSquash on the same branch
-# sampling frequency set stupid high so it doesn't apply to any sound files
 setup_packsquash:
   stage: preprocessing
-  cache:
-    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-    policy: pull-push
-    paths:
-      - ./packsquash_bin/
-      - ./options.toml
-      - ./fake_resource_pack/
   script:
     - echo "Installing wget & unzip"
     - yum install -y wget unzip
@@ -97,17 +85,24 @@ setup_packsquash:
       sampling_frequency = 999999
       empty_audio_optimization=false
       EOF
+  artifacts:
+    paths:
+      - ./packsquash_bin/
+      - ./options.toml
+    expire_in: 7 days
 
-# PackSquash compresses this fake resource pack - see https://github.com/ComunidadAylas/PackSquash
-# If this stage fails, it's likely a JSON format issue - check for incorrectly formatted doubles
-# The "fake pack" is cached on all jobs on the specific branch. Needs to be cleared if you're REMOVING things.
+default:
+  artifacts:
+    expire_in: 7 days
+
 run_packsquash:
-  stage: preprocessing
+  stage: packsquash
   dependencies:
     - check_assets_cache
     - setup_resource_pack
     - setup_packsquash
   script:
+    - ls -l
     - if [[ ! -f ./compressed_pack.zip || -f run_packsquash.flag ]]; then
       echo "Running PackSquash";
       chmod +x ./packsquash_bin/packsquash;
@@ -116,42 +111,19 @@ run_packsquash:
       echo "Skipping PackSquash; no changes detected and compressed pack exists";
       fi
   cache:
-    - key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-      policy: pull-push
-      paths:
-        - ./packsquash_bin/
-        - ./options.toml
-        - ./fake_resource_pack/
-    - key: "${CI_COMMIT_REF_NAME}"
-      paths:
-        - ./compressed_pack.zip
-      policy: pull-push
-    - key: "${CI_COMMIT_REF_NAME}-data-hash"
-      paths:
-        - current_hash.txt
-        - assets_data_hash.txt
-        - run_packsquash.flag
+    key: "cache-${CI_COMMIT_REF_NAME}"
+    policy: pull-push
+    paths:
+      - assets_data_hash.txt
+      - ./compressed_pack.zip
   artifacts:
     paths:
       - ./compressed_pack.zip
-    expire_in: 7 days
 
-# test
-# Moves compressed assets/data back into the correct path for build stage
 replace_resources:
-  stage: preprocessing
+  stage: replaceresources
   dependencies:
     - run_packsquash
-  cache:
-    - key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-      policy: pull-push
-      paths:
-        - common/src/main/resources/
-    - key: "${CI_COMMIT_REF_NAME}"
-      policy: pull-push
-      paths:
-        - ./compressed_pack.zip
-
   script:
     - echo "Installing unzip"
     - yum install -y unzip
@@ -167,57 +139,47 @@ replace_resources:
     - echo "Replacing assets and data"
     - mv temp_unpack/assets common/src/main/resources/
     - mv temp_unpack/data common/src/main/resources/
+  artifacts:
+    paths:
+      - common/src/main/resources/
 
 build:
   stage: build
+  dependencies:
+    - replace_resources
   script:
     - export GRADLE_OPTS="-Xmx4G -Xms4G"
     - chmod +x ./gradlew
     - ./gradlew build
-  cache:
-    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-    policy: pull-push
+  artifacts:
     paths:
       - neoforge/build/libs
       - fabric/build/libs
-      - common/src/main/resources/
 
-# Publishes builds to Nick's Maven Repo - https://maven.impactdev.net/
 publish:
   stage: deploy
   dependencies:
     - build
-  cache:
-    key: "CI_COMMIT_REF_NAME"
-    policy: pull
-    paths:
-      - neoforge/build/libs/*.jar
-      - fabric/build/libs/*.jar
   rules:
     - if: '$CI_PROJECT_PATH == "cable-mc/cobblemon" && $CI_COMMIT_BRANCH == "main"'
   script:
     - export GRADLE_OPTS="-Xmx4G -Xms4G"
     - chmod +x ./gradlew
     - ./gradlew publish
+  artifacts:
+    paths:
+      - neoforge/build/libs/*.jar
+      - fabric/build/libs/*.jar
 
-# 'Deploys' artifacts, automatically if on main branch, can still be done manually if not, expires after 7 days
 deploy_artifacts:
   stage: deploy
   dependencies:
     - build
-  cache:
-    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
-    policy: pull
-    paths:
-      - neoforge/build/libs/*.jar
-      - fabric/build/libs/*.jar
   script:
     - echo "Collecting artifacts..."
-    # i don't have to touch gradle if I just filter out the unwanted jars here
     - find neoforge/build/libs/ -type f -name "*.jar" | grep -vE "dev-shadow|sources|javadoc" | xargs -I {} mv {} ./
     - find fabric/build/libs/ -type f -name "*.jar" | grep -vE "dev-shadow|sources|javadoc" | xargs -I {} mv {} ./
     - for f in *.jar; do mv "$f" "$(echo "$f" | sed s/+/b$CI_PIPELINE_IID+/)"; done
   artifacts:
-    expire_in: 7 days
     paths:
       - ./*.jar
