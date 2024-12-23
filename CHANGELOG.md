@@ -348,6 +348,7 @@
 - Pokémon sent out outside a battle will spawn facing their trainer.
 - Wailord is now 25% bigger
 - Region-biased Pokémon forms are now optional to an in-built resource pack. For NeoForge users, all our in-built resource packs default to disabled.
+- Update item sprites for Cell Battery, Chipped Pot, Covert Cloak, Cracked Pot, Eject Pack, Masterpiece Teacup, Red Card, Sachet, Terrain Extender, Unremarkable Teacup, and Utility Umbrella.
 
 ### Fixes
 - Fixed Ability Patches not reverting Hidden Abilities back to Normal Abilities.
