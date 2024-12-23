@@ -3,27 +3,186 @@ image: amazoncorretto:21
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
 
+#TODO add client reference test process, search for import com.cobblemon.mod.common.client
+
 stages:
+  - preprocessing
   - build
   - deploy
 
-#TODO add client reference test process, search for import com.cobblemon.mod.common.client
+check_assets_cache:
+  stage: preprocessing
+  script:
+    - echo "Checking if cached hash matches current hash"
+
+    # Calculate the current hash
+    - find common/src/main/resources/assets common/src/main/resources/data -type f -exec sha256sum {} + | sort -k 2 | sha256sum > current_hash.txt
+    - echo "Current hash:"
+    - cat current_hash.txt
+
+    # Check for the existence of the previous hash
+    - if [[ -f assets_data_hash.txt ]]; then
+      echo "Previous cached hash found:";
+      cat assets_data_hash.txt;
+      if cmp -s assets_data_hash.txt current_hash.txt; then
+      echo "Hashes match, skipping PackSquash";
+      rm -f run_packsquash.flag || true;
+      else
+      echo "Hashes differ, PackSquash needed";
+      touch run_packsquash.flag;
+      fi;
+      else
+      echo "No cached hash found, marking PackSquash as required";
+      touch run_packsquash.flag;
+      fi
+
+    # Save the current hash for future runs
+    - echo "Saving current hash to cache";
+    - cp current_hash.txt assets_data_hash.txt
+  cache:
+    key: "${CI_COMMIT_REF_NAME}-data-hash"
+    paths:
+      - current_hash.txt
+      - assets_data_hash.txt
+      - run_packsquash.flag
+  artifacts:
+    paths:
+      - assets_data_hash.txt
+    expire_in: 7 days
+
+
+# Creates a fake resource pack with Cobblemon's assets & data. PackSquash will compress this in run_packsquash
+setup_resource_pack:
+  stage: preprocessing
+  script:
+    - echo "Setting up fake resource pack"
+    - mkdir ./fake_resource_pack
+    - cp -r common/src/main/resources/assets common/src/main/resources/data ./fake_resource_pack/
+    - echo '{"pack":{"pack_format":34,"description":"Fake Cobblemon Pack"}}' > ./fake_resource_pack/pack.mcmeta
+  cache:
+    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
+    policy: pull-push
+    paths:
+      - ./fake_resource_pack/
+
+# Downloads & Installs PackSquash.
+# Also setups up PackSquash's config, points towards the fake resource pack,
+# the output pack path, and 'zip_spec_conformance_level' to 'high', which
+# enables caching when rerunning PackSquash on the same branch
+# sampling frequency set stupid high so it doesn't apply to any sound files
+setup_packsquash:
+  stage: preprocessing
+  cache:
+    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
+    policy: pull-push
+    paths:
+      - ./packsquash_bin/
+      - ./options.toml
+      - ./fake_resource_pack/
+  script:
+    - echo "Installing wget & unzip"
+    - yum install -y wget unzip
+    - echo "Downloading PackSquash"
+    - wget https://github.com/ComunidadAylas/PackSquash/releases/download/v0.4.0/PackSquash.CLI.executable.x86_64-unknown-linux-musl.zip
+    - unzip PackSquash.CLI.executable.x86_64-unknown-linux-musl.zip -d ./packsquash_bin
+    - echo "Creating PackSquash options.toml"
+    - |
+      cat <<EOF > ./options.toml
+      pack_directory = "./fake_resource_pack/"
+      output_file_path = "./compressed_pack.zip"
+      zip_spec_conformance_level = "high"
+      ['**/*?.ogg']
+      transcode_ogg = false
+      two_pass_vorbis_optimization_and_validation = false
+      sampling_frequency = 999999
+      empty_audio_optimization=false
+      EOF
+
+# PackSquash compresses this fake resource pack - see https://github.com/ComunidadAylas/PackSquash
+# If this stage fails, it's likely a JSON format issue - check for incorrectly formatted doubles
+# The "fake pack" is cached on all jobs on the specific branch. Needs to be cleared if you're REMOVING things.
+run_packsquash:
+  stage: preprocessing
+  dependencies:
+    - check_assets_cache
+    - setup_resource_pack
+    - setup_packsquash
+  script:
+    - if [[ ! -f ./compressed_pack.zip || -f run_packsquash.flag ]]; then
+      echo "Running PackSquash";
+      chmod +x ./packsquash_bin/packsquash;
+      ./packsquash_bin/packsquash ./options.toml;
+      else
+      echo "Skipping PackSquash; no changes detected and compressed pack exists";
+      fi
+  cache:
+    - key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
+      policy: pull-push
+      paths:
+        - ./packsquash_bin/
+        - ./options.toml
+        - ./fake_resource_pack/
+    - key: "${CI_COMMIT_REF_NAME}"
+      paths:
+        - ./compressed_pack.zip
+      policy: pull-push
+    - key: "${CI_COMMIT_REF_NAME}-data-hash"
+      paths:
+        - current_hash.txt
+        - assets_data_hash.txt
+        - run_packsquash.flag
+  artifacts:
+    paths:
+      - ./compressed_pack.zip
+    expire_in: 7 days
+
+# test
+# Moves compressed assets/data back into the correct path for build stage
+replace_resources:
+  stage: preprocessing
+  dependencies:
+    - run_packsquash
+  cache:
+    - key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
+      policy: pull-push
+      paths:
+        - common/src/main/resources/
+    - key: "${CI_COMMIT_REF_NAME}"
+      policy: pull-push
+      paths:
+        - ./compressed_pack.zip
+
+  script:
+    - echo "Installing unzip"
+    - yum install -y unzip
+
+    - echo "Unzipping compressed pack"
+    - mkdir temp_unpack
+    - unzip ./compressed_pack.zip -d temp_unpack
+
+    - echo "Removing original assets and data"
+    - rm -rf common/src/main/resources/assets
+    - rm -rf common/src/main/resources/data
+
+    - echo "Replacing assets and data"
+    - mv temp_unpack/assets common/src/main/resources/
+    - mv temp_unpack/data common/src/main/resources/
 
 build:
   stage: build
-  only:
-    - branches@cable-mc/cobblemon
   script:
     - export GRADLE_OPTS="-Xmx4G -Xms4G"
     - chmod +x ./gradlew
     - ./gradlew build
   cache:
-    key: "$CI_COMMIT_REF_NAME"
-    policy: push
+    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
+    policy: pull-push
     paths:
       - neoforge/build/libs
       - fabric/build/libs
+      - common/src/main/resources/
 
+# Publishes builds to Nick's Maven Repo - https://maven.impactdev.net/
 publish:
   stage: deploy
   dependencies:
@@ -35,32 +194,30 @@ publish:
       - neoforge/build/libs/*.jar
       - fabric/build/libs/*.jar
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_PROJECT_PATH == "cable-mc/cobblemon" && $CI_COMMIT_BRANCH == "main"'
   script:
     - export GRADLE_OPTS="-Xmx4G -Xms4G"
     - chmod +x ./gradlew
     - ./gradlew publish
 
-# Separate step to deploy the artifacts, save Norry the headache of keeping even more shit around
-deploy:
+# 'Deploys' artifacts, automatically if on main branch, can still be done manually if not, expires after 7 days
+deploy_artifacts:
   stage: deploy
   dependencies:
     - build
-  when: manual
   cache:
-    key: "$CI_COMMIT_REF_NAME"
+    key: "${CI_COMMIT_REF_NAME}-${CI_PIPELINE_ID}"
     policy: pull
     paths:
       - neoforge/build/libs/*.jar
       - fabric/build/libs/*.jar
-  script: 
+  script:
     - echo "Collecting artifacts..."
-    - mv neoforge/build/libs/*+*.jar ./
-    - mv fabric/build/libs/*+*.jar ./
+    # i don't have to touch gradle if I just filter out the unwanted jars here
+    - find neoforge/build/libs/ -type f -name "*.jar" | grep -vE "dev-shadow|sources|javadoc" | xargs -I {} mv {} ./
+    - find fabric/build/libs/ -type f -name "*.jar" | grep -vE "dev-shadow|sources|javadoc" | xargs -I {} mv {} ./
     - for f in *.jar; do mv "$f" "$(echo "$f" | sed s/+/b$CI_PIPELINE_IID+/)"; done
   artifacts:
-    expire_in: 28 days
+    expire_in: 7 days
     paths:
       - ./*.jar
-#      - neoforge/build/libs/*+*.jar
-#      - fabric/build/libs/*+*.jar
