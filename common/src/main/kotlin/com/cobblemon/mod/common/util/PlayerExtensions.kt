@@ -171,11 +171,14 @@ fun <T : Entity> Player.traceEntityCollision(
         AABB(startPos.subtract(maxDistanceVector), startPos.add(maxDistanceVector)),
         { entityClass.isInstance(it) }
     )
+
     while (step <= maxDistance) {
         val location = startPos.add(direction.scale(step.toDouble()))
         step += stepDistance
 
-        val collided = entities.filter { ignoreEntity != it && location in it.boundingBox }.filter { entityClass.isInstance(it) }
+        val collided = entities.filter {
+            ignoreEntity != it && location in it.boundingBox && entityClass.isInstance(it) && !it.isSpectator
+        }
 
         if (collided.isNotEmpty()) {
             if(collideBlock != null && level().clip(ClipContext(startPos, location, ClipContext.Block.COLLIDER, collideBlock, this)).type == HitResult.Type.BLOCK) {
