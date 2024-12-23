@@ -470,7 +470,7 @@
     - Added HealingSource, an interface applied to all sources of healing from player actions, for easier tracking of healing sources.
   - Move Change
   - Shiny Chance Calculation Event (with player context)
-  - Dex Information Changed; this event is fired when the Pokédex is updated with new information.
+  - Dex Information Changed (Pre and Post); this event is fired when the Pokédex is updated with new information.
 - Rebuilt large swaths of the model animation code to simplify it.
 - Renamed a bunch of things from %Poseable% to %Posable% because spelling.
 - Renamed StatelessAnimation to PoseAnimation.
@@ -479,6 +479,7 @@
 - Allowed for SpawnSnowstormEntityParticleHandler to handle non-posable entities (due to being non-posable, locators are useless, to set the offset use the settings in the particle itself)
 
 ### Data Pack & Resource Pack Creators
+- Added experimental "flow" datapack folder for handling events using MoLang event handlers.
 - Added support for "shedders" similar to Shedinja's evolution logic.
 - Fixed the placeholder `WingFlapIdle` animation so the wings are not rotating opposite to each other.
 - 'player' type dialogue faces can now be explicitly stated so that NPC mods that use fake players can show in dialogue portraits.
@@ -503,6 +504,7 @@
 - Some pose condition names have been changed: 
   - `isTouchingWaterOrRain` has been changed to `isInWaterOrRain`
   - `isSubermegedInWater` has been changed to `isUnderWater`
+
 
 ### Localization
 - Updated translations for:
