@@ -318,7 +318,6 @@
 - Updated dialogue GUI assets with proper assets.
 - Updated party switching interface when in battle.
 - Relic coin pouches can now be waterlogged.
-- Pokémon name and level labels are now only visible when crouching by default. Set the `displayEntityLabelsWhenCrouchingOnly` config to `false` to always have them displayed.
 - The "Press R to start battle prompt" will now disappear after a player's first battle has been won.
 - The default number of digits for the Pokédex number in the summary has been increased, from 3 to 4.
 - The pasture block model's screen is now off by default.

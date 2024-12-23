@@ -123,6 +123,21 @@ object CobblemonFabric : CobblemonImplementation {
             playerEntity.didSleep()
         }
 
+        // This doesn't work (yet) because Fabric does not let us make non-potion ingredients/inputs/outputs.
+        // Throws an exception about the ingredient not being a potion. Maybe one day?
+//        FabricBrewingRecipeRegistryBuilder.BUILD.register { builder ->
+//            BrewingRecipes.recipes.forEach { (input, ingredient, output) ->
+//                if (input is CobblemonPotionIngredient) {
+//                    // This doesn't respect the specific potion types that are considered inputs. This is less than perfect
+//                    // but will at least let JEI/EMI etc fill in the ingredients.
+//                    builder.addContainerRecipe(Items.POTION, ingredient, output)
+//                } else {
+//                    input as CobblemonItemIngredient
+//                    builder.addContainerRecipe(input.item, ingredient, output)
+//                }
+//            }
+//        }
+
         ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS.register { player, isLogin ->
             if (isLogin) {
                 Cobblemon.dataProvider.sync(player)
