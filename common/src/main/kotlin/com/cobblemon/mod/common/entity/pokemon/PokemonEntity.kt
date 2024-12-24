@@ -86,7 +86,6 @@ import java.util.EnumSet
 import java.util.Optional
 import java.util.UUID
 import java.util.concurrent.CompletableFuture
-import kotlin.math.roundToInt
 import net.minecraft.core.BlockPos
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
@@ -111,6 +110,8 @@ import net.minecraft.server.level.ServerPlayer
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.sounds.SoundSource
 import net.minecraft.tags.FluidTags
+import net.minecraft.util.Mth
+import net.minecraft.util.Mth.clamp
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.damagesource.DamageSource
@@ -395,6 +396,17 @@ open class PokemonEntity(
     }
 
     override fun tick() {
+        /* Addresses watchdog hanging that is completely bloody inexplicable. */
+        yBodyRot = Mth.wrapDegrees(yBodyRot)
+        yBodyRotO = Mth.wrapDegrees(yBodyRotO)
+        yRot = Mth.wrapDegrees(yRot)
+        yRotO = Mth.wrapDegrees(yRotO)
+        xRot = Mth.wrapDegrees(xRot)
+        xRotO = Mth.wrapDegrees(xRotO)
+        yHeadRot = Mth.wrapDegrees(yHeadRot)
+        yHeadRotO = Mth.wrapDegrees(yHeadRotO)
+        /* I'm sure it's not even us but something altering the logic of the loops in LivingEntity */
+
         super.tick()
 
         if (isBattling) {
@@ -430,8 +442,8 @@ open class PokemonEntity(
 
         if (ticksLived <= 20) {
             clearRestriction()
-            val spawnDirection = entityData.get(SPAWN_DIRECTION).takeIf { it.isFinite() } ?: 0F
-            yBodyRot = (spawnDirection * 1000F).toInt() / 1000F
+//            val spawnDirection = entityData.get(SPAWN_DIRECTION).takeIf { it.isFinite() } ?: 0F
+//            yBodyRot = (spawnDirection * 1000F).toInt() / 1000F
         }
 
         if (this.tethering != null && !this.tethering!!.box.contains(this.x, this.y, this.z)) {
