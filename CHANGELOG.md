@@ -1,5 +1,5 @@
 # Changelog
-## [1.6.0 - The Record Catch Update (Month Xth, 2024)](#1-6-0)
+## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
 
 ### Additions
