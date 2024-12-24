@@ -323,7 +323,7 @@
 - Updated particles on Gastly.
 - Revamped stat buff and de-buff particles.
 - Improved the performance of display cases that contain Pokémon photos.
-- Updated sounds for Poké Balls.
+- Updated sounds for Poké Balls closing, opening and for Pokémon breaking out.
 - Improved the performance of display cases that contain Pokémon Model items.
 - Removed species Base Stats from the summary interface as it is now viewable within the Pokédex.
 - Changed summary tab text labels to icons. You'll get used to them. Or else.
@@ -362,7 +362,7 @@
 - Fixed Tumbling Down advancement not being granted by tumblestone variants.
 - Improve error handling when loading spawn sets to ensure invalid configurations don't crash the server.
 - Fixed empty `JsonPlayerData` files resulting in players being unable to join server/world.
-- Evolution notification and UI sound is now correctly playing (again).
+- Sound for evolving Pokémon through the Summary Menu is now correctly playing again.
 - Fix Starter prompt not showing up.
 - Fixed owned Poké balls floating upwards if pausing the game mid-transition (which looked absolutely hilarious).
 - Fixed all mouse buttons working for Battle UI navigation (now it's only primary/left click).
