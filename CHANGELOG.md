@@ -124,9 +124,6 @@
 #### Gen 9
 - Wattrel
 - Kilowattrel
-- Wiglett
-- Wugtrio
-- Flamigo
 - Veluza
 - Farigiraf
 - Klawf
