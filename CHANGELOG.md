@@ -1,4 +1,9 @@
 # Changelog
+## [1.6.1 (Release TBD)](#1-6-1)
+
+### Fixes
+- Fix Pokédex sometimes crashing when switching forms
+
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
 
