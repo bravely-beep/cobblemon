@@ -1,6 +1,9 @@
 # Changelog
 ## [1.6.1 (Release TBD)](#1-6-1)
 
+### Additions
+- Added the `is_standing_on_blocks(depth, blocks...)` MoLang function, which returns whether the specified entity is standing on a specific block or set of blocks. Example usage: `q.is_standing_on_blocks(2, minecraft:sand)` 
+
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
 - Fix crash related to Tom's Simple Storage and Fossil Machine
