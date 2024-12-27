@@ -456,7 +456,6 @@ class EmptyPokeBallEntity : ThrowableItemProjectile, PosableEntity, WaterDragMod
         after(seconds = 2.2F) {
             // Time to begin falling
             pokemonEntity.phasingTargetId = -1
-            pokemonEntity.beamMode = 0
             pokemonEntity.isInvisible = true
             captureState = CaptureState.FALL
             after(seconds = 1.5F) {

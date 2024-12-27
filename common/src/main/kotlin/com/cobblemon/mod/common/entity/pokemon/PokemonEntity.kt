@@ -1366,13 +1366,17 @@ open class PokemonEntity(
         if (beamMode != 3) super.pushEntities()
     }
 
-    /*
-    private fun updateEyeHeight() {
-        @Suppress("CAST_NEVER_SUCCEEDS")
-        (this as com.cobblemon.mod.common.mixin.accessor.AccessorEntity).standingEyeHeight(this.getActiveEyeHeight(EntityPose.STANDING, this.type.dimensions))
+    override fun isPushable(): Boolean {
+        return beamMode != 3 && super.isPushable()
     }
 
-     */
+    /*
+        private fun updateEyeHeight() {
+            @Suppress("CAST_NEVER_SUCCEEDS")
+            (this as com.cobblemon.mod.common.mixin.accessor.AccessorEntity).standingEyeHeight(this.getActiveEyeHeight(EntityPose.STANDING, this.type.dimensions))
+        }
+
+    */
 
     fun isFlying() = this.getBehaviourFlag(PokemonBehaviourFlag.FLYING)
 
