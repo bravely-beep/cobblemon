@@ -4,6 +4,8 @@
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
 - Fix crash related to Tom's Simple Storage and Fossil Machine
+- Fixed `full_party`, `own_zangoose_seviper`, `use_revive` and `use_candy` Advancement triggers
+- Fixed `healing_machine` Advancement by using the correct 1.21 trigger
 - Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand 
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
