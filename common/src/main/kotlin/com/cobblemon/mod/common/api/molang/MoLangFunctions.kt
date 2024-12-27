@@ -462,6 +462,11 @@ object MoLangFunctions {
             }
             map.put("max_health") { _ -> DoubleValue(entity.maxHealth) }
             map.put("name") { _ -> StringValue(entity.effectiveName().string) }
+            map.put("type") { _ ->
+                entity.registryAccess().registry(Registries.ENTITY_TYPE).get().getKey(entity.type)?.toString()?.let {
+                    StringValue(it)
+                } ?: DoubleValue.ZERO
+            }
             map.put("yaw") { _ -> DoubleValue(entity.yRot.toDouble()) }
             map.put("pitch") { _ -> DoubleValue(entity.xRot.toDouble()) }
             map.put("x") { _ -> DoubleValue(entity.x) }
