@@ -3,6 +3,7 @@
 
 ### Additions
 - Added the `is_standing_on_blocks(depth, blocks...)` MoLang function, which returns whether the specified entity is standing on a specific block or set of blocks. Example usage: `q.is_standing_on_blocks(2, minecraft:sand)` 
+- Added config setting `hideUnimplementedPokemonInThePokedex` which hides unimplemented Pokémon from the Pokédex when set to true. 
 
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
