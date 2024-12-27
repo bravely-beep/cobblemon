@@ -247,6 +247,9 @@ class CobblemonConfig {
     @NodeCategory(Category.World)
     var entityInteractionMaxDistance  = 64F
 
+    @NodeCategory(Category.Pokedex)
+    var hideUnimplementedPokemonInThePokedex = false
+
     @NodeCategory(Category.Debug)
     var enableDebugKeys = false
 }

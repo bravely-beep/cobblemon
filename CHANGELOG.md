@@ -1,6 +1,9 @@
 # Changelog
 ## [1.6.1 (Release TBD)](#1-6-1)
 
+### Additions
+- Added config setting `hideUnimplementedPokemonInThePokedex` which hides unimplemented Pokémon from the Pokédex when set to true. 
+
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
 - Fix crash related to Tom's Simple Storage and Fossil Machine
