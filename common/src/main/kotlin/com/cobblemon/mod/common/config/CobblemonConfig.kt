@@ -244,8 +244,8 @@ class CobblemonConfig {
     @NodeCategory(Category.Battles)
     var battleSpectateMaxDistance = 64F
 
-    @NodeCategory(Category.World)
-    var entityInteractionMaxDistance  = 64F
+    @NodeCategory(Category.Pokedex)
+    var maxPokedexScanningDetectionRange = 10.0
 
     @NodeCategory(Category.Pokedex)
     var hideUnimplementedPokemonInThePokedex = false
