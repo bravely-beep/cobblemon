@@ -22,6 +22,7 @@
 - Parametric particle motion now works
 - Event spawned particles now work
 - Particles can now have independent coordinate spaces
+- Fixed bait being consumed when not reeling in any pokémon.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"

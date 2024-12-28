@@ -305,7 +305,7 @@
   "item.cobblemon.auspicious_armor": "Auspicious Armor",
   "item.cobblemon.auspicious_armor.tooltip": "Evolves Charcadet into Armarouge",
   "item.cobblemon.malicious_armor": "Malicious Armor",
-  "item.cobblemon.malicious_armor.tooltip": "Evolves Charcadet into Armarouge",
+  "item.cobblemon.malicious_armor.tooltip": "Evolves Charcadet into Ceruledge",
   "item.cobblemon.binding_band": "Binding Band",
   "item.cobblemon.binding_band.tooltip": "Increases damage dealt by the binding status",
   "item.cobblemon.black_belt": "Black Belt",
@@ -888,6 +888,8 @@
   "block.cobblemon.dawn_stone_block": "Dawn Stone Block",
   "block.cobblemon.dusk_stone_block": "Dusk Stone Block",
 
+  "cobblemon.fishing.no_bite": "Not even a nibble.",
+
   "cobblemon.fishing_bait_effect_header": "Fishing Bait Effects:",
   "cobblemon.fishing_bait_effects.nature.tooltip": "%1$s%% - Attract %2$s Nature",
   "cobblemon.fishing_bait_effects.iv.tooltip": "%1$s%% - %2$s IV +%3$s",
@@ -902,6 +904,7 @@
   "cobblemon.fishing_bait_effects.pokemon_chance.tooltip": "%1$s%% - Reel in a Pokémon",
   "cobblemon.fishing_bait_effects.friendship.tooltip": "%1$s%% - Boost Friendship +%3$s",
   "cobblemon.fishing_bait_effects.inert.tooltip": "No known effect",
+
   "cobblemon.egg_group.monster": "Monster",
   "cobblemon.egg_group.water_1": "Water 1",
   "cobblemon.egg_group.bug": "Bug",
