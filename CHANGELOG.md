@@ -5,6 +5,8 @@
 - Added config setting `maxPokedexScanningDetectionRange` to control from what distance the player can scan Pokémon using the Pokédex.
 - Added the `is_standing_on_blocks(depth, blocks...)` MoLang function, which returns whether the specified entity is standing on a specific block or set of blocks. Example usage: `q.is_standing_on_blocks(2, minecraft:sand)` 
 - Added config setting `hideUnimplementedPokemonInThePokedex` which hides unimplemented Pokémon from the Pokédex when set to true. 
+- Added molang particle queries for getting distance to targeted entities
+- Added debug renderer for poseable entity locators
 
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
@@ -16,6 +18,10 @@
 - Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand
 - Fixed an issue where the first Pokémon in the pastured Pokémon list clipped into the interface.
 - Fixed all Pokémon facing South on spawn
+- Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand 
+- Parametric particle motion now works
+- Event spawned particles now work
+- Particles can now have independent coordinate spaces
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"

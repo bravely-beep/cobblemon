@@ -614,7 +614,8 @@ object MoLangFunctions {
                     val context = ActionEffectContext(
                         actionEffect = actionEffect,
                         providers = mutableListOf(NPCProvider(npc)),
-                        runtime = runtime
+                        runtime = runtime,
+                        level = npc.level()
                     )
                     npc.actionEffect = context
                     npc.brain.setMemory(CobblemonMemories.ACTIVE_ACTION_EFFECT, context)
