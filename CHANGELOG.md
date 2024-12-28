@@ -15,6 +15,7 @@
 - Fixed `healing_machine` Advancement by using the correct 1.21 trigger
 - Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand
 - Fixed an issue where the first Pokémon in the pastured Pokémon list clipped into the interface.
+- Fixed all Pokémon facing South on spawn
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"

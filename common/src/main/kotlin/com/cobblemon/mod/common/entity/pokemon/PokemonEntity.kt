@@ -442,8 +442,8 @@ open class PokemonEntity(
 
         if (ticksLived <= 20) {
             clearRestriction()
-//            val spawnDirection = entityData.get(SPAWN_DIRECTION).takeIf { it.isFinite() } ?: 0F
-//            yBodyRot = (spawnDirection * 1000F).toInt() / 1000F
+            val spawnDirection = entityData.get(SPAWN_DIRECTION).takeIf { it.isFinite() } ?: 0F
+            yBodyRot = (spawnDirection * 1000F).toInt() / 1000F
         }
 
         if (this.tethering != null && !this.tethering!!.box.contains(this.x, this.y, this.z)) {
