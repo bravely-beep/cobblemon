@@ -16,6 +16,7 @@ import com.cobblemon.mod.common.pokeball.catching.calculators.CobblemonCaptureCa
 import com.cobblemon.mod.common.util.adapters.CaptureCalculatorAdapter
 import com.cobblemon.mod.common.util.adapters.IntRangeAdapter
 import com.google.gson.GsonBuilder
+import com.google.gson.annotations.SerializedName
 
 class CobblemonConfig {
     companion object {
@@ -239,7 +240,8 @@ class CobblemonConfig {
     var tradeMaxDistance = 12F
 
     @NodeCategory(Category.Battles)
-    var BattlePvPMaxDistance = 32F
+    @SerializedName("battlePvPMaxDistance", alternate = ["BattlePvPMaxDistance"])
+    var battlePvPMaxDistance = 32F
 
     @NodeCategory(Category.Battles)
     var battleSpectateMaxDistance = 64F

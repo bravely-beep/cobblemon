@@ -130,7 +130,7 @@ interface Evolution : EvolutionLike {
         owner.party().getFirstAvailablePosition() ?: return false
 
         // Add shed Pokemon to player's party
-        val shedPokemon = pokemon.clone()
+        val shedPokemon = pokemon.clone(registryAccess = owner.registryAccess())
         shedPokemon.removeHeldItem()
         innerShedder.apply(shedPokemon)
         shedPokemon.caughtBall = ((pokeballStack?.item ?: CobblemonItems.POKE_BALL) as PokeBallItem).pokeBall
