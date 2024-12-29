@@ -8,6 +8,10 @@
 - Added molang particle queries for getting distance to targeted entities
 - Added debug renderer for poseable entity locators
 
+### Changes
+- Pokémon will now be dynamically revealed to the Pokédex as they're seen instead of revealing entire parties at the end of battle regardless.
+- Unseen wild Pokémon will update their name from '???' to their real name as soon as a battle starts to reflect the battle UI showing the actual species name.
+
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
 - Fix crash related to Tom's Simple Storage and Fossil Machine
