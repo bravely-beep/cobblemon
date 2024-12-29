@@ -8,6 +8,9 @@
 
 package com.cobblemon.mod.common.pokemon
 
+import com.bedrockk.molang.runtime.struct.QueryStruct
+import com.bedrockk.molang.runtime.value.DoubleValue
+import com.bedrockk.molang.runtime.value.MoValue
 import com.cobblemon.mod.common.Cobblemon
 import com.cobblemon.mod.common.api.pokemon.stats.Stat
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
@@ -26,6 +29,14 @@ abstract class PokemonStats : Iterable<Map.Entry<Stat, Int>> {
     abstract val acceptableRange: IntRange
     abstract val defaultValue: Int
     override fun iterator() = stats.entries.iterator()
+
+    fun asStruct(): QueryStruct {
+        val struct = QueryStruct(hashMapOf())
+        for (stat in Stats.PERMANENT) {
+            struct.addFunction(stat.showdownId) { DoubleValue(this.getOrDefault(stat)) }
+        }
+        return struct
+    }
 
     /** Emits any stat change. */
     val observable = SimpleObservable<PokemonStats>()

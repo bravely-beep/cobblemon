@@ -8,6 +8,11 @@
 
 package com.cobblemon.mod.common.api.moves
 
+import com.bedrockk.molang.runtime.MoParams
+import com.bedrockk.molang.runtime.struct.QueryStruct
+import com.bedrockk.molang.runtime.value.DoubleValue
+import com.bedrockk.molang.runtime.value.MoValue
+import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.api.moves.categories.DamageCategory
 import com.cobblemon.mod.common.api.reactive.SimpleObservable
 import com.cobblemon.mod.common.api.types.ElementalType
@@ -25,6 +30,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder
 import kotlin.math.ceil
 import kotlin.properties.Delegates
 import net.minecraft.network.chat.MutableComponent
+import java.util.function.Function
 
 /**
  * Representing a Move based on some template and with current PP and the number of raised PP stages.
@@ -89,6 +95,21 @@ open class Move(
 
     val maxPp: Int
         get() = template.pp + raisedPpStages * template.pp / 5
+
+    fun asStruct(): QueryStruct {
+        return QueryStruct(
+            hashMapOf<String, Function<MoParams, Any>>(
+                "name" to Function { StringValue(name) },
+                "displayName" to Function { StringValue(displayName.string) },
+                "description" to Function { StringValue(description.string) },
+                "type" to Function { StringValue(type.name) },
+                "damageCategory" to Function { StringValue(damageCategory.name) },
+                "power" to Function { DoubleValue(power) },
+                "accuracy" to Function { DoubleValue(accuracy) },
+                "maxPp" to Function { DoubleValue(maxPp.toDouble()) }
+            )
+        )
+    }
 
     /** Raises the max PP and rescales the current PP value. Returns false if it was already maxed out. */
     fun raiseMaxPP(amount: Int): Boolean {

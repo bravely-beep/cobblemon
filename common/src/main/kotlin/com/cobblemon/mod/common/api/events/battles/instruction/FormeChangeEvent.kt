@@ -6,29 +6,33 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package com.cobblemon.mod.common.api.events.battles
+package com.cobblemon.mod.common.api.events.battles.instruction
 
 import com.bedrockk.molang.runtime.value.MoValue
 import com.bedrockk.molang.runtime.value.StringValue
 import com.cobblemon.mod.common.api.battles.model.PokemonBattle
 import com.cobblemon.mod.common.api.battles.model.actor.ActorType
-import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
+import com.cobblemon.mod.common.api.events.battles.BattleEvent
+import com.cobblemon.mod.common.battles.dispatch.InterpreterInstruction
+import com.cobblemon.mod.common.battles.pokemon.BattlePokemon
 import com.cobblemon.mod.common.util.asArrayValue
 
 /**
- * Event fired when a [PokemonBattle] is fled by a [PlayerBattleActor].
- *
- * @author Segfault Guy
- * @since March 25th 2023
+ * Event that is fired when a Pokemon changes Forme in battle.
+ * @param battle The battle where the change occurred.
+ * @param pokemon The Pokemon that changed Forme.
  */
-data class BattleFledEvent (
+data class FormeChangeEvent(
     override val battle: PokemonBattle,
-    val player: PlayerBattleActor
+    val pokemon: BattlePokemon,
+    val formeName: String
 ) : BattleEvent {
-    val context = mutableMapOf<String, MoValue>(
+    val context = mutableMapOf(
         "battle" to battle.struct,
         "players" to battle.actors.filter { it.type == ActorType.PLAYER }.asArrayValue { it.struct },
         "npcs" to battle.actors.filter { it.type == ActorType.NPC }.asArrayValue { it.struct },
-        "wild_pokemon" to battle.actors.filter { it.type == ActorType.WILD }.asArrayValue { it.struct }
+        "wild_pokemon" to battle.actors.filter { it.type == ActorType.WILD }.asArrayValue { it.struct },
+        "pokemon" to pokemon.struct,
+        "forme" to StringValue(formeName)
     )
 }

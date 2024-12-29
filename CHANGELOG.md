@@ -24,6 +24,26 @@
 - Particles can now have independent coordinate spaces
 - Fixed bait being consumed when not reeling in any pokémon.
 
+### Molang & Datapacks  
+- Added flows for:
+  - `forme_change`: Triggered when a Pokémon changes form in battle.
+  - `mega_evolution`: Triggered when a Pokémon mega evolves in battle. (Note: Third party mods are required for this feature currently)
+  - `zpower_used`: Triggered when a Pokémon uses a Z-Power move in battle. (Note: Third party mods are required for this feature currently)
+  - `terastallization`: Triggered when a Pokémon terastallizes in battle. (Note: Third party mods are required for this feature currently)
+  - `battle_fainted`: Triggered when a Pokémon faints in battle.
+  - `battle_fled`: Triggered when a Player flees from battle.
+  - `battle_started_pre`: Triggered when a battle starts. Cancelable!
+  - `battle_started_post`: Triggered when a battle starts.
+  - `apricorn_harvested`: Triggered when an apricorn is harvested.
+  - `thrown_pokeball_hit`: Triggered when a thrown Pokéball hits a Pokémon.
+  - `level_up`: Triggered when a Pokémon levels up.
+  - `pokemon_fainted`: Triggered when a Pokémon faints.
+  - `pokemon_gained`: Triggered when a Player gains a Pokémon.
+- Added molang functions:
+  - For Pokémon:
+    - `pokemon.apply(PokemonProperties)`: Applies the given properties to the Pokémon.
+    - `pokemon.owner`: Returns the owner of the Pokémon or 0.0 if there is no owner or they are not online.
+
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
 
