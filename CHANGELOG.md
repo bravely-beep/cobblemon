@@ -15,7 +15,6 @@
 - Fix Pokémon being collidable while being captured by a Pokéball.
 - Fixed `full_party`, `own_zangoose_seviper`, `use_revive` and `use_candy` Advancement triggers
 - Fixed `healing_machine` Advancement by using the correct 1.21 trigger
-- Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand
 - Fixed an issue where the first Pokémon in the pastured Pokémon list clipped into the interface.
 - Fixed all Pokémon facing South on spawn
 - Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand 
@@ -23,6 +22,13 @@
 - Event spawned particles now work
 - Particles can now have independent coordinate spaces
 - Fixed bait being consumed when not reeling in any pokémon.
+- Fix Miltank milk magically disappearing out of your bucket
+- Fix Cobblemon Nicknames migrating from 1.5.2 not being displayed properly
+- Fix capitalization in one of our config fields, but allowing typo'd version to still be valid
+- Fix Pokerod not working if lure or luck of the sea enchantments get removed by other mods
+- Fix crashes related to Pokémon when they are ready to evolve while holding an enchanted item
+- Fix crashes that sometimes occur when evolving Nincada
+- Fix plants not being compostible on NeoForge
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
