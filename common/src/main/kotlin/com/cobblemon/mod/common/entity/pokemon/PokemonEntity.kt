@@ -819,7 +819,7 @@ open class PokemonEntity(
                 itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND)
                 return InteractionResult.SUCCESS
             } else if (itemStack.`is`(Items.BUCKET)) {
-                if (pokemon.getFeature<FlagSpeciesFeature>(DataKeys.CAN_BE_MILKED) != null) {
+                if (pokemon.aspects.any { it.contains(DataKeys.CAN_BE_MILKED) }) {
                     player.playSound(SoundEvents.GOAT_MILK, 1.0f, 1.0f)
                     val milkBucket = ItemUtils.createFilledResult(itemStack, player, Items.MILK_BUCKET.defaultInstance)
                     player.setItemInHand(hand, milkBucket)
