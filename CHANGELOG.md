@@ -29,6 +29,7 @@
 - Fix crashes related to Pokémon when they are ready to evolve while holding an enchanted item
 - Fix crashes that sometimes occur when evolving Nincada
 - Fix plants not being compostible on NeoForge
+- Fix hide UI (F1 key) not hiding the party overlay.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
