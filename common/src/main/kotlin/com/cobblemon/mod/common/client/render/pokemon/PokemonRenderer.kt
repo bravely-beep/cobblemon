@@ -75,6 +75,11 @@ class PokemonRenderer(
             .withUnderlined(false)
             .withStrikethrough(false)
             .withObfuscated(false)
+
+        private val HIDDEN_NAME = Component.literal("???")
+
+        private val SPACE = Component.literal(" ")
+
     }
 
     val ballContext = RenderContext().also {
@@ -358,14 +363,14 @@ class PokemonRenderer(
             var label = if (ServerSettings.displayEntityNameLabel &&
                 !Cobblemon.config.displayNameForUnknownPokemon &&
                 CobblemonClient.clientPokedexData.getKnowledgeForSpecies(entity.pokemon.species.resourceIdentifier) == PokedexEntryProgress.NONE) {
-                Component.literal("???")
+                HIDDEN_NAME
             } else if (ServerSettings.displayEntityNameLabel) {
                 entity.name.copy()
             } else {
                 Component.empty()
             }
             if(ServerSettings.displayEntityNameLabel && ServerSettings.displayEntityLevelLabel && entity.labelLevel() > 0) {
-                label.append(Component.literal(" "))
+                label.append(SPACE)
             }
             if (ServerSettings.displayEntityLevelLabel && entity.labelLevel() > 0) {
                 // This a Style.EMPTY with a lot of effects set to false and color set to white, renderer inherits these from nick otherwise
