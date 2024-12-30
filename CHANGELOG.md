@@ -35,6 +35,7 @@
 - Fixed Pokémon riding two boats when attempting to deploy a platform on water.
 - Made berry trees be shearable by dispenser blocks
 - Fix the summary screen showing there's experience to reach the next level when at level cap.
+- Fix Pokémon forgetting moves when evolving on specific cases.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
