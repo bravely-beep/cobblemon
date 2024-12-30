@@ -522,6 +522,10 @@ open class PokemonEntity(
         return super.isInvulnerableTo(damageSource)
     }
 
+    override fun canRide(vehicle: Entity): Boolean {
+        return platform == PlatformType.NONE && super.canRide(vehicle)
+    }
+
     /**
      * A utility method that checks if this Pokémon has the [UncatchableProperty.uncatchable] property.
      *
