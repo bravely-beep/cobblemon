@@ -30,6 +30,8 @@
 - Fix crashes that sometimes occur when evolving Nincada
 - Fix plants not being compostible on NeoForge
 - Fix hide UI (F1 key) not hiding the party overlay.
+- Fixed NPC MoLang command `player_lose_command` not working.
+- Corrected misaligned tooltips with editboxes in the NPC editor screen.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
