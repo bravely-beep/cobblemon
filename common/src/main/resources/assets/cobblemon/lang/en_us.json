@@ -1303,6 +1303,8 @@
   "cobblemon.challenge.canceled.receiver": "%1$s canceled their challenge...",
   "cobblemon.challenge.error.insufficient_pokemon.other": "%1$s doesn't have any Pokémon to battle with!",
   "cobblemon.challenge.error.insufficient_pokemon.self": "You don't have any Pokémon to battle with!",
+  "cobblemon.challenge.error.duplicate": "You already have a pending battle request sent to %1$s.",
+  "cobblemon.challenge.error.pending": "%1$s already has a pending battle request for you.",
   "cobblemon.challenge.rule.level": "Level %1$s All",
   "cobblemon.challenge.rule.anything_goes": "Anything Goes",
 
@@ -1521,6 +1523,7 @@
   "cobblemon.command.pokebox.last_pokemon": "Did not send that Player's last Pokémon to the PC.",
   "cobblemon.command.pokemonrestart": "Cleared %1$s's party and PC.",
   "cobblemon.command.freezepokemon.non_pokemon": "You are not looking at a Pokémon.",
+  "cobblemon.command.npcedit.non_npc": "You are not looking at a NPC.",
 
   "advancements.cobblemon.root": "The World of Cobblemon!",
   "advancements.cobblemon.root.description": "Choose a starter Pokémon and set out on a new adventure",
