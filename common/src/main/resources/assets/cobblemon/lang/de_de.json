@@ -6252,7 +6252,7 @@
     "cobblemon.ui.pokedex.info.variation": "Arten",
     "cobblemon.ui.pokedex.info.form.maushold-family-four": "Familie",
     "cobblemon.ui.starter.narrator.backbutton": "Zurück-Knopf gedrückt",
-    "cobblemon.pokerod.bobber": "Schimmer: %1$s",
+    "cobblemon.pokerod.bobber": "Schwimmer: %1$s",
     "cobblemon.pokerod.bait": "Köder: %1$s x%2$s",
     "block.cobblemon.lectern": "Pult",
     "cobblemon.fishing_bait_effects.level_raise.tooltip": "%1$s%% - Erhöhe Level +%3$s",
@@ -6309,5 +6309,12 @@
     "cobblemon.type.suffix": "%1$s Typ",
     "gamerule.battleInvulnerability": "Kampf Unverwundbarkeit",
     "tag.item.cobblemon.poke_rods": "Poké Angeln",
-    "entity.cobblemon.empty_pokeball": "Leerer Pokéball"
+    "entity.cobblemon.empty_pokeball": "Leerer Pokéball",
+    "cobblemon.ui.pokedex.info.form.galar": "Galar",
+    "cobblemon.ui.pokedex.info.form.region-bias-galar": "Galar-Einfluss",
+    "cobblemon.ui.pokedex.info.form.region-bias-alola": "Alola-Einfluss",
+    "cobblemon.ui.pokedex.info.form.hisui": "Hisui",
+    "cobblemon.ui.pokedex.info.form.region-bias-hisui": "Hisui-Einfluss",
+    "cobblemon.ui.pokedex.info.form.region-bias-paldea": "Paldea-Einfluss",
+    "cobblemon.ui.pokedex.info.form.no_ice": "Wohlfühlkopf"
 }
