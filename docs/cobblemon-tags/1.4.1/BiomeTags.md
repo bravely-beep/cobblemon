@@ -1259,7 +1259,7 @@ This file contains tags related to different biomes in cobblemon, as well as som
 <summary><b>Tag:</b> #has_ore:ore_water_stone_normal</summary>
 
 - #cobblemon:is_freshwater
-- #minecraft:is_ocean
+- #cobblemon:is_ocean
 
 </details>
 
@@ -1281,5 +1281,39 @@ This file contains tags related to different biomes in cobblemon, as well as som
 <details>
 <summary><b>Tag:</b> #has_structure:village_plains_pokecenter_signtest</summary>
 
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #vivillon_evolutions:ocean</summary>
+
+- #cobblemon:is_coast
+- #cobblemon:is_warm_ocean
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #vivillon_evolutions:river</summary>
+
+- #cobblemon:is_river
+- #cobblemon:is_swamp
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #vivillon_evolutions:sun</summary>
+
+- #cobblemon:is_sky
+- #cobblemon:is_volcanic
+- minecraft:sunflower_plains
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #vivillon_evolutions:tundra</summary>
+
+- #cobblemon:is_glacial
+- #cobblemon:is_snowy_forest
+- #cobblemon:is_tundra
 
 </details>

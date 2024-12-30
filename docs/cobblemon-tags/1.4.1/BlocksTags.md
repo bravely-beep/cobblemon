@@ -5,6 +5,22 @@ This file contains tags related to block in cobblemon.
 ## Tags:
 
 <details>
+<summary><b>Tag:</b> #blocks:all_hanging_signs</summary>
+
+- #cobblemon:ceiling_hanging_signs
+- #cobblemon:wall_hanging_signs
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:all_signs</summary>
+
+- #cobblemon:all_hanging_signs
+- #cobblemon:signs
+
+</details>
+
+<details>
 <summary><b>Tag:</b> #blocks:apricorns</summary>
 
 - cobblemon:black_apricorn
@@ -147,6 +163,8 @@ This file contains tags related to block in cobblemon.
 <details>
 <summary><b>Tag:</b> #blocks:berry_soil</summary>
 
+- #c:farmlands
+- #forge:farmlands
 - minecraft:farmland
 
 </details>
@@ -157,6 +175,13 @@ This file contains tags related to block in cobblemon.
 - #cobblemon:snow_block
 - #minecraft:dirt
 - #minecraft:sand
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:ceiling_hanging_signs</summary>
+
+- cobblemon:apricorn_hanging_sign
 
 </details>
 
@@ -232,7 +257,18 @@ This file contains tags related to block in cobblemon.
 - #forge:cobblestone/normal
 - #forge:stone
 - #minecraft:dirt
+- minecraft:andesite
+- minecraft:cobbled_deepslate
+- minecraft:cobblestone
+- minecraft:deepslate
+- minecraft:diorite
+- minecraft:granite
+- minecraft:infested_cobblestone
+- minecraft:infested_deepslate
+- minecraft:infested_stone
+- minecraft:mossy_cobblestone
 - minecraft:stone
+- minecraft:tuff
 
 </details>
 
@@ -244,6 +280,14 @@ This file contains tags related to block in cobblemon.
 - #minecraft:leaves
 - #minecraft:replaceable
 - minecraft:ice
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:signs</summary>
+
+- #cobblemon:standing_signs
+- #cobblemon:wall_signs
 
 </details>
 
@@ -262,10 +306,52 @@ This file contains tags related to block in cobblemon.
 </details>
 
 <details>
+<summary><b>Tag:</b> #blocks:standing_signs</summary>
+
+- cobblemon:apricorn_sign
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:wall_hanging_signs</summary>
+
+- cobblemon:apricorn_wall_hanging_sign
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:wall_signs</summary>
+
+- cobblemon:apricorn_wall_sign
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:all_hanging_signs</summary>
+
+- #cobblemon:all_hanging_signs
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:all_signs</summary>
+
+- #cobblemon:all_signs
+
+</details>
+
+<details>
 <summary><b>Tag:</b> #blocks:bee_growables</summary>
 
 - #cobblemon:apricorns
 - #cobblemon:crops
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:ceiling_hanging_signs</summary>
+
+- #cobblemon:ceiling_hanging_signs
 
 </details>
 
@@ -393,9 +479,37 @@ This file contains tags related to block in cobblemon.
 </details>
 
 <details>
+<summary><b>Tag:</b> #blocks:signs</summary>
+
+- #cobblemon:signs
+
+</details>
+
+<details>
 <summary><b>Tag:</b> #blocks:small_flowers</summary>
 
 - #cobblemon:small_flowers
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:standing_signs</summary>
+
+- #cobblemon:standing_signs
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:wall_hanging_signs</summary>
+
+- #cobblemon:wall_hanging_signs
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #blocks:wall_signs</summary>
+
+- #cobblemon:wall_signs
 
 </details>
 

@@ -124,6 +124,14 @@ This file contains tags related to items in cobblemon.
 </details>
 
 <details>
+<summary><b>Tag:</b> #items:boats</summary>
+
+- cobblemon:apricorn_boat
+- cobblemon:apricorn_chest_boat
+
+</details>
+
+<details>
 <summary><b>Tag:</b> #items:cobblemon_seeds</summary>
 
 - cobblemon:blue_mint_seeds
@@ -199,6 +207,13 @@ This file contains tags related to items in cobblemon.
 - cobblemon:exp_candy_xl
 - cobblemon:exp_candy_xs
 - cobblemon:rare_candy
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #items:hanging_signs</summary>
+
+- cobblemon:apricorn_hanging_sign
 
 </details>
 
@@ -375,11 +390,39 @@ This file contains tags related to items in cobblemon.
 </details>
 
 <details>
+<summary><b>Tag:</b> #items:signs</summary>
+
+- cobblemon:apricorn_sign
+
+</details>
+
+<details>
 <summary><b>Tag:</b> #items:zinc_ingredients</summary>
 
 - minecraft:cod
 - minecraft:salmon
 - minecraft:tropical_fish
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #held:consumed_in_npc_battle</summary>
+
+- #cobblemon:berries
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #held:consumed_in_pvp_battle</summary>
+
+- #cobblemon:berries
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #held:consumed_in_wild_battle</summary>
+
+- #cobblemon:berries
 
 </details>
 
@@ -417,18 +460,24 @@ This file contains tags related to items in cobblemon.
 - cobblemon:choice_band
 - cobblemon:choice_scarf
 - cobblemon:choice_specs
+- cobblemon:cleanse_tag
 - cobblemon:destiny_knot
 - cobblemon:dragon_fang
 - cobblemon:everstone
 - cobblemon:exp_share
+- cobblemon:fairy_feather
+- cobblemon:flame_orb
 - cobblemon:focus_band
 - cobblemon:hard_stone
 - cobblemon:heavy_duty_boots
 - cobblemon:leftovers
+- cobblemon:life_orb
 - cobblemon:light_clay
 - cobblemon:magnet
+- cobblemon:mental_herb
 - cobblemon:metal_powder
 - cobblemon:miracle_seed
+- cobblemon:mirror_herb
 - cobblemon:muscle_band
 - cobblemon:mystic_water
 - cobblemon:never_melt_ice
@@ -437,6 +486,7 @@ This file contains tags related to items in cobblemon.
 - cobblemon:power_band
 - cobblemon:power_belt
 - cobblemon:power_bracer
+- cobblemon:power_herb
 - cobblemon:power_lens
 - cobblemon:power_weight
 - cobblemon:quick_claw
@@ -450,6 +500,7 @@ This file contains tags related to items in cobblemon.
 - cobblemon:silver_powder
 - cobblemon:soft_sand
 - cobblemon:spell_tag
+- cobblemon:toxic_orb
 - cobblemon:twisted_spoon
 - cobblemon:wise_glasses
 - cobblemon:wise_glasses
@@ -513,6 +564,20 @@ This file contains tags related to items in cobblemon.
 </details>
 
 <details>
+<summary><b>Tag:</b> #items:flowers</summary>
+
+- cobblemon:pep_up_flower
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #items:hanging_signs</summary>
+
+- #cobblemon:hanging_signs
+
+</details>
+
+<details>
 <summary><b>Tag:</b> #items:leaves</summary>
 
 - cobblemon:apricorn_leaves
@@ -543,6 +608,27 @@ This file contains tags related to items in cobblemon.
 <summary><b>Tag:</b> #items:planks</summary>
 
 - cobblemon:apricorn_planks
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #items:signs</summary>
+
+- #cobblemon:signs
+
+</details>
+
+<details>
+<summary><b>Tag:</b> #items:villager_plantable_seeds</summary>
+
+- cobblemon:blue_mint_seeds
+- cobblemon:cyan_mint_seeds
+- cobblemon:green_mint_seeds
+- cobblemon:pink_mint_seeds
+- cobblemon:red_mint_seeds
+- cobblemon:revival_herb
+- cobblemon:vivichoke_seeds
+- cobblemon:white_mint_seeds
 
 </details>
 
