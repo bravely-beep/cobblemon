@@ -34,6 +34,7 @@
 - Corrected misaligned tooltips with editboxes in the NPC editor screen.
 - Fixed Pokémon riding two boats when attempting to deploy a platform on water.
 - Made berry trees be shearable by dispenser blocks
+- Fixed Adorn compatibility, including improvements when using JEI/REI (Apricorn items now show up under the collapsed entries rather than standalone)
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
