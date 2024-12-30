@@ -190,15 +190,23 @@ interface Evolution : EvolutionLike {
     }
 
     fun evolutionMethod(pokemon: Pokemon) {
+        // This ensures the Pokémon doesn't lose moves during evolution
+        // (e.g., Oshawott evolving at level 17 knowing Razor Shell, while Dewott only learns it at level 18).
+        val previousSpeciesLearnableMoves = pokemon.relearnableMoves
+
         this.result.apply(pokemon)
-        this.learnableMoves.forEach { move ->
+
+        val movesToLearn = previousSpeciesLearnableMoves + this.learnableMoves
+        movesToLearn.forEach { move ->
             if (pokemon.moveSet.hasSpace()) {
                 pokemon.moveSet.add(move.create())
             } else {
                 pokemon.benchedMoves.add(BenchedMove(move, 0))
             }
+
             pokemon.getOwnerPlayer()?.sendSystemMessage(lang("experience.learned_move", pokemon.getDisplayName(), move.displayName))
         }
+
         // we want to instantly tick for example you might only evolve your Bulbasaur at level 34 so Venusaur should be immediately available
         pokemon.evolutions.filterIsInstance<PassiveEvolution>().forEach { evolution -> evolution.attemptEvolution(pokemon) }
         pokemon.lockedEvolutions.filterIsInstance<PassiveEvolution>().forEach { evolution -> evolution.attemptEvolution(pokemon) }
