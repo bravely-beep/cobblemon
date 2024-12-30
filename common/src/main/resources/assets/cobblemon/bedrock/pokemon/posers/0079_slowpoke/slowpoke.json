@@ -36,7 +36,7 @@
         "poseTypes": ["FLOAT"],
         "animations": [
           "q.look('head')",
-          "q.bedrock('slowpoke', 'ground_idle')"
+          "q.bedrock('slowpoke', 'water_idle')"
         ],
         "quirks": [
           "q.bedrock_quirk('slowpoke', 'blink')"
@@ -46,7 +46,7 @@
         "poseTypes": ["SWIM"],
         "animations": [
           "q.look('head')",
-          "q.bedrock('slowpoke', 'ground_walk')"
+          "q.bedrock('slowpoke', 'water_swim')"
         ],
         "quirks": [
           "q.bedrock_quirk('slowpoke', 'blink')"

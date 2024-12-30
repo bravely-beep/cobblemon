@@ -15,7 +15,7 @@
           "q.bedrock('slowbro_galarian', 'ground_idle')"
         ],
         "quirks": [
-          "q.bedrock_quirk('slowbro_galarian', 'blink1')","q.bedrock_quirk('slowbro_galarian', 'blink2')"
+          "q.bedrock_quirk('slowbro_galarian', 'blink')"
         ]
       },
       "battle-standing": {
@@ -26,7 +26,7 @@
           "q.bedrock('slowbro_galarian', 'battle_idle')"
         ],
         "quirks": [
-          "q.bedrock_quirk('slowbro_galarian', 'blink1')","q.bedrock_quirk('slowbro_galarian', 'blink2')"
+          "q.bedrock_quirk('slowbro_galarian', 'blink')"
         ]
       },
       "walking": {
@@ -35,7 +35,7 @@
           "q.look('head')",
           "q.bedrock('slowbro_galarian', 'ground_walk')"],
         "quirks": [
-          "q.bedrock_quirk('slowbro_galarian', 'blink1')","q.bedrock_quirk('slowbro_galarian', 'blink2')"
+          "q.bedrock_quirk('slowbro_galarian', 'blink')"
         ]
       },
       "sleep": {
@@ -46,19 +46,19 @@
         "poseTypes": ["FLOAT"],
         "animations": [
           "q.look('head')",
-          "q.bedrock('slowbro_galarian', 'ground_idle')"
+          "q.bedrock('slowbro_galarian', 'water_idle')"
         ],
-        "quirks": ["q.bedrock_quirk('slowbro_galarian', 'blink1')","q.bedrock_quirk('slowbro_galarian', 'blink2')"
+        "quirks": ["q.bedrock_quirk('slowbro_galarian', 'blink')"
       ]
       },
       "swim": {
         "poseTypes": ["SWIM"],
         "animations": [
           "q.look('head')",
-          "q.bedrock('slowbro_galarian', 'ground_walk')"
+          "q.bedrock('slowbro_galarian', 'water_swim')"
         ],
         "quirks": [
-          "q.bedrock_quirk('slowbro_galarian', 'blink1')","q.bedrock_quirk('slowbro_galarian', 'blink2')"
+          "q.bedrock_quirk('slowbro_galarian', 'blink')"
       ]
       }
     }

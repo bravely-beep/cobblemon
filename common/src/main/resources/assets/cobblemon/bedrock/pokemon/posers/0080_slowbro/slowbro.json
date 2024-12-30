@@ -57,7 +57,7 @@
         "poseTypes": ["SWIM"],
         "animations": [
           "q.look('head')",
-          "q.bedrock('slowbro', 'ground_walk')"
+          "q.bedrock('slowbro', 'water_swim')"
         ],
         "quirks": [
           "q.bedrock_quirk('slowbro', 'blink1')","q.bedrock_quirk('slowbro', 'blink2')"
