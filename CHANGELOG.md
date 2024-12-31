@@ -7,6 +7,7 @@
 - Added config setting `hideUnimplementedPokemonInThePokedex` which hides unimplemented Pokémon from the Pokédex when set to true. 
 - Added molang particle queries for getting distance to targeted entities
 - Added debug renderer for poseable entity locators
+- Added `baseScale` property to NPCs.
 
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
