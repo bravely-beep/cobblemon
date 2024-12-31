@@ -37,6 +37,8 @@
 - Fix the summary screen showing there's experience to reach the next level when at level cap.
 - Fix Pokémon forgetting moves when evolving on specific cases.
 - Fixed Adorn compatibility, including improvements when using JEI/REI (Apricorn items now show up under the collapsed entries rather than standalone)
+- Fix error message appearing on battle log when using Solar Beam with Sunny Day.
+- Fix Pokémon Model offsets for larger species.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
