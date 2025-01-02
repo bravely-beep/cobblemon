@@ -9,6 +9,26 @@
 - Added debug renderer for poseable entity locators
 - Added `baseScale` property to NPCs.
 
+### Pokémon Added
+#### Gen 5
+- Foongus
+- Amoonguss
+
+#### Gen 8
+- Galarian Slowpoke
+- Galarian Slowbro
+- Galarian Slowking
+
+### Added cries to the following Pokémon
+- Spinda
+
+### Animation updates for the following Pokémon
+- placeholder
+
+### Model updates for the following Pokémon
+- Slowpoke, Slowbro, Slowking
+- Eiscue
+
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
 - Fix crash related to Tom's Simple Storage and Fossil Machine
