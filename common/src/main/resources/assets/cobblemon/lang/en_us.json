@@ -346,7 +346,7 @@
   "item.cobblemon.everstone": "Everstone",
   "item.cobblemon.everstone.tooltip": "Prevents the holder from evolving",
   "item.cobblemon.eviolite": "Eviolite",
-  "item.cobblemon.eviolite.tooltip": "Boosts the holder's Defense and Sp. Atk if it is not fully evolved",
+  "item.cobblemon.eviolite.tooltip": "Boosts the holder's Defense and Sp. Defense if it is not fully evolved",
   "item.cobblemon.exp_share": "Exp. Share",
   "item.cobblemon.exp_share.tooltip": "Allows the holder to receive a share of experience from battles without participating",
   "item.cobblemon.expert_belt": "Expert Belt",
