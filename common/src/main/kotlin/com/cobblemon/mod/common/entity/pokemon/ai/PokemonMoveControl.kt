@@ -200,6 +200,9 @@ class PokemonMoveControl(val pokemonEntity: PokemonEntity) : MoveControl(pokemon
             if (this.pokemonEntity.isBattling) {
                 if (this.pokemonEntity.getBehaviourFlag(PokemonBehaviourFlag.FLYING)) {
                     // Flying Pokemon have extremely low vertical deceleration and can fly into the stratosphere if their movement is not dampened
+                    // This can happen when:
+                    // A Pokemon was jumping when the battle begins
+                    // A Pokemon receives knockback from sweeping edge striking a nearby target, wind charges, etc.
                     mob.deltaMovement = Vec3(mob.deltaMovement.x, min(0.01, mob.deltaMovement.y), mob.deltaMovement.z)
                 }
                 if (mob.isInWater) {
