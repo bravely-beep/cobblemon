@@ -1,30 +1,28 @@
 {
   "implemented": true,
-  "name": "Wingull",
   "nationalPokedexNumber": 278,
+  "name": "Wingull",
   "primaryType": "water",
   "secondaryType": "flying",
+  "maleRatio": 0.5,
+  "height": 6,
+  "weight": 95,
+  "pokedex": [
+    "cobblemon.species.wingull.desc"
+  ],
+  "labels": [
+    "gen3"
+  ],
+  "aspects": [],
   "abilities": [
     "keeneye",
     "hydration",
     "h:raindish"
   ],
-  "drops": {
-    "amount": 3,
-    "entries": [
-      {
-        "item": "minecraft:feather",
-        "quantityRange": "0-1"
-      },
-      {
-        "item": "minecraft:chicken"
-      },
-      {
-        "item": "cobblemon:wacan_berry",
-        "percentage": 2.5
-      }
-    ]
-  },
+  "eggGroups": [
+    "water_1",
+    "flying"
+  ],
   "baseStats": {
     "hp": 40,
     "attack": 30,
@@ -33,16 +31,26 @@
     "special_defence": 30,
     "speed": 85
   },
-  "catchRate": 190,
-  "maleRatio": 0.5,
-  "shoulderMountable": false,
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
   "baseExperienceYield": 54,
   "experienceGroup": "medium_fast",
+  "catchRate": 190,
   "eggCycles": 20,
-  "eggGroups": [
-    "water_1",
-    "flying"
-  ],
+  "baseFriendship": 50,
+  "shoulderMountable": false,
+  "baseScale": 0.6,
+  "hitbox": {
+    "width": 0.7,
+    "height": 0.9,
+    "fixed": false
+  },
   "behaviour": {
     "moving": {
       "fly": {
@@ -64,6 +72,22 @@
       "light": "0-4"
     }
   },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:feather",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "minecraft:chicken"
+      },
+      {
+        "item": "cobblemon:wacan_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
   "moves": [
     "1:growl",
     "1:watergun",
@@ -71,23 +95,16 @@
     "10:supersonic",
     "15:wingattack",
     "20:waterpulse",
-    "22:aircutter",
-    "26:agility",
     "26:pursuit",
-    "29:aerialace",
     "30:airslash",
     "35:mist",
     "40:roost",
     "45:hurricane",
     "egg:aerialace",
-    "egg:agility",
     "egg:aircutter",
     "egg:aquaring",
-    "egg:brine",
     "egg:gust",
     "egg:knockoff",
-    "egg:mist",
-    "egg:roost",
     "egg:soak",
     "egg:twister",
     "egg:watersport",
@@ -97,91 +114,61 @@
     "tm:agility",
     "tm:aircutter",
     "tm:airslash",
-    "tm:attract",
+    "tm:aquaring",
     "tm:blizzard",
     "tm:bravebird",
     "tm:brine",
-    "tm:captivate",
     "tm:chillingwater",
-    "tm:confide",
     "tm:defog",
-    "tm:doubleteam",
     "tm:dualwingbeat",
     "tm:echoedvoice",
     "tm:endure",
     "tm:facade",
     "tm:featherdance",
     "tm:fly",
-    "tm:frustration",
+    "tm:growl",
+    "tm:gust",
     "tm:hail",
     "tm:helpinghand",
-    "tm:hiddenpower",
     "tm:hurricane",
     "tm:hydropump",
     "tm:icebeam",
     "tm:icywind",
     "tm:knockoff",
     "tm:liquidation",
+    "tm:mist",
     "tm:muddywater",
-    "tm:naturalgift",
+    "tm:ominouswind",
     "tm:pluck",
     "tm:protect",
+    "tm:pursuit",
+    "tm:quickattack",
     "tm:raindance",
     "tm:rest",
-    "tm:return",
     "tm:roost",
-    "tm:round",
-    "tm:scald",
-    "tm:secretpower",
     "tm:shockwave",
+    "tm:skyattack",
     "tm:sleeptalk",
-    "tm:snore",
     "tm:snowscape",
+    "tm:soak",
     "tm:steelwing",
     "tm:substitute",
+    "tm:supersonic",
     "tm:surf",
-    "tm:swagger",
     "tm:swift",
     "tm:tailwind",
     "tm:takedown",
     "tm:terablast",
     "tm:thief",
-    "tm:toxic",
-    "tm:uproar",
+    "tm:twister",
     "tm:uturn",
     "tm:waterfall",
+    "tm:watergun",
     "tm:waterpulse",
+    "tm:watersport",
     "tm:whirlpool",
-    "tutor:aircutter",
-    "tutor:defog",
-    "tutor:doubleedge",
-    "tutor:dualwingbeat",
-    "tutor:endure",
-    "tutor:icywind",
-    "tutor:knockoff",
-    "tutor:liquidation",
-    "tutor:mimic",
-    "tutor:mudslap",
-    "tutor:ominouswind",
-    "tutor:roost",
-    "tutor:shockwave",
-    "tutor:skyattack",
-    "tutor:sleeptalk",
-    "tutor:snore",
-    "tutor:substitute",
-    "tutor:swagger",
-    "tutor:swift",
-    "tutor:tailwind",
-    "tutor:twister",
-    "tutor:uproar",
-    "tutor:watergun",
-    "tutor:waterpulse"
-  ],
-  "labels": [
-    "gen3"
-  ],
-  "pokedex": [
-    "cobblemon.species.wingull.desc"
+    "tm:wideguard",
+    "tm:wingattack"
   ],
   "evolutions": [
     {
@@ -189,7 +176,9 @@
       "variant": "level_up",
       "result": "pelipper",
       "consumeHeldItem": false,
-      "learnableMoves": [],
+      "learnableMoves": [
+        "protect"
+      ],
       "requirements": [
         {
           "variant": "level",
@@ -197,24 +186,5 @@
         }
       ]
     }
-  ],
-  "baseScale": 0.6,
-  "hitbox": {
-    "width": 0.7,
-    "height": 0.9,
-    "fixed": false
-  },
-  "baseFriendship": 50,
-  "evYield": {
-    "hp": 0,
-    "attack": 0,
-    "defence": 0,
-    "special_attack": 0,
-    "special_defence": 0,
-    "speed": 1
-  },
-  "height": 6,
-  "weight": 95,
-  "aspects": [],
-  "cannotDynamax": false
+  ]
 }

@@ -1,26 +1,29 @@
 {
   "implemented": true,
-  "name": "Maushold",
   "nationalPokedexNumber": 925,
+  "name": "Maushold",
   "primaryType": "normal",
+  "maleRatio": -1,
+  "height": 3,
+  "weight": 23,
+  "pokedex": [
+    "cobblemon.species.maushold.desc"
+  ],
+  "labels": [
+    "gen9"
+  ],
+  "aspects": [
+    "maushold-family-three"
+  ],
   "abilities": [
     "friendguard",
     "cheekpouch",
     "h:technician"
   ],
-  "drops": {
-    "amount": 3,
-    "entries": [
-      {
-        "item": "minecraft:wheat_seeds",
-        "quantityRange": "0-2"
-      },
-      {
-        "item": "cobblemon:chilan_berry",
-        "percentage": 5.0
-      }
-    ]
-  },
+  "eggGroups": [
+    "field",
+    "fairy"
+  ],
   "baseStats": {
     "hp": 74,
     "attack": 75,
@@ -28,6 +31,25 @@
     "special_attack": 65,
     "special_defence": 75,
     "speed": 111
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 2
+  },
+  "baseExperienceYield": 165,
+  "experienceGroup": "fast",
+  "catchRate": 75,
+  "eggCycles": 10,
+  "baseFriendship": 50,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 1.25,
+    "height": 0.75,
+    "fixed": false
   },
   "behaviour": {
     "resting": {
@@ -37,28 +59,23 @@
       "light": "0-4"
     }
   },
-  "catchRate": 75,
-  "maleRatio": -1,
-  "baseExperienceYield": 165,
-  "baseFriendship": 50,
-  "evYield": {
-    "hp": 0,
-    "attack": 0,
-    "defence": 0,
-    "special_attack": 0,
-    "special_defence": 0,
-    "speed": 2
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:wheat_seeds",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:chilan_berry",
+        "percentage": 5
+      }
+    ]
   },
-  "experienceGroup": "fast",
-  "eggCycles": 10,
-  "eggGroups": [
-    "field",
-    "fairy"
-  ],
   "moves": [
-    "1:babydolleyes",
-    "1:followme",
     "1:pound",
+    "1:followme",
+    "1:babydolleyes",
     "1:tidyup",
     "5:echoedvoice",
     "8:helpinghand",
@@ -72,19 +89,34 @@
     "41:beatup",
     "46:copycat",
     "53:populationbomb",
+    "egg:afteryou",
+    "egg:batonpass",
+    "egg:bite",
+    "egg:feint",
+    "egg:switcheroo",
+    "egg:tickle",
     "tm:aerialace",
+    "tm:afteryou",
     "tm:agility",
+    "tm:babydolleyes",
     "tm:batonpass",
+    "tm:beatup",
+    "tm:bite",
     "tm:bulletseed",
     "tm:charm",
     "tm:chillingwater",
+    "tm:copycat",
     "tm:crunch",
     "tm:dig",
     "tm:doubleedge",
+    "tm:doublehit",
+    "tm:echoedvoice",
     "tm:encore",
     "tm:endure",
     "tm:facade",
     "tm:faketears",
+    "tm:feint",
+    "tm:followme",
     "tm:gigaimpact",
     "tm:grassknot",
     "tm:helpinghand",
@@ -95,6 +127,8 @@
     "tm:mudshot",
     "tm:mudslap",
     "tm:playrough",
+    "tm:populationbomb",
+    "tm:pound",
     "tm:protect",
     "tm:raindance",
     "tm:rest",
@@ -105,40 +139,44 @@
     "tm:sunnyday",
     "tm:superfang",
     "tm:swift",
+    "tm:switcheroo",
     "tm:takedown",
     "tm:taunt",
     "tm:terablast",
     "tm:thief",
     "tm:thunderwave",
+    "tm:tickle",
+    "tm:tidyup",
     "tm:trailblaze",
     "tm:uturn",
     "tm:waterpulse"
   ],
-  "baseScale": 0.5,
-  "hitbox": {
-    "width": 1.25,
-    "height": 0.75,
-    "fixed": false
-  },
-  "labels": [
-    "gen9"
-  ],
-  "aspects": [
-    "maushold-family-three"
-  ],
-  "height": 3,
-  "weight": 23,
   "preEvolution": "tandemaus",
   "evolutions": [],
-  "cannotDynamax": false,
   "forms": [
     {
       "name": "Four",
       "primaryType": "normal",
+      "maleRatio": -1,
+      "height": 3,
+      "weight": 28,
+      "pokedex": [
+        "cobblemon.species.maushold-four.desc"
+      ],
+      "labels": [
+        "gen9"
+      ],
+      "aspects": [
+        "maushold-family-four"
+      ],
       "abilities": [
         "friendguard",
         "cheekpouch",
         "h:technician"
+      ],
+      "eggGroups": [
+        "field",
+        "fairy"
       ],
       "baseStats": {
         "hp": 74,
@@ -148,9 +186,6 @@
         "special_defence": 75,
         "speed": 111
       },
-      "catchRate": 75,
-      "maleRatio": -1,
-      "baseFriendship": 50,
       "evYield": {
         "hp": 0,
         "attack": 0,
@@ -159,16 +194,15 @@
         "special_defence": 0,
         "speed": 2
       },
+      "baseExperienceYield": 165,
       "experienceGroup": "fast",
+      "catchRate": 75,
       "eggCycles": 10,
-      "eggGroups": [
-        "field",
-        "fairy"
-      ],
+      "baseFriendship": 50,
       "moves": [
-        "1:babydolleyes",
-        "1:followme",
         "1:pound",
+        "1:followme",
+        "1:babydolleyes",
         "1:tidyup",
         "5:echoedvoice",
         "8:helpinghand",
@@ -182,17 +216,34 @@
         "41:beatup",
         "46:copycat",
         "53:populationbomb",
+        "egg:afteryou",
+        "egg:batonpass",
+        "egg:bite",
+        "egg:feint",
+        "egg:switcheroo",
+        "egg:tickle",
         "tm:aerialace",
+        "tm:afteryou",
         "tm:agility",
+        "tm:babydolleyes",
+        "tm:batonpass",
+        "tm:beatup",
+        "tm:bite",
         "tm:bulletseed",
         "tm:charm",
         "tm:chillingwater",
+        "tm:copycat",
         "tm:crunch",
         "tm:dig",
+        "tm:doubleedge",
+        "tm:doublehit",
+        "tm:echoedvoice",
         "tm:encore",
         "tm:endure",
         "tm:facade",
         "tm:faketears",
+        "tm:feint",
+        "tm:followme",
         "tm:gigaimpact",
         "tm:grassknot",
         "tm:helpinghand",
@@ -203,6 +254,8 @@
         "tm:mudshot",
         "tm:mudslap",
         "tm:playrough",
+        "tm:populationbomb",
+        "tm:pound",
         "tm:protect",
         "tm:raindance",
         "tm:rest",
@@ -211,33 +264,23 @@
         "tm:sleeptalk",
         "tm:substitute",
         "tm:sunnyday",
+        "tm:superfang",
         "tm:swift",
+        "tm:switcheroo",
         "tm:takedown",
         "tm:taunt",
         "tm:terablast",
         "tm:thief",
         "tm:thunderwave",
+        "tm:tickle",
+        "tm:tidyup",
         "tm:trailblaze",
         "tm:uturn",
         "tm:waterpulse"
       ],
-      "labels": [
-        "gen9"
-      ],
-      "aspects": [
-        "maushold-family-four"
-      ],
-      "height": 3,
-      "weight": 28,
       "preEvolution": "tandemaus",
-      "cannotDynamax": false,
-      "battleOnly": false,
-      "pokedex": [
-        "cobblemon.species.maushold-four.desc"
-      ]
+      "evolutions": [],
+      "battleOnly": false
     }
-  ],
-  "pokedex": [
-    "cobblemon.species.maushold.desc"
   ]
 }

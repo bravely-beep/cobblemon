@@ -1,26 +1,26 @@
 {
   "implemented": true,
-  "name": "Cetitan",
   "nationalPokedexNumber": 975,
+  "name": "Cetitan",
   "primaryType": "ice",
+  "maleRatio": 0.5,
+  "height": 45,
+  "weight": 7000,
+  "pokedex": [
+    "cobblemon.species.cetitan.desc"
+  ],
+  "labels": [
+    "gen9"
+  ],
+  "aspects": [],
   "abilities": [
     "thickfat",
     "slushrush",
     "h:sheerforce"
   ],
-  "drops": {
-    "amount": 3,
-    "entries": [
-      {
-        "item": "minecraft:bone_block",
-        "quantityRange": "0-2"
-      },
-      {
-        "item": "cobblemon:aspear_berry",
-        "percentage": 5.0
-      }
-    ]
-  },
+  "eggGroups": [
+    "field"
+  ],
   "baseStats": {
     "hp": 170,
     "attack": 113,
@@ -29,10 +29,6 @@
     "special_defence": 55,
     "speed": 73
   },
-  "catchRate": 50,
-  "maleRatio": 0.5,
-  "baseExperienceYield": 182,
-  "baseFriendship": 50,
   "evYield": {
     "hp": 2,
     "attack": 0,
@@ -41,11 +37,17 @@
     "special_defence": 0,
     "speed": 0
   },
+  "baseExperienceYield": 182,
   "experienceGroup": "medium_slow",
+  "catchRate": 50,
   "eggCycles": 25,
-  "eggGroups": [
-    "field"
-  ],
+  "baseFriendship": 50,
+  "baseScale": 0.9,
+  "hitbox": {
+    "width": 2.8,
+    "height": 2.8,
+    "fixed": false
+  },
   "behaviour": {
     "moving": {
       "walk": {
@@ -59,9 +61,22 @@
       "light": "0-4"
     }
   },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:bone_block",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:aspear_berry",
+        "percentage": 5
+      }
+    ]
+  },
   "moves": [
-    "1:powdersnow",
     "1:tackle",
+    "1:powdersnow",
     "6:growl",
     "9:echoedvoice",
     "12:iceshard",
@@ -75,20 +90,31 @@
     "44:icespinner",
     "49:doubleedge",
     "53:blizzard",
+    "egg:bellydrum",
+    "egg:entrainment",
+    "egg:iciclecrash",
+    "egg:superpower",
+    "egg:yawn",
     "tm:amnesia",
     "tm:avalanche",
+    "tm:bellydrum",
     "tm:blizzard",
     "tm:bodypress",
     "tm:bodyslam",
+    "tm:bounce",
     "tm:bulldoze",
     "tm:charm",
     "tm:chillingwater",
     "tm:curse",
     "tm:doubleedge",
     "tm:earthquake",
+    "tm:echoedvoice",
     "tm:endure",
+    "tm:entrainment",
     "tm:facade",
+    "tm:flail",
     "tm:gigaimpact",
+    "tm:growl",
     "tm:hardpress",
     "tm:heavyslam",
     "tm:helpinghand",
@@ -98,12 +124,15 @@
     "tm:icebeam",
     "tm:icefang",
     "tm:icepunch",
+    "tm:iceshard",
     "tm:icespinner",
+    "tm:iciclecrash",
     "tm:iciclespear",
     "tm:icywind",
     "tm:knockoff",
     "tm:liquidation",
     "tm:playrough",
+    "tm:powdersnow",
     "tm:protect",
     "tm:raindance",
     "tm:rest",
@@ -111,26 +140,13 @@
     "tm:snowscape",
     "tm:stompingtantrum",
     "tm:substitute",
+    "tm:superpower",
+    "tm:tackle",
     "tm:takedown",
     "tm:terablast",
-    "tm:waterpulse"
+    "tm:waterpulse",
+    "tm:yawn"
   ],
-  "labels": [
-    "gen9"
-  ],
-  "aspects": [],
-  "height": 45,
-  "weight": 7000,
   "preEvolution": "cetoddle",
-  "evolutions": [],
-  "baseScale": 0.9,
-  "hitbox": {
-    "width": 2.8,
-    "height": 2.8,
-    "fixed": false
-  },
-  "cannotDynamax": false,
-  "pokedex": [
-    "cobblemon.species.cetitan.desc"
-  ]
+  "evolutions": []
 }
