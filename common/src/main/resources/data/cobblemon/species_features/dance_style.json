@@ -1,0 +1,15 @@
+{
+  "type": "choice",
+  "keys": [
+    "dance_style"
+  ],
+  "default": "baile",
+  "choices": [
+    "baile",
+    "pom_pom",
+    "pa'u",
+    "sensu"
+  ],
+  "isAspect": true,
+  "aspectFormat": "dance-style-{{choice}}"
+}

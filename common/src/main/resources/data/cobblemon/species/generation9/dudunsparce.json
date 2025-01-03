@@ -12,7 +12,7 @@
     "gen9"
   ],
   "aspects": [
-    "landsnake-form-two_segment"
+    "two-segment"
   ],
   "abilities": [
     "serenegrace",
@@ -200,7 +200,7 @@
         "gen9"
       ],
       "aspects": [
-        "landsnake-form-three_segment"
+        "three-segment"
       ],
       "abilities": [
         "serenegrace",

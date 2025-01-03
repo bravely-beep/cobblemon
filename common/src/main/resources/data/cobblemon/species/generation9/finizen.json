@@ -147,10 +147,6 @@
         {
           "variant": "level",
           "minLevel": 38
-        },
-        {
-          "variant": "has_move",
-          "move": "helpinghand"
         }
       ]
     }

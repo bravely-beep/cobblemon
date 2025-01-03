@@ -1,0 +1,15 @@
+{
+  "type": "choice",
+  "keys": [
+    "matcha_authenticity"
+  ],
+  "default": "random",
+  "choices": [
+    "counterfeit",
+    "artisan",
+    "unremarkable",
+    "masterpiece"
+  ],
+  "isAspect": true,
+  "aspectFormat": "matcha-authenticity-{{choice}}"
+}
