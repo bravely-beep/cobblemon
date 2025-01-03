@@ -13,7 +13,6 @@
     "gen5"
   ],
   "aspects": [
-    "standard"
   ],
   "abilities": [
     "sheerforce",
@@ -202,7 +201,7 @@
         "gen5"
       ],
       "aspects": [
-        "zen"
+        "zen_mode"
       ],
       "abilities": [
         "sheerforce",
@@ -358,7 +357,6 @@
         "gen8"
       ],
       "aspects": [
-        "standard",
         "galarian"
       ],
       "abilities": [
@@ -518,7 +516,7 @@
         "gen8"
       ],
       "aspects": [
-        "zen",
+        "zen_mode",
         "galarian"
       ],
       "abilities": [
