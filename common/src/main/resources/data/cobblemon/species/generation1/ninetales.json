@@ -371,7 +371,7 @@
         "tm:wonderroom",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "vulpix regional_form=alolan",
+      "preEvolution": "vulpix alolan",
       "evolutions": [],
       "battleOnly": false
     }

@@ -387,7 +387,7 @@
         "tm:uturn",
         "tm:workup"
       ],
-      "preEvolution": "meowth regional_form=alolan",
+      "preEvolution": "meowth alolan",
       "evolutions": [],
       "battleOnly": false
     }

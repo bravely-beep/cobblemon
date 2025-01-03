@@ -353,7 +353,7 @@
         {
           "id": "vulpix_ninetalesalola",
           "variant": "item_interact",
-          "result": "ninetales regional_form=alolan",
+          "result": "ninetales alolan",
           "consumeHeldItem": true,
           "learnableMoves": [
             "dazzlinggleam"

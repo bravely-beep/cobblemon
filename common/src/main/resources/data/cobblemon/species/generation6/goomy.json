@@ -144,7 +144,7 @@
     {
       "id": "goomy_sliggoohisui",
       "variant": "level_up",
-      "result": "sliggoo regional_form=hisuian",
+      "result": "sliggoo hisuian",
       "consumeHeldItem": false,
       "learnableMoves": [
         "shelter"
@@ -294,7 +294,7 @@
         {
           "id": "goomy_sliggoohisui",
           "variant": "level_up",
-          "result": "sliggoo regional_form=hisuian",
+          "result": "sliggoo hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "shelter"

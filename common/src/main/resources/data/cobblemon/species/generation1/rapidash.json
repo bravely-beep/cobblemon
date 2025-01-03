@@ -331,7 +331,7 @@
         "tm:wonderroom",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "ponyta regional_form=galarian",
+      "preEvolution": "ponyta galarian",
       "evolutions": [],
       "battleOnly": false
     }

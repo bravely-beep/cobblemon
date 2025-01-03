@@ -197,7 +197,7 @@
     {
       "id": "dewott_samurotthisui",
       "variant": "level_up",
-      "result": "samurott regional_form=hisuian",
+      "result": "samurott hisuian",
       "consumeHeldItem": false,
       "learnableMoves": [
         "ceaselessedge"
@@ -385,7 +385,7 @@
         {
           "id": "dewott_samurotthisui",
           "variant": "level_up",
-          "result": "samurott regional_form=hisuian",
+          "result": "samurott hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "ceaselessedge"

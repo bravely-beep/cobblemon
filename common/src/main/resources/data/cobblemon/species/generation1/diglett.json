@@ -326,7 +326,7 @@
         {
           "id": "diglett_dugtrioalola",
           "variant": "level_up",
-          "result": "dugtrio regional_form=alolan",
+          "result": "dugtrio alolan",
           "consumeHeldItem": false,
           "learnableMoves": [
             "sandtomb"

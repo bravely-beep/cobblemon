@@ -168,6 +168,6 @@
     "tm:workup",
     "tm:xscissor"
   ],
-  "preEvolution": "meowth regional_form=galarian",
+  "preEvolution": "meowth galarian",
   "evolutions": []
 }

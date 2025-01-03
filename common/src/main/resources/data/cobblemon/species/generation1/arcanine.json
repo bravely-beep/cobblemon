@@ -313,7 +313,7 @@
         "tm:wildcharge",
         "tm:willowisp"
       ],
-      "preEvolution": "growlithe regional_form=hisuian",
+      "preEvolution": "growlithe hisuian",
       "evolutions": [],
       "battleOnly": false
     }

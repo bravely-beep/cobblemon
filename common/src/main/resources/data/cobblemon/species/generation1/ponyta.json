@@ -297,7 +297,7 @@
         {
           "id": "ponyta_rapidashgalar",
           "variant": "level_up",
-          "result": "rapidash regional_form=galarian",
+          "result": "rapidash galarian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "psychocut"

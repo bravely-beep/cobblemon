@@ -336,7 +336,7 @@
         "tm:uproar",
         "tm:workup"
       ],
-      "preEvolution": "diglett regional_form=alolan",
+      "preEvolution": "diglett alolan",
       "evolutions": [],
       "battleOnly": false
     }

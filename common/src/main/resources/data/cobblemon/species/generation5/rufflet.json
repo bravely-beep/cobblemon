@@ -163,7 +163,7 @@
     {
       "id": "rufflet_braviaryhisui",
       "variant": "level_up",
-      "result": "braviary regional_form=hisuian",
+      "result": "braviary hisuian",
       "consumeHeldItem": false,
       "learnableMoves": [
         "esperwing"
@@ -333,7 +333,7 @@
         {
           "id": "rufflet_braviaryhisui",
           "variant": "level_up",
-          "result": "braviary regional_form=hisuian",
+          "result": "braviary hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "esperwing"

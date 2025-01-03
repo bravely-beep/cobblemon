@@ -387,7 +387,7 @@
         "tm:venoshock",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "grimer regional_form=alolan",
+      "preEvolution": "grimer alolan",
       "evolutions": [],
       "battleOnly": false
     }

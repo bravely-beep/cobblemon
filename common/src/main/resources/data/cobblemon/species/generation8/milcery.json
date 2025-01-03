@@ -102,7 +102,7 @@
     {
       "id": "milcery_alcremiestrawberryvanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=strawberry cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -122,7 +122,7 @@
     {
       "id": "milcery_alcremielovevanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=love cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -142,7 +142,7 @@
     {
       "id": "milcery_alcremieberryvanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=berry cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -162,7 +162,7 @@
     {
       "id": "milcery_alcremieclovervanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=clover cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -182,7 +182,7 @@
     {
       "id": "milcery_alcremieflowervanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=flower cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -202,7 +202,7 @@
     {
       "id": "milcery_alcremiestarvanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=star cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -222,7 +222,7 @@
     {
       "id": "milcery_alcremieribbonvanillacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=vanilla_cream",
+      "result": "alcremie decoration=ribbon cream=vanilla",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -242,7 +242,7 @@
     {
       "id": "milcery_alcremiestrawberryrubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=ruby_cream",
+      "result": "alcremie decoration=strawberry cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -262,7 +262,7 @@
     {
       "id": "milcery_alcremieloverubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=ruby_cream",
+      "result": "alcremie decoration=love cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -282,7 +282,7 @@
     {
       "id": "milcery_alcremieberryrubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=ruby_cream",
+      "result": "alcremie decoration=berry cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -302,7 +302,7 @@
     {
       "id": "milcery_alcremiecloverrubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=ruby_cream",
+      "result": "alcremie decoration=clover cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -322,7 +322,7 @@
     {
       "id": "milcery_alcremieflowerrubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=ruby_cream",
+      "result": "alcremie decoration=flower cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -342,7 +342,7 @@
     {
       "id": "milcery_alcremiestarrubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=ruby_cream",
+      "result": "alcremie decoration=star cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -362,7 +362,7 @@
     {
       "id": "milcery_alcremieribbonrubycream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=ruby_cream",
+      "result": "alcremie decoration=ribbon cream=ruby",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -382,7 +382,7 @@
     {
       "id": "milcery_alcremiestrawberrymatchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=matcha_cream",
+      "result": "alcremie decoration=strawberry cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -402,7 +402,7 @@
     {
       "id": "milcery_alcremielovematchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=matcha_cream",
+      "result": "alcremie decoration=love cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -422,7 +422,7 @@
     {
       "id": "milcery_alcremieberrymatchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=matcha_cream",
+      "result": "alcremie decoration=berry cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -442,7 +442,7 @@
     {
       "id": "milcery_alcremieclovermatchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=matcha_cream",
+      "result": "alcremie decoration=clover cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -462,7 +462,7 @@
     {
       "id": "milcery_alcremieflowermatchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=matcha_cream",
+      "result": "alcremie decoration=flower cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -482,7 +482,7 @@
     {
       "id": "milcery_alcremiestarmatchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=matcha_cream",
+      "result": "alcremie decoration=star cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -502,7 +502,7 @@
     {
       "id": "milcery_alcremieribbonmatchacream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=matcha_cream",
+      "result": "alcremie decoration=ribbon cream=matcha",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -522,7 +522,7 @@
     {
       "id": "milcery_alcremiestrawberrymintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=mint_cream",
+      "result": "alcremie decoration=strawberry cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -542,7 +542,7 @@
     {
       "id": "milcery_alcremielovemintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=mint_cream",
+      "result": "alcremie decoration=love cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -562,7 +562,7 @@
     {
       "id": "milcery_alcremieberrymintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=mint_cream",
+      "result": "alcremie decoration=berry cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -582,7 +582,7 @@
     {
       "id": "milcery_alcremieclovermintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=mint_cream",
+      "result": "alcremie decoration=clover cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -602,7 +602,7 @@
     {
       "id": "milcery_alcremieflowermintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=mint_cream",
+      "result": "alcremie decoration=flower cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -622,7 +622,7 @@
     {
       "id": "milcery_alcremiestarmintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=mint_cream",
+      "result": "alcremie decoration=star cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -642,7 +642,7 @@
     {
       "id": "milcery_alcremieribbonmintcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=mint_cream",
+      "result": "alcremie decoration=ribbon cream=mint",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -662,7 +662,7 @@
     {
       "id": "milcery_alcremiestrawberrylemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=lemon_cream",
+      "result": "alcremie decoration=strawberry cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -682,7 +682,7 @@
     {
       "id": "milcery_alcremielovelemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=lemon_cream",
+      "result": "alcremie decoration=love cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -702,7 +702,7 @@
     {
       "id": "milcery_alcremieberrylemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=lemon_cream",
+      "result": "alcremie decoration=berry cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -722,7 +722,7 @@
     {
       "id": "milcery_alcremiecloverlemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=lemon_cream",
+      "result": "alcremie decoration=clover cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -742,7 +742,7 @@
     {
       "id": "milcery_alcremieflowerlemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=lemon_cream",
+      "result": "alcremie decoration=flower cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -762,7 +762,7 @@
     {
       "id": "milcery_alcremiestarlemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=lemon_cream",
+      "result": "alcremie decoration=star cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -782,7 +782,7 @@
     {
       "id": "milcery_alcremieribbonlemoncream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=lemon_cream",
+      "result": "alcremie decoration=ribbon cream=lemon",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -802,7 +802,7 @@
     {
       "id": "milcery_alcremiestrawberrysaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=salted_cream",
+      "result": "alcremie decoration=strawberry cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -822,7 +822,7 @@
     {
       "id": "milcery_alcremielovesaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=salted_cream",
+      "result": "alcremie decoration=love cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -842,7 +842,7 @@
     {
       "id": "milcery_alcremieberrysaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=salted_cream",
+      "result": "alcremie decoration=berry cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -862,7 +862,7 @@
     {
       "id": "milcery_alcremiecloversaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=salted_cream",
+      "result": "alcremie decoration=clover cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -882,7 +882,7 @@
     {
       "id": "milcery_alcremieflowersaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=salted_cream",
+      "result": "alcremie decoration=flower cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -902,7 +902,7 @@
     {
       "id": "milcery_alcremiestarsaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=salted_cream",
+      "result": "alcremie decoration=star cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -922,7 +922,7 @@
     {
       "id": "milcery_alcremieribbonsaltedcream",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=salted_cream",
+      "result": "alcremie decoration=ribbon cream=salted",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -942,7 +942,7 @@
     {
       "id": "milcery_alcremiestrawberryrubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=strawberry cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -962,7 +962,7 @@
     {
       "id": "milcery_alcremieloverubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=love cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -982,7 +982,7 @@
     {
       "id": "milcery_alcremieberryrubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=berry cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1002,7 +1002,7 @@
     {
       "id": "milcery_alcremiecloverrubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=clover cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1022,7 +1022,7 @@
     {
       "id": "milcery_alcremieflowerrubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=flower cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1042,7 +1042,7 @@
     {
       "id": "milcery_alcremiestarrubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=star cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1062,7 +1062,7 @@
     {
       "id": "milcery_alcremieribbonrubyswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=ruby_swirl",
+      "result": "alcremie decoration=ribbon cream=ruby_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1082,7 +1082,7 @@
     {
       "id": "milcery_alcremiestrawberrycaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=strawberry flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=strawberry cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1102,7 +1102,7 @@
     {
       "id": "milcery_alcremielovecaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=love flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=love cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1122,7 +1122,7 @@
     {
       "id": "milcery_alcremieberrycaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=berry flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=berry cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1142,7 +1142,7 @@
     {
       "id": "milcery_alcremieclovercaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=clover flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=clover cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1162,7 +1162,7 @@
     {
       "id": "milcery_alcremieflowercaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=flower flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=flower cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1182,7 +1182,7 @@
     {
       "id": "milcery_alcremiestarcaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=star flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=star cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1202,7 +1202,7 @@
     {
       "id": "milcery_alcremieribboncaramelswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=caramel_swirl",
+      "result": "alcremie decoration=ribbon cream=caramel_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"
@@ -1222,7 +1222,7 @@
     {
       "id": "milcery_alcremieribbonrainbowswirl",
       "variant": "level_up",
-      "result": "alcremie sweet_decoration=ribbon flavor_cream=rainbow_swirl",
+      "result": "alcremie decoration=ribbon cream=rainbow_swirl",
       "consumeHeldItem": true,
       "learnableMoves": [
         "decorate"

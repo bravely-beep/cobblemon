@@ -169,6 +169,6 @@
     "tm:venoshock",
     "tm:xscissor"
   ],
-  "preEvolution": "sneasel regional_form=hisuian",
+  "preEvolution": "sneasel hisuian",
   "evolutions": []
 }

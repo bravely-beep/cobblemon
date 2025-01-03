@@ -339,7 +339,7 @@
         "tm:venoshock",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "rattata regional_form=alolan",
+      "preEvolution": "rattata alolan",
       "evolutions": [],
       "battleOnly": false
     }

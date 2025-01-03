@@ -356,7 +356,7 @@
         {
           "id": "geodude_graveleralola",
           "variant": "level_up",
-          "result": "graveler regional_form=alolan",
+          "result": "graveler alolan",
           "consumeHeldItem": false,
           "learnableMoves": [],
           "requirements": [

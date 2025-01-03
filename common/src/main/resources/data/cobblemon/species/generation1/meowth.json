@@ -379,7 +379,7 @@
         {
           "id": "meowth_persianalola",
           "variant": "level_up",
-          "result": "persian regional_form=alolan",
+          "result": "persian alolan",
           "consumeHeldItem": false,
           "learnableMoves": [
             "swift",

@@ -367,7 +367,7 @@
         "tm:workup",
         "tm:xscissor"
       ],
-      "preEvolution": "sandshrew regional_form=alolan",
+      "preEvolution": "sandshrew alolan",
       "evolutions": [],
       "battleOnly": false
     }

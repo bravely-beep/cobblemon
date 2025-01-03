@@ -383,7 +383,7 @@
         {
           "id": "slowpoke_slowbrogalar",
           "variant": "item_interact",
-          "result": "slowbro regional_form=galarian",
+          "result": "slowbro galarian",
           "consumeHeldItem": true,
           "learnableMoves": [
             "shellsidearm"
@@ -394,7 +394,7 @@
         {
           "id": "slowpoke_slowkinggalar",
           "variant": "item_interact",
-          "result": "slowking regional_form=galarian",
+          "result": "slowking galarian",
           "consumeHeldItem": true,
           "learnableMoves": [
             "eeriespell"

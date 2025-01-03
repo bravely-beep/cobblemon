@@ -328,7 +328,7 @@
         "tm:whirlpool",
         "tm:workup"
       ],
-      "preEvolution": "zigzagoon regional_form=galarian",
+      "preEvolution": "zigzagoon galarian",
       "evolutions": [
         {
           "id": "linoone_obstagoon",

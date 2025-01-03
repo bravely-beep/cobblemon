@@ -316,7 +316,7 @@
         {
           "id": "zorua_zoroarkhisui",
           "variant": "level_up",
-          "result": "zoroark regional_form=hisuian",
+          "result": "zoroark hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "shadowclaw"

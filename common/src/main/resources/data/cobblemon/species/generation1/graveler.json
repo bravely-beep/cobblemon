@@ -352,12 +352,12 @@
         "tm:wildcharge",
         "tm:zapcannon"
       ],
-      "preEvolution": "geodude regional_form=alolan",
+      "preEvolution": "geodude alolan",
       "evolutions": [
         {
           "id": "graveler_golemalola",
           "variant": "trade",
-          "result": "golem regional_form=alolan",
+          "result": "golem alolan",
           "consumeHeldItem": false,
           "learnableMoves": [],
           "requirements": []

@@ -176,7 +176,7 @@
     {
       "id": "petilil_lilliganthisui",
       "variant": "item_interact",
-      "result": "lilligant regional_form=hisuian",
+      "result": "lilligant hisuian",
       "consumeHeldItem": true,
       "learnableMoves": [
         "victorydance"
@@ -338,7 +338,7 @@
         {
           "id": "petilil_lilliganthisui",
           "variant": "item_interact",
-          "result": "lilligant regional_form=hisuian",
+          "result": "lilligant hisuian",
           "consumeHeldItem": true,
           "learnableMoves": [
             "victorydance"

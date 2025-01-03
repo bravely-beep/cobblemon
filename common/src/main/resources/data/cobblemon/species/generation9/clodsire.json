@@ -170,6 +170,6 @@
     "tm:yawn",
     "tm:zenheadbutt"
   ],
-  "preEvolution": "wooper regional_form=paldean",
+  "preEvolution": "wooper paldean",
   "evolutions": []
 }

@@ -188,7 +188,7 @@
     {
       "id": "cubone_marowakalola",
       "variant": "level_up",
-      "result": "marowak regional_form=alolan",
+      "result": "marowak alolan",
       "consumeHeldItem": false,
       "learnableMoves": [
         "shadowbone"
@@ -386,7 +386,7 @@
         {
           "id": "cubone_marowakalola",
           "variant": "level_up",
-          "result": "marowak regional_form=alolan",
+          "result": "marowak alolan",
           "consumeHeldItem": false,
           "learnableMoves": [
             "shadowbone"

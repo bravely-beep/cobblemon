@@ -187,6 +187,6 @@
     "tm:waterfall",
     "tm:waterpulse"
   ],
-  "preEvolution": "qwilfish regional_form=hisuian",
+  "preEvolution": "qwilfish hisuian",
   "evolutions": []
 }

@@ -359,7 +359,7 @@
         "tm:wildcharge",
         "tm:zapcannon"
       ],
-      "preEvolution": "graveler regional_form=alolan",
+      "preEvolution": "graveler alolan",
       "evolutions": [],
       "battleOnly": false
     }

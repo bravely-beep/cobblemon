@@ -181,7 +181,7 @@
     {
       "id": "koffing_weezinggalar",
       "variant": "level_up",
-      "result": "weezing regional_form=galarian",
+      "result": "weezing galarian",
       "consumeHeldItem": false,
       "learnableMoves": [
         "doublehit"
@@ -361,7 +361,7 @@
         {
           "id": "koffing_weezinggalar",
           "variant": "level_up",
-          "result": "weezing regional_form=galarian",
+          "result": "weezing galarian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "doublehit"

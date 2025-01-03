@@ -148,6 +148,6 @@
     "tm:wonderroom",
     "tm:zenheadbutt"
   ],
-  "preEvolution": "yamask regional_form=galarian",
+  "preEvolution": "yamask galarian",
   "evolutions": []
 }

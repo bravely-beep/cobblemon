@@ -155,6 +155,6 @@
     "tm:throatchop",
     "tm:workup"
   ],
-  "preEvolution": "farfetchd regional_form=galarian",
+  "preEvolution": "farfetchd galarian",
   "evolutions": []
 }

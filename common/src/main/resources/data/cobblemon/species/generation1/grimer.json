@@ -381,7 +381,7 @@
         {
           "id": "grimer_mukalola",
           "variant": "level_up",
-          "result": "muk regional_form=alolan",
+          "result": "muk alolan",
           "consumeHeldItem": false,
           "learnableMoves": [
             "venomdrench"

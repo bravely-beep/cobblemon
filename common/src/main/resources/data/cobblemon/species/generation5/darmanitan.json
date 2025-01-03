@@ -500,7 +500,7 @@
         "tm:yawn",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "darumaka regional_form=galarian",
+      "preEvolution": "darumaka galarian",
       "evolutions": [],
       "battleOnly": false
     },

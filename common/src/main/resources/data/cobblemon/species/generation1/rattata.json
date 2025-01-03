@@ -328,7 +328,7 @@
         {
           "id": "rattata_raticatealola",
           "variant": "level_up",
-          "result": "raticate regional_form=alolan",
+          "result": "raticate alolan",
           "consumeHeldItem": false,
           "learnableMoves": [
             "scaryface"

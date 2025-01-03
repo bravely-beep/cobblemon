@@ -154,6 +154,6 @@
     "tm:whirlpool",
     "tm:willowisp"
   ],
-  "preEvolution": "corsola regional_form=galarian",
+  "preEvolution": "corsola galarian",
   "evolutions": []
 }

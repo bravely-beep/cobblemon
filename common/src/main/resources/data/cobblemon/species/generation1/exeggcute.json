@@ -187,7 +187,7 @@
     {
       "id": "exeggcute_exeggutoralola",
       "variant": "item_interact",
-      "result": "exeggutor regional_form=alolan",
+      "result": "exeggutor alolan",
       "consumeHeldItem": true,
       "learnableMoves": [
         "dragonhammer"
@@ -365,7 +365,7 @@
         {
           "id": "exeggcute_exeggutoralola",
           "variant": "item_interact",
-          "result": "exeggutor regional_form=alolan",
+          "result": "exeggutor alolan",
           "consumeHeldItem": true,
           "learnableMoves": [
             "dragonhammer"

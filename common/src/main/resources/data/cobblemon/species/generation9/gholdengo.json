@@ -131,6 +131,6 @@
     "tm:thunderwave",
     "tm:trick"
   ],
-  "preEvolution": "gimmighoul coin_form=chest",
+  "preEvolution": "gimmighoul",
   "evolutions": []
 }

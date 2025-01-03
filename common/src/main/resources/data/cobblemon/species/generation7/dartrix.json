@@ -188,7 +188,7 @@
     {
       "id": "dartrix_decidueyehisui",
       "variant": "level_up",
-      "result": "decidueye regional_form=hisuian",
+      "result": "decidueye hisuian",
       "consumeHeldItem": false,
       "learnableMoves": [
         "triplearrows"
@@ -372,7 +372,7 @@
         {
           "id": "dartrix_decidueyehisui",
           "variant": "level_up",
-          "result": "decidueye regional_form=hisuian",
+          "result": "decidueye hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "triplearrows"

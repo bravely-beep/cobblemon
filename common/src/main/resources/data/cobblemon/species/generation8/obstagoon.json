@@ -182,6 +182,6 @@
     "tm:workup",
     "tm:xscissor"
   ],
-  "preEvolution": "linoone regional_form=galarian",
+  "preEvolution": "linoone galarian",
   "evolutions": []
 }

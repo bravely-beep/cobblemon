@@ -138,7 +138,7 @@
     {
       "id": "doublade_aegislash",
       "variant": "item_interact",
-      "result": "aegislash stance_forme=shield",
+      "result": "aegislash",
       "consumeHeldItem": true,
       "learnableMoves": [
         "kingsshield"

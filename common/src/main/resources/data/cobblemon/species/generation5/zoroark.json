@@ -346,7 +346,7 @@
         "tm:uturn",
         "tm:willowisp"
       ],
-      "preEvolution": "zorua regional_form=hisuian",
+      "preEvolution": "zorua hisuian",
       "evolutions": [],
       "battleOnly": false
     }

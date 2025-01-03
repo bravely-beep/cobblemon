@@ -193,7 +193,7 @@
     {
       "id": "mimejr_mrmimegalar",
       "variant": "level_up",
-      "result": "mrmime regional_form=galarian",
+      "result": "mrmime galarian",
       "consumeHeldItem": false,
       "learnableMoves": [],
       "requirements": [
@@ -393,7 +393,7 @@
         {
           "id": "mimejr_mrmimegalar",
           "variant": "level_up",
-          "result": "mrmime regional_form=galarian",
+          "result": "mrmime galarian",
           "consumeHeldItem": false,
           "learnableMoves": [],
           "requirements": [

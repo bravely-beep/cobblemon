@@ -341,7 +341,7 @@
         "tm:waterpulse",
         "tm:weatherball"
       ],
-      "preEvolution": "sliggoo regional_form=hisuian",
+      "preEvolution": "sliggoo hisuian",
       "evolutions": [],
       "battleOnly": false
     }

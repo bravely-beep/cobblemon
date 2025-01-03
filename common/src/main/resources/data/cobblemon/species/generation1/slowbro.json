@@ -595,7 +595,7 @@
         "tm:yawn",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "slowpoke regional_form=galarian",
+      "preEvolution": "slowpoke galarian",
       "evolutions": [],
       "battleOnly": false
     }

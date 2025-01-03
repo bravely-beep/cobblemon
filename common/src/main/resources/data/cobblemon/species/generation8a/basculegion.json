@@ -157,7 +157,7 @@
     "tm:whirlpool",
     "tm:zenheadbutt"
   ],
-  "preEvolution": "basculin striped_form=white",
+  "preEvolution": "basculin fish_stripes=white",
   "evolutions": [],
   "forms": [
     {
@@ -298,7 +298,7 @@
         "tm:whirlpool",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "basculin striped_form=white",
+      "preEvolution": "basculin fish_stripes=white",
       "evolutions": [],
       "battleOnly": false
     }

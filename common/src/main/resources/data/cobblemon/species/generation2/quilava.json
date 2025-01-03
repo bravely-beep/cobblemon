@@ -188,7 +188,7 @@
     {
       "id": "quilava_typhlosionhisui",
       "variant": "level_up",
-      "result": "typhlosion regional_form=hisuian",
+      "result": "typhlosion hisuian",
       "consumeHeldItem": false,
       "learnableMoves": [
         "infernalparade"
@@ -373,7 +373,7 @@
         {
           "id": "quilava_typhlosionhisui",
           "variant": "level_up",
-          "result": "typhlosion regional_form=hisuian",
+          "result": "typhlosion hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "infernalparade"

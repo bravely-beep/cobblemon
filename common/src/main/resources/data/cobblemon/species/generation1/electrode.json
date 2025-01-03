@@ -286,7 +286,7 @@
         "tm:wildcharge",
         "tm:worryseed"
       ],
-      "preEvolution": "voltorb regional_form=hisuian",
+      "preEvolution": "voltorb hisuian",
       "evolutions": [],
       "battleOnly": false
     }

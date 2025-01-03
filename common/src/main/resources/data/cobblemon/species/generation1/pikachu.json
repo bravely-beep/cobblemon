@@ -223,7 +223,7 @@
     {
       "id": "pikachu_raichualola",
       "variant": "item_interact",
-      "result": "raichu regional_form=alolan",
+      "result": "raichu alolan",
       "consumeHeldItem": true,
       "learnableMoves": [
         "psychic"
@@ -745,7 +745,7 @@
         {
           "id": "pikachu_raichualola",
           "variant": "item_interact",
-          "result": "raichu regional_form=alolan",
+          "result": "raichu alolan",
           "consumeHeldItem": true,
           "learnableMoves": [
             "psychic"

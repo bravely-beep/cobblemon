@@ -308,7 +308,7 @@
         {
           "id": "sliggoo_goodrahisui",
           "variant": "level_up",
-          "result": "goodra regional_form=hisuian",
+          "result": "goodra hisuian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "irontail"

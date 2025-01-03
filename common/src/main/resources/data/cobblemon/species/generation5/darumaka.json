@@ -157,7 +157,7 @@
     {
       "id": "darumaka_darmanitan",
       "variant": "level_up",
-      "result": "darmanitan blazing_mode=standard",
+      "result": "darmanitan",
       "consumeHeldItem": false,
       "learnableMoves": [
         "hammerarm"
@@ -310,7 +310,7 @@
         {
           "id": "darumaka_darmanitangalar",
           "variant": "item_interact",
-          "result": "darmanitan blazing_mode=standard regional_form=galarian",
+          "result": "darmanitan galarian",
           "consumeHeldItem": true,
           "learnableMoves": [
             "iciclecrash"

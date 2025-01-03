@@ -313,7 +313,7 @@
         {
           "id": "zigzagoon_linoonegalar",
           "variant": "level_up",
-          "result": "linoone regional_form=galarian",
+          "result": "linoone galarian",
           "consumeHeldItem": false,
           "learnableMoves": [
             "nightslash"
