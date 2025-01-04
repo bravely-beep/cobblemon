@@ -8,6 +8,8 @@
 - Added molang particle queries for getting distance to targeted entities
 - Added debug renderer for poseable entity locators
 - Added `baseScale` property to NPCs.
+- Added the player to `PokerodReelEvent`.
+- Pokédex and Dialogue API screens now close when the inventory keybind is pressed.
 
 ### Fixes
 - Fix Pokédex sometimes crashing when switching forms
@@ -44,6 +46,8 @@
 - Fix `/pokedex grant only` and `/pokedex remove only` not respecting the form parameter passed.
 - Fix variant forms appearing incorrectly in the Pokédex when the normal form had not been unlocked.
 - Fix Pokémon occasionally being shot into the sky during battle.
+- Fixed Wooloo variants not being automatically registered in the owner's Pokédex when dyed.
+- Fixed Vivichoke Dip and Leek and Potato Stew not returning a bowl upon consumption.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
