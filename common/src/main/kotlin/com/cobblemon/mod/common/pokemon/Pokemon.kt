@@ -1216,6 +1216,7 @@ open class Pokemon : ShowdownIdentifiable {
          */
         if (!isClient) {
             aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet() + forcedAspects
+            CobblemonEvents.POKEMON_ASPECTS_CHANGED.post(PokemonAspectsChangedEvent(getOwnerUUID(), this))
         } else {
             aspects = forcedAspects
         }
