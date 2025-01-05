@@ -1215,8 +1215,12 @@ open class Pokemon : ShowdownIdentifiable {
          * aspect providers, and we want the server side to entirely manage them anyway.
          */
         if (!isClient) {
+            val oldAspects = aspects
             aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet() + forcedAspects
-            CobblemonEvents.POKEMON_ASPECTS_CHANGED.post(PokemonAspectsChangedEvent(getOwnerUUID(), this))
+
+            if (oldAspects != aspects) {
+                CobblemonEvents.POKEMON_ASPECTS_CHANGED.post(PokemonAspectsChangedEvent(getOwnerUUID(), this))
+            }
         } else {
             aspects = forcedAspects
         }
