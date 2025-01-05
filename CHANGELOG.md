@@ -44,6 +44,7 @@
 - Fix `/pokedex grant only` and `/pokedex remove only` not respecting the form parameter passed.
 - Fix variant forms appearing incorrectly in the Pokédex when the normal form had not been unlocked.
 - Fix Pokémon occasionally being shot into the sky during battle.
+- Fixed NPC editing GUI not updating aspects until a game restart.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
