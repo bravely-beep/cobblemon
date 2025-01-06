@@ -5529,5 +5529,7 @@
     "cobblemon.ability.wonderskin": "奇跡皮膚",
     "cobblemon.ability.wonderskin.desc": "不易受到變化類招式攻擊的身體。",
     "cobblemon.ability.zenmode": "達摩模式",
-    "cobblemon.ability.zenmode.desc": "ＨＰ變為一半以下時，樣子會改變。"
+    "cobblemon.ability.zenmode.desc": "ＨＰ變為一半以下時，樣子會改變。",
+    "item.cobblemon.pokerod_smithing_template": "鍛造模板",
+    "item.cobblemon.smithing_template.pokerod.ingredients": "精靈球"
 }
