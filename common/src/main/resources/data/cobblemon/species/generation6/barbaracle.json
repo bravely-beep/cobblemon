@@ -25,6 +25,15 @@
   "eggGroups": [
     "water_3"
   ],
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "swimSpeed": 0.1,
+        "canSwimInWater": false,
+        "canBreatheUnderwater": true
+      }
+    }
+  },
   "moves": [
     "1:mudslap",
     "1:sandattack",
@@ -146,10 +155,10 @@
   ],
   "preEvolution": "binacle",
   "evolutions": [],
-  "baseScale": 1,
+  "baseScale": 1.1,
   "hitbox": {
-    "width": 1,
-    "height": 1,
+    "width": 1.5,
+    "height": 2.8,
     "fixed": false
   },
   "baseFriendship": 50,
