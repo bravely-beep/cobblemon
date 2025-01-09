@@ -10,6 +10,7 @@
 - Added `baseScale` property to NPCs.
 
 ### Fixes
+- Fix Display Cases not dropping items if destroyed through explosions.
 - Fix Pokédex sometimes crashing when switching forms
 - Fix crash related to Tom's Simple Storage and Fossil Machine
 - Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand
