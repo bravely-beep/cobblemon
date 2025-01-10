@@ -9,6 +9,11 @@
 - Added debug renderer for poseable entity locators.
 - Added `baseScale` property to NPCs.
 
+### Changes
+- Pokémon will now be dynamically revealed to the Pokédex as they're seen instead of revealing entire parties at the end of battle regardless.
+- Unseen wild Pokémon will update their name from '???' to their real name as soon as a battle starts to reflect the battle UI showing the actual species name.
+- Pokémon under the illusion effect will reveal their disguise to the Pokédex first and then the base Pokémon once the disguise is broken.
+
 ### Fixes
 - Fixed Pokédex sometimes crashing when switching forms.
 - Fixed Pokédex interface not transitioning out when closed.
