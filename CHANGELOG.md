@@ -25,6 +25,13 @@
 - Fixed Pokémon being collidable while being captured by a Poké Ball.
 - Fixed `full_party`, `own_zangoose_seviper`, `use_revive` and `use_candy` Advancement triggers.
 - Fixed `healing_machine` Advancement by using the correct 1.21 trigger.
+- Fix Display Cases not dropping items if destroyed through explosions.
+- Fix Pokédex sometimes crashing when switching forms
+- Fix crash related to Tom's Simple Storage and Fossil Machine
+- Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand
+- Fix Pokémon being collidable while being captured by a Pokéball.
+- Fixed `full_party`, `own_zangoose_seviper`, `use_revive` and `use_candy` Advancement triggers
+- Fixed `healing_machine` Advancement by using the correct 1.21 trigger
 - Fixed an issue where the first Pokémon in the pastured Pokémon list clipped into the interface.
 - Fixed all Pokémon facing South on spawn.
 - Fixed not being able to retrieve a fossil from the Fossil Machine with an empty hand .
