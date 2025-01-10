@@ -8,6 +8,8 @@
 - Added molang particle queries for getting distance to targeted entities.
 - Added debug renderer for poseable entity locators.
 - Added `baseScale` property to NPCs.
+- Added the player to `PokerodReelEvent`.
+- Pokédex and Dialogue API screens now close when the inventory keybind is pressed.
 
 ### Changes
 - Pokémon will now be dynamically revealed to the Pokédex as they're seen instead of revealing entire parties at the end of battle regardless.
@@ -55,6 +57,19 @@
 - Fix some users being unable to open their PC if a Pokémon in said PC had a lot of pp raises beyond normal bounds
 - Fix some color variants (dubwool, conkeldurr and undyed wooloo) missing in the Pokédex
 - Fix invalid species or held_items causing Players to not be able to load into their world anymore (commonly happening after removing addons/mods)
+- Made berry trees be shearable by dispenser blocks
+- Fix the summary screen showing there's experience to reach the next level when at level cap.
+- Fix Pokémon forgetting moves when evolving on specific cases.
+- Fixed Adorn compatibility, including improvements when using JEI/REI (Apricorn items now show up under the collapsed entries rather than standalone)
+- Fix error message appearing on battle log when using Solar Beam with Sunny Day.
+- Fix Pokémon Model offsets for larger species.
+- Fix `/pokedex grant all` command not giving male/female/shininess completion for some Pokémon.
+- Fix `/pokedex grant only` and `/pokedex remove only` not respecting the form parameter passed.
+- Fix variant forms appearing incorrectly in the Pokédex when the normal form had not been unlocked.
+- Fix Pokémon occasionally being shot into the sky during battle.
+- Fixed Wooloo variants not being automatically registered in the owner's Pokédex when dyed.
+- Fixed Vivichoke Dip and Leek and Potato Stew not returning a bowl upon consumption.
+- Fixed Fossil Restoration Machine not accepting Hay Bales.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
