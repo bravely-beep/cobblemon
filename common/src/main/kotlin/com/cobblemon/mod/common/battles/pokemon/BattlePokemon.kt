@@ -31,7 +31,6 @@ import com.cobblemon.mod.common.util.battleLang
 import com.cobblemon.mod.common.util.server
 import java.util.UUID
 import net.minecraft.network.chat.MutableComponent
-import java.util.*
 import java.util.function.Function
 
 open class BattlePokemon(
@@ -74,7 +73,7 @@ open class BattlePokemon(
             "uuid" to Function { StringValue(uuid.toString()) },
             "health" to Function { DoubleValue(health.toDouble()) },
             "max_health" to Function { DoubleValue(maxHealth.toDouble()) },
-            "ivs" to Function { effectedPokemon.ivs.asStruct() },
+            "ivs" to Function { effectedPokemon.ivs.struct },
             "nature" to Function { StringValue(effectedPokemon.nature.name.toString()) },
             "moveset" to Function { effectedPokemon.moveSet.toStruct() }
         ))

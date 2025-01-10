@@ -20,6 +20,6 @@ data class PokemonFaintedEvent(
 ) {
     val context = mutableMapOf(
         "pokemon" to pokemon.struct,
-        "faintedTimer" to DoubleValue(faintedTimer)
+        "fainted_timer" to DoubleValue(faintedTimer)
     )
 }

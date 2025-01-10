@@ -20,7 +20,7 @@ import com.cobblemon.mod.common.pokemon.Pokemon
 class LevelUpEvent(val pokemon: Pokemon, val oldLevel: Int, var newLevel: Int) {
     val context = mutableMapOf(
         "pokemon" to pokemon.struct,
-        "oldLevel" to DoubleValue(oldLevel.toDouble()),
-        "newLevel" to DoubleValue(newLevel.toDouble())
+        "old_level" to DoubleValue(oldLevel.toDouble()),
+        "new_level" to DoubleValue(newLevel.toDouble())
     )
 }

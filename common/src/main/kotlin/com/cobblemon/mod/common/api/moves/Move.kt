@@ -11,8 +11,9 @@ package com.cobblemon.mod.common.api.moves
 import com.bedrockk.molang.runtime.MoParams
 import com.bedrockk.molang.runtime.struct.QueryStruct
 import com.bedrockk.molang.runtime.value.DoubleValue
-import com.bedrockk.molang.runtime.value.MoValue
 import com.bedrockk.molang.runtime.value.StringValue
+import com.cobblemon.mod.common.api.molang.MoLangFunctions.addFunctions
+import com.cobblemon.mod.common.api.molang.ObjectValue
 import com.cobblemon.mod.common.api.moves.categories.DamageCategory
 import com.cobblemon.mod.common.api.reactive.SimpleObservable
 import com.cobblemon.mod.common.api.types.ElementalType
@@ -96,17 +97,17 @@ open class Move(
     val maxPp: Int
         get() = template.pp + raisedPpStages * template.pp / 5
 
-    fun asStruct(): QueryStruct {
-        return QueryStruct(
-            hashMapOf<String, Function<MoParams, Any>>(
+    val struct: QueryStruct = ObjectValue(this).also {
+        it.addFunctions(
+            hashMapOf(
                 "name" to Function { StringValue(name) },
-                "displayName" to Function { StringValue(displayName.string) },
+                "display_name" to Function { StringValue(displayName.string) },
                 "description" to Function { StringValue(description.string) },
                 "type" to Function { StringValue(type.name) },
-                "damageCategory" to Function { StringValue(damageCategory.name) },
+                "damage_category" to Function { StringValue(damageCategory.name) },
                 "power" to Function { DoubleValue(power) },
                 "accuracy" to Function { DoubleValue(accuracy) },
-                "maxPp" to Function { DoubleValue(maxPp.toDouble()) }
+                "max_pp" to Function { DoubleValue(maxPp.toDouble()) }
             )
         )
     }

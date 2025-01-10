@@ -33,15 +33,15 @@ class MoveSet : Iterable<Move> {
         val struct = QueryStruct(hashMapOf())
         struct.addFunction("move") { params ->
             val index = params.getInt(0) as? Int ?: return@addFunction null
-            return@addFunction get(index)?.asStruct()
+            return@addFunction get(index)?.struct
         }
         struct.addFunction("has_move") { params ->
             val moveID = params.getString(0) ?: return@addFunction null
-            return@addFunction moves.any { it?.template?.name == moveID }
+            return@addFunction if(moves.any { it?.template?.name == moveID }) DoubleValue(1.0) else DoubleValue(0.0)
         }
         struct.addFunction("get_move") { params ->
             val moveID = params.getString(0) ?: return@addFunction null
-            return@addFunction moves.firstOrNull { it?.template?.name == moveID }?.asStruct()
+            return@addFunction moves.firstOrNull { it?.template?.name == moveID }?.struct
         }
         return struct
     }

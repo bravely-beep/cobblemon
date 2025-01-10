@@ -29,7 +29,6 @@ data class PokemonScannedEvent(val player: ServerPlayer, val scannedPokemonEntit
         "pokemon" to scannedPokemonEntityData.struct,
         "entity" to {
             when (scannedEntity) {
-                is PokemonEntity -> scannedEntity.struct
                 is LivingEntity -> scannedEntity.asMostSpecificMoLangValue()
                 else -> DoubleValue(0.0)
             }
