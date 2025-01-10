@@ -1218,7 +1218,7 @@ open class Pokemon : ShowdownIdentifiable {
             val oldAspects = aspects
             aspects = AspectProvider.providers.flatMap { it.provide(this) }.toSet() + forcedAspects
 
-            if (oldAspects != aspects) {
+            if (oldAspects != aspects && !isWild()) {
                 CobblemonEvents.POKEMON_ASPECTS_CHANGED.post(PokemonAspectsChangedEvent(getOwnerUUID(), this))
             }
         } else {
