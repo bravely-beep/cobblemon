@@ -47,6 +47,9 @@
 - Fixed variant forms appearing incorrectly in the Pokédex when the normal form had not been unlocked.
 - Fixed Pokémon occasionally being shot into the sky during battle.
 - Fixed NPC editing GUI not updating aspects until a game restart.
+- Fix some users being unable to open their PC if a Pokémon in said PC had a lot of pp raises beyond normal bounds
+- Fix some color variants (dubwool, conkeldurr and undyed wooloo) missing in the Pokédex
+- Fix invalid species or held_items causing Players to not be able to load into their world anymore (commonly happening after removing addons/mods)
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
