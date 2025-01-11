@@ -151,7 +151,6 @@ object PokemonModelRepository : VaryingModelRepository<PokemonPosableModel>() {
         inbuilt("staryu", ::StaryuModel)
         inbuilt("steelix", ::SteelixModel)
         inbuilt("tangela", ::TangelaModel)
-        inbuilt("tauros", ::TaurosModel)
         inbuilt("tentacool", ::TentacoolModel)
         inbuilt("tentacruel", ::TentacruelModel)
         inbuilt("vaporeon", ::VaporeonModel)
