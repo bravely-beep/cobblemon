@@ -392,6 +392,9 @@ object CobblemonItems : PlatformRegistry<Registry<Item>, ResourceKey<Registry<It
 
     @JvmField val BERRY_JUICE = this.create("berry_juice", BerryJuiceItem())
 
+    @JvmField
+    val GALARICA_NUTS = create("galarica_nuts", GalaricaNutItem())
+
     // Medicine
     @JvmField
     val RARE_CANDY = candyItem("rare_candy") { _, pokemon -> pokemon.getExperienceToNextLevel() }
