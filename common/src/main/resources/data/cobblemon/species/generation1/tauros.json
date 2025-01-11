@@ -17,7 +17,8 @@
     "speed": 110
   },
   "features": [
-    "paldean-breed"
+    "paldean",
+    "bull_breed"
   ],
   "catchRate": 45,
   "maleRatio": 1,
@@ -120,7 +121,7 @@
         "paldea_regional"
       ],
       "aspects": [
-        "paldean-breed-combat"
+        "paldean"
       ],
       "height": 14,
       "weight": 884,
@@ -231,7 +232,8 @@
         "paldea_regional"
       ],
       "aspects": [
-        "paldean-breed-blaze"
+        "paldean",
+        "bull-breed-blaze"
       ],
       "height": 14,
       "weight": 884,
@@ -339,7 +341,8 @@
         "paldea_regional"
       ],
       "aspects": [
-        "paldean-breed-aqua"
+        "paldean",
+        "bull-breed-aqua"
       ],
       "height": 14,
       "weight": 884,

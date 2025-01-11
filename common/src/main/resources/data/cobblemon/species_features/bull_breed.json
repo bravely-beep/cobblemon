@@ -1,6 +1,6 @@
 {
   "type": "choice",
-  "keys": ["paldean_breed"],
+  "keys": ["bull_breed"],
   "default": "combat",
   "choices": [
     "combat",
@@ -8,5 +8,5 @@
     "blaze"
   ],
   "isAspect": true,
-  "aspectFormat": "paldean-breed-{{choice}}"
+  "aspectFormat": "bull-breed-{{choice}}"
 }

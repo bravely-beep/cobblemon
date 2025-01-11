@@ -3,14 +3,14 @@
   "order": 1,
   "variations": [
     {
-      "aspects": ["paldean-breed-combat"],
+      "aspects": ["paldean"],
       "poser": "cobblemon:tauros",
       "model": "cobblemon:tauros_paldean_combat.geo",
       "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_paldean_combat.png",
       "layers": []
     },
     {
-      "aspects": ["paldean-breed-combat","shiny"],
+      "aspects": ["paldean","shiny"],
       "texture": "cobblemon:textures/pokemon/0128_tauros/tauros_paldean_combat_shiny.png"
     }
   ]
