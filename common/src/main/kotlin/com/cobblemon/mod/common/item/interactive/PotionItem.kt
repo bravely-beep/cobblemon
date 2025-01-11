@@ -52,7 +52,7 @@ class PotionItem(val type: PotionType) : CobblemonItem(Properties()), PokemonSel
             return InteractionResultHolder.fail(stack)
         }
         var healthToRestore = genericRuntime.resolveInt(type.amountToHeal())
-        CobblemonEvents.POKEMON_HEALED.postThen(PokemonHealedEvent(pokemon, amount, this), { cancelledEvent -> return InteractionResultHolder.fail(stack)}) { event ->
+        CobblemonEvents.POKEMON_HEALED.postThen(PokemonHealedEvent(pokemon, healthToRestore, this), { cancelledEvent -> return InteractionResultHolder.fail(stack)}) { event ->
             healthToRestore = event.amount
         }
         pokemon.currentHealth = min(pokemon.currentHealth + healthToRestore, pokemon.maxHealth)
