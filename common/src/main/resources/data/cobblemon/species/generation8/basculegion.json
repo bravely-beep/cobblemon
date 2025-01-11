@@ -31,7 +31,7 @@
     }
   },
   "catchRate": 135,
-  "maleRatio": 0.5,
+  "maleRatio": 1,
   "shoulderMountable": false,
   "baseExperienceYield": 265,
   "baseFriendship": 0,
