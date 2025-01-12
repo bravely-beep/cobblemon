@@ -62,6 +62,7 @@
 - Fixed Wooloo variants not being automatically registered in the owner's Pokédex when dyed.
 - Fixed Vivichoke Dip and Leek and Potato Stew not returning a bowl upon consumption.
 - Fixed Fossil Restoration Machine not accepting Hay Bales.
+- Fixed Potion items so that they no longer apply over double their intended healing value.
 
 ### Molang & Datapacks  
 - Added flows for:
