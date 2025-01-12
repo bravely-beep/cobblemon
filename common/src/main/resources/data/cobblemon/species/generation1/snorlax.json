@@ -19,7 +19,7 @@
   "behaviour": {
     "moving": {
       "walk": {
-        "walkSpeed": 0.142
+        "walkSpeed": 0.147
     },
     "resting": {
       "canSleep": true,
