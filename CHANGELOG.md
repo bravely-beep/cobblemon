@@ -62,6 +62,7 @@
 - Fixed Wooloo variants not being automatically registered in the owner's Pokédex when dyed.
 - Fixed Vivichoke Dip and Leek and Potato Stew not returning a bowl upon consumption.
 - Fixed Fossil Restoration Machine not accepting Hay Bales.
+- Fixed Potion items so that they no longer apply over double their intended healing value.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
