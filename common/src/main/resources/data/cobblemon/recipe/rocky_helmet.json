@@ -10,7 +10,7 @@
             "item": "minecraft:gold_ingot"
         },
         "L": {
-            "item": "minecraft:lime_dye"
+            "tag": "c:dyes/lime"
         },
         "S": {
             "item": "cobblemon:hard_stone"
