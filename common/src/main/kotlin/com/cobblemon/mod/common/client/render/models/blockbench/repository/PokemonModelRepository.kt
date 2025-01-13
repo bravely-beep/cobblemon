@@ -339,8 +339,6 @@ object PokemonModelRepository : VaryingModelRepository<PokemonPosableModel>() {
         inbuilt("shroomish", ::ShroomishModel)
         inbuilt("breloom", ::BreloomModel)
         inbuilt("charcadet", ::CharcadetModel)
-        inbuilt("armarouge", ::ArmarougeModel)
-        inbuilt("ceruledge", ::CeruledgeModel)
         inbuilt("flittle", ::FlittleModel)
         inbuilt("espathra", ::EspathraModel)
         inbuilt("surskit", ::SurskitModel)
