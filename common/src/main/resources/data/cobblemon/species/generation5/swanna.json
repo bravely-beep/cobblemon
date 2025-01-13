@@ -36,6 +36,22 @@
     "special_defence": 63,
     "speed": 98
   },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.28
+      },
+      "swim": {
+        "swimSpeed": 0.17,
+        "canSwimInWater": true,
+        "canBreatheUnderwater": false,
+        "canWalkOnWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    }
+  },
   "catchRate": 45,
   "maleRatio": 0.5,
   "shoulderMountable": false,
@@ -135,10 +151,10 @@
   ],
   "preEvolution": "ducklett",
   "evolutions": [],
-  "baseScale": 1,
+  "baseScale": 0.75,
   "hitbox": {
-    "width": 1,
-    "height": 1,
+    "width": 1.2,
+    "height": 2.4,
     "fixed": false
   },
   "baseFriendship": 70,
