@@ -10,7 +10,7 @@
             "tag": "c:slime_balls"
         },
         "O": {
-            "tag": "c:obsidians/normal"
+            "item": "minecraft:obsidian"
         },
         "C": {
             "item": "cobblemon:clover_sweet"

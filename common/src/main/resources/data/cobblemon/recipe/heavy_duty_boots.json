@@ -10,7 +10,7 @@
             "tag": "c:ingots/iron"
         },
         "O": {
-            "tag": "c:obsidians/normal"
+            "item": "minecraft:obsidian"
         },
         "B": {
             "item": "minecraft:leather_boots"
