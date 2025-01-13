@@ -10,13 +10,13 @@
             "tag": "c:dyes/yellow"
         },
         "I": {
-            "item": "minecraft:iron_ingot"
+            "tag": "c:ingots/iron"
         },
         "B": {
             "tag": "minecraft:buttons"
         },
         "R": {
-            "item": "minecraft:redstone"
+            "tag": "c:dusts/redstone"
         },
         "P": {
             "item": "minecraft:piston"

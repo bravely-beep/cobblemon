@@ -7,10 +7,10 @@
     ],
     "key": {
         "S": {
-            "item": "minecraft:slime_ball"
+            "tag": "c:slime_balls"
         },
         "O": {
-            "item": "minecraft:obsidian"
+            "tag": "c:obsidians/normal"
         },
         "C": {
             "item": "cobblemon:clover_sweet"

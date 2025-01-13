@@ -7,7 +7,7 @@
     ],
     "key": {
         "G": {
-            "item": "minecraft:gold_ingot"
+            "tag": "c:ingot/gold"
         },
         "K": {
             "item": "minecraft:dried_kelp"

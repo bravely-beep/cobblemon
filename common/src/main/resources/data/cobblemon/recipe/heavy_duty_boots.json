@@ -7,10 +7,10 @@
     ],
     "key": {
         "I": {
-            "item": "minecraft:iron_ingot"
+            "tag": "c:ingots/iron"
         },
         "O": {
-            "item": "minecraft:obsidian"
+            "tag": "c:obsidians/normal"
         },
         "B": {
             "item": "minecraft:leather_boots"
