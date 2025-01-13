@@ -19,6 +19,7 @@
 - Unseen wild Pokémon will update their name from '???' to their real name as soon as a battle starts to reflect the battle UI showing the actual species name.
 - Pokémon under the illusion effect will reveal their disguise to the Pokédex first and then the base Pokémon once the disguise is broken.
 - Added more support for a variety of Fabric/NeoForge Convention tags
+- Reformatted some tags to be more consistent
 
 ### Fixes
 - Fixed Pokédex sometimes crashing when switching forms.

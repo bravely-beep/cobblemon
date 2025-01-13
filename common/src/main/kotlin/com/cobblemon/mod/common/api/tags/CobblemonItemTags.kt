@@ -41,8 +41,6 @@ object CobblemonItemTags {
     val BERRIES = create("berries")
     @JvmField
     val BOATS = create("boats")
-    @JvmField
-    val COBBLEMON_SEEDS = create("cobblemon_seeds")
     /**
      * This tag is used for Fossil Machine natural materials
      */
