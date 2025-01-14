@@ -17,6 +17,18 @@
     "special_defence": 45,
     "speed": 35
   },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.146
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "depth": "normal",
+      "light": "0-4"
+      }
+  },
   "features": [
     "alolan"
   ],
