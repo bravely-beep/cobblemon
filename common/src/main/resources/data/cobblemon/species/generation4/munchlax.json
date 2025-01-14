@@ -33,6 +33,19 @@
     "special_defence": 85,
     "speed": 5
   },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.118
+      },
+      "resting": {
+        "canSleep": true,
+        "willSleepOnBed": false,
+        "depth": "normal",
+        "light": "0-15"
+      }
+    }
+  },
   "catchRate": 50,
   "maleRatio": 0.875,
   "shoulderMountable": false,

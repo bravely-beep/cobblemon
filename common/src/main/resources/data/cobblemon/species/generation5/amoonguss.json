@@ -28,6 +28,14 @@
     "special_defence": 80,
     "speed": 30
   },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  },
   "catchRate": 75,
   "maleRatio": 0.5,
   "shoulderMountable": false,
@@ -119,10 +127,11 @@
   ],
   "preEvolution": "foongus",
   "evolutions": [],
-  "baseScale": 1,
+  "standingEyeHeight": 0.6,
+  "baseScale": 0.7,
   "hitbox": {
-    "width": 1,
-    "height": 1,
+    "width": 1.2,
+    "height": 1.35,
     "fixed": false
   },
   "baseFriendship": 50,

@@ -450,7 +450,28 @@
       "eggGroups": [
         "undiscovered"
       ],
-      "moves": [],
+      "moves": [
+        "1:astonish",
+        "1:tackle",
+        "tm:astonish",
+        "tm:confuseray",
+        "tm:endure",
+        "tm:hex",
+        "tm:lightscreen",
+        "tm:nastyplot",
+        "tm:nightshade",
+        "tm:powergem",
+        "tm:protect",
+        "tm:reflect",
+        "tm:rest",
+        "tm:shadowball",
+        "tm:sleeptalk",
+        "tm:substitute",
+        "tm:tackle",
+        "tm:takedown",
+        "tm:terablast",
+        "tm:thief"
+      ],
       "labels": [
         "gen9"
       ],

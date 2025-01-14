@@ -1,0 +1,12 @@
+{
+  "type": "choice",
+  "keys": ["bull_breed"],
+  "default": "combat",
+  "choices": [
+    "combat",
+    "aqua",
+    "blaze"
+  ],
+  "isAspect": true,
+  "aspectFormat": "bull-breed-{{choice}}"
+}
