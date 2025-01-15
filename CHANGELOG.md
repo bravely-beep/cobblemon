@@ -13,6 +13,7 @@
 - Added Galarica Nuts, used for crafting Galarica Cuffs and Wreaths. Dropped from certain Pokémon.
 - Added specific compatibility with Repurposed Structures. (Thank you, TelepathicGrunt!)
 - Added an evolution method for Karrablast to evolve into Escavalier in single-player mode.
+- Added crossover paintings from Close Combat, Premonition, Altar, Slumber, and Nomad.
 
 ### Changes
 - Pokémon will now be dynamically revealed to the Pokédex as they're seen instead of revealing entire parties at the end of battle regardless.
