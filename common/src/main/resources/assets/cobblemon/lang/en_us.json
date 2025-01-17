@@ -2313,7 +2313,6 @@
   "tag.item.cobblemon.apricorns": "Apricorns",
   "tag.item.cobblemon.azalea_tree": "Azalea Trees",
   "tag.item.cobblemon.berries": "Berries",
-  "tag.item.cobblemon.cobblemon_seeds": "Seeds",
   "tag.item.cobblemon.evolution_items": "Evolution Items",
   "tag.item.cobblemon.evolution_stones": "Evolution Stones",
   "tag.item.cobblemon.experience_candies": "Experience Candies",
@@ -2401,6 +2400,7 @@
   "tag.item.cobblemon.evolution_stone_blocks": "Evolution Stone Blocks",
   "tag.item.cobblemon.pokedex": "Pokédexes",
   "tag.item.cobblemon.pokedex_screen": "Pokédex Screens",
+  "tag.item.cobblemon.gilded_chests": "Gilded Chests",
 
   "npc.sacchi.name": "Professor Sacchi",
   "npc.variable.challenge_cooldown.name": "Challenge Cooldown",
