@@ -57,7 +57,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": true,
       "light": "11-15"
     }
   },
