@@ -60,6 +60,9 @@
 - Fixed Adorn compatibility, including improvements when using JEI/REI (Apricorn items now show up under the collapsed entries rather than standalone)
 - Fix error message appearing on battle log when using Solar Beam with Sunny Day.
 - Fix Pokémon Model offsets for larger species.
+- Fix `/pokedex grant all` command not giving male/female/shininess completion for some Pokémon.
+- Fix `/pokedex grant only` and `/pokedex remove only` not respecting the form parameter passed.
+- Fix variant forms appearing incorrectly in the Pokédex when the normal form had not been unlocked.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
