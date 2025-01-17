@@ -9,7 +9,6 @@
 package com.cobblemon.mod.common.api.tags
 
 import com.cobblemon.mod.common.CobblemonItems
-import com.cobblemon.mod.common.api.tags.CobblemonBlockTags.createTag
 import com.cobblemon.mod.common.util.cobblemonResource
 import net.minecraft.core.registries.Registries
 import net.minecraft.tags.TagKey
