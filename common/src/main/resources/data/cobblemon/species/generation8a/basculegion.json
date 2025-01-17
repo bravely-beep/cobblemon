@@ -1,28 +1,13 @@
 {
   "implemented": true,
-  "nationalPokedexNumber": 902,
   "name": "Basculegion",
+  "nationalPokedexNumber": 902,
   "primaryType": "water",
   "secondaryType": "ghost",
-  "maleRatio": 1,
-  "height": 30,
-  "weight": 1100,
-  "pokedex": [
-    "cobblemon.species.basculegion.desc"
-  ],
-  "labels": [
-    "gen8a"
-  ],
-  "aspects": [
-    "male"
-  ],
   "abilities": [
     "swiftswim",
     "adaptability",
     "h:moldbreaker"
-  ],
-  "eggGroups": [
-    "water_2"
   ],
   "baseStats": {
     "hp": 120,
@@ -31,26 +16,6 @@
     "special_attack": 80,
     "special_defence": 75,
     "speed": 78
-  },
-  "evYield": {
-    "hp": 3,
-    "attack": 0,
-    "defence": 0,
-    "special_attack": 0,
-    "special_defence": 0,
-    "speed": 0
-  },
-  "baseExperienceYield": 265,
-  "experienceGroup": "medium_fast",
-  "catchRate": 45,
-  "eggCycles": 20,
-  "baseFriendship": 50,
-  "shoulderMountable": false,
-  "baseScale": 1,
-  "hitbox": {
-    "width": 2.2,
-    "height": 1.3,
-    "fixed": false
   },
   "behaviour": {
     "moving": {
@@ -65,23 +30,29 @@
       }
     }
   },
-  "drops": {
-    "amount": 2,
-    "entries": [
-      {
-        "item": "minecraft:salmon"
-      },
-      {
-        "item": "minecraft:bone_meal",
-        "percentage": 5
-      }
-    ]
+  "catchRate": 135,
+  "maleRatio": 1,
+  "shoulderMountable": false,
+  "baseExperienceYield": 265,
+  "baseFriendship": 0,
+  "evYield": {
+    "hp": 2,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
   },
+  "experienceGroup": "medium_fast",
+  "eggCycles": 0,
+  "eggGroups": [
+    "water_2"
+  ],
   "moves": [
+    "1:phantomforce",
     "1:shadowball",
     "1:tailwhip",
     "1:watergun",
-    "1:phantomforce",
     "4:tackle",
     "8:flail",
     "12:aquajet",
@@ -99,9 +70,6 @@
     "egg:endeavor",
     "egg:lastrespects",
     "tm:agility",
-    "tm:aquajet",
-    "tm:aquatail",
-    "tm:bite",
     "tm:blizzard",
     "tm:chillingwater",
     "tm:confuseray",
@@ -110,23 +78,18 @@
     "tm:endeavor",
     "tm:endure",
     "tm:facade",
-    "tm:flail",
     "tm:flipturn",
     "tm:gigaimpact",
-    "tm:headbutt",
-    "tm:headsmash",
     "tm:hex",
     "tm:hydropump",
     "tm:hyperbeam",
     "tm:icebeam",
     "tm:icefang",
     "tm:icywind",
-    "tm:lastrespects",
     "tm:liquidation",
     "tm:muddywater",
     "tm:mudshot",
     "tm:nightshade",
-    "tm:ominouswind",
     "tm:outrage",
     "tm:painsplit",
     "tm:phantomforce",
@@ -139,50 +102,37 @@
     "tm:shadowball",
     "tm:sleeptalk",
     "tm:snowscape",
-    "tm:soak",
     "tm:spite",
     "tm:substitute",
     "tm:surf",
     "tm:swift",
-    "tm:tackle",
-    "tm:tailwhip",
     "tm:takedown",
     "tm:terablast",
-    "tm:thrash",
     "tm:uproar",
     "tm:waterfall",
-    "tm:watergun",
     "tm:waterpulse",
-    "tm:wavecrash",
     "tm:whirlpool",
     "tm:zenheadbutt"
   ],
-  "preEvolution": "basculin fish_stripes=white",
+  "labels": [
+    "gen8"
+  ],
+  "pokedex": [
+    "cobblemon.species.basculegion.desc"
+  ],
+  "height": 30,
+  "weight": 1100,
+  "preEvolution": "basculin whitestriped",
   "evolutions": [],
   "forms": [
     {
       "name": "F",
       "primaryType": "water",
       "secondaryType": "ghost",
-      "maleRatio": 0,
-      "height": 30,
-      "weight": 1100,
-      "pokedex": [
-        "cobblemon.species.basculegion-f.desc"
-      ],
-      "labels": [
-        "gen8a"
-      ],
-      "aspects": [
-        "female"
-      ],
       "abilities": [
         "swiftswim",
         "adaptability",
         "h:moldbreaker"
-      ],
-      "eggGroups": [
-        "water_2"
       ],
       "baseStats": {
         "hp": 120,
@@ -192,19 +142,6 @@
         "special_defence": 75,
         "speed": 78
       },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 265,
-      "experienceGroup": "medium_fast",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
       "behaviour": {
         "moving": {
           "canLook": false,
@@ -218,11 +155,28 @@
           }
         }
       },
+      "catchRate": 135,
+      "maleRatio": 0,
+      "baseExperienceYield": 265,
+      "baseFriendship": 0,
+      "evYield": {
+        "hp": 2,
+        "attack": 0,
+        "defence": 0,
+        "special_attack": 0,
+        "special_defence": 0,
+        "speed": 0
+      },
+      "experienceGroup": "medium_fast",
+      "eggCycles": 0,
+      "eggGroups": [
+        "water_2"
+      ],
       "moves": [
+        "1:phantomforce",
         "1:shadowball",
         "1:tailwhip",
         "1:watergun",
-        "1:phantomforce",
         "4:tackle",
         "8:flail",
         "12:aquajet",
@@ -240,9 +194,6 @@
         "egg:endeavor",
         "egg:lastrespects",
         "tm:agility",
-        "tm:aquajet",
-        "tm:aquatail",
-        "tm:bite",
         "tm:blizzard",
         "tm:chillingwater",
         "tm:confuseray",
@@ -251,23 +202,18 @@
         "tm:endeavor",
         "tm:endure",
         "tm:facade",
-        "tm:flail",
         "tm:flipturn",
         "tm:gigaimpact",
-        "tm:headbutt",
-        "tm:headsmash",
         "tm:hex",
         "tm:hydropump",
         "tm:hyperbeam",
         "tm:icebeam",
         "tm:icefang",
         "tm:icywind",
-        "tm:lastrespects",
         "tm:liquidation",
         "tm:muddywater",
         "tm:mudshot",
         "tm:nightshade",
-        "tm:ominouswind",
         "tm:outrage",
         "tm:painsplit",
         "tm:phantomforce",
@@ -280,27 +226,49 @@
         "tm:shadowball",
         "tm:sleeptalk",
         "tm:snowscape",
-        "tm:soak",
         "tm:spite",
         "tm:substitute",
         "tm:surf",
         "tm:swift",
-        "tm:tackle",
-        "tm:tailwhip",
         "tm:takedown",
         "tm:terablast",
-        "tm:thrash",
         "tm:uproar",
         "tm:waterfall",
-        "tm:watergun",
         "tm:waterpulse",
-        "tm:wavecrash",
         "tm:whirlpool",
         "tm:zenheadbutt"
       ],
-      "preEvolution": "basculin fish_stripes=white",
-      "evolutions": [],
+      "labels": [
+        "gen8"
+      ],
+      "aspects": [
+        "female"
+      ],
+      "height": 30,
+      "weight": 1100,
+      "preEvolution": "basculin whitestriped",
+      "cannotDynamax": false,
       "battleOnly": false
     }
-  ]
+  ],
+  "baseScale": 1,
+  "hitbox": {
+    "width": 2.2,
+    "height": 1.3,
+    "fixed": false
+  },
+  "aspects": [],
+  "cannotDynamax": false,
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "minecraft:salmon"
+      },
+      {
+        "item": "minecraft:bone_meal",
+        "percentage": 5.0
+      }
+    ]
+  }
 }

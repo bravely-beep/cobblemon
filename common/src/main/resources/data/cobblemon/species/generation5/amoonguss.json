@@ -1,53 +1,12 @@
 {
-  "nationalPokedexNumber": 591,
   "name": "Amoonguss",
+  "nationalPokedexNumber": 591,
   "primaryType": "grass",
   "secondaryType": "poison",
-  "maleRatio": 0.5,
-  "height": 6,
-  "weight": 105,
-  "pokedex": [
-    "cobblemon.species.amoonguss.desc"
-  ],
-  "labels": [
-    "gen5"
-  ],
-  "aspects": [],
   "abilities": [
     "effectspore",
     "h:regenerator"
   ],
-  "eggGroups": [
-    "grass"
-  ],
-  "baseStats": {
-    "hp": 114,
-    "attack": 85,
-    "defence": 70,
-    "special_attack": 85,
-    "special_defence": 80,
-    "speed": 30
-  },
-  "evYield": {
-    "hp": 2,
-    "attack": 0,
-    "defence": 0,
-    "special_attack": 0,
-    "special_defence": 0,
-    "speed": 0
-  },
-  "baseExperienceYield": 162,
-  "experienceGroup": "medium_fast",
-  "catchRate": 75,
-  "eggCycles": 20,
-  "baseFriendship": 50,
-  "shoulderMountable": false,
-  "baseScale": 1,
-  "hitbox": {
-    "width": 1,
-    "height": 1,
-    "fixed": false
-  },
   "drops": {
     "amount": 3,
     "entries": [
@@ -57,20 +16,45 @@
       },
       {
         "item": "cobblemon:cheri_berry",
-        "percentage": 5
+        "percentage": 5.0
       }
     ]
   },
+  "baseStats": {
+    "hp": 114,
+    "attack": 85,
+    "defence": 70,
+    "special_attack": 85,
+    "special_defence": 80,
+    "speed": 30
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "depth": "normal",
+      "light": "0-4"
+    }
+  },
+  "catchRate": 75,
+  "maleRatio": 0.5,
+  "shoulderMountable": false,
+  "baseExperienceYield": 162,
+  "experienceGroup": "medium_fast",
+  "eggCycles": 20,
+  "eggGroups": [
+    "grass"
+  ],
   "moves": [
     "1:absorb",
-    "1:growth",
     "1:astonish",
     "1:bide",
-    "1:feintattack",
+    "1:growth",
     "1:stunspore",
     "12:megadrain",
     "16:synthesis",
     "20:clearsmog",
+    "20:feintattack",
     "24:sweetscent",
     "28:gigadrain",
     "32:ingrain",
@@ -78,63 +62,89 @@
     "42:ragepowder",
     "48:solarbeam",
     "54:spore",
-    "egg:clearsmog",
-    "egg:defensecurl",
-    "egg:poisonpowder",
-    "egg:rollout",
-    "egg:worryseed",
-    "tm:absorb",
-    "tm:afteryou",
-    "tm:astonish",
-    "tm:bide",
+    "tm:attract",
     "tm:bodyslam",
     "tm:bulletseed",
-    "tm:clearsmog",
-    "tm:defensecurl",
+    "tm:confide",
+    "tm:doubleteam",
     "tm:endure",
     "tm:energyball",
     "tm:facade",
-    "tm:feintattack",
     "tm:flash",
     "tm:foulplay",
-    "tm:gastroacid",
+    "tm:frustration",
     "tm:gigadrain",
     "tm:gigaimpact",
     "tm:grassknot",
     "tm:grassyterrain",
-    "tm:growth",
     "tm:hex",
+    "tm:hiddenpower",
     "tm:hyperbeam",
-    "tm:ingrain",
     "tm:leafstorm",
     "tm:magicalleaf",
-    "tm:megadrain",
     "tm:naturepower",
     "tm:payback",
-    "tm:poisonpowder",
     "tm:pollenpuff",
     "tm:protect",
-    "tm:ragepowder",
     "tm:raindance",
     "tm:rest",
-    "tm:rollout",
+    "tm:return",
+    "tm:round",
     "tm:scaryface",
+    "tm:secretpower",
     "tm:seedbomb",
     "tm:sleeptalk",
     "tm:sludgebomb",
+    "tm:snore",
     "tm:solarbeam",
-    "tm:spore",
     "tm:stompingtantrum",
-    "tm:stunspore",
     "tm:substitute",
     "tm:sunnyday",
-    "tm:sweetscent",
-    "tm:synthesis",
+    "tm:swagger",
     "tm:terablast",
     "tm:toxic",
     "tm:venoshock",
-    "tm:worryseed"
+    "tutor:afteryou",
+    "tutor:clearsmog",
+    "tutor:foulplay",
+    "tutor:gastroacid",
+    "tutor:gigadrain",
+    "tutor:protect",
+    "tutor:ragepowder",
+    "tutor:seedbomb",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:spore",
+    "tutor:stompingtantrum",
+    "tutor:synthesis",
+    "tutor:worryseed"
+  ],
+  "labels": [
+    "gen5"
+  ],
+  "pokedex": [
+    "cobblemon.species.amoonguss.desc"
   ],
   "preEvolution": "foongus",
-  "evolutions": []
+  "evolutions": [],
+  "standingEyeHeight": 0.6,
+  "baseScale": 0.7,
+  "hitbox": {
+    "width": 1.2,
+    "height": 1.35,
+    "fixed": false
+  },
+  "baseFriendship": 50,
+  "evYield": {
+    "hp": 2,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "height": 6,
+  "weight": 105,
+  "aspects": [],
+  "cannotDynamax": false
 }

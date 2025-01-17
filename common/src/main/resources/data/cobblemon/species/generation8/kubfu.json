@@ -1,24 +1,9 @@
 {
-  "nationalPokedexNumber": 891,
   "name": "Kubfu",
+  "nationalPokedexNumber": 891,
   "primaryType": "fighting",
-  "maleRatio": 0.875,
-  "height": 6,
-  "weight": 120,
-  "pokedex": [
-    "cobblemon.species.kubfu.desc"
-  ],
-  "labels": [
-    "gen8",
-    "legendary"
-  ],
-  "aspects": [],
   "abilities": [
-    "innerfocus",
-    "h:innerfocus"
-  ],
-  "eggGroups": [
-    "undiscovered"
+    "innerfocus"
   ],
   "baseStats": {
     "hp": 60,
@@ -28,29 +13,18 @@
     "special_defence": 50,
     "speed": 72
   },
-  "evYield": {
-    "hp": 0,
-    "attack": 1,
-    "defence": 0,
-    "special_attack": 0,
-    "special_defence": 0,
-    "speed": 0
-  },
+  "catchRate": 3,
+  "maleRatio": 0.875,
+  "shoulderMountable": false,
   "baseExperienceYield": 77,
   "experienceGroup": "slow",
-  "catchRate": 3,
   "eggCycles": 120,
-  "baseFriendship": 50,
-  "shoulderMountable": false,
-  "baseScale": 1,
-  "hitbox": {
-    "width": 1,
-    "height": 1,
-    "fixed": false
-  },
+  "eggGroups": [
+    "undiscovered"
+  ],
   "moves": [
-    "1:rocksmash",
     "1:leer",
+    "1:rocksmash",
     "4:endure",
     "8:focusenergy",
     "12:aerialace",
@@ -66,26 +40,22 @@
     "52:focuspunch",
     "tm:acrobatics",
     "tm:aerialace",
+    "tm:attract",
     "tm:bodyslam",
     "tm:brickbreak",
     "tm:bulkup",
     "tm:closecombat",
-    "tm:counter",
-    "tm:detect",
     "tm:dig",
     "tm:doubleedge",
-    "tm:dynamicpunch",
     "tm:endure",
     "tm:facade",
     "tm:firepunch",
     "tm:fling",
     "tm:focusenergy",
     "tm:focuspunch",
-    "tm:headbutt",
     "tm:helpinghand",
     "tm:icepunch",
     "tm:ironhead",
-    "tm:leer",
     "tm:lowkick",
     "tm:lowsweep",
     "tm:megakick",
@@ -96,9 +66,10 @@
     "tm:retaliate",
     "tm:revenge",
     "tm:reversal",
-    "tm:rocksmash",
+    "tm:round",
     "tm:scaryface",
     "tm:sleeptalk",
+    "tm:snore",
     "tm:substitute",
     "tm:superpower",
     "tm:swordsdance",
@@ -107,30 +78,61 @@
     "tm:thunderpunch",
     "tm:uturn",
     "tm:workup",
-    "tm:zenheadbutt"
+    "tm:zenheadbutt",
+    "tutor:coaching",
+    "tutor:endure",
+    "tutor:focusenergy",
+    "tutor:leer",
+    "tutor:rocksmash"
+  ],
+  "labels": [
+    "gen8",
+    "legendary"
+  ],
+  "pokedex": [
+    "cobblemon.species.kubfu.desc"
   ],
   "evolutions": [
     {
       "id": "kubfu_urshifu",
-      "variant": "item_interact",
-      "result": "urshifu wushu_style=single_strike",
-      "consumeHeldItem": true,
+      "variant": "block_click",
+      "result": "urshifu",
+      "consumeHeldItem": false,
       "learnableMoves": [
         "wickedblow"
       ],
       "requirements": [],
-      "requiredContext": "cobblemon:scroll_of_darkness"
+      "block": "cobblemon:scroll_of_darkness"
     },
     {
-      "id": "kubfu_urshifurapidstrike",
-      "variant": "item_interact",
-      "result": "urshifu wushu_style=rapid_strike",
-      "consumeHeldItem": true,
+      "id": "kubfu_urshifu",
+      "variant": "block_click",
+      "result": "urshifu rapidstrike",
+      "consumeHeldItem": false,
       "learnableMoves": [
         "surgingstrikes"
       ],
       "requirements": [],
-      "requiredContext": "cobblemon:scroll_of_waters"
+      "block": "cobblemon:scroll_of_waters"
     }
-  ]
+  ],
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1,
+    "height": 1,
+    "fixed": false
+  },
+  "baseFriendship": 50,
+  "evYield": {
+    "hp": 0,
+    "attack": 1,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "height": 6,
+  "weight": 120,
+  "aspects": [],
+  "cannotDynamax": false
 }

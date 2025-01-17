@@ -53,6 +53,7 @@
     "moving": {
       "canLook": false,
       "walk": {
+        "walkSpeed": 0.12,
         "avoidsLand": true
       },
       "swim": {

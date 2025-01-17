@@ -1,8 +1,4 @@
 {
-  "pokemon": [
-    "tauros"
-  ],
-  "features": [
-    "bull_breed"
-  ]
+  "pokemon": ["tauros"],
+  "features": ["bull_breed"]
 }
