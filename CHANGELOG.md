@@ -14,6 +14,7 @@
 - Added specific compatibility with Repurposed Structures. (Thank you, TelepathicGrunt!)
 - Added an evolution method for Karrablast to evolve into Escavalier in single-player mode.
 - Pokédexes can now be placed in Chiseled Bookshelves.
+- Added crossover paintings from Close Combat, Premonition, Altar, Slumber, and Nomad.
 
 ### Changes
 - Pokémon will now be dynamically revealed to the Pokédex as they're seen instead of revealing entire parties at the end of battle regardless.
@@ -22,6 +23,8 @@
 - Added more support for a variety of Fabric/NeoForge Convention tags.
 - Reformatted some tags to be more consistent.
 - Edited some recipes to utilize tags instead of direct item ids, for greater mod compatibility.
+- Berries will drop if broken at age 0
+- Improved Fortune drops on Mint Seeds
 
 ### Fixes
 - Fixed Pokédex sometimes crashing when switching forms.
@@ -68,6 +71,7 @@
 - Fixed Vivichoke Dip and Leek and Potato Stew not returning a bowl upon consumption.
 - Fixed Fossil Restoration Machine not accepting Hay Bales.
 - Fixed Potion items so that they no longer apply over double their intended healing value.
+- Fixed Fast Ball capture rate applying to all Pokémon.
 
 ### Molang & Datapacks  
 - Added flows for:
