@@ -1,7 +1,8 @@
 {
   "type": "choice",
   "keys": [
-    "fish_stripes"
+    "fish_stripes",
+    "striped"
   ],
   "default": "red",
   "choices": [
