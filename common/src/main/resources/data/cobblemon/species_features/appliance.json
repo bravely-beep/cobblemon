@@ -12,5 +12,5 @@
     "mow"
   ],
   "isAspect": true,
-  "aspectFormat": "appliance-{{choice}}"
+  "aspectFormat": "{{choice}}-appliance"
 }

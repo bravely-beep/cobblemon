@@ -44,7 +44,7 @@
   "catchRate": 3,
   "eggCycles": 80,
   "baseFriendship": 35,
-  "shoulderMountable": false,
+  "behaviour": {},
   "moves": [
     "1:aquajet",
     "1:leer",
@@ -179,6 +179,7 @@
       "catchRate": 3,
       "eggCycles": 80,
       "baseFriendship": 35,
+      "behaviour": {},
       "moves": [
         "1:aquajet",
         "1:leer",

@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 1.85,
@@ -52,8 +51,6 @@
   },
   "behaviour": {
     "resting": {
-      "canSleep": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -108,7 +105,6 @@
     "52:uproar",
     "60:dragonrush",
     "68:boomburst",
-    "evolution:dragonclaw",
     "egg:bugbite",
     "egg:feint",
     "egg:firstimpression",

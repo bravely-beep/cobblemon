@@ -11,5 +11,5 @@
     "snowy"
   ],
   "isAspect": true,
-  "aspectFormat": "forecast-form-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

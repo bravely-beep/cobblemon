@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1,
@@ -57,7 +56,6 @@
     },
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -96,7 +94,6 @@
     "51:dazzlinggleam",
     "57:lightscreen",
     "62:thunder",
-    "evolution:thunderpunch",
     "egg:afteryou",
     "egg:agility",
     "egg:eerieimpulse",
@@ -210,7 +207,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "moldbreaker",
@@ -242,6 +239,13 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInLava": true
+          }
+        }
+      },
       "moves": [
         "1:firepunch",
         "1:tackle",
@@ -264,7 +268,6 @@
         "51:dazzlinggleam",
         "57:lightscreen",
         "62:thunder",
-        "evolution:thunderpunch",
         "egg:afteryou",
         "egg:agility",
         "egg:eerieimpulse",

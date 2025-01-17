@@ -1,5 +1,7 @@
 {
-  "keys": ["no_ice"],
+  "keys": [
+    "power_construct"
+  ],
   "type": "flag",
   "isAspect": true,
   "default": false

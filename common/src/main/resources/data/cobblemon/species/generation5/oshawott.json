@@ -11,7 +11,8 @@
   ],
   "labels": [
     "gen5",
-    "starter"
+    "starter",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.5,
   "hitbox": {
     "width": 0.9,
@@ -55,7 +55,6 @@
   "behaviour": {
     "moving": {
       "swim": {
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true
       }
@@ -63,7 +62,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -199,7 +197,9 @@
       ],
       "labels": [
         "gen8a",
-        "starter"
+        "starter",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

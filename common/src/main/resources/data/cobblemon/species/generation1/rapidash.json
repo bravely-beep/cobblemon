@@ -10,7 +10,8 @@
     "cobblemon.species.rapidash.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.2,
   "hitbox": {
     "width": 0.9,
@@ -55,8 +55,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -101,8 +99,6 @@
     "49:inferno",
     "56:fireblast",
     "63:flareblitz",
-    "evolution:furyattack",
-    "evolution:smartstrike",
     "egg:captivate",
     "egg:doubleedge",
     "egg:doublekick",
@@ -187,9 +183,11 @@
         "cobblemon.species.rapidash-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
+        "galarian",
         "galarian"
       ],
       "abilities": [
@@ -223,9 +221,6 @@
       "baseFriendship": 50,
       "behaviour": {
         "resting": {
-          "canSleep": false,
-          "willSleepOnBed": false,
-          "depth": "normal",
           "light": "0-4"
         },
         "moving": {
@@ -264,7 +259,6 @@
         "49:dazzlinggleam",
         "56:psychic",
         "63:healingwish",
-        "evolution:psychocut",
         "egg:doubleedge",
         "egg:doublekick",
         "egg:horndrill",

@@ -43,13 +43,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:sunsteelstrike",
     "1:cosmicpower",
@@ -70,7 +70,6 @@
     "70:flareblitz",
     "77:wideguard",
     "84:gigaimpact",
-    "evolution:sunsteelstrike",
     "tm:agility",
     "tm:bodyslam",
     "tm:bulldoze",

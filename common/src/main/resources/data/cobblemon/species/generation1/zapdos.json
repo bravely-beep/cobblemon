@@ -12,7 +12,8 @@
   ],
   "labels": [
     "gen1",
-    "legendary"
+    "legendary",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,7 +47,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.5,
   "hitbox": {
     "width": 1.2,
@@ -170,7 +170,8 @@
       ],
       "labels": [
         "gen8",
-        "legendary"
+        "legendary",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -203,6 +204,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 35,
+      "behaviour": {},
       "drops": {
         "amount": 6,
         "entries": [

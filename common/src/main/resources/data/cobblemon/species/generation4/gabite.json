@@ -43,12 +43,18 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1.5,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInLava": true
+      }
+    }
   },
   "drops": {
     "amount": 2,
@@ -78,7 +84,6 @@
     "58:sandstorm",
     "66:takedown",
     "74:dragonrush",
-    "evolution:dualchop",
     "egg:doubleedge",
     "egg:metalclaw",
     "egg:thrash",

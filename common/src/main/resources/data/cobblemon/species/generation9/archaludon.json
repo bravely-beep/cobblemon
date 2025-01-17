@@ -43,6 +43,7 @@
   "catchRate": 10,
   "eggCycles": 30,
   "baseFriendship": 50,
+  "behaviour": {},
   "moves": [
     "1:electroshot",
     "1:leer",
@@ -58,7 +59,6 @@
     "54:flashcannon",
     "60:metalburst",
     "66:hyperbeam",
-    "evolution:electroshot",
     "egg:mirrorcoat",
     "egg:nightslash",
     "egg:slash",

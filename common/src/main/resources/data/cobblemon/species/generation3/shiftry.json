@@ -44,13 +44,13 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1.7,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -95,8 +95,6 @@
     "1:razorwind",
     "1:bide",
     "1:pound",
-    "evolution:leafblade",
-    "evolution:leaftornado",
     "egg:defog",
     "egg:leechseed",
     "egg:nightslash",

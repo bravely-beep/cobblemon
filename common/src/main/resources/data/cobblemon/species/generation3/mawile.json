@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 0.5,
@@ -53,9 +52,6 @@
   },
   "behaviour": {
     "resting": {
-      "canSleep": false,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -210,7 +206,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "hugepower",
@@ -242,6 +238,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:visegrip",

@@ -10,7 +10,8 @@
     "cobblemon.species.quilava.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1,
@@ -54,8 +54,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -220,7 +218,9 @@
         "cobblemon.species.quilava-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -58,8 +57,9 @@
       },
       "swim": {
         "swimSpeed": 0.15,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     }
   },
@@ -97,7 +97,6 @@
     "42:hydropump",
     "48:soak",
     "54:hyperbeam",
-    "evolution:octazooka",
     "egg:acidspray",
     "egg:entrainment",
     "egg:flail",

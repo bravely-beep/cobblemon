@@ -44,7 +44,6 @@
   "catchRate": 155,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.2,
@@ -55,8 +54,9 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": false,
-        "canBreatheUnderwater": true
+        "canSwimInWater": true,
+        "canBreatheUnderwater": true,
+        "canSwimInLava": false
       }
     }
   },
@@ -79,7 +79,6 @@
     "52:crabhammer",
     "58:endeavor",
     "64:guillotine",
-    "evolution:swift",
     "egg:ancientpower",
     "egg:aquajet",
     "egg:chipaway",

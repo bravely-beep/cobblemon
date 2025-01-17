@@ -44,7 +44,6 @@
   "catchRate": 90,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 0.7,
@@ -59,8 +58,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -100,7 +97,6 @@
     "44:seedbomb",
     "50:dynamicpunch",
     "55:focuspunch",
-    "evolution:machpunch",
     "egg:charm",
     "egg:faketears",
     "egg:helpinghand",

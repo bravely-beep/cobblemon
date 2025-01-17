@@ -15,7 +15,7 @@
     "restricted"
   ],
   "aspects": [
-    "life-mode-neutral"
+    "neutral-mode"
   ],
   "abilities": [
     "fairyaura",
@@ -45,13 +45,13 @@
   "catchRate": 45,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2,
     "height": 4,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:gravity",
     "1:tackle",
@@ -150,7 +150,7 @@
         "restricted"
       ],
       "aspects": [
-        "life-mode-active"
+        "active-mode"
       ],
       "abilities": [
         "fairyaura",

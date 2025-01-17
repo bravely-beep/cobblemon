@@ -10,7 +10,8 @@
     "cobblemon.species.rattata.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.6,
@@ -61,7 +61,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -191,7 +190,8 @@
         "cobblemon.species.rattata-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
         "alolan"
@@ -225,6 +225,7 @@
       "catchRate": 255,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [

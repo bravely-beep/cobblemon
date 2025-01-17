@@ -1,0 +1,18 @@
+{
+  "type": "choice",
+  "keys": [
+    "sweet_decoration"
+  ],
+  "default": "random",
+  "choices": [
+    "strawberry",
+    "berry",
+    "love",
+    "star",
+    "clover",
+    "flower",
+    "ribbon"
+  ],
+  "isAspect": true,
+  "aspectFormat": "sweet-decoration-{{choice}}"
+}

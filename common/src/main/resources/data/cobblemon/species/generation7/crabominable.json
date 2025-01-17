@@ -43,12 +43,21 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.8,
     "height": 2.7,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
+      }
+    }
   },
   "drops": {
     "amount": 1,
@@ -78,7 +87,6 @@
     "42:irondefense",
     "45:dynamicpunch",
     "49:closecombat",
-    "evolution:icepunch",
     "egg:endeavor",
     "egg:focuspunch",
     "egg:slam",

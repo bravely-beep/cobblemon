@@ -43,13 +43,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -80,7 +80,6 @@
     "36:irondefense",
     "40:fly",
     "44:dragonrush",
-    "evolution:wingattack",
     "egg:defensecurl",
     "egg:recycle",
     "egg:rollout",
@@ -156,7 +155,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "ripen",
@@ -189,6 +188,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:wingattack",
         "1:recycle",
@@ -207,7 +207,6 @@
         "36:irondefense",
         "40:fly",
         "44:dragonrush",
-        "evolution:wingattack",
         "egg:defensecurl",
         "egg:recycle",
         "egg:rollout",

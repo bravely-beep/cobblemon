@@ -42,7 +42,6 @@
   "catchRate": 90,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 3.5,
@@ -52,7 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -89,7 +87,6 @@
     "51:playrough",
     "58:highhorsepower",
     "65:superpower",
-    "evolution:heavyslam",
     "egg:belch",
     "egg:curse",
     "egg:defensecurl",
@@ -182,7 +179,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "sheerforce",
@@ -214,6 +211,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:heavyslam",
         "1:tackle",
@@ -229,7 +227,6 @@
         "51:playrough",
         "58:highhorsepower",
         "65:superpower",
-        "evolution:heavyslam",
         "egg:belch",
         "egg:curse",
         "egg:defensecurl",

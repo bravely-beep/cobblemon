@@ -9,5 +9,5 @@
     "low_key"
   ],
   "isAspect": true,
-  "aspectFormat": "punk-form-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

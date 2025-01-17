@@ -42,7 +42,6 @@
   "catchRate": 255,
   "eggCycles": 5,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.8,
@@ -57,9 +56,10 @@
       },
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true,
+        "canSwimInLava": false
       }
     }
   },

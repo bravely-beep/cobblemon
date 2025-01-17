@@ -10,7 +10,8 @@
     "cobblemon.species.sandslash.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1,
@@ -54,9 +54,12 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
     }
   },
   "drops": {
@@ -92,7 +95,6 @@
     "51:swordsdance",
     "56:sandstorm",
     "61:earthquake",
-    "evolution:crushclaw",
     "egg:chipaway",
     "egg:counter",
     "egg:flail",
@@ -199,9 +201,11 @@
         "cobblemon.species.sandslash-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
+        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -232,6 +236,7 @@
       "catchRate": 90,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [
@@ -269,7 +274,6 @@
         "1:powdersnow",
         "1:snowscape",
         "1:bide",
-        "evolution:iciclespear",
         "egg:chipaway",
         "egg:counter",
         "egg:crushclaw",

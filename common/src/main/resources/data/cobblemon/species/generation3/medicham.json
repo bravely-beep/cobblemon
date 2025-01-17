@@ -41,13 +41,13 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -221,7 +221,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "purepower",
@@ -252,6 +252,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:firepunch",
         "1:thunderpunch",

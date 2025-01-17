@@ -42,13 +42,13 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -89,7 +89,6 @@
     "54:weatherball",
     "61:crunch",
     "68:blizzard",
-    "evolution:freezedry",
     "egg:bide",
     "egg:block",
     "egg:disable",
@@ -181,7 +180,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "refrigerate",
@@ -213,6 +212,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:powdersnow",
         "1:leer",
@@ -232,7 +232,6 @@
         "54:weatherball",
         "61:crunch",
         "68:blizzard",
-        "evolution:freezedry",
         "egg:bide",
         "egg:block",
         "egg:disable",

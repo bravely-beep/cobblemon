@@ -43,7 +43,6 @@
   "catchRate": 25,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.6,
   "hitbox": {
     "width": 2,
@@ -53,9 +52,13 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
     }
   },
   "drops": {
@@ -218,7 +221,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "sandforce",
@@ -249,6 +252,14 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInWater": false
+          }
+        }
+      },
       "moves": [
         "1:thunderfang",
         "1:icefang",

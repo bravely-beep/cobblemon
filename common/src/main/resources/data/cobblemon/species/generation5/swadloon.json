@@ -42,13 +42,13 @@
   "catchRate": 120,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -82,7 +82,6 @@
     "31:stickyweb",
     "36:bugbuzz",
     "43:flail",
-    "evolution:protect",
     "egg:camouflage",
     "egg:mefirst",
     "egg:mindreader",

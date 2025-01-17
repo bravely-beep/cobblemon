@@ -54,9 +54,12 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
     }
   },
   "drops": {
@@ -87,7 +90,6 @@
     "40:recover",
     "45:mistyterrain",
     "50:entrainment",
-    "evolution:decorate",
     "egg:babydolleyes",
     "egg:lastresort",
     "tm:acidarmor",
@@ -206,7 +208,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -326,7 +327,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -446,7 +446,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -566,7 +565,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -686,7 +684,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -806,7 +803,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -926,7 +922,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -1046,7 +1041,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",
@@ -1121,8 +1115,7 @@
         "gmax"
       ],
       "aspects": [
-        "cream-vanilla",
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "sweetveil",
@@ -1154,6 +1147,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:decorate",
         "1:tackle",
@@ -1169,7 +1163,6 @@
         "40:recover",
         "45:mistyterrain",
         "50:entrainment",
-        "evolution:decorate",
         "egg:babydolleyes",
         "egg:lastresort",
         "tm:acidarmor",

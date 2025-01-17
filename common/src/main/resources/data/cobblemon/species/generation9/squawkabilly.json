@@ -191,6 +191,7 @@
       "catchRate": 190,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:growl",
         "1:peck",
@@ -308,6 +309,7 @@
       "catchRate": 190,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:growl",
         "1:peck",
@@ -425,6 +427,7 @@
       "catchRate": 190,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:growl",
         "1:peck",

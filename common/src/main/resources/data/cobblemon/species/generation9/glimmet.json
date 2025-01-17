@@ -53,12 +53,15 @@
     "moving": {
       "fly": {
         "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     },
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },

@@ -14,7 +14,7 @@
     "legendary"
   ],
   "aspects": [
-    "mirror-forme-incarnate"
+    "incarnate-forme"
   ],
   "abilities": [
     "cutecharm",
@@ -44,7 +44,7 @@
   "catchRate": 3,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
+  "behaviour": {},
   "moves": [
     "1:astonish",
     "1:fairywind",
@@ -134,7 +134,7 @@
         "legendary"
       ],
       "aspects": [
-        "mirror-forme-therian"
+        "therian-forme"
       ],
       "abilities": [
         "overcoat",
@@ -164,6 +164,7 @@
       "catchRate": 3,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:fairywind",

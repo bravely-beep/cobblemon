@@ -10,7 +10,8 @@
     "cobblemon.species.zoroark.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,13 +45,13 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.65,
   "hitbox": {
     "width": 1.3,
     "height": 2.9,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -83,7 +84,6 @@
     "46:nightdaze",
     "52:nastyplot",
     "58:foulplay",
-    "evolution:nightslash",
     "egg:captivate",
     "egg:copycat",
     "egg:counter",
@@ -197,9 +197,11 @@
         "cobblemon.species.zoroark-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
+        "hisuian",
         "hisuian"
       ],
       "abilities": [
@@ -236,6 +238,7 @@
         "height": 3.3,
         "fixed": false
       },
+      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -266,7 +269,6 @@
         "46:bittermalice",
         "52:nastyplot",
         "58:foulplay",
-        "evolution:shadowclaw",
         "egg:comeuppance",
         "egg:detect",
         "egg:extrasensory",

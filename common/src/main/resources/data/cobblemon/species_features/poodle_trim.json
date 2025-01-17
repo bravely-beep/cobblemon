@@ -17,5 +17,5 @@
     "pharaoh"
   ],
   "isAspect": true,
-  "aspectFormat": "poodle-trim-{{choice}}"
+  "aspectFormat": "{{choice}}-trim"
 }

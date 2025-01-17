@@ -10,7 +10,8 @@
     "cobblemon.species.rufflet.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -42,12 +43,18 @@
   "catchRate": 190,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
-  "baseScale": 1,
+  "baseScale": 0.75,
   "hitbox": {
-    "width": 1,
-    "height": 1,
+    "width": 0.8,
+    "height": 1.2,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      }
+    }
   },
   "drops": {
     "amount": 3,
@@ -196,7 +203,9 @@
         "cobblemon.species.rufflet-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

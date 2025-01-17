@@ -9,5 +9,5 @@
     "core"
   ],
   "isAspect": true,
-  "aspectFormat": "meteor-shield-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

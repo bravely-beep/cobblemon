@@ -12,7 +12,7 @@
     "gen3"
   ],
   "aspects": [
-    "cocoon-species-silcoon"
+    "silcoon-cocoon"
   ],
   "abilities": [
     "shedskin",
@@ -42,7 +42,6 @@
   "catchRate": 120,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -78,7 +77,6 @@
     "1:harden",
     "1:tackle",
     "1:poisonsting",
-    "evolution:harden",
     "tm:bugbite",
     "tm:electroweb",
     "tm:harden",

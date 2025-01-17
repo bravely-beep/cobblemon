@@ -52,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -99,7 +97,6 @@
     "48:stompingtantrum",
     "53:outrage",
     "57:finalgambit",
-    "evolution:shadowpunch",
     "egg:beatup",
     "egg:counter",
     "egg:curse",

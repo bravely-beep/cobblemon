@@ -43,13 +43,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 100,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:pound",
     "1:megadrain",
@@ -153,7 +153,7 @@
         "restricted"
       ],
       "aspects": [
-        "king-steed-ice"
+        "ice-rider"
       ],
       "abilities": [
         "asoneglastrier",
@@ -183,6 +183,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 100,
+      "behaviour": {},
       "moves": [
         "1:glaciallance",
         "1:tackle",
@@ -340,7 +341,7 @@
         "restricted"
       ],
       "aspects": [
-        "king-steed-shadow"
+        "shadow-rider"
       ],
       "abilities": [
         "asonespectrier",
@@ -370,6 +371,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 100,
+      "behaviour": {},
       "moves": [
         "1:astralbarrage",
         "1:tackle",

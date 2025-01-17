@@ -44,7 +44,6 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.3,
   "hitbox": {
     "width": 1,
@@ -59,8 +58,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -95,7 +92,6 @@
     "44:woodhammer",
     "48:destinybond",
     "52:forestscurse",
-    "evolution:shadowclaw",
     "egg:allyswitch",
     "egg:bestow",
     "egg:disable",

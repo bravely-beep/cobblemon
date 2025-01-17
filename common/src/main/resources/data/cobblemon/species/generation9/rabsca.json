@@ -41,6 +41,7 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -69,7 +70,6 @@
     "40:guardswap",
     "45:bugbuzz",
     "50:psychic",
-    "evolution:revivalblessing",
     "egg:cosmicpower",
     "egg:memento",
     "egg:recover",

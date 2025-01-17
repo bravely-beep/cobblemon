@@ -42,6 +42,7 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
+  "behaviour": {},
   "moves": [
     "1:scratch",
     "1:confusion",

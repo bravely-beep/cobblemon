@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 1,
@@ -52,8 +51,12 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "canSwimInLava": true
+      }
     }
   },
   "drops": {
@@ -88,7 +91,6 @@
     "42:thrash",
     "47:sandstorm",
     "52:hyperbeam",
-    "evolution:irondefense",
     "egg:ancientpower",
     "egg:assurance",
     "egg:curse",

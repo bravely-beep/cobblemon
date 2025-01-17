@@ -3,7 +3,7 @@
   "keys": [
     "matcha_authenticity"
   ],
-  "default": "random",
+  "default": "none",
   "choices": [
     "counterfeit",
     "artisan",
@@ -11,5 +11,5 @@
     "masterpiece"
   ],
   "isAspect": true,
-  "aspectFormat": "matcha-authenticity-{{choice}}"
+  "aspectFormat": "{{choice}}"
 }

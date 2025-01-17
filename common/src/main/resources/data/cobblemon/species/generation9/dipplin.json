@@ -43,6 +43,7 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "moves": [
     "1:doublehit",
     "1:withdraw",
@@ -60,7 +61,6 @@
     "36:recover",
     "40:energyball",
     "44:substitute",
-    "evolution:doublehit",
     "egg:defensecurl",
     "egg:recycle",
     "egg:rollout",

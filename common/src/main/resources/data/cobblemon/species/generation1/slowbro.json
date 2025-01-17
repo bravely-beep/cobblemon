@@ -11,7 +11,8 @@
     "cobblemon.species.slowbro.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -47,7 +48,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.3,
   "hitbox": {
     "width": 0.8,
@@ -58,8 +58,9 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.08,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       },
       "walk": {
         "walkSpeed": 0.15
@@ -99,7 +100,6 @@
     "41:psychup",
     "46:raindance",
     "51:healpulse",
-    "evolution:withdraw",
     "egg:belch",
     "egg:bellydrum",
     "egg:block",
@@ -235,7 +235,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "shellarmor",
@@ -267,6 +267,16 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:curse",
         "1:tackle",
@@ -287,7 +297,6 @@
         "41:psychup",
         "46:raindance",
         "51:healpulse",
-        "evolution:withdraw",
         "egg:belch",
         "egg:bellydrum",
         "egg:block",
@@ -419,9 +428,11 @@
         "cobblemon.species.slowbro-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
+        "galarian",
         "galarian"
       ],
       "abilities": [
@@ -454,6 +465,16 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "drops": {
         "amount": 1,
         "entries": [
@@ -483,7 +504,6 @@
         "39:psychup",
         "42:raindance",
         "45:healpulse",
-        "evolution:shellsidearm",
         "egg:belch",
         "egg:bellydrum",
         "egg:block",

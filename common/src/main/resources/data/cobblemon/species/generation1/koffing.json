@@ -10,7 +10,8 @@
     "cobblemon.species.koffing.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -43,9 +44,8 @@
   "eggCycles": 20,
   "baseFriendship": 50,
   "features": [
-    "region_bias"
+    "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 0.9,
@@ -213,7 +213,9 @@
         "cobblemon.species.koffing-galarbias.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "customized_official",
+        "galarian_form"
       ],
       "aspects": [
         "region-bias-galar"

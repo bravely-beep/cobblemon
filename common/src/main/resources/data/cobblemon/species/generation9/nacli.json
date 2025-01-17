@@ -52,12 +52,14 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.125
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },

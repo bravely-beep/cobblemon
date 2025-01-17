@@ -41,13 +41,13 @@
   "catchRate": 45,
   "eggCycles": 35,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.9,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -88,7 +88,6 @@
     "45:agility",
     "50:thunder",
     "55:lastresort",
-    "evolution:thundershock",
     "egg:captivate",
     "egg:curse",
     "egg:detect",

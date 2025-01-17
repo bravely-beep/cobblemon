@@ -10,7 +10,8 @@
     "cobblemon.species.goomy.desc"
   ],
   "labels": [
-    "gen6"
+    "gen6",
+    "kalosian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,13 +46,13 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.83,
     "height": 0.7,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -176,7 +177,9 @@
         "cobblemon.species.goomy-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

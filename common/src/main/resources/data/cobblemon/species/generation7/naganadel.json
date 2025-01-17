@@ -43,13 +43,13 @@
   "catchRate": 45,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.2,
     "height": 4,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -77,7 +77,6 @@
     "56:gastroacid",
     "63:toxic",
     "70:dragonrush",
-    "evolution:aircutter",
     "tm:acid",
     "tm:acrobatics",
     "tm:aerialace",

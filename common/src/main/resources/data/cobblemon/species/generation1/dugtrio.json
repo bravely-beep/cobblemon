@@ -10,7 +10,8 @@
     "cobblemon.species.dugtrio.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.05,
@@ -55,13 +55,12 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "swim": {
-        "canSwimInWater": false
+        "canSwimInWater": false,
+        "avoidsWater": true
       }
     }
   },
@@ -102,7 +101,6 @@
     "42:earthpower",
     "48:earthquake",
     "54:fissure",
-    "evolution:sandtomb",
     "egg:ancientpower",
     "egg:feintattack",
     "egg:finalgambit",
@@ -196,9 +194,11 @@
         "cobblemon.species.dugtrio-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
+        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -230,6 +230,7 @@
       "catchRate": 50,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:sandtomb",
         "1:rototiller",
@@ -250,7 +251,6 @@
         "42:earthpower",
         "48:earthquake",
         "54:fissure",
-        "evolution:sandtomb",
         "egg:ancientpower",
         "egg:feintattack",
         "egg:finalgambit",

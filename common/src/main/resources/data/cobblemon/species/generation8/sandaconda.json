@@ -42,13 +42,13 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -148,7 +148,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "sandspit",
@@ -181,6 +181,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:skullbash",
         "1:wrap",

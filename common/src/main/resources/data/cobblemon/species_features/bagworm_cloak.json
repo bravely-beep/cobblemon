@@ -3,12 +3,12 @@
   "keys": [
     "bagworm_cloak"
   ],
-  "default": "plant",
+  "default": "random",
   "choices": [
     "plant",
     "sandy",
     "trash"
   ],
   "isAspect": true,
-  "aspectFormat": "bagworm-cloak-{{choice}}"
+  "aspectFormat": "{{choice}}-cloak"
 }

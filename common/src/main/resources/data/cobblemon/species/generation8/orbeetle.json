@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -153,7 +153,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "swarm",
@@ -185,6 +185,7 @@
       "eggCycles": 15,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:reflect",
         "1:lightscreen",

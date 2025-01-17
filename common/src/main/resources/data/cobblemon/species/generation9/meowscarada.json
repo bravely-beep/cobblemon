@@ -53,7 +53,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -92,7 +91,6 @@
     "52:knockoff",
     "58:grassyterrain",
     "64:leafstorm",
-    "evolution:flowertrick",
     "egg:allyswitch",
     "egg:copycat",
     "egg:leechseed",

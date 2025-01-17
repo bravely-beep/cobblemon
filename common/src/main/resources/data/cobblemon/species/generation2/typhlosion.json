@@ -10,7 +10,8 @@
     "cobblemon.species.typhlosion.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.65,
   "hitbox": {
     "width": 1.35,
@@ -54,8 +54,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -208,7 +206,8 @@
         "cobblemon.species.typhlosion-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -247,6 +246,7 @@
         "height": 2.65,
         "fixed": false
       },
+      "behaviour": {},
       "moves": [
         "1:infernalparade",
         "1:gyroball",
@@ -266,7 +266,6 @@
         "56:inferno",
         "61:rollout",
         "74:overheat",
-        "evolution:infernalparade",
         "egg:covet",
         "egg:crushclaw",
         "egg:curse",

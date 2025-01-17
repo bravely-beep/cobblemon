@@ -42,13 +42,13 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [

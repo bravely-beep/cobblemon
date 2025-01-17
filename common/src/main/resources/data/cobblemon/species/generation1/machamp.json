@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.2,
   "hitbox": {
     "width": 1,
     "height": 1.8,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -202,7 +202,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "guts",
@@ -234,6 +234,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:lowkick",
         "1:leer",

@@ -11,7 +11,8 @@
     "cobblemon.species.aerodactyl.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -43,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 35,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.8,
   "hitbox": {
     "width": 1,
@@ -61,8 +61,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -194,10 +192,11 @@
       ],
       "labels": [
         "gen6",
-        "mega"
+        "mega",
+        "fossil"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "toughclaws",
@@ -228,6 +227,7 @@
       "eggCycles": 35,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:bite",
         "1:ancientpower",

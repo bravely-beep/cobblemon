@@ -49,6 +49,7 @@
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -280,7 +281,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "runaway",
@@ -312,6 +313,7 @@
       "eggCycles": 35,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:tailwhip",
         "1:tackle",

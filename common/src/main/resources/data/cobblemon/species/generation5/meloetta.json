@@ -14,7 +14,7 @@
     "mythical"
   ],
   "aspects": [
-    "song-forme-aria"
+    "aria-forme"
   ],
   "abilities": [
     "serenegrace",
@@ -44,7 +44,7 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 100,
-  "shoulderMountable": false,
+  "behaviour": {},
   "moves": [
     "1:round",
     "1:quickattack",
@@ -175,7 +175,7 @@
         "mythical"
       ],
       "aspects": [
-        "song-forme-pirouette"
+        "pirouette-forme"
       ],
       "abilities": [
         "serenegrace",
@@ -205,6 +205,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 100,
+      "behaviour": {},
       "moves": [
         "1:round",
         "1:quickattack",

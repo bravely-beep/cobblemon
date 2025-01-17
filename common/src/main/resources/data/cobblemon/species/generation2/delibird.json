@@ -1,4 +1,5 @@
 {
+  "implemented": true,
   "nationalPokedexNumber": 225,
   "name": "Delibird",
   "primaryType": "ice",
@@ -43,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.63,
   "hitbox": {
     "width": 1.15,
@@ -54,6 +54,12 @@
     "moving": {
       "fly": {
         "canFly": true
+      },
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
       }
     }
   },

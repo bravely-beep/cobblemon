@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2.7,
@@ -96,7 +95,6 @@
     "46:focusenergy",
     "55:flamethrower",
     "73:doubleedge",
-    "evolution:fly",
     "egg:defensecurl",
     "egg:dragonrage",
     "egg:dragonrush",
@@ -202,7 +200,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "aerilate",
@@ -259,7 +257,6 @@
         "46:focusenergy",
         "55:flamethrower",
         "73:doubleedge",
-        "evolution:fly",
         "egg:defensecurl",
         "egg:dragonrage",
         "egg:dragonrush",

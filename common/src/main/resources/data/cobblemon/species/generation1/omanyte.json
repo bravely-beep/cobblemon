@@ -11,7 +11,8 @@
     "cobblemon.species.omanyte.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 0.5,
@@ -55,13 +55,14 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       },
       "walk": {
         "walkSpeed": 0.19

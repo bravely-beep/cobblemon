@@ -10,7 +10,8 @@
     "cobblemon.species.rampardos.desc"
   ],
   "labels": [
-    "gen4"
+    "gen4",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -41,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.6,
@@ -51,13 +51,14 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "walk": {
         "walkSpeed": 0.19
+      },
+      "swim": {
+        "canSwimInLava": true
       }
     }
   },
@@ -86,7 +87,6 @@
     "43:zenheadbutt",
     "51:screech",
     "58:headsmash",
-    "evolution:endeavor",
     "egg:hammerarm",
     "egg:slam",
     "egg:stomp",

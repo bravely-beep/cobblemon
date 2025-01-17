@@ -10,7 +10,8 @@
     "cobblemon.species.bergmite.desc"
   ],
   "labels": [
-    "gen6"
+    "gen6",
+    "kalosian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -43,7 +44,6 @@
   "catchRate": 190,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.95,
   "hitbox": {
     "width": 0.95,
@@ -54,7 +54,6 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true
       },
@@ -64,8 +63,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -208,7 +205,9 @@
         "cobblemon.species.bergmite-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

@@ -11,7 +11,8 @@
     "cobblemon.species.kabuto.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 0.5,
@@ -55,14 +55,13 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.2,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },

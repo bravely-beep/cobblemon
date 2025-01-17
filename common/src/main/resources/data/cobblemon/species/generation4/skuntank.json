@@ -42,13 +42,13 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -76,7 +76,6 @@
     "38:nightslash",
     "43:belch",
     "48:explosion",
-    "evolution:flamethrower",
     "egg:astonish",
     "egg:doubleedge",
     "egg:flameburst",

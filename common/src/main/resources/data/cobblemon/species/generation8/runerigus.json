@@ -44,13 +44,13 @@
   "catchRate": 90,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -79,7 +79,6 @@
     "56:powersplit",
     "56:guardsplit",
     "62:destinybond",
-    "evolution:shadowclaw",
     "egg:memento",
     "tm:allyswitch",
     "tm:amnesia",

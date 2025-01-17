@@ -41,7 +41,6 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.9,
@@ -56,8 +55,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -87,7 +84,6 @@
     "44:stickyweb",
     "46:bugbuzz",
     "50:perishsong",
-    "evolution:furycutter",
     "tm:absorb",
     "tm:aerialace",
     "tm:batonpass",

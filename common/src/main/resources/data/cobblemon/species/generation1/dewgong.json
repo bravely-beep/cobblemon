@@ -44,7 +44,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 2,
   "hitbox": {
     "width": 0.9,
@@ -54,8 +53,10 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -96,7 +97,6 @@
     "55:icebeam",
     "61:safeguard",
     "65:snowscape",
-    "evolution:sheercold",
     "egg:belch",
     "egg:disable",
     "egg:entrainment",

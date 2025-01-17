@@ -11,7 +11,8 @@
     "cobblemon.species.sneasel.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,13 +47,13 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.6,
     "height": 1.25,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -222,7 +223,8 @@
         "cobblemon.species.sneasel-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -262,6 +264,7 @@
         "height": 1.25,
         "fixed": false
       },
+      "behaviour": {},
       "drops": {
         "amount": 3,
         "entries": [

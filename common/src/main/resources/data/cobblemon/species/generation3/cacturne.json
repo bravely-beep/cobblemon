@@ -43,7 +43,6 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.75,
@@ -53,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -106,7 +103,6 @@
     "44:energyball",
     "49:cottonspore",
     "54:sandstorm",
-    "evolution:spikyshield",
     "egg:acid",
     "egg:belch",
     "egg:block",

@@ -41,13 +41,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:seismictoss",
     "1:cosmicpower",
@@ -239,7 +239,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-fighting"
+        "fighting-plate"
       ],
       "abilities": [
         "multitype",
@@ -269,6 +269,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -461,7 +462,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-flying"
+        "flying-plate"
       ],
       "abilities": [
         "multitype",
@@ -491,6 +492,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -683,7 +685,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-poison"
+        "poison-plate"
       ],
       "abilities": [
         "multitype",
@@ -713,6 +715,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -904,7 +907,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-ground"
+        "ground-plate"
       ],
       "abilities": [
         "multitype",
@@ -934,6 +937,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -1126,7 +1130,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-rock"
+        "rock-plate"
       ],
       "abilities": [
         "multitype",
@@ -1156,6 +1160,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -1348,7 +1353,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-bug"
+        "bug-plate"
       ],
       "abilities": [
         "multitype",
@@ -1378,6 +1383,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -1570,7 +1576,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-ghost"
+        "ghost-plate"
       ],
       "abilities": [
         "multitype",
@@ -1600,6 +1606,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -1792,7 +1799,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-steel"
+        "steel-plate"
       ],
       "abilities": [
         "multitype",
@@ -1822,6 +1829,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -2014,7 +2022,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-fire"
+        "fire-plate"
       ],
       "abilities": [
         "multitype",
@@ -2044,6 +2052,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -2231,7 +2240,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-water"
+        "water-plate"
       ],
       "abilities": [
         "multitype",
@@ -2261,6 +2270,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -2453,7 +2463,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-grass"
+        "grass-plate"
       ],
       "abilities": [
         "multitype",
@@ -2483,6 +2493,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -2675,7 +2686,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-electric"
+        "electric-plate"
       ],
       "abilities": [
         "multitype",
@@ -2705,6 +2716,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -2897,7 +2909,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-psychic"
+        "psychic-plate"
       ],
       "abilities": [
         "multitype",
@@ -2927,6 +2939,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -3119,7 +3132,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-ice"
+        "ice-plate"
       ],
       "abilities": [
         "multitype",
@@ -3149,6 +3162,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -3341,7 +3355,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-dragon"
+        "dragon-plate"
       ],
       "abilities": [
         "multitype",
@@ -3371,6 +3385,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -3563,7 +3578,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-dark"
+        "dark-plate"
       ],
       "abilities": [
         "multitype",
@@ -3593,6 +3608,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",
@@ -3785,7 +3801,7 @@
         "mythical"
       ],
       "aspects": [
-        "multitype-fairy"
+        "fairy-plate"
       ],
       "abilities": [
         "multitype",
@@ -3815,6 +3831,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:seismictoss",
         "1:cosmicpower",

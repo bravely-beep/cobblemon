@@ -53,9 +53,7 @@
   },
   "behaviour": {
     "resting": {
-      "canSleep": false,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },

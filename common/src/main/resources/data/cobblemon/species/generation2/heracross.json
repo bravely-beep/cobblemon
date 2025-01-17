@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.05,
@@ -193,7 +192,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "skilllink",
@@ -224,6 +223,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:nightslash",
         "1:tackle",

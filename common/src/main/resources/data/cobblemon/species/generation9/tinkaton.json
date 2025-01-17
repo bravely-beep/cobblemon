@@ -52,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -88,7 +86,6 @@
     "43:flatter",
     "47:skittersmack",
     "52:knockoff",
-    "evolution:gigatonhammer",
     "egg:feint",
     "egg:icehammer",
     "egg:quash",

@@ -42,7 +42,6 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.1,
@@ -89,7 +88,6 @@
     "48:shadowball",
     "54:destinybond",
     "60:dreameater",
-    "evolution:shadowpunch",
     "egg:astonish",
     "egg:clearsmog",
     "egg:disable",

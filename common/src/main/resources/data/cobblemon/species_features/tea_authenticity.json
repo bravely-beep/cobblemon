@@ -9,5 +9,5 @@
     "antique"
   ],
   "isAspect": true,
-  "aspectFormat": "tea-authenticity-{{choice}}"
+  "aspectFormat": "{{choice}}"
 }

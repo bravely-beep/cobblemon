@@ -42,7 +42,6 @@
   "catchRate": 90,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.5,
@@ -53,7 +52,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -90,8 +88,6 @@
     "56:powersplit",
     "56:guardsplit",
     "62:destinybond",
-    "evolution:scaryface",
-    "evolution:shadowclaw",
     "egg:healblock",
     "egg:memento",
     "egg:nightmare",

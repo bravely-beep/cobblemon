@@ -42,12 +42,19 @@
   "catchRate": 65,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.9,
     "height": 2.3,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "drops": {
     "amount": 2,
@@ -82,7 +89,6 @@
     "40:counter",
     "44:doubleedge",
     "48:headsmash",
-    "evolution:slam",
     "egg:curse",
     "egg:defensecurl",
     "egg:feintattack",

@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 2,
@@ -58,8 +57,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -99,7 +96,6 @@
     "34:drillpeck",
     "42:swagger",
     "50:bravebird",
-    "evolution:steelwing",
     "egg:defog",
     "egg:rocksmash",
     "egg:roost",
@@ -191,7 +187,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "pressure",
@@ -223,6 +219,7 @@
       "eggCycles": 15,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:steelwing",
         "1:irondefense",
@@ -239,7 +236,6 @@
         "34:drillpeck",
         "42:swagger",
         "50:bravebird",
-        "evolution:steelwing",
         "egg:defog",
         "egg:rocksmash",
         "egg:roost",

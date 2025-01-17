@@ -11,7 +11,8 @@
     "cobblemon.species.omastar.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.6,
@@ -54,14 +54,14 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       },
       "walk": {
         "walkSpeed": 0.14
@@ -100,8 +100,6 @@
     "56:surf",
     "63:shellsmash",
     "70:hydropump",
-    "evolution:crunch",
-    "evolution:spikecannon",
     "egg:aurorabeam",
     "egg:bide",
     "egg:bite",

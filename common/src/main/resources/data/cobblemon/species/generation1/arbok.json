@@ -44,9 +44,8 @@
   "eggCycles": 20,
   "baseFriendship": 50,
   "features": [
-    "cobra_pattern"
+    "snake-pattern"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -57,8 +56,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -94,7 +91,6 @@
     "51:haze",
     "56:coil",
     "63:gunkshot",
-    "evolution:crunch",
     "egg:disable",
     "egg:poisonfang",
     "egg:poisontail",

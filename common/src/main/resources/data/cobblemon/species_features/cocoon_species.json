@@ -9,5 +9,5 @@
     "cascoon"
   ],
   "isAspect": true,
-  "aspectFormat": "cocoon-species-{{choice}}"
+  "aspectFormat": "{{choice}}-cocoon"
 }

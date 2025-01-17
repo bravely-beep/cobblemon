@@ -10,7 +10,8 @@
     "cobblemon.species.stunfisk.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,12 +47,21 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
+      }
+    }
   },
   "drops": {
     "amount": 3,
@@ -172,7 +182,8 @@
         "cobblemon.species.stunfisk-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -206,6 +217,16 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:mudslap",
         "1:tackle",

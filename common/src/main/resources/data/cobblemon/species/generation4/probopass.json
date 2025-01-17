@@ -43,7 +43,6 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.5,
@@ -53,9 +52,13 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
     }
   },
   "drops": {
@@ -103,7 +106,6 @@
     "40:stoneedge",
     "43:zapcannon",
     "43:lockon",
-    "evolution:triattack",
     "egg:doubleedge",
     "egg:headsmash",
     "egg:magnitude",

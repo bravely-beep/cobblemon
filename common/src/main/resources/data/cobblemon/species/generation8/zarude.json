@@ -43,13 +43,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.4,
     "height": 3,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:bind",
     "1:scratch",
@@ -166,7 +166,7 @@
         "mythical"
       ],
       "aspects": [
-        "rogue-cape-dada"
+        "dada-cape"
       ],
       "abilities": [
         "leafguard",
@@ -196,6 +196,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:bind",
         "1:scratch",

@@ -12,7 +12,7 @@
     "gen3"
   ],
   "aspects": [
-    "forecast-form-normal"
+    "normal-form"
   ],
   "abilities": [
     "forecast",
@@ -43,12 +43,21 @@
   "catchRate": 45,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    }
   },
   "drops": {
     "amount": 1,
@@ -146,7 +155,7 @@
         "gen4"
       ],
       "aspects": [
-        "forecast-form-sunny"
+        "sunny-form"
       ],
       "abilities": [
         "forecast",
@@ -177,6 +186,7 @@
       "catchRate": 45,
       "eggCycles": 25,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [
@@ -274,7 +284,7 @@
         "gen4"
       ],
       "aspects": [
-        "forecast-form-rainy"
+        "rainy-form"
       ],
       "abilities": [
         "forecast",
@@ -305,6 +315,7 @@
       "catchRate": 45,
       "eggCycles": 25,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [
@@ -402,7 +413,7 @@
         "gen4"
       ],
       "aspects": [
-        "forecast-form-snowy"
+        "snowy-form"
       ],
       "abilities": [
         "forecast",
@@ -433,6 +444,7 @@
       "catchRate": 45,
       "eggCycles": 25,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [

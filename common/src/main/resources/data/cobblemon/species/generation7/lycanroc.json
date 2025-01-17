@@ -12,7 +12,7 @@
     "gen7"
   ],
   "aspects": [
-    "wolf-form-midday"
+    "midday-form"
   ],
   "abilities": [
     "keeneye",
@@ -43,7 +43,7 @@
   "catchRate": 90,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
+  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -85,8 +85,6 @@
     "48:scaryface",
     "54:stealthrock",
     "60:stoneedge",
-    "evolution:accelerock",
-    "evolution:suckerpunch",
     "egg:crushclaw",
     "egg:endeavor",
     "egg:lastresort",
@@ -179,7 +177,7 @@
         "gen7"
       ],
       "aspects": [
-        "wolf-form-midnight"
+        "midnight-form"
       ],
       "abilities": [
         "keeneye",
@@ -210,6 +208,7 @@
       "catchRate": 90,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:counter",
         "1:reversal",
@@ -230,7 +229,6 @@
         "48:scaryface",
         "54:stealthrock",
         "60:stoneedge",
-        "evolution:counter",
         "egg:crushclaw",
         "egg:endeavor",
         "egg:lastresort",
@@ -336,7 +334,7 @@
         "gen7"
       ],
       "aspects": [
-        "wolf-form-dusk"
+        "dusk-form"
       ],
       "abilities": [
         "toughclaws",
@@ -366,6 +364,7 @@
       "catchRate": 90,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:thrash",
         "1:accelerock",
@@ -392,8 +391,6 @@
         "48:scaryface",
         "54:stealthrock",
         "60:stoneedge",
-        "evolution:crushclaw",
-        "evolution:thrash",
         "egg:endeavor",
         "egg:lastresort",
         "egg:odorsleuth",

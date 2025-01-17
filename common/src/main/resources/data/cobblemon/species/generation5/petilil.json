@@ -10,7 +10,8 @@
     "cobblemon.species.petilil.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -61,7 +62,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -205,7 +205,9 @@
         "cobblemon.species.petilil-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

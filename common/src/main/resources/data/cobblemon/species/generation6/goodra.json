@@ -11,7 +11,8 @@
   ],
   "labels": [
     "gen6",
-    "powerhouse"
+    "powerhouse",
+    "kalosian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,15 +45,15 @@
   "eggCycles": 40,
   "baseFriendship": 35,
   "features": [
-    "regional_form"
+    "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.8,
     "height": 3.3,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -87,7 +88,6 @@
     "49:bodyslam",
     "58:muddywater",
     "67:powerwhip",
-    "evolution:aquatail",
     "egg:counter",
     "egg:lifedew",
     "tm:absorb",
@@ -185,9 +185,11 @@
       ],
       "labels": [
         "gen8a",
-        "powerhouse"
+        "powerhouse",
+        "hisuian_form"
       ],
       "aspects": [
+        "hisuian",
         "hisuian"
       ],
       "abilities": [
@@ -225,6 +227,7 @@
         "height": 3.6,
         "fixed": false
       },
+      "behaviour": {},
       "drops": {
         "amount": 7,
         "entries": [
@@ -265,7 +268,6 @@
         "49:bodyslam",
         "58:muddywater",
         "67:heavyslam",
-        "evolution:irontail",
         "egg:counter",
         "egg:lifedew",
         "tm:absorb",

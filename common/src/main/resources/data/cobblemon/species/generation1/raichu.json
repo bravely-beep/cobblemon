@@ -10,7 +10,8 @@
     "cobblemon.species.raichu.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 0.8,
@@ -55,8 +55,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -100,7 +98,6 @@
     "1:discharge",
     "1:growl",
     "5:thunderbolt",
-    "evolution:thunderpunch",
     "egg:bestow",
     "egg:bide",
     "egg:charge",
@@ -219,7 +216,8 @@
         "cobblemon.species.raichu-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
         "alolan"
@@ -262,14 +260,11 @@
       "behaviour": {
         "moving": {
           "swim": {
-            "canWalkOnWater": true,
-            "canSwimInWater": true
+            "canWalkOnWater": true
           }
         },
         "resting": {
           "canSleep": true,
-          "willSleepOnBed": false,
-          "depth": "normal",
           "light": "0-4"
         }
       },
@@ -313,7 +308,6 @@
         "1:discharge",
         "1:growl",
         "5:thunderbolt",
-        "evolution:psychic",
         "egg:bestow",
         "egg:bide",
         "egg:charge",

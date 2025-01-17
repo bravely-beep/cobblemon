@@ -42,13 +42,13 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 7,
     "entries": [
@@ -95,7 +95,6 @@
     "64:defog",
     "72:attract",
     "80:bravebird",
-    "evolution:bonerush",
     "egg:feintattack",
     "egg:meanlook",
     "egg:mirrormove",

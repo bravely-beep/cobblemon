@@ -43,7 +43,6 @@
   "catchRate": 50,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2.7,
@@ -53,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -101,7 +98,6 @@
     "51:earthquake",
     "58:blizzard",
     "65:thrash",
-    "evolution:doublehit",
     "egg:ancientpower",
     "egg:bite",
     "egg:curse",

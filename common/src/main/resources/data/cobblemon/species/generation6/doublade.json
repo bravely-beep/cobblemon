@@ -42,12 +42,19 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.4,
     "height": 1.8,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "drops": {
     "amount": 4,
@@ -138,7 +145,7 @@
     {
       "id": "doublade_aegislash",
       "variant": "item_interact",
-      "result": "aegislash",
+      "result": "aegislash stance_forme=shield",
       "consumeHeldItem": true,
       "learnableMoves": [
         "kingsshield"

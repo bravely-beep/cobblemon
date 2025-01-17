@@ -9,5 +9,5 @@
     "blade"
   ],
   "isAspect": true,
-  "aspectFormat": "stance-forme-{{choice}}"
+  "aspectFormat": "{{choice}}-forme"
 }

@@ -11,7 +11,8 @@
     "cobblemon.species.anorith.desc"
   ],
   "labels": [
-    "gen3"
+    "gen3",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -52,20 +53,18 @@
   "behaviour": {
     "moving": {
       "walk": {
-        "avoidsLand": false,
         "walkSpeed": 0.17
       },
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true,
+        "canSwimInLava": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },

@@ -3,7 +3,7 @@
   "keys": [
     "dance_style"
   ],
-  "default": "baile",
+  "default": "random",
   "choices": [
     "baile",
     "pom_pom",
@@ -11,5 +11,5 @@
     "sensu"
   ],
   "isAspect": true,
-  "aspectFormat": "dance-style-{{choice}}"
+  "aspectFormat": "{{choice}}-style"
 }

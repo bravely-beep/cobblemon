@@ -56,15 +56,15 @@
       },
       "swim": {
         "swimSpeed": 0.14,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true,
+        "canSwimInLava": false
       }
     },
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },

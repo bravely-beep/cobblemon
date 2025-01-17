@@ -42,6 +42,7 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -71,7 +72,6 @@
     "49:discharge",
     "54:agility",
     "60:doubleshock",
-    "evolution:revivalblessing",
     "egg:fakeout",
     "egg:machpunch",
     "egg:sweetkiss",

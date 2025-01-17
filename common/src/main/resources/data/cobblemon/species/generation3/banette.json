@@ -41,13 +41,13 @@
   "catchRate": 45,
   "eggCycles": 25,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -73,7 +73,6 @@
     "40:suckerpunch",
     "46:trick",
     "53:phantomforce",
-    "evolution:knockoff",
     "egg:astonish",
     "egg:confuseray",
     "egg:destinybond",
@@ -181,7 +180,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "prankster",
@@ -212,6 +211,7 @@
       "eggCycles": 25,
       "baseFriendship": 35,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:knockoff",
         "1:screech",
@@ -228,7 +228,6 @@
         "40:suckerpunch",
         "46:trick",
         "53:phantomforce",
-        "evolution:knockoff",
         "egg:astonish",
         "egg:confuseray",
         "egg:destinybond",

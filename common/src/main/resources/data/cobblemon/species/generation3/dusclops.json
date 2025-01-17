@@ -41,7 +41,6 @@
   "catchRate": 90,
   "eggCycles": 25,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 0.85,
   "hitbox": {
     "width": 1.2,
@@ -56,8 +55,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -100,7 +97,6 @@
     "36:curse",
     "42:shadowball",
     "48:futuresight",
-    "evolution:shadowpunch",
     "egg:destinybond",
     "egg:feintattack",
     "egg:grudge",

@@ -43,7 +43,7 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -208,6 +208,7 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:mefirst",
         "1:magicalleaf",

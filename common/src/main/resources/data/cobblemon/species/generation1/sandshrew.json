@@ -10,7 +10,8 @@
     "cobblemon.species.sandshrew.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.8,
@@ -55,12 +55,13 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.29
+      },
+      "swim": {
+        "avoidsWater": true
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -211,7 +212,8 @@
         "cobblemon.species.sandshrew-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
         "alolan"
@@ -244,6 +246,7 @@
       "catchRate": 255,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [

@@ -13,7 +13,7 @@
     "mythical"
   ],
   "aspects": [
-    "gracidea-forme-land"
+    "land-forme"
   ],
   "abilities": [
     "naturalcure",
@@ -43,7 +43,7 @@
   "catchRate": 45,
   "eggCycles": 120,
   "baseFriendship": 100,
-  "shoulderMountable": false,
+  "behaviour": {},
   "moves": [
     "1:growth",
     "10:magicalleaf",
@@ -132,7 +132,7 @@
         "mythical"
       ],
       "aspects": [
-        "gracidea-forme-sky"
+        "sky-forme"
       ],
       "abilities": [
         "serenegrace",
@@ -162,6 +162,7 @@
       "catchRate": 45,
       "eggCycles": 120,
       "baseFriendship": 100,
+      "behaviour": {},
       "moves": [
         "1:growth",
         "10:magicalleaf",

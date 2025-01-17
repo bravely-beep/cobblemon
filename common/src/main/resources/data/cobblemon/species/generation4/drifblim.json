@@ -43,7 +43,6 @@
   "catchRate": 60,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.6,
@@ -58,8 +57,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -99,7 +96,6 @@
     "42:batonpass",
     "48:tailwind",
     "54:explosion",
-    "evolution:phantomforce",
     "egg:clearsmog",
     "egg:defog",
     "egg:disable",

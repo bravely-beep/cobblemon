@@ -11,7 +11,8 @@
     "cobblemon.species.carracosta.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.1,
@@ -54,19 +54,17 @@
   "behaviour": {
     "moving": {
       "walk": {
-        "avoidsLand": false,
         "walkSpeed": 0.14
       },
       "swim": {
         "swimSpeed": 0.2,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },

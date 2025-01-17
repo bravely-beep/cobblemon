@@ -11,7 +11,8 @@
   ],
   "labels": [
     "gen2",
-    "starter"
+    "starter",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.5,
   "hitbox": {
     "width": 0.8,
@@ -56,7 +56,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -189,7 +188,9 @@
       ],
       "labels": [
         "gen8a",
-        "starter"
+        "starter",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

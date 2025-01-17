@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.2,
   "hitbox": {
     "width": 1.2,
@@ -54,8 +53,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -91,7 +88,6 @@
     "1:leer",
     "1:horndrill",
     "1:captivate",
-    "evolution:megahorn",
     "egg:captivate",
     "egg:chipaway",
     "egg:confusion",

@@ -11,7 +11,8 @@
     "cobblemon.species.exeggcute.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -43,9 +44,9 @@
   "eggCycles": 20,
   "baseFriendship": 50,
   "features": [
+    "alolan",
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.1,
@@ -56,7 +57,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -217,7 +217,9 @@
         "cobblemon.species.exeggcute-alolabias.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "customized_official",
+        "alolan_form"
       ],
       "aspects": [
         "region-bias-alola"

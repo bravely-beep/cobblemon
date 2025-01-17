@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.85,
     "height": 1.65,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -75,7 +75,6 @@
     "36:uproar",
     "42:woodhammer",
     "48:endeavor",
-    "evolution:doublehit",
     "egg:fakeout",
     "egg:growth",
     "egg:hammerarm",

@@ -41,6 +41,16 @@
   "catchRate": 50,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
+      }
+    }
+  },
   "drops": {
     "amount": 2,
     "entries": [

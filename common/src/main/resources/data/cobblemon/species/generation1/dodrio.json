@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.6,
   "hitbox": {
     "width": 0.6,
@@ -58,8 +57,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -101,7 +98,6 @@
     "38:drillpeck",
     "43:endeavor",
     "50:thrash",
-    "evolution:triattack",
     "egg:assurance",
     "egg:feintattack",
     "egg:flail",

@@ -40,6 +40,7 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -74,7 +75,6 @@
     "46:phantomforce",
     "51:charm",
     "58:doubleedge",
-    "evolution:lastrespects",
     "egg:allyswitch",
     "egg:destinybond",
     "egg:disable",

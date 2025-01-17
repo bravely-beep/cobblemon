@@ -41,7 +41,6 @@
   "catchRate": 45,
   "eggCycles": 35,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.9,
@@ -51,7 +50,6 @@
   "behaviour": {
     "moving": {
       "swim": {
-        "canSwimInWater": true,
         "canBreatheUnderwater": true
       }
     }
@@ -97,7 +95,6 @@
     "45:acidarmor",
     "50:hydropump",
     "55:lastresort",
-    "evolution:watergun",
     "egg:captivate",
     "egg:curse",
     "egg:detect",

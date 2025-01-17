@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 0.9,
@@ -55,7 +54,6 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.3,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true
       },
@@ -65,8 +63,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -101,7 +97,6 @@
     "61:dragonrush",
     "66:doubleedge",
     "72:lastresort",
-    "evolution:dragonpulse",
     "egg:confuseray",
     "egg:curse",
     "egg:disable",

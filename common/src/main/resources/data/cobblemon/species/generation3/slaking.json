@@ -41,7 +41,6 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.25,
   "hitbox": {
     "width": 1.2,
@@ -60,8 +59,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "sleepChance": "0.0023",
       "light": "0-14"
     }
@@ -95,7 +92,6 @@
     "45:fling",
     "52:megakick",
     "63:hammerarm",
-    "evolution:swagger",
     "egg:afteryou",
     "egg:bodyslam",
     "egg:crushclaw",

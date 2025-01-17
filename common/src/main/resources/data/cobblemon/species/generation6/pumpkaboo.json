@@ -45,7 +45,6 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.8,
@@ -60,8 +59,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "11-15"
     }
   },
@@ -221,6 +218,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "baseScale": 0.6,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:trickortreat",
@@ -361,6 +359,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "baseScale": 1,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:trickortreat",
@@ -501,6 +500,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "baseScale": 1.4,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:trickortreat",

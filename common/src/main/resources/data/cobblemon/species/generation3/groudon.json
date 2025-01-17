@@ -14,7 +14,7 @@
     "restricted"
   ],
   "aspects": [
-    "reversion-state-standard"
+    "standard"
   ],
   "abilities": [
     "drought",
@@ -44,13 +44,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -181,7 +181,7 @@
         "primal"
       ],
       "aspects": [
-        "reversion-state-primal"
+        "primal"
       ],
       "abilities": [
         "desolateland",
@@ -212,6 +212,7 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:mudshot",
         "1:scaryface",

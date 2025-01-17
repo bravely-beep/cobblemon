@@ -14,7 +14,7 @@
     "restricted"
   ],
   "aspects": [
-    "behemoth-warrior-hero"
+    "hero"
   ],
   "abilities": [
     "dauntlessshield",
@@ -45,13 +45,13 @@
   "eggCycles": 120,
   "baseFriendship": 0,
   "dynamaxBlocked": true,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:wideguard",
     "1:metalclaw",
@@ -151,7 +151,7 @@
         "restricted"
       ],
       "aspects": [
-        "behemoth-warrior-crowned"
+        "crowned"
       ],
       "abilities": [
         "dauntlessshield",
@@ -182,6 +182,7 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [

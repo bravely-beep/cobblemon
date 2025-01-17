@@ -44,7 +44,6 @@
   "catchRate": 127,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1.3,
@@ -55,9 +54,10 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.25,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true,
+        "canSwimInLava": false
       }
     }
   },
@@ -92,7 +92,6 @@
     "48:amnesia",
     "53:superpower",
     "58:curse",
-    "evolution:watergun",
     "egg:defensecurl",
     "egg:furyswipes",
     "egg:mudsport",

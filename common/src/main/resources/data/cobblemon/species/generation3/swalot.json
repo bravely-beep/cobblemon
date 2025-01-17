@@ -41,13 +41,13 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -80,7 +80,6 @@
     "37:sludgebomb",
     "42:gastroacid",
     "49:belch",
-    "evolution:bodyslam",
     "egg:acidarmor",
     "egg:clearsmog",
     "egg:curse",

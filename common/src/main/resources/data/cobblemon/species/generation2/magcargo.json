@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1,
@@ -53,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -62,8 +59,8 @@
         "canWalkOnLava": true,
         "canBreatheUnderlava": true,
         "avoidsWater": true,
-        "canSwimInLava": true,
-        "canSwimInWater": false
+        "canSwimInWater": false,
+        "canSwimInLava": true
       },
       "walk": {
         "walkSpeed": 0.2
@@ -104,7 +101,6 @@
     "43:bodyslam",
     "47:recover",
     "54:flamethrower",
-    "evolution:shellsmash",
     "egg:acidarmor",
     "egg:curse",
     "egg:guardswap",

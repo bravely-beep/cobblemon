@@ -11,7 +11,8 @@
     "cobblemon.species.slowking.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -47,7 +48,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.2,
   "hitbox": {
     "width": 0.8,
@@ -57,8 +57,10 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       },
       "walk": {
         "walkSpeed": 0.2
@@ -243,9 +245,11 @@
         "cobblemon.species.slowking-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
+        "galarian",
         "galarian"
       ],
       "abilities": [
@@ -282,6 +286,12 @@
         "moving": {
           "walk": {
             "walkSpeed": 0.23
+          },
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
           }
         }
       },
@@ -319,7 +329,6 @@
         "39:psychup",
         "42:raindance",
         "45:healpulse",
-        "evolution:eeriespell",
         "egg:belch",
         "egg:bellydrum",
         "egg:block",

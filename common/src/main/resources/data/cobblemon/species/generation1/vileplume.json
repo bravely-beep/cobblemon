@@ -45,7 +45,6 @@
   "features": [
     "valencian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.2,
@@ -55,8 +54,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -92,7 +89,6 @@
     "1:sweetscent",
     "1:luckychant",
     "1:naturalgift",
-    "evolution:petalblizzard",
     "egg:afteryou",
     "egg:flail",
     "egg:ingrain",

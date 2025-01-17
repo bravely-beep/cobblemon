@@ -56,8 +56,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -90,7 +88,6 @@
     "43:dazzlinggleam",
     "49:psychic",
     "54:lastresort",
-    "evolution:luminacrash",
     "egg:allyswitch",
     "egg:hypnosis",
     "egg:roost",

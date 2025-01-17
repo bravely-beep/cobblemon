@@ -52,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -88,7 +86,6 @@
     "40:substitute",
     "45:knockoff",
     "51:gunkshot",
-    "evolution:doodle",
     "egg:copycat",
     "egg:crosspoison",
     "egg:partingshot",

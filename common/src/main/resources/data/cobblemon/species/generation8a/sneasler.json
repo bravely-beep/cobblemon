@@ -45,13 +45,13 @@
   "catchRate": 20,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.95,
     "height": 2.5,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -85,7 +85,6 @@
     "48:agility",
     "54:screech",
     "60:closecombat",
-    "evolution:direclaw",
     "egg:counter",
     "egg:doublehit",
     "egg:fakeout",

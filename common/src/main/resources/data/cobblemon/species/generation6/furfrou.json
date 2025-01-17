@@ -12,7 +12,7 @@
     "gen6"
   ],
   "aspects": [
-    "poodle-trim-natural"
+    "natural-trim"
   ],
   "abilities": [
     "furcoat",
@@ -42,13 +42,13 @@
   "catchRate": 160,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -149,7 +149,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-heart"
+        "heart-trim"
       ],
       "abilities": [
         "furcoat",
@@ -263,7 +263,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-star"
+        "star-trim"
       ],
       "abilities": [
         "furcoat",
@@ -377,7 +377,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-diamond"
+        "diamond-trim"
       ],
       "abilities": [
         "furcoat",
@@ -491,7 +491,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-debutante"
+        "debutante-trim"
       ],
       "abilities": [
         "furcoat",
@@ -605,7 +605,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-matron"
+        "matron-trim"
       ],
       "abilities": [
         "furcoat",
@@ -719,7 +719,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-dandy"
+        "dandy-trim"
       ],
       "abilities": [
         "furcoat",
@@ -833,7 +833,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-la_reine"
+        "la_reine-trim"
       ],
       "abilities": [
         "furcoat",
@@ -947,7 +947,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-kabuki"
+        "kabuki-trim"
       ],
       "abilities": [
         "furcoat",
@@ -1061,7 +1061,7 @@
         "gen6"
       ],
       "aspects": [
-        "poodle-trim-pharaoh"
+        "pharaoh-trim"
       ],
       "abilities": [
         "furcoat",

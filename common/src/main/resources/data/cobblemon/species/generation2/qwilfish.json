@@ -11,7 +11,8 @@
     "cobblemon.species.qwilfish.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,7 +47,6 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.6,
@@ -60,14 +60,13 @@
       },
       "swim": {
         "swimSpeed": 0.3,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -214,7 +213,8 @@
         "cobblemon.species.qwilfish-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -255,14 +255,13 @@
           },
           "swim": {
             "swimSpeed": 0.3,
+            "canBreatheUnderwater": true,
             "canSwimInWater": true,
-            "canBreatheUnderwater": true
+            "canSwimInLava": false
           }
         },
         "resting": {
           "canSleep": true,
-          "willSleepOnBed": false,
-          "depth": "normal",
           "light": "0-4"
         }
       },

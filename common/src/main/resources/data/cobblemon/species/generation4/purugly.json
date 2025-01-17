@@ -41,13 +41,13 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -74,7 +74,6 @@
     "45:bodyslam",
     "52:attract",
     "60:honeclaws",
-    "evolution:swagger",
     "egg:bite",
     "egg:flail",
     "egg:quickattack",

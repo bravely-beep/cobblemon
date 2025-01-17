@@ -45,7 +45,6 @@
   "features": [
     "sheared"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.9,
@@ -53,6 +52,7 @@
     "fixed": false
   },
   "standingEyeHeight": 0.6,
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [

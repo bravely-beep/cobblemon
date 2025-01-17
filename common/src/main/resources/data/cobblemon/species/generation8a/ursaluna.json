@@ -43,13 +43,13 @@
   "catchRate": 20,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.8,
     "height": 2,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 8,
     "entries": [
@@ -91,7 +91,6 @@
     "48:highhorsepower",
     "56:thrash",
     "64:hammerarm",
-    "evolution:headlongrush",
     "egg:bellydrum",
     "egg:chipaway",
     "egg:closecombat",
@@ -240,6 +239,7 @@
       "catchRate": 5,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:scratch",
         "1:leer",

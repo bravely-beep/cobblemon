@@ -11,7 +11,8 @@
     "cobblemon.species.dartrix.desc"
   ],
   "labels": [
-    "gen7"
+    "gen7",
+    "alolan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 1,
@@ -221,7 +221,9 @@
         "cobblemon.species.dartrix-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

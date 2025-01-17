@@ -42,6 +42,7 @@
   "catchRate": 25,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -74,7 +75,6 @@
     "57:ironhead",
     "64:swordsdance",
     "71:guillotine",
-    "evolution:kowtowcleave",
     "egg:feintattack",
     "egg:headbutt",
     "egg:meanlook",

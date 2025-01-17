@@ -10,7 +10,8 @@
     "cobblemon.species.muk.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.4,
   "hitbox": {
     "width": 1.4,
@@ -55,7 +55,8 @@
   "behaviour": {
     "moving": {
       "swim": {
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true
       }
     }
   },
@@ -95,7 +96,6 @@
     "46:acidarmor",
     "52:belch",
     "57:memento",
-    "evolution:venomdrench",
     "egg:acidspray",
     "egg:curse",
     "egg:haze",
@@ -213,9 +213,11 @@
         "cobblemon.species.muk-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
+        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -247,6 +249,13 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true
+          }
+        }
+      },
       "drops": {
         "amount": 4,
         "entries": [
@@ -282,7 +291,6 @@
         "46:acidarmor",
         "52:belch",
         "57:memento",
-        "evolution:venomdrench",
         "egg:assurance",
         "egg:clearsmog",
         "egg:curse",

@@ -41,13 +41,13 @@
   "catchRate": 60,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -80,7 +80,6 @@
     "1:babydolleyes",
     "1:growl",
     "1:doubleslap",
-    "evolution:tailslap",
     "egg:aquatail",
     "egg:captivate",
     "egg:flail",

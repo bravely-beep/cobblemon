@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.8,
@@ -52,7 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -60,8 +58,10 @@
         "walkSpeed": 0.17
       },
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -96,7 +96,6 @@
     "42:irondefense",
     "49:hydropump",
     "56:wavecrash",
-    "evolution:flashcannon",
     "egg:aquajet",
     "egg:aquaring",
     "egg:fakeout",
@@ -219,7 +218,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "megalauncher",
@@ -251,6 +250,16 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:flashcannon",
         "1:tackle",
@@ -269,7 +278,6 @@
         "42:irondefense",
         "49:hydropump",
         "56:wavecrash",
-        "evolution:flashcannon",
         "egg:aquajet",
         "egg:aquaring",
         "egg:fakeout",
@@ -392,7 +400,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "torrent",
@@ -424,6 +432,16 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:flashcannon",
         "1:tackle",
@@ -442,7 +460,6 @@
         "42:irondefense",
         "49:hydropump",
         "56:wavecrash",
-        "evolution:flashcannon",
         "egg:aquajet",
         "egg:aquaring",
         "egg:fakeout",

@@ -40,13 +40,13 @@
   "catchRate": 255,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -86,6 +86,10 @@
         {
           "variant": "level",
           "minLevel": 7
+        },
+        {
+          "variant": "properties",
+          "target": "wurmple cocoon_species=silcoon"
         }
       ]
     },
@@ -101,6 +105,10 @@
         {
           "variant": "level",
           "minLevel": 7
+        },
+        {
+          "variant": "properties",
+          "target": "wurmple cocoon_species=cascoon"
         }
       ]
     }

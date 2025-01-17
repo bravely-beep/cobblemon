@@ -52,12 +52,14 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -94,7 +96,6 @@
     "49:earthquake",
     "54:stoneedge",
     "60:explosion",
-    "evolution:hammerarm",
     "egg:ancientpower",
     "egg:curse",
     "egg:fissure",

@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 1,
@@ -52,8 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -93,7 +90,6 @@
     "45:screech",
     "50:endeavor",
     "55:leafstorm",
-    "evolution:furycutter",
     "egg:absorb",
     "egg:crushclaw",
     "egg:doublekick",

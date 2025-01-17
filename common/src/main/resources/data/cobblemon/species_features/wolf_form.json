@@ -10,5 +10,5 @@
     "midnight"
   ],
   "isAspect": true,
-  "aspectFormat": "wolf-form-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

@@ -42,7 +42,6 @@
   "catchRate": 120,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.9,
@@ -52,13 +51,15 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "walk": {
         "walkSpeed": 0.12
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     }
   },
@@ -98,7 +99,6 @@
     "42:sandstorm",
     "48:stoneedge",
     "54:explosion",
-    "evolution:powergem",
     "egg:autotomize",
     "egg:curse",
     "egg:gravity",

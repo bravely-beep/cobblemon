@@ -44,7 +44,6 @@
   "catchRate": 55,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -57,8 +56,10 @@
         "avoidsLand": true
       },
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -93,7 +94,6 @@
     "52:sludgebomb",
     "59:hydropump",
     "66:outrage",
-    "evolution:twister",
     "egg:acidarmor",
     "egg:camouflage",
     "egg:dragontail",

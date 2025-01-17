@@ -48,6 +48,7 @@
     "height": 1.9,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -83,7 +84,6 @@
     "48:jawlock",
     "55:doubleedge",
     "60:outrage",
-    "evolution:comeuppance",
     "egg:destinybond",
     "egg:endeavor",
     "egg:playrough",

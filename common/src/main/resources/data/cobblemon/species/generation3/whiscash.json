@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2.3,
@@ -56,8 +55,10 @@
         "avoidsLand": true
       },
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -94,7 +95,6 @@
     "40:earthquake",
     "48:futuresight",
     "56:fissure",
-    "evolution:thrash",
     "egg:flail",
     "egg:magnitude",
     "egg:spark",

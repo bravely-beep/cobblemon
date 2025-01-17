@@ -14,7 +14,7 @@
     "gen6"
   ],
   "aspects": [
-    "stance-forme-shield"
+    "shield-forme"
   ],
   "abilities": [
     "stancechange",
@@ -44,12 +44,19 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.1,
     "height": 1.9,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "drops": {
     "amount": 5,
@@ -86,7 +93,6 @@
     "1:retaliate",
     "1:metalsound",
     "1:tackle",
-    "evolution:kingsshield",
     "egg:block",
     "egg:destinybond",
     "egg:wideguard",
@@ -162,7 +168,7 @@
         "gen6"
       ],
       "aspects": [
-        "stance-forme-blade"
+        "blade-forme"
       ],
       "abilities": [
         "stancechange",
@@ -192,6 +198,14 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInWater": false
+          }
+        }
+      },
       "moves": [
         "1:furycutter",
         "1:pursuit",
@@ -210,7 +224,6 @@
         "1:retaliate",
         "1:metalsound",
         "1:tackle",
-        "evolution:kingsshield",
         "tm:aerialace",
         "tm:afteryou",
         "tm:airslash",

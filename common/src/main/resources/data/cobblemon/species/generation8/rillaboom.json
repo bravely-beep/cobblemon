@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.95,
   "hitbox": {
     "width": 1.6,
     "height": 2.3,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -79,7 +79,6 @@
     "46:woodhammer",
     "54:endeavor",
     "62:boomburst",
-    "evolution:drumbeating",
     "egg:fakeout",
     "egg:growth",
     "egg:hammerarm",
@@ -185,7 +184,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "overgrow",
@@ -217,6 +216,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:drumbeating",
         "1:doublehit",
@@ -234,7 +234,6 @@
         "46:woodhammer",
         "54:endeavor",
         "62:boomburst",
-        "evolution:drumbeating",
         "egg:fakeout",
         "egg:growth",
         "egg:hammerarm",

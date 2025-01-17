@@ -42,13 +42,13 @@
   "catchRate": 3,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:watergun",
     "1:refresh",

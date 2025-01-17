@@ -52,12 +52,14 @@
     "moving": {
       "fly": {
         "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -96,7 +98,6 @@
     "39:powergem",
     "44:acidarmor",
     "50:sludgewave",
-    "evolution:mortalspin",
     "egg:explosion",
     "egg:memento",
     "egg:toxic",

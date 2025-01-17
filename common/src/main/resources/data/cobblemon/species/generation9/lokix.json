@@ -41,6 +41,7 @@
   "catchRate": 30,
   "eggCycles": 20,
   "baseFriendship": 0,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -70,7 +71,6 @@
     "44:firstimpression",
     "48:bounce",
     "53:axekick",
-    "evolution:lunge",
     "egg:counter",
     "egg:skittersmack",
     "tm:aerialace",

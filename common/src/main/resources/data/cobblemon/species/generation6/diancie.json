@@ -42,13 +42,13 @@
   "catchRate": 3,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:tackle",
     "1:harden",
@@ -166,7 +166,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "magicbounce",
@@ -197,6 +197,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:harden",

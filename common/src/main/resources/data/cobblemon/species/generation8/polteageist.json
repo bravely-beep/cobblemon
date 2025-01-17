@@ -12,7 +12,7 @@
     "gen8"
   ],
   "aspects": [
-    "tea-authenticity-phony"
+    "phony"
   ],
   "abilities": [
     "weakarmor",
@@ -43,13 +43,13 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -76,7 +76,6 @@
     "54:memento",
     "60:shellsmash",
     "66:curse",
-    "evolution:teatime",
     "egg:allyswitch",
     "tm:allyswitch",
     "tm:aromatherapy",
@@ -147,7 +146,7 @@
         "gen8"
       ],
       "aspects": [
-        "tea-authenticity-antique"
+        "antique"
       ],
       "abilities": [
         "weakarmor",
@@ -178,6 +177,7 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:teatime",
         "1:strengthsap",
@@ -195,7 +195,6 @@
         "54:memento",
         "60:shellsmash",
         "66:curse",
-        "evolution:teatime",
         "egg:allyswitch",
         "tm:allyswitch",
         "tm:aromatherapy",

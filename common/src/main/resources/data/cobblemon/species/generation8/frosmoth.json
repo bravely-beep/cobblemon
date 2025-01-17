@@ -41,13 +41,13 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -84,7 +84,6 @@
     "44:tailwind",
     "48:wideguard",
     "52:quiverdance",
-    "evolution:icywind",
     "egg:bugbite",
     "egg:fairywind",
     "egg:mirrorcoat",

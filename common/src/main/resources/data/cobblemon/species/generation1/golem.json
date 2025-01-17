@@ -11,7 +11,8 @@
     "cobblemon.species.golem.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,12 +47,26 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 1,
     "height": 1.3,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.14
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4"
+    }
   },
   "drops": {
     "amount": 6,
@@ -193,9 +208,11 @@
         "cobblemon.species.golem-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
+        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -227,6 +244,14 @@
       "catchRate": 45,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInWater": false
+          }
+        }
+      },
       "drops": {
         "amount": 6,
         "entries": [

@@ -45,7 +45,6 @@
   "features": [
     "valencian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 0.5,
@@ -55,7 +54,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -103,7 +101,6 @@
     "36:tailwind",
     "40:ragepowder",
     "44:quiverdance",
-    "evolution:gust",
     "tm:acrobatics",
     "tm:aerialace",
     "tm:aircutter",
@@ -184,7 +181,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "compoundeyes",
@@ -215,6 +212,7 @@
       "eggCycles": 15,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:gust",
         "1:stringshot",
@@ -235,7 +233,6 @@
         "36:tailwind",
         "40:ragepowder",
         "44:quiverdance",
-        "evolution:gust",
         "tm:acrobatics",
         "tm:aerialace",
         "tm:aircutter",

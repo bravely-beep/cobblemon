@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.6,
@@ -54,8 +53,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -115,7 +112,6 @@
     "56:quickguard",
     "56:wideguard",
     "63:closecombat",
-    "evolution:slash",
     "egg:confuseray",
     "egg:destinybond",
     "egg:disable",
@@ -287,7 +283,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "innerfocus",
@@ -318,6 +314,7 @@
       "eggCycles": 20,
       "baseFriendship": 35,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:leafblade",
         "1:nightslash",
@@ -353,7 +350,6 @@
         "56:quickguard",
         "56:wideguard",
         "63:closecombat",
-        "evolution:slash",
         "egg:confuseray",
         "egg:destinybond",
         "egg:disable",

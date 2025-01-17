@@ -42,6 +42,7 @@
   "catchRate": 3,
   "eggCycles": 20,
   "baseFriendship": 0,
+  "behaviour": {},
   "moves": [
     "1:smog",
     "1:poisongas",

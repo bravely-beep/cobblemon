@@ -41,13 +41,13 @@
   "catchRate": 45,
   "eggCycles": 35,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.9,
     "height": 1.2,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -88,8 +88,6 @@
     "45:psychup",
     "50:moonblast",
     "55:lastresort",
-    "evolution:disarmingvoice",
-    "evolution:fairywind",
     "egg:captivate",
     "egg:curse",
     "egg:detect",

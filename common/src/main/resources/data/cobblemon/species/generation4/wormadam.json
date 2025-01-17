@@ -13,7 +13,7 @@
     "gen4"
   ],
   "aspects": [
-    "bagworm-cloak-plant"
+    "plant-cloak"
   ],
   "abilities": [
     "anticipation",
@@ -43,7 +43,7 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -74,7 +74,6 @@
     "44:psychic",
     "47:leafstorm",
     "50:bugbuzz",
-    "evolution:quiverdance",
     "tm:attract",
     "tm:bugbite",
     "tm:bugbuzz",
@@ -146,7 +145,7 @@
         "gen4"
       ],
       "aspects": [
-        "bagworm-cloak-sandy"
+        "sandy-cloak"
       ],
       "abilities": [
         "anticipation",
@@ -176,6 +175,7 @@
       "catchRate": 45,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:protect",
@@ -193,7 +193,6 @@
         "44:psychic",
         "47:fissure",
         "50:bugbuzz",
-        "evolution:quiverdance",
         "tm:attract",
         "tm:bugbite",
         "tm:bugbuzz",
@@ -267,7 +266,7 @@
         "gen4"
       ],
       "aspects": [
-        "bagworm-cloak-trash"
+        "trash-cloak"
       ],
       "abilities": [
         "anticipation",
@@ -297,6 +296,7 @@
       "catchRate": 45,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:protect",
@@ -315,7 +315,6 @@
         "44:psychic",
         "47:ironhead",
         "50:bugbuzz",
-        "evolution:quiverdance",
         "tm:attract",
         "tm:bugbite",
         "tm:bugbuzz",

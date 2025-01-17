@@ -54,6 +54,12 @@
     "moving": {
       "fly": {
         "canFly": true
+      },
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -92,7 +98,6 @@
     "43:voltswitch",
     "48:discharge",
     "55:hurricane",
-    "evolution:electroball",
     "egg:endeavor",
     "egg:featherdance",
     "egg:spitup",

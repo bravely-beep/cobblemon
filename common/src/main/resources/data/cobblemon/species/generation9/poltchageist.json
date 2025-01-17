@@ -13,7 +13,7 @@
     "gen9"
   ],
   "aspects": [
-    "matcha-authenticity-counterfeit"
+    "counterfeit"
   ],
   "abilities": [
     "hospitality",
@@ -44,6 +44,7 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -134,7 +135,7 @@
         "gen9"
       ],
       "aspects": [
-        "matcha-authenticity-artisan"
+        "artisan"
       ],
       "abilities": [
         "hospitality",
@@ -165,6 +166,7 @@
       "catchRate": 120,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:stunspore",
         "1:withdraw",

@@ -10,7 +10,8 @@
     "cobblemon.species.samurott.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.6,
@@ -54,13 +54,10 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "swim": {
-        "canSwimInWater": true,
         "canBreatheUnderwater": true
       }
     }
@@ -97,7 +94,6 @@
     "51:retaliate",
     "58:swordsdance",
     "63:hydropump",
-    "evolution:slash",
     "egg:airslash",
     "egg:aquacutter",
     "egg:copycat",
@@ -203,7 +199,8 @@
         "cobblemon.species.samurott-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -245,13 +242,10 @@
       "behaviour": {
         "resting": {
           "canSleep": true,
-          "willSleepOnBed": false,
-          "depth": "normal",
           "light": "0-4"
         },
         "moving": {
           "swim": {
-            "canSwimInWater": true,
             "canBreatheUnderwater": true
           }
         }
@@ -290,7 +284,6 @@
         "51:retaliate",
         "58:swordsdance",
         "63:hydropump",
-        "evolution:ceaselessedge",
         "egg:airslash",
         "egg:aquacutter",
         "egg:copycat",

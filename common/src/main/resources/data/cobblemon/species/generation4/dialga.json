@@ -15,7 +15,7 @@
     "restricted"
   ],
   "aspects": [
-    "orb-forme-standard"
+    "altered-forme"
   ],
   "abilities": [
     "pressure",
@@ -45,13 +45,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:scaryface",
     "1:metalclaw",
@@ -163,7 +163,7 @@
         "restricted"
       ],
       "aspects": [
-        "orb-forme-origin"
+        "origin-forme"
       ],
       "abilities": [
         "pressure",
@@ -193,6 +193,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:scaryface",
         "1:metalclaw",

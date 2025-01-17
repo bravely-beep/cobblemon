@@ -11,7 +11,8 @@
     "cobblemon.species.wooper.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -57,14 +58,15 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     },
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -210,7 +212,8 @@
         "cobblemon.species.wooper-paldea.desc"
       ],
       "labels": [
-        "gen9"
+        "gen9",
+        "paldean_form"
       ],
       "aspects": [
         "paldean"
@@ -245,6 +248,16 @@
       "catchRate": 255,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "drops": {
         "amount": 2,
         "entries": [

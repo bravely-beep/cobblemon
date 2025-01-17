@@ -14,7 +14,7 @@
     "legendary"
   ],
   "aspects": [
-    "wushu-style-single_strike"
+    "single_strike-style"
   ],
   "abilities": [
     "unseenfist",
@@ -44,13 +44,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:wickedblow",
     "1:suckerpunch",
@@ -69,7 +69,6 @@
     "44:counter",
     "48:closecombat",
     "52:focuspunch",
-    "evolution:wickedblow",
     "tm:acrobatics",
     "tm:aerialace",
     "tm:assurance",
@@ -161,7 +160,7 @@
         "legendary"
       ],
       "aspects": [
-        "wushu-style-rapid_strike"
+        "rapid_strike-style"
       ],
       "abilities": [
         "unseenfist",
@@ -191,6 +190,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:surgingstrikes",
         "1:aquajet",
@@ -209,7 +209,6 @@
         "44:counter",
         "48:closecombat",
         "52:focuspunch",
-        "evolution:surgingstrikes",
         "tm:acrobatics",
         "tm:aerialace",
         "tm:aquajet",
@@ -298,8 +297,8 @@
         "gmax"
       ],
       "aspects": [
-        "wushu-style-single_strike",
-        "dynamax-form-gmax"
+        "single_strike-style",
+        "gmax"
       ],
       "abilities": [
         "unseenfist",
@@ -330,6 +329,7 @@
       "eggCycles": 120,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:wickedblow",
         "1:suckerpunch",
@@ -348,7 +348,6 @@
         "44:counter",
         "48:closecombat",
         "52:focuspunch",
-        "evolution:wickedblow",
         "tm:acrobatics",
         "tm:aerialace",
         "tm:assurance",
@@ -440,8 +439,8 @@
         "gmax"
       ],
       "aspects": [
-        "wushu-style-rapid_strike",
-        "dynamax-form-gmax"
+        "rapid_strike-style",
+        "gmax"
       ],
       "abilities": [
         "unseenfist",
@@ -472,6 +471,7 @@
       "eggCycles": 120,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:surgingstrikes",
         "1:aquajet",
@@ -490,7 +490,6 @@
         "44:counter",
         "48:closecombat",
         "52:focuspunch",
-        "evolution:surgingstrikes",
         "tm:acrobatics",
         "tm:aerialace",
         "tm:aquajet",

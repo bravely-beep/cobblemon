@@ -10,7 +10,8 @@
     "cobblemon.species.voltorb.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,12 +46,19 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 0.7,
     "height": 0.7,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "drops": {
     "amount": 1,
@@ -162,7 +170,8 @@
         "cobblemon.species.voltorb-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -196,6 +205,14 @@
       "catchRate": 190,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInWater": false
+          }
+        }
+      },
       "drops": {
         "amount": 3,
         "entries": [

@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 0.9,
     "height": 3,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -84,7 +84,6 @@
     "46:bounce",
     "54:doubleedge",
     "62:courtchange",
-    "evolution:pyroball",
     "egg:highjumpkick",
     "egg:sandattack",
     "egg:suckerpunch",
@@ -182,7 +181,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "blaze",
@@ -214,6 +213,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:pyroball",
         "1:feint",
@@ -229,7 +229,6 @@
         "46:bounce",
         "54:doubleedge",
         "62:courtchange",
-        "evolution:pyroball",
         "egg:highjumpkick",
         "egg:sandattack",
         "egg:suckerpunch",

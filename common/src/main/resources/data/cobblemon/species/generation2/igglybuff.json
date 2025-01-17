@@ -51,6 +51,7 @@
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [

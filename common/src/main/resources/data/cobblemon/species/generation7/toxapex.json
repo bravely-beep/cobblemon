@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 2,
@@ -54,8 +53,9 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.2,
-        "canSwimInWater": false,
-        "canBreatheUnderwater": true
+        "canSwimInWater": true,
+        "canBreatheUnderwater": true,
+        "canSwimInLava": false
       }
     }
   },
@@ -91,7 +91,6 @@
     "42:acidspray",
     "49:poisonjab",
     "56:toxic",
-    "evolution:banefulbunker",
     "egg:haze",
     "egg:infestation",
     "egg:spikecannon",

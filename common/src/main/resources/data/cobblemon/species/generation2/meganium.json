@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 1.6,
@@ -52,8 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -89,7 +86,6 @@
     "54:safeguard",
     "60:gigadrain",
     "65:solarbeam",
-    "evolution:petaldance",
     "egg:ancientpower",
     "egg:aromatherapy",
     "egg:counter",

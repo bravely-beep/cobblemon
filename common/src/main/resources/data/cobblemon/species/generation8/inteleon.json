@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 0.8,
@@ -52,14 +51,14 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -87,7 +86,6 @@
     "46:soak",
     "54:raindance",
     "62:hydropump",
-    "evolution:snipeshot",
     "egg:aquajet",
     "egg:aquaring",
     "egg:doubleteam",
@@ -183,7 +181,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "torrent",
@@ -215,6 +213,16 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:snipeshot",
         "1:acrobatics",
@@ -230,7 +238,6 @@
         "46:soak",
         "54:raindance",
         "62:hydropump",
-        "evolution:snipeshot",
         "egg:aquajet",
         "egg:aquaring",
         "egg:doubleteam",

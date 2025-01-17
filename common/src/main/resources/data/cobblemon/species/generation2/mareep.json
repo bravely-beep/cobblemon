@@ -45,7 +45,6 @@
   "features": [
     "sheared"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 0.75,
@@ -60,7 +59,6 @@
     },
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },

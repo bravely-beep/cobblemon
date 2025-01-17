@@ -44,12 +44,18 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 1.1,
     "height": 2,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInLava": true
+      }
+    }
   },
   "drops": {
     "amount": 2,
@@ -82,7 +88,6 @@
     "54:stoneedge",
     "61:megahorn",
     "68:horndrill",
-    "evolution:hammerarm",
     "egg:counter",
     "egg:crushclaw",
     "egg:curse",

@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.5,
@@ -53,7 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -66,8 +64,8 @@
       },
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInLava": true
       }
     }
   },
@@ -103,8 +101,6 @@
     "46:firespin",
     "54:inferno",
     "62:flareblitz",
-    "evolution:airslash",
-    "evolution:wingattack",
     "egg:ancientpower",
     "egg:bellydrum",
     "egg:bite",
@@ -233,7 +229,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega_x"
+        "mega_x"
       ],
       "abilities": [
         "toughclaws",
@@ -265,6 +261,13 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInLava": true
+          }
+        }
+      },
       "moves": [
         "1:dragonclaw",
         "1:airslash",
@@ -284,8 +287,6 @@
         "46:firespin",
         "54:inferno",
         "62:flareblitz",
-        "evolution:airslash",
-        "evolution:wingattack",
         "egg:ancientpower",
         "egg:bellydrum",
         "egg:bite",
@@ -414,7 +415,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega_y"
+        "mega_y"
       ],
       "abilities": [
         "drought",
@@ -446,6 +447,13 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInLava": true
+          }
+        }
+      },
       "moves": [
         "1:dragonclaw",
         "1:airslash",
@@ -465,8 +473,6 @@
         "46:firespin",
         "54:inferno",
         "62:flareblitz",
-        "evolution:airslash",
-        "evolution:wingattack",
         "egg:ancientpower",
         "egg:bellydrum",
         "egg:bite",
@@ -595,7 +601,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "blaze",
@@ -627,6 +633,13 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInLava": true
+          }
+        }
+      },
       "moves": [
         "1:dragonclaw",
         "1:airslash",
@@ -646,8 +659,6 @@
         "46:firespin",
         "54:inferno",
         "62:flareblitz",
-        "evolution:airslash",
-        "evolution:wingattack",
         "egg:ancientpower",
         "egg:bellydrum",
         "egg:bite",

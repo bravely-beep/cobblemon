@@ -51,6 +51,7 @@
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -83,8 +84,6 @@
     "1:acid",
     "1:luckychant",
     "1:naturalgift",
-    "evolution:magicalleaf",
-    "evolution:petalblizzard",
     "egg:afteryou",
     "egg:flail",
     "egg:ingrain",

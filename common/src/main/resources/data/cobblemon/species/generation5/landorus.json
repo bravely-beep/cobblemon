@@ -14,7 +14,7 @@
     "legendary"
   ],
   "aspects": [
-    "mirror-forme-incarnate"
+    "incarnate-forme"
   ],
   "abilities": [
     "sandforce",
@@ -44,7 +44,7 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 90,
-  "shoulderMountable": false,
+  "behaviour": {},
   "moves": [
     "1:punishment",
     "1:rockthrow",
@@ -150,7 +150,7 @@
         "legendary"
       ],
       "aspects": [
-        "mirror-forme-therian"
+        "therian-forme"
       ],
       "abilities": [
         "intimidate",
@@ -180,6 +180,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 90,
+      "behaviour": {},
       "moves": [
         "1:punishment",
         "1:rockthrow",

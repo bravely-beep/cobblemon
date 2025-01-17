@@ -10,7 +10,8 @@
     "cobblemon.species.dewott.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 1,
@@ -54,15 +54,12 @@
   "behaviour": {
     "moving": {
       "swim": {
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -229,7 +226,9 @@
         "cobblemon.species.dewott-hisuibias.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

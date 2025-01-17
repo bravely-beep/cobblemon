@@ -10,7 +10,8 @@
     "cobblemon.species.ponyta.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.8,
@@ -60,8 +60,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -182,7 +180,8 @@
         "cobblemon.species.ponyta-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -216,6 +215,7 @@
       "catchRate": 190,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [

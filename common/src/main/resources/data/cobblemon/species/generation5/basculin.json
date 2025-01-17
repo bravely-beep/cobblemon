@@ -10,7 +10,8 @@
     "cobblemon.species.basculin.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [
     "redstriped"
@@ -44,7 +45,6 @@
   "catchRate": 190,
   "eggCycles": 40,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.18,
@@ -59,8 +59,9 @@
       },
       "swim": {
         "swimSpeed": 0.1,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     }
   },
@@ -298,16 +299,17 @@
       "battleOnly": false
     },
     {
-      "name": "White",
+      "name": "White-Striped",
       "primaryType": "water",
       "maleRatio": 0.5,
       "height": 10,
       "weight": 180,
       "pokedex": [
-        "cobblemon.species.basculin-white.desc"
+        "cobblemon.species.basculin-whitestriped.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "whitestriped"

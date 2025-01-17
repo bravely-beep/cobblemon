@@ -9,5 +9,5 @@
     "busted"
   ],
   "isAspect": true,
-  "aspectFormat": "disguise-form-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

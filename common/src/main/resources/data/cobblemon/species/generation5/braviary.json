@@ -10,7 +10,8 @@
     "cobblemon.species.braviary.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,12 +46,18 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
-  "baseScale": 1,
+  "baseScale": 0.8,
   "hitbox": {
-    "width": 1,
-    "height": 1,
+    "width": 1.2,
+    "height": 2.25,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      }
+    }
   },
   "drops": {
     "amount": 5,
@@ -89,7 +96,6 @@
     "57:airslash",
     "64:defog",
     "72:thrash",
-    "evolution:superpower",
     "egg:rocksmash",
     "egg:roost",
     "tm:acrobatics",
@@ -169,7 +175,8 @@
         "cobblemon.species.braviary-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -203,6 +210,7 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -242,7 +250,6 @@
         "64:defog",
         "72:thrash",
         "80:hurricane",
-        "evolution:esperwing",
         "egg:rocksmash",
         "egg:roost",
         "tm:acrobatics",

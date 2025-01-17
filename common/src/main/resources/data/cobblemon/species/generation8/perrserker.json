@@ -44,13 +44,13 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -81,7 +81,6 @@
     "42:slash",
     "48:metalsound",
     "54:thrash",
-    "evolution:ironhead",
     "egg:covet",
     "egg:curse",
     "egg:doubleedge",

@@ -42,13 +42,13 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -82,7 +82,6 @@
     "43:woodhammer",
     "49:blizzard",
     "56:sheercold",
-    "evolution:icepunch",
     "egg:doubleedge",
     "egg:growth",
     "egg:leechseed",
@@ -194,7 +193,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "snowwarning",
@@ -226,6 +225,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:icepunch",
         "1:powdersnow",
@@ -242,7 +242,6 @@
         "43:woodhammer",
         "49:blizzard",
         "56:sheercold",
-        "evolution:icepunch",
         "egg:doubleedge",
         "egg:growth",
         "egg:leechseed",

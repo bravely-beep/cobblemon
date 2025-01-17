@@ -41,13 +41,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.75,
   "hitbox": {
     "width": 0.55,
     "height": 1.3,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:astonish",
     "1:doubleteam",
@@ -132,7 +132,7 @@
         "gen4"
       ],
       "aspects": [
-        "appliance-heat"
+        "heat-appliance"
       ],
       "abilities": [
         "levitate",
@@ -162,6 +162,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:doubleteam",
@@ -249,7 +250,7 @@
         "gen4"
       ],
       "aspects": [
-        "appliance-wash"
+        "wash-appliance"
       ],
       "abilities": [
         "levitate",
@@ -279,6 +280,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:doubleteam",
@@ -366,7 +368,7 @@
         "gen4"
       ],
       "aspects": [
-        "appliance-frost"
+        "frost-appliance"
       ],
       "abilities": [
         "levitate",
@@ -396,6 +398,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:doubleteam",
@@ -483,7 +486,7 @@
         "gen4"
       ],
       "aspects": [
-        "appliance-fan"
+        "fan-appliance"
       ],
       "abilities": [
         "levitate",
@@ -513,6 +516,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:doubleteam",
@@ -600,7 +604,7 @@
         "gen4"
       ],
       "aspects": [
-        "appliance-mow"
+        "mow-appliance"
       ],
       "abilities": [
         "levitate",
@@ -630,6 +634,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:doubleteam",

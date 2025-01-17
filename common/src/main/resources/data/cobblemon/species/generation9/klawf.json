@@ -48,6 +48,16 @@
     "height": 1.25,
     "fixed": false
   },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
+      }
+    }
+  },
   "drops": {
     "amount": 1,
     "entries": [

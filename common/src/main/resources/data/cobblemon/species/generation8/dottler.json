@@ -42,13 +42,13 @@
   "catchRate": 120,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -63,9 +63,6 @@
     "1:lightscreen",
     "1:confusion",
     "1:strugglebug",
-    "evolution:confusion",
-    "evolution:lightscreen",
-    "evolution:reflect",
     "egg:infestation",
     "egg:recover",
     "egg:stickyweb",

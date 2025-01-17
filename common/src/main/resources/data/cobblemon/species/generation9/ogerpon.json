@@ -13,7 +13,7 @@
     "legendary"
   ],
   "aspects": [
-    "ogre-mask-teal"
+    "teal-mask"
   ],
   "abilities": [
     "defiant",
@@ -43,6 +43,7 @@
   "catchRate": 5,
   "eggCycles": 10,
   "baseFriendship": 50,
+  "behaviour": {},
   "moves": [
     "1:vinewhip",
     "1:leechseed",
@@ -143,7 +144,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-wellspring"
+        "wellspring-mask"
       ],
       "abilities": [
         "waterabsorb",
@@ -173,6 +174,7 @@
       "catchRate": 5,
       "eggCycles": 5,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",
@@ -274,7 +276,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-hearthflame"
+        "hearthflame-mask"
       ],
       "abilities": [
         "moldbreaker",
@@ -304,6 +306,7 @@
       "catchRate": 5,
       "eggCycles": 5,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",
@@ -405,7 +408,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-cornerstone"
+        "cornerstone-mask"
       ],
       "abilities": [
         "sturdy",
@@ -435,6 +438,7 @@
       "catchRate": 5,
       "eggCycles": 5,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",
@@ -535,7 +539,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-teal",
+        "teal-mask",
         "embody-aspect"
       ],
       "abilities": [
@@ -567,6 +571,7 @@
       "eggCycles": 5,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",
@@ -668,7 +673,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-wellspring",
+        "wellspring-mask",
         "embody-aspect"
       ],
       "abilities": [
@@ -700,6 +705,7 @@
       "eggCycles": 5,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",
@@ -801,7 +807,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-hearthflame",
+        "hearthflame-mask",
         "embody-aspect"
       ],
       "abilities": [
@@ -833,6 +839,7 @@
       "eggCycles": 5,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",
@@ -934,7 +941,7 @@
         "legendary"
       ],
       "aspects": [
-        "ogre-mask-cornerstone",
+        "cornerstone-mask",
         "embody-aspect"
       ],
       "abilities": [
@@ -966,6 +973,7 @@
       "eggCycles": 5,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:vinewhip",
         "1:leechseed",

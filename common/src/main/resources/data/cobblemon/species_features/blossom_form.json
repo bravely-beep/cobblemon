@@ -9,5 +9,5 @@
     "sunshine"
   ],
   "isAspect": true,
-  "aspectFormat": "blossom-form-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

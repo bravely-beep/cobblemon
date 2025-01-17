@@ -10,7 +10,8 @@
     "cobblemon.species.cranidos.desc"
   ],
   "labels": [
-    "gen4"
+    "gen4",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -41,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.7,
@@ -51,13 +51,14 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "walk": {
         "walkSpeed": 0.18
+      },
+      "swim": {
+        "canSwimInLava": true
       }
     }
   },

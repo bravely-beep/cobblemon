@@ -43,7 +43,6 @@
   "catchRate": 15,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.2,
@@ -53,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -88,7 +85,6 @@
     "36:rockslide",
     "40:xscissor",
     "44:swordsdance",
-    "evolution:stoneaxe",
     "egg:counter",
     "egg:defog",
     "egg:feint",

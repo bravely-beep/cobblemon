@@ -1,5 +1,5 @@
 {
-  "keys": ["schooling"],
+  "keys": ["three_segment"],
   "type": "flag",
   "isAspect": true,
   "default": false

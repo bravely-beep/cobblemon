@@ -10,7 +10,8 @@
     "cobblemon.species.sliggoo.desc"
   ],
   "labels": [
-    "gen6"
+    "gen6",
+    "kalosian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -43,15 +44,15 @@
   "eggCycles": 40,
   "baseFriendship": 35,
   "features": [
-    "regional_form"
+    "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.65,
   "hitbox": {
     "width": 1.1,
     "height": 1.65,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -82,7 +83,6 @@
     "43:curse",
     "49:bodyslam",
     "56:muddywater",
-    "evolution:acidspray",
     "egg:counter",
     "egg:lifedew",
     "tm:absorb",
@@ -176,7 +176,8 @@
         "cobblemon.species.sliggoo-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -216,6 +217,7 @@
         "height": 1.75,
         "fixed": false
       },
+      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -250,7 +252,6 @@
         "43:curse",
         "49:ironhead",
         "56:muddywater",
-        "evolution:shelter",
         "egg:counter",
         "egg:lifedew",
         "tm:absorb",

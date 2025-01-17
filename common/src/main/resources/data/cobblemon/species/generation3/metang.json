@@ -42,7 +42,6 @@
   "catchRate": 3,
   "eggCycles": 40,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -53,12 +52,14 @@
     "moving": {
       "fly": {
         "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -93,8 +94,6 @@
     "58:irondefense",
     "66:agility",
     "74:hyperbeam",
-    "evolution:confusion",
-    "evolution:metalclaw",
     "tm:aerialace",
     "tm:agility",
     "tm:allyswitch",

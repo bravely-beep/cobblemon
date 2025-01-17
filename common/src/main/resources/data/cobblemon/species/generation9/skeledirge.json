@@ -51,8 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -86,7 +84,6 @@
     "47:hex",
     "58:fireblast",
     "64:overheat",
-    "evolution:torchsong",
     "egg:belch",
     "egg:curse",
     "egg:encore",

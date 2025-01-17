@@ -14,5 +14,5 @@
     "violet"
   ],
   "isAspect": true,
-  "aspectFormat": "core-color-{{choice}}"
+  "aspectFormat": "{{choice}}-core"
 }

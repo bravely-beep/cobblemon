@@ -46,8 +46,13 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
     }
   },
   "drops": {
@@ -85,7 +90,6 @@
     "46:uproar",
     "52:spinout",
     "58:gunkshot",
-    "evolution:shiftgear",
     "egg:haze",
     "egg:partingshot",
     "egg:selfdestruct",

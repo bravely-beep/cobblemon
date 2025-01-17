@@ -42,12 +42,19 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "drops": {
     "amount": 5,
@@ -81,7 +88,6 @@
     "45:heatcrash",
     "54:rockblast",
     "63:stoneedge",
-    "evolution:tarshot",
     "egg:block",
     "egg:explosion",
     "egg:mudslap",
@@ -167,7 +173,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "steamengine",
@@ -199,6 +205,14 @@
       "eggCycles": 15,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInWater": false
+          }
+        }
+      },
       "moves": [
         "1:tarshot",
         "1:flamecharge",
@@ -214,7 +228,6 @@
         "45:heatcrash",
         "54:rockblast",
         "63:stoneedge",
-        "evolution:tarshot",
         "egg:block",
         "egg:explosion",
         "egg:mudslap",

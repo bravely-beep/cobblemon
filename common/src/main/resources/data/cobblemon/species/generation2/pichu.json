@@ -11,7 +11,8 @@
   ],
   "labels": [
     "gen2",
-    "baby"
+    "baby",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -49,6 +50,7 @@
     "height": 0.9,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -170,7 +172,9 @@
       ],
       "labels": [
         "gen7",
-        "baby"
+        "baby",
+        "customized_official",
+        "alolan_form"
       ],
       "aspects": [
         "region-bias-alola"

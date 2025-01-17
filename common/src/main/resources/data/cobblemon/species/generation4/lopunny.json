@@ -43,7 +43,6 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 140,
-  "shoulderMountable": false,
   "baseScale": 0.5,
   "hitbox": {
     "width": 1.4,
@@ -58,8 +57,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -112,7 +109,6 @@
     "48:bounce",
     "52:healingwish",
     "56:highjumpkick",
-    "evolution:return",
     "egg:attract",
     "egg:circlethrow",
     "egg:copycat",
@@ -246,7 +242,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "scrappy",
@@ -278,6 +274,7 @@
       "eggCycles": 20,
       "baseFriendship": 140,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:mirrorcoat",
         "1:magiccoat",
@@ -303,7 +300,6 @@
         "48:bounce",
         "52:healingwish",
         "56:highjumpkick",
-        "evolution:return",
         "egg:attract",
         "egg:circlethrow",
         "egg:copycat",

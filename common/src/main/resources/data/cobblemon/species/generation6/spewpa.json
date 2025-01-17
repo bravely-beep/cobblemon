@@ -41,7 +41,6 @@
   "catchRate": 120,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.5,
@@ -60,8 +59,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -87,7 +84,6 @@
     "1:protect",
     "1:stunspore",
     "1:tackle",
-    "evolution:protect",
     "egg:poisonpowder",
     "egg:ragepowder",
     "egg:stunspore",
@@ -239,7 +235,7 @@
     {
       "id": "spewpa_vivillonhighplains",
       "variant": "level_up",
-      "result": "vivillon vivillon_wings=high_plains",
+      "result": "vivillon vivillon_wings=high-plains",
       "consumeHeldItem": false,
       "learnableMoves": [
         "gust"
@@ -251,7 +247,7 @@
         },
         {
           "variant": "biome",
-          "biomeCondition": "#cobblemon:evolution/vivillon/high_plains"
+          "biomeCondition": "#cobblemon:evolution/vivillon/high-plains"
         },
         {
           "variant": "structure",
@@ -262,7 +258,7 @@
     {
       "id": "spewpa_vivillonicysnow",
       "variant": "level_up",
-      "result": "vivillon vivillon_wings=icy_snow",
+      "result": "vivillon vivillon_wings=icy-snow",
       "consumeHeldItem": false,
       "learnableMoves": [
         "gust"
@@ -274,11 +270,11 @@
         },
         {
           "variant": "biome",
-          "biomeCondition": "#cobblemon:evolution/vivillon/icy_snow"
+          "biomeCondition": "#cobblemon:evolution/vivillon/icy-snow"
         },
         {
           "variant": "biome",
-          "biomeAnticondition": "#cobblemon:evolution/vivillon/icy_snow_anti"
+          "biomeAnticondition": "#cobblemon:evolution/vivillon/icy-snow_anti"
         },
         {
           "variant": "structure",
@@ -654,7 +650,7 @@
     {
       "id": "spewpa_vivillonpokeball",
       "variant": "level_up",
-      "result": "vivillon vivillon_wings=poke_ball",
+      "result": "vivillon vivillon_wings=poke-ball",
       "consumeHeldItem": false,
       "learnableMoves": [
         "gust"

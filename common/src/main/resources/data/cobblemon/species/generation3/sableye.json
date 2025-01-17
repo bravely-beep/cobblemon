@@ -50,6 +50,7 @@
     "height": 1.2,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -235,7 +236,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "magicbounce",
@@ -266,6 +267,7 @@
       "eggCycles": 25,
       "baseFriendship": 35,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:leer",
         "1:scratch",

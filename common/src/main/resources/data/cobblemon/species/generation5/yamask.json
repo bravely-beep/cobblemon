@@ -10,7 +10,8 @@
     "cobblemon.species.yamask.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.5,
   "hitbox": {
     "width": 1,
@@ -56,7 +56,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -185,7 +184,8 @@
         "cobblemon.species.yamask-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -219,6 +219,7 @@
       "catchRate": 190,
       "eggCycles": 25,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [

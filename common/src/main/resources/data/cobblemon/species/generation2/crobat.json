@@ -42,7 +42,6 @@
   "catchRate": 90,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -60,8 +59,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -101,7 +98,6 @@
     "55:confuseray",
     "62:airslash",
     "69:leechlife",
-    "evolution:crosspoison",
     "egg:curse",
     "egg:defog",
     "egg:feintattack",

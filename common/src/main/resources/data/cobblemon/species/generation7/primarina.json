@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.7,
@@ -56,14 +55,14 @@
         "walkSpeed": 0.23
       },
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -94,7 +93,6 @@
     "44:hypervoice",
     "51:moonblast",
     "58:hydropump",
-    "evolution:sparklingaria",
     "egg:aquaring",
     "egg:aromaticmist",
     "egg:captivate",

@@ -12,7 +12,7 @@
     "gen4"
   ],
   "aspects": [
-    "bagworm-cloak-plant"
+    "plant-cloak"
   ],
   "abilities": [
     "shedskin",
@@ -42,13 +42,13 @@
   "catchRate": 120,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -126,7 +126,7 @@
         "gen4"
       ],
       "aspects": [
-        "bagworm-cloak-sandy"
+        "sandy-cloak"
       ],
       "abilities": [
         "shedskin",
@@ -221,7 +221,7 @@
         "gen4"
       ],
       "aspects": [
-        "bagworm-cloak-trash"
+        "trash-cloak"
       ],
       "abilities": [
         "shedskin",

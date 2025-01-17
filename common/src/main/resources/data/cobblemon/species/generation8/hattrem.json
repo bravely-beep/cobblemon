@@ -42,13 +42,13 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1,
     "height": 1.2,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -72,7 +72,6 @@
     "37:calmmind",
     "44:psychic",
     "51:healingwish",
-    "evolution:brutalswing",
     "egg:afteryou",
     "egg:aromaticmist",
     "egg:mysticalfire",

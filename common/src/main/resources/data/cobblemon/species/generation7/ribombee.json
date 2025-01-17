@@ -44,7 +44,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.35,
   "hitbox": {
     "width": 0.85,
@@ -62,8 +61,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -94,7 +91,6 @@
     "48:dazzlinggleam",
     "56:bugbuzz",
     "64:quiverdance",
-    "evolution:pollenpuff",
     "egg:aromaticmist",
     "egg:bestow",
     "egg:moonblast",

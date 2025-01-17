@@ -10,7 +10,8 @@
     "cobblemon.species.ninetales.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,7 +45,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.1,
@@ -54,8 +54,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -204,9 +202,11 @@
         "cobblemon.species.ninetales-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
+        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -237,6 +237,7 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 7,
         "entries": [
@@ -275,7 +276,6 @@
         "1:tailwhip",
         "1:disable",
         "1:freezedry",
-        "evolution:dazzlinggleam",
         "egg:babydolleyes",
         "egg:captivate",
         "egg:disable",

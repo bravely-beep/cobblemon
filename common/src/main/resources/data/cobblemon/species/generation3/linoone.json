@@ -10,7 +10,8 @@
     "cobblemon.species.linoone.desc"
   ],
   "labels": [
-    "gen3"
+    "gen3",
+    "hoennian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.6,
@@ -60,8 +60,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -97,7 +95,6 @@
     "38:flail",
     "43:bellydrum",
     "48:doubleedge",
-    "evolution:slash",
     "egg:bestow",
     "egg:extremespeed",
     "egg:mudsport",
@@ -197,9 +194,11 @@
         "cobblemon.species.linoone-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
+        "galarian",
         "galarian"
       ],
       "abilities": [
@@ -231,6 +230,7 @@
       "catchRate": 90,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [
@@ -259,7 +259,6 @@
         "38:counter",
         "43:taunt",
         "48:doubleedge",
-        "evolution:nightslash",
         "egg:knockoff",
         "egg:partingshot",
         "egg:quickguard",

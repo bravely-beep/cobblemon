@@ -55,7 +55,6 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.3,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true
       },
@@ -65,8 +64,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },

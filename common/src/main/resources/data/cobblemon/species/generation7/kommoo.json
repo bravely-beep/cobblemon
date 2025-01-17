@@ -44,13 +44,13 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2.2,
     "height": 3.35,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -94,7 +94,6 @@
     "60:closecombat",
     "68:clangoroussoul",
     "76:boomburst",
-    "evolution:clangingscales",
     "egg:counter",
     "egg:dragonbreath",
     "egg:focuspunch",

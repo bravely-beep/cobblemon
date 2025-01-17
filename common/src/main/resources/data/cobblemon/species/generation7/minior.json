@@ -13,7 +13,7 @@
     "gen7"
   ],
   "aspects": [
-    "meteor-shield-core"
+    "core-form"
   ],
   "abilities": [
     "shieldsdown",
@@ -43,12 +43,19 @@
   "catchRate": 255,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "moves": [
     "1:tackle",
@@ -138,7 +145,7 @@
         "gen7"
       ],
       "aspects": [
-        "meteor-shield-meteor"
+        "meteor-form"
       ],
       "abilities": [
         "shieldsdown",

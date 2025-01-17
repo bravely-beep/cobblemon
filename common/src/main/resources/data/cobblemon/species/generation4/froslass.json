@@ -42,13 +42,13 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -95,8 +95,6 @@
     "54:auroraveil",
     "61:shadowball",
     "68:blizzard",
-    "evolution:hex",
-    "evolution:ominouswind",
     "egg:bide",
     "egg:block",
     "egg:disable",

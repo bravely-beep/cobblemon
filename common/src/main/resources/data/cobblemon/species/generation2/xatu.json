@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 0.7,
@@ -60,8 +59,7 @@
       },
       "fly": {
         "canFly": true
-      },
-      "canLook": true
+      }
     }
   },
   "drops": {
@@ -102,7 +100,6 @@
     "41:psychic",
     "48:wish",
     "55:futuresight",
-    "evolution:airslash",
     "egg:drillpeck",
     "egg:featherdance",
     "egg:feintattack",

@@ -10,7 +10,8 @@
     "cobblemon.species.avalugg.desc"
   ],
   "labels": [
-    "gen6"
+    "gen6",
+    "kalosian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -44,9 +45,8 @@
   "eggCycles": 20,
   "baseFriendship": 50,
   "features": [
-    "regional_form"
+    "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 4,
@@ -60,15 +60,12 @@
       },
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -107,7 +104,6 @@
     "41:blizzard",
     "46:doubleedge",
     "51:iciclecrash",
-    "evolution:bodyslam",
     "egg:auroraveil",
     "egg:barrier",
     "egg:mirrorcoat",
@@ -193,7 +189,8 @@
         "cobblemon.species.avalugg-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -228,6 +225,7 @@
       "catchRate": 55,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [
@@ -262,7 +260,6 @@
         "46:doubleedge",
         "51:stoneedge",
         "61:mountaingale",
-        "evolution:rockslide",
         "egg:auroraveil",
         "egg:barrier",
         "egg:mirrorcoat",

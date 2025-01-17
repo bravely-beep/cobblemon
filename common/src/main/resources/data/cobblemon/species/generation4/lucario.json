@@ -44,13 +44,13 @@
   "catchRate": 45,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.65,
   "hitbox": {
     "width": 0.8,
     "height": 2.45,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -90,7 +90,6 @@
     "52:dragonpulse",
     "56:extremespeed",
     "60:closecombat",
-    "evolution:aurasphere",
     "egg:bite",
     "egg:bulletpunch",
     "egg:circlethrow",
@@ -227,7 +226,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "adaptability",
@@ -259,6 +258,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:quickattack",
         "1:foresight",
@@ -289,7 +289,6 @@
         "52:dragonpulse",
         "56:extremespeed",
         "60:closecombat",
-        "evolution:aurasphere",
         "egg:bite",
         "egg:bulletpunch",
         "egg:circlethrow",

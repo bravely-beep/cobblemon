@@ -42,7 +42,6 @@
   "catchRate": 127,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1.2,
@@ -52,8 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -88,7 +85,6 @@
     "40:tailslap",
     "46:foulplay",
     "52:partingshot",
-    "evolution:thief",
     "egg:howl",
     "egg:knockoff",
     "egg:quickguard",

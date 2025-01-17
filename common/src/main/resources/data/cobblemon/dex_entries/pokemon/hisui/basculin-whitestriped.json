@@ -1,13 +1,13 @@
 {
-  "id": "cobblemon:basculin-white",
+  "id": "cobblemon:basculin-whitestriped",
   "speciesId": "cobblemon:basculin",
   "displayAspects": [],
   "conditionAspects": [],
   "forms": [
     {
-      "displayForm": "White",
+      "displayForm": "White-Striped",
       "unlockForms": [
-        "White"
+        "White-Striped"
       ]
     }
   ],

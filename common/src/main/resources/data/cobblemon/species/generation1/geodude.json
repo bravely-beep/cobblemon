@@ -11,7 +11,8 @@
     "cobblemon.species.geodude.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,7 +47,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.9,
@@ -56,9 +56,13 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
     }
   },
   "drops": {
@@ -202,7 +206,8 @@
         "cobblemon.species.geodude-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
         "alolan"
@@ -236,6 +241,14 @@
       "catchRate": 255,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInWater": false
+          }
+        }
+      },
       "drops": {
         "amount": 4,
         "entries": [

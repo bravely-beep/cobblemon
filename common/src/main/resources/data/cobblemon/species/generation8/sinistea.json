@@ -12,7 +12,7 @@
     "gen8"
   ],
   "aspects": [
-    "tea-authenticity-phony"
+    "phony"
   ],
   "abilities": [
     "weakarmor",
@@ -43,13 +43,13 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -145,7 +145,7 @@
         "gen8"
       ],
       "aspects": [
-        "tea-authenticity-antique"
+        "antique"
       ],
       "abilities": [
         "weakarmor",
@@ -176,6 +176,7 @@
       "catchRate": 120,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:astonish",
         "1:withdraw",

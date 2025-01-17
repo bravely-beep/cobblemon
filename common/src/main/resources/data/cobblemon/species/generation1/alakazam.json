@@ -42,7 +42,6 @@
   "catchRate": 50,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -52,8 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -90,7 +87,6 @@
     "40:roleplay",
     "45:futuresight",
     "50:calmmind",
-    "evolution:kinesis",
     "egg:barrier",
     "egg:confusion",
     "egg:guardsplit",
@@ -200,7 +196,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "trace",
@@ -231,6 +227,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:teleport",
         "1:kinesis",
@@ -247,7 +244,6 @@
         "40:roleplay",
         "45:futuresight",
         "50:calmmind",
-        "evolution:kinesis",
         "egg:barrier",
         "egg:confusion",
         "egg:guardsplit",

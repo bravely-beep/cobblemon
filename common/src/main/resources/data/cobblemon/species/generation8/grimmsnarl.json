@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.5,
@@ -54,7 +53,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -86,7 +84,6 @@
     "48:playrough",
     "56:foulplay",
     "64:hammerarm",
-    "evolution:spiritbreak",
     "egg:partingshot",
     "tm:assurance",
     "tm:bite",
@@ -179,7 +176,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "prankster",
@@ -212,6 +209,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:spiritbreak",
         "1:falsesurrender",
@@ -231,7 +229,6 @@
         "48:playrough",
         "56:foulplay",
         "64:hammerarm",
-        "evolution:spiritbreak",
         "egg:partingshot",
         "tm:assurance",
         "tm:bite",

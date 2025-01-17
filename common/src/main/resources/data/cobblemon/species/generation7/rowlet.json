@@ -12,7 +12,8 @@
   ],
   "labels": [
     "gen7",
-    "starter"
+    "starter",
+    "alolan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,7 +47,6 @@
   "features": [
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 0.95,
@@ -189,7 +189,9 @@
       ],
       "labels": [
         "gen8a",
-        "starter"
+        "starter",
+        "customized_official",
+        "hisuian_form"
       ],
       "aspects": [
         "region-bias-hisui"

@@ -3,11 +3,11 @@
   "keys": [
     "landsnake_form"
   ],
-  "default": "random",
+  "default": "two-segment",
   "choices": [
     "two-segment",
     "three-segment"
   ],
   "isAspect": true,
-  "aspectFormat": "{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

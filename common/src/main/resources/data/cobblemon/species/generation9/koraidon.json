@@ -43,6 +43,7 @@
   "catchRate": 3,
   "eggCycles": 50,
   "baseFriendship": 0,
+  "behaviour": {},
   "moves": [
     "1:sunnyday",
     "1:breakingswipe",

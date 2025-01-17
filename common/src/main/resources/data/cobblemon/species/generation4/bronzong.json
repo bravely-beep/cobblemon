@@ -42,12 +42,19 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
+    }
   },
   "drops": {
     "amount": 5,
@@ -91,7 +98,6 @@
     "44:metalsound",
     "50:futuresight",
     "56:raindance",
-    "evolution:block",
     "egg:feintattack",
     "egg:gravity",
     "egg:healblock",

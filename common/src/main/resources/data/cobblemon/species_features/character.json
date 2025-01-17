@@ -3,7 +3,7 @@
   "keys": [
     "character"
   ],
-  "default": "f",
+  "default": "random",
   "choices": [
     "a",
     "b",

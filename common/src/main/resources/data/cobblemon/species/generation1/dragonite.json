@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1.5,
@@ -55,8 +54,10 @@
     "moving": {
       "swim": {
         "canWalkOnWater": true,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       },
       "fly": {
         "canFly": true
@@ -109,8 +110,6 @@
     "53:raindance",
     "62:dragondance",
     "80:hyperbeam",
-    "evolution:hurricane",
-    "evolution:wingattack",
     "egg:aquajet",
     "egg:dragonbreath",
     "egg:extremespeed",

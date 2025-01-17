@@ -11,7 +11,8 @@
     "cobblemon.species.cradily.desc"
   ],
   "labels": [
-    "gen3"
+    "gen3",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -42,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.9,
@@ -53,8 +53,9 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.12,
-        "canSwimInWater": false,
-        "canBreatheUnderwater": true
+        "canSwimInWater": true,
+        "canBreatheUnderwater": true,
+        "canSwimInLava": false
       },
       "walk": {
         "walkSpeed": 0.12
@@ -62,8 +63,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },

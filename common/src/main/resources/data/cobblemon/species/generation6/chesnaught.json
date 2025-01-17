@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -51,9 +50,6 @@
   },
   "behaviour": {
     "resting": {
-      "canSleep": false,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -87,7 +83,6 @@
     "60:painsplit",
     "66:woodhammer",
     "78:gigaimpact",
-    "evolution:spikyshield",
     "egg:bellydrum",
     "egg:curse",
     "egg:defensecurl",

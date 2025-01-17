@@ -10,9 +10,11 @@
     "cobblemon.species.darmanitan.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [
+    "standard-mode"
   ],
   "abilities": [
     "sheerforce",
@@ -46,7 +48,6 @@
     "galarian",
     "zen_mode"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.8,
@@ -56,7 +57,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -92,7 +92,6 @@
     "44:flareblitz",
     "50:thrash",
     "56:superpower",
-    "evolution:hammerarm",
     "egg:extrasensory",
     "egg:flamewheel",
     "egg:focuspunch",
@@ -201,7 +200,7 @@
         "gen5"
       ],
       "aspects": [
-        "zen_mode"
+        "zen-mode"
       ],
       "abilities": [
         "sheerforce",
@@ -237,6 +236,7 @@
         "height": 1.5,
         "fixed": false
       },
+      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:rage",
@@ -255,7 +255,6 @@
         "44:flareblitz",
         "50:thrash",
         "56:superpower",
-        "evolution:hammerarm",
         "tm:bellydrum",
         "tm:bite",
         "tm:bodypress",
@@ -354,9 +353,12 @@
         "cobblemon.species.darmanitan-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
+        "standard-mode",
+        "galarian",
         "galarian"
       ],
       "abilities": [
@@ -387,6 +389,7 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [
@@ -416,7 +419,6 @@
         "44:blizzard",
         "50:thrash",
         "56:superpower",
-        "evolution:iciclecrash",
         "egg:flamewheel",
         "egg:focuspunch",
         "egg:freezedry",
@@ -513,10 +515,11 @@
         "cobblemon.species.darmanitan-galarzen.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
-        "zen_mode",
+        "zen-mode",
         "galarian"
       ],
       "abilities": [
@@ -547,6 +550,7 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:iciclecrash",
         "1:powdersnow",
@@ -563,7 +567,6 @@
         "44:blizzard",
         "50:thrash",
         "56:superpower",
-        "evolution:iciclecrash",
         "tm:avalanche",
         "tm:bellydrum",
         "tm:bite",

@@ -9,5 +9,5 @@
     "gorging"
   ],
   "isAspect": true,
-  "aspectFormat": "missile-form-{{choice}}"
+  "aspectFormat": "{{choice}}-form"
 }

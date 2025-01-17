@@ -41,13 +41,13 @@
   "catchRate": 50,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -82,8 +82,6 @@
     "48:skillswap",
     "56:futuresight",
     "64:wonderroom",
-    "evolution:dizzypunch",
-    "evolution:hammerarm",
     "egg:acidarmor",
     "egg:astonish",
     "egg:confuseray",

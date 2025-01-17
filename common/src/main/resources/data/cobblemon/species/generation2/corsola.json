@@ -11,7 +11,8 @@
     "cobblemon.species.corsola.desc"
   ],
   "labels": [
-    "gen2"
+    "gen2",
+    "johtonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -47,7 +48,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 0.65,
@@ -58,8 +58,9 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.2,
-        "canSwimInWater": false,
-        "canBreatheUnderwater": true
+        "canSwimInWater": true,
+        "canBreatheUnderwater": true,
+        "canSwimInLava": false
       }
     }
   },
@@ -193,7 +194,8 @@
         "cobblemon.species.corsola-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -227,6 +229,16 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "drops": {
         "amount": 1,
         "entries": [

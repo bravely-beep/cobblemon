@@ -42,7 +42,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.9,
   "hitbox": {
     "width": 1,
@@ -52,14 +51,14 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -99,7 +98,6 @@
     "49:extrasensory",
     "56:doubleteam",
     "68:hydropump",
-    "evolution:watershuriken",
     "egg:bestow",
     "egg:camouflage",
     "egg:counter",
@@ -215,7 +213,7 @@
         "gen7"
       ],
       "aspects": [
-        "battle-bond-bond"
+        "bond"
       ],
       "abilities": [
         "battlebond",
@@ -266,7 +264,6 @@
         "49:extrasensory",
         "56:doubleteam",
         "68:hydropump",
-        "evolution:watershuriken",
         "tm:acrobatics",
         "tm:aerialace",
         "tm:blizzard",
@@ -362,7 +359,7 @@
         "gen7"
       ],
       "aspects": [
-        "battle-bond-ash"
+        "ash"
       ],
       "abilities": [
         "battlebond",
@@ -393,6 +390,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:nightslash",
         "1:roleplay",
@@ -416,7 +414,6 @@
         "49:extrasensory",
         "56:doubleteam",
         "68:hydropump",
-        "evolution:watershuriken",
         "egg:bestow",
         "egg:camouflage",
         "egg:counter",

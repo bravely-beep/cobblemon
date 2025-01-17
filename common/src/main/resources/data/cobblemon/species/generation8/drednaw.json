@@ -43,12 +43,21 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
+      }
+    }
   },
   "drops": {
     "amount": 3,
@@ -78,7 +87,6 @@
     "48:liquidation",
     "57:bodyslam",
     "66:headsmash",
-    "evolution:rocktomb",
     "egg:dragontail",
     "egg:gastroacid",
     "egg:shellsmash",
@@ -173,7 +181,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "strongjaw",
@@ -206,6 +214,16 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:rocktomb",
         "1:razorshell",
@@ -221,7 +239,6 @@
         "48:liquidation",
         "57:bodyslam",
         "66:headsmash",
-        "evolution:rocktomb",
         "egg:dragontail",
         "egg:gastroacid",
         "egg:shellsmash",

@@ -44,7 +44,6 @@
   "catchRate": 120,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.35,
   "hitbox": {
     "width": 1.1,
@@ -54,8 +53,10 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -89,7 +90,6 @@
     "52:blizzard",
     "58:hail",
     "64:sheercold",
-    "evolution:swagger",
     "egg:aquaring",
     "egg:bellydrum",
     "egg:curse",

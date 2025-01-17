@@ -13,7 +13,7 @@
     "mythical"
   ],
   "aspects": [
-    "meteorite-forme-normal"
+    "normal-forme"
   ],
   "abilities": [
     "pressure",
@@ -43,7 +43,7 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -184,7 +184,7 @@
         "mythical"
       ],
       "aspects": [
-        "meteorite-forme-attack"
+        "attack-forme"
       ],
       "abilities": [
         "pressure",
@@ -214,6 +214,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -356,7 +357,7 @@
         "mythical"
       ],
       "aspects": [
-        "meteorite-forme-defense"
+        "defense-forme"
       ],
       "abilities": [
         "pressure",
@@ -386,6 +387,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -534,7 +536,7 @@
         "mythical"
       ],
       "aspects": [
-        "meteorite-forme-speed"
+        "speed-forme"
       ],
       "abilities": [
         "pressure",
@@ -564,6 +566,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [

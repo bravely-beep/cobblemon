@@ -10,7 +10,8 @@
     "cobblemon.species.diglett.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.5,
@@ -55,13 +55,12 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
       "swim": {
-        "canSwimInWater": false
+        "canSwimInWater": false,
+        "avoidsWater": true
       }
     }
   },
@@ -199,7 +198,8 @@
         "cobblemon.species.diglett-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
         "alolan"
@@ -233,6 +233,7 @@
       "catchRate": 255,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:sandattack",
         "1:metalclaw",

@@ -42,6 +42,7 @@
   "catchRate": 30,
   "eggCycles": 50,
   "baseFriendship": 0,
+  "behaviour": {},
   "moves": [
     "1:electricterrain",
     "1:workup",

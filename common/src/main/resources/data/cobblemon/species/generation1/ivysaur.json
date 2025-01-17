@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.95,
   "hitbox": {
     "width": 0.7,
@@ -58,7 +57,6 @@
     },
     "resting": {
       "canSleep": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },

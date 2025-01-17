@@ -56,8 +56,9 @@
       },
       "swim": {
         "swimSpeed": 0.1,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     }
   },
@@ -138,7 +139,7 @@
     {
       "id": "finizen_palafin",
       "variant": "level_up",
-      "result": "palafin",
+      "result": "palafin dolphin_form=zero",
       "consumeHeldItem": false,
       "learnableMoves": [
         "flipturn"

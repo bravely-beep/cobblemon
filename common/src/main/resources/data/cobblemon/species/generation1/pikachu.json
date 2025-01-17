@@ -10,7 +10,8 @@
     "cobblemon.species.pikachu.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -43,6 +44,7 @@
   "eggCycles": 10,
   "baseFriendship": 50,
   "features": [
+    "alolan",
     "region_bias"
   ],
   "shoulderMountable": true,
@@ -61,7 +63,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -255,7 +256,7 @@
         "gen7"
       ],
       "aspects": [
-        "partner-cap-partner"
+        "partner-cap"
       ],
       "abilities": [
         "static",
@@ -285,6 +286,7 @@
       "catchRate": 190,
       "eggCycles": 10,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:tailwhip",
         "1:thundershock",
@@ -400,7 +402,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "static",
@@ -432,6 +434,7 @@
       "eggCycles": 10,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:thundershock",
         "1:growl",
@@ -565,7 +568,9 @@
         "cobblemon.species.pikachu-alolabias.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "customized_official",
+        "alolan_form"
       ],
       "aspects": [
         "region-bias-alola"

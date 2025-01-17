@@ -10,7 +10,8 @@
     "cobblemon.species.zorua.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -51,6 +52,7 @@
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -190,7 +192,8 @@
         "cobblemon.species.zorua-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -224,6 +227,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "shoulderMountable": true,
+      "behaviour": {},
       "drops": {
         "amount": 4,
         "entries": [

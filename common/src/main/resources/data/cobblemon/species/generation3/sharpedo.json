@@ -42,7 +42,6 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.2,
@@ -57,8 +56,9 @@
       },
       "swim": {
         "swimSpeed": 0.7,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     }
   },
@@ -94,7 +94,6 @@
     "40:agility",
     "46:liquidation",
     "52:takedown",
-    "evolution:slash",
     "egg:ancientpower",
     "egg:destinybond",
     "egg:doubleedge",
@@ -191,7 +190,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "strongjaw",
@@ -222,6 +221,19 @@
       "eggCycles": 20,
       "baseFriendship": 35,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "walk": {
+            "avoidsLand": true
+          },
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:feint",
         "1:leer",
@@ -241,7 +253,6 @@
         "40:agility",
         "46:liquidation",
         "52:takedown",
-        "evolution:slash",
         "egg:ancientpower",
         "egg:destinybond",
         "egg:doubleedge",

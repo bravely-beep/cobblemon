@@ -13,7 +13,7 @@
     "gen9"
   ],
   "aspects": [
-    "matcha-authenticity-unremarkable"
+    "unremarkable"
   ],
   "abilities": [
     "hospitality",
@@ -44,6 +44,7 @@
   "catchRate": 60,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -68,7 +69,6 @@
     "48:shadowball",
     "54:memento",
     "60:leafstorm",
-    "evolution:matchagotcha",
     "tm:absorb",
     "tm:astonish",
     "tm:calmmind",
@@ -128,7 +128,7 @@
         "gen9"
       ],
       "aspects": [
-        "matcha-authenticity-masterpiece"
+        "masterpiece"
       ],
       "abilities": [
         "hospitality",
@@ -159,6 +159,7 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:matchagotcha",
         "1:stunspore",
@@ -174,7 +175,6 @@
         "48:shadowball",
         "54:memento",
         "60:leafstorm",
-        "evolution:matchagotcha",
         "tm:absorb",
         "tm:astonish",
         "tm:calmmind",

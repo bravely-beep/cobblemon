@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -88,7 +88,6 @@
     "43:entrainment",
     "46:swordsdance",
     "50:leafstorm",
-    "evolution:slash",
     "egg:camouflage",
     "egg:mefirst",
     "egg:mindreader",

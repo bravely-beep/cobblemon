@@ -15,7 +15,7 @@
     "restricted"
   ],
   "aspects": [
-    "percent-cells-50"
+    "50-percent"
   ],
   "abilities": [
     "aurabreak",
@@ -45,7 +45,7 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
+  "behaviour": {},
   "moves": [
     "1:bulldoze",
     "1:dragonbreath",
@@ -136,7 +136,7 @@
   "evolutions": [],
   "forms": [
     {
-      "name": "10",
+      "name": "10%",
       "primaryType": "dragon",
       "secondaryType": "ground",
       "maleRatio": -1,
@@ -151,7 +151,7 @@
         "restricted"
       ],
       "aspects": [
-        "percent-cells-10"
+        "10-percent"
       ],
       "abilities": [
         "aurabreak",
@@ -270,7 +270,7 @@
       "battleOnly": false
     },
     {
-      "name": "10-C",
+      "name": "10%-C",
       "primaryType": "dragon",
       "secondaryType": "ground",
       "maleRatio": -1,
@@ -280,12 +280,12 @@
         "cobblemon.species.zygarde-10c.desc"
       ],
       "labels": [
-        "gen7",
+        "cobblemon",
         "legendary",
         "restricted"
       ],
       "aspects": [
-        "percent-cells-10",
+        "10-percent",
         "power-construct"
       ],
       "abilities": [
@@ -405,7 +405,7 @@
       "battleOnly": false
     },
     {
-      "name": "50-C",
+      "name": "50%-C",
       "primaryType": "dragon",
       "secondaryType": "ground",
       "maleRatio": -1,
@@ -415,12 +415,12 @@
         "cobblemon.species.zygarde-50c.desc"
       ],
       "labels": [
-        "gen7",
+        "cobblemon",
         "legendary",
         "restricted"
       ],
       "aspects": [
-        "percent-cells-50",
+        "50-percent",
         "power-construct"
       ],
       "abilities": [
@@ -555,7 +555,7 @@
         "restricted"
       ],
       "aspects": [
-        "percent-cells-complete"
+        "complete-percent"
       ],
       "abilities": [
         "powerconstruct",
@@ -585,6 +585,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:bulldoze",
         "1:dragonbreath",

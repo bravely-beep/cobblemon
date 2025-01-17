@@ -41,7 +41,6 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.5,
@@ -88,7 +87,6 @@
     "53:flamethrower",
     "60:outrage",
     "67:doubleedge",
-    "evolution:protect",
     "egg:defensecurl",
     "egg:dragonrage",
     "egg:dragonrush",

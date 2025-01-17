@@ -42,7 +42,6 @@
   "catchRate": 100,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.85,
   "hitbox": {
     "width": 1,
@@ -83,8 +82,6 @@
     "40:roleplay",
     "45:futuresight",
     "50:calmmind",
-    "evolution:confusion",
-    "evolution:kinesis",
     "egg:barrier",
     "egg:confusion",
     "egg:guardsplit",

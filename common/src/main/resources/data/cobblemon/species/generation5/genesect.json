@@ -42,13 +42,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:quickattack",
     "1:furycutter",
@@ -156,7 +156,7 @@
         "mythical"
       ],
       "aspects": [
-        "techno-drive-water"
+        "water-drive"
       ],
       "abilities": [
         "download",
@@ -294,7 +294,7 @@
         "mythical"
       ],
       "aspects": [
-        "techno-drive-electric"
+        "electric-drive"
       ],
       "abilities": [
         "download",
@@ -432,7 +432,7 @@
         "mythical"
       ],
       "aspects": [
-        "techno-drive-fire"
+        "fire-drive"
       ],
       "abilities": [
         "download",
@@ -570,7 +570,7 @@
         "mythical"
       ],
       "aspects": [
-        "techno-drive-ice"
+        "ice-drive"
       ],
       "abilities": [
         "download",

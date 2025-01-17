@@ -42,7 +42,6 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 1.5,
@@ -52,9 +51,13 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
+      }
     }
   },
   "drops": {
@@ -95,7 +98,6 @@
     "38:powersplit",
     "43:sandstorm",
     "48:explosion",
-    "evolution:hyperbeam",
     "tm:allyswitch",
     "tm:ancientpower",
     "tm:bodypress",

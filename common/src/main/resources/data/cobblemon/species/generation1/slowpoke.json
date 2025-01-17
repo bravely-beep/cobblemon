@@ -11,7 +11,8 @@
     "cobblemon.species.slowpoke.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -47,7 +48,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.2,
@@ -58,8 +58,9 @@
     "moving": {
       "swim": {
         "swimSpeed": 0.08,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       },
       "walk": {
         "walkSpeed": 0.125
@@ -68,7 +69,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-16"
     }
   },
@@ -239,7 +239,8 @@
         "cobblemon.species.slowpoke-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -274,6 +275,16 @@
       "catchRate": 190,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "drops": {
         "amount": 1,
         "entries": [

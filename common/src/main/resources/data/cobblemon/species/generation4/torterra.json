@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2.25,
@@ -53,8 +52,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     },
     "moving": {
@@ -88,7 +85,6 @@
     "51:gigadrain",
     "57:leafstorm",
     "63:headlongrush",
-    "evolution:earthquake",
     "egg:doubleedge",
     "egg:growth",
     "egg:shellsmash",

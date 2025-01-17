@@ -10,7 +10,8 @@
     "cobblemon.species.lilligant.desc"
   ],
   "labels": [
-    "gen5"
+    "gen5",
+    "unovan_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,13 +46,13 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 1.1,
     "height": 2.3,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -91,7 +92,6 @@
     "1:stunspore",
     "1:charm",
     "5:magicalleaf",
-    "evolution:petaldance",
     "egg:bide",
     "egg:grasswhistle",
     "egg:healingwish",
@@ -176,7 +176,8 @@
         "cobblemon.species.lilligant-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
         "hisuian"
@@ -216,6 +217,7 @@
         "height": 2.1,
         "fixed": false
       },
+      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [
@@ -254,7 +256,6 @@
         "1:helpinghand",
         "1:aromatherapy",
         "5:axekick",
-        "evolution:victorydance",
         "egg:bide",
         "egg:grasswhistle",
         "egg:healingwish",

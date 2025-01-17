@@ -13,7 +13,7 @@
     "gen8"
   ],
   "aspects": [
-    "punk-form-amped"
+    "amped-form"
   ],
   "abilities": [
     "punkrock",
@@ -44,13 +44,13 @@
   "catchRate": 45,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -84,7 +84,6 @@
     "44:overdrive",
     "48:boomburst",
     "52:shiftgear",
-    "evolution:spark",
     "egg:endeavor",
     "egg:metalsound",
     "tm:acid",
@@ -183,7 +182,7 @@
         "gen8"
       ],
       "aspects": [
-        "punk-form-low_key"
+        "low_key-form"
       ],
       "abilities": [
         "punkrock",
@@ -214,6 +213,7 @@
       "catchRate": 45,
       "eggCycles": 25,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:spark",
         "1:belch",
@@ -238,7 +238,6 @@
         "44:overdrive",
         "48:boomburst",
         "52:magneticflux",
-        "evolution:spark",
         "egg:endeavor",
         "egg:metalsound",
         "tm:acid",
@@ -340,8 +339,8 @@
         "gmax"
       ],
       "aspects": [
-        "punk-form-amped",
-        "dynamax-form-gmax"
+        "amped-form",
+        "gmax"
       ],
       "abilities": [
         "punkrock",
@@ -373,6 +372,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:spark",
         "1:belch",
@@ -397,7 +397,6 @@
         "44:overdrive",
         "48:boomburst",
         "52:shiftgear",
-        "evolution:spark",
         "egg:endeavor",
         "egg:metalsound",
         "tm:acid",
@@ -497,8 +496,8 @@
         "gmax"
       ],
       "aspects": [
-        "punk-form-low_key",
-        "dynamax-form-gmax"
+        "low_key-form",
+        "gmax"
       ],
       "abilities": [
         "punkrock",
@@ -530,6 +529,7 @@
       "eggCycles": 25,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:spark",
         "1:belch",
@@ -554,7 +554,6 @@
         "44:overdrive",
         "48:boomburst",
         "52:magneticflux",
-        "evolution:spark",
         "egg:endeavor",
         "egg:metalsound",
         "tm:acid",

@@ -41,7 +41,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 0.8,
@@ -51,8 +50,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -86,7 +83,6 @@
     "44:leafblade",
     "51:sunnyday",
     "63:solarblade",
-    "evolution:petalblizzard",
     "egg:aromatherapy",
     "egg:defog",
     "egg:superpower",

@@ -43,13 +43,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:dragonrage",
     "1:ancientpower",
@@ -162,7 +162,7 @@
         "restricted"
       ],
       "aspects": [
-        "absofusion-white"
+        "white-fusion"
       ],
       "abilities": [
         "turboblaze",
@@ -192,6 +192,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:dragonrage",
         "1:ancientpower",
@@ -306,7 +307,7 @@
         "restricted"
       ],
       "aspects": [
-        "absofusion-black"
+        "black-fusion"
       ],
       "abilities": [
         "teravolt",
@@ -336,6 +337,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:dragonrage",
         "1:ancientpower",

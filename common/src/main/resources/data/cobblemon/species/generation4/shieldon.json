@@ -11,7 +11,8 @@
     "cobblemon.species.shieldon.desc"
   ],
   "labels": [
-    "gen4"
+    "gen4",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -42,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 0.85,
@@ -53,6 +53,9 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.16
+      },
+      "swim": {
+        "canSwimInLava": true
       }
     }
   },

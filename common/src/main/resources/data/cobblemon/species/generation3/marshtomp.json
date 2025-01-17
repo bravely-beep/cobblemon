@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.85,
   "hitbox": {
     "width": 0.9,
@@ -53,8 +52,10 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       }
     }
   },
@@ -94,7 +95,6 @@
     "45:screech",
     "50:endeavor",
     "55:hydropump",
-    "evolution:mudshot",
     "egg:ancientpower",
     "egg:barrier",
     "egg:bide",

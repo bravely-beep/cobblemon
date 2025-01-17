@@ -44,7 +44,6 @@
   "catchRate": 45,
   "eggCycles": 40,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 2.4,
@@ -54,10 +53,11 @@
   "behaviour": {
     "moving": {
       "swim": {
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
         "canWalkOnWater": true,
-        "swimSpeed": 0.3
+        "swimSpeed": 0.3,
+        "canSwimInWater": true,
+        "canSwimInLava": false
       },
       "walk": {
         "walkSpeed": 0.15
@@ -65,8 +65,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -219,7 +217,7 @@
         "gmax"
       ],
       "aspects": [
-        "dynamax-form-gmax"
+        "gmax"
       ],
       "abilities": [
         "waterabsorb",
@@ -252,6 +250,16 @@
       "eggCycles": 40,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:growl",
         "1:watergun",

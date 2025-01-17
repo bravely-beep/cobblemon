@@ -10,7 +10,8 @@
     "cobblemon.species.arcanine.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,13 +46,13 @@
   "features": [
     "hisuian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 1.2,
     "height": 1.7,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -86,7 +87,6 @@
     "1:howl",
     "1:flameburst",
     "5:flamethrower",
-    "evolution:extremespeed",
     "egg:burnup",
     "egg:covet",
     "egg:doubleedge",
@@ -181,9 +181,11 @@
         "cobblemon.species.arcanine-hisui.desc"
       ],
       "labels": [
-        "gen8a"
+        "gen8a",
+        "hisuian_form"
       ],
       "aspects": [
+        "hisuian",
         "hisuian"
       ],
       "abilities": [
@@ -215,6 +217,7 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:rockslide",
         "1:firefang",
@@ -235,7 +238,6 @@
         "1:leer",
         "5:flamethrower",
         "64:ragingfury",
-        "evolution:extremespeed",
         "egg:covet",
         "egg:doubleedge",
         "egg:doublekick",

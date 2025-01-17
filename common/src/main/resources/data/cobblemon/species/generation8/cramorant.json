@@ -43,12 +43,21 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.6,
   "hitbox": {
     "width": 0.6,
     "height": 1.7,
     "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "canBreatheUnderwater": true,
+        "swimSpeed": "0.2"
+      }
+    }
   },
   "drops": {
     "amount": 6,
@@ -164,7 +173,7 @@
         "gen8"
       ],
       "aspects": [
-        "missile-form-gulping"
+        "gulping-form"
       ],
       "abilities": [
         "gulpmissile",
@@ -195,6 +204,16 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:belch",
         "1:peck",
@@ -290,7 +309,7 @@
         "gen8"
       ],
       "aspects": [
-        "missile-form-gorging"
+        "gorging-form"
       ],
       "abilities": [
         "gulpmissile",
@@ -321,6 +340,16 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:belch",
         "1:peck",

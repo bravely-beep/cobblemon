@@ -41,13 +41,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:multiattack",
     "1:healblock",
@@ -76,7 +76,6 @@
     "50:takedown",
     "55:doubleedge",
     "60:partingshot",
-    "evolution:multiattack",
     "egg:healblock",
     "egg:punishment",
     "egg:razorwind",
@@ -176,7 +175,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-fighting"
+        "fighting-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -206,6 +205,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -234,7 +234,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -331,7 +330,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-flying"
+        "flying-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -361,6 +360,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -389,7 +389,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -486,7 +485,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-poison"
+        "poison-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -516,6 +515,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -544,7 +544,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -641,7 +640,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-ground"
+        "ground-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -671,6 +670,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -699,7 +699,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -796,7 +795,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-rock"
+        "rock-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -826,6 +825,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -854,7 +854,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -951,7 +950,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-bug"
+        "bug-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -981,6 +980,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1009,7 +1009,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -1106,7 +1105,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-ghost"
+        "ghost-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -1136,6 +1135,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1164,7 +1164,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -1261,7 +1260,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-steel"
+        "steel-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -1291,6 +1290,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1319,7 +1319,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -1416,7 +1415,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-fire"
+        "fire-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -1446,6 +1445,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1474,7 +1474,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -1571,7 +1570,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-water"
+        "water-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -1601,6 +1600,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1629,7 +1629,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -1726,7 +1725,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-grass"
+        "grass-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -1756,6 +1755,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1784,7 +1784,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -1881,7 +1880,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-electric"
+        "electric-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -1911,6 +1910,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1939,7 +1939,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -2036,7 +2035,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-psychic"
+        "psychic-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -2066,6 +2065,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2094,7 +2094,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -2191,7 +2190,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-ice"
+        "ice-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -2221,6 +2220,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2249,7 +2249,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -2346,7 +2345,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-dragon"
+        "dragon-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -2376,6 +2375,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2404,7 +2404,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -2501,7 +2500,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-dark"
+        "dark-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -2531,6 +2530,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2559,7 +2559,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",
@@ -2656,7 +2655,7 @@
         "legendary"
       ],
       "aspects": [
-        "rks-memory-fairy"
+        "fairy-memory"
       ],
       "abilities": [
         "rkssystem",
@@ -2686,6 +2685,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 0,
+      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2714,7 +2714,6 @@
         "50:takedown",
         "55:doubleedge",
         "60:partingshot",
-        "evolution:multiattack",
         "tm:aerialace",
         "tm:airslash",
         "tm:bite",

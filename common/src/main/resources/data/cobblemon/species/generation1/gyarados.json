@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 5,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 2,
@@ -53,17 +52,14 @@
   "behaviour": {
     "moving": {
       "walk": {
-        "canWalk": true,
         "avoidsLand": true
-      },
-      "fly": {
-        "canFly": false
       },
       "swim": {
         "swimSpeed": 0.1,
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true,
+        "canSwimInLava": false
       }
     }
   },
@@ -104,7 +100,6 @@
     "44:hurricane",
     "48:thrash",
     "52:hyperbeam",
-    "evolution:bite",
     "tm:aquatail",
     "tm:avalanche",
     "tm:bite",
@@ -200,7 +195,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "moldbreaker",
@@ -232,6 +227,16 @@
       "eggCycles": 5,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "canSwimInWater": true,
+            "canSwimInLava": false,
+            "canBreatheUnderwater": true,
+            "swimSpeed": "0.2"
+          }
+        }
+      },
       "moves": [
         "1:bite",
         "1:dragonrage",
@@ -253,7 +258,6 @@
         "44:hurricane",
         "48:thrash",
         "52:hyperbeam",
-        "evolution:bite",
         "tm:aquatail",
         "tm:avalanche",
         "tm:bite",

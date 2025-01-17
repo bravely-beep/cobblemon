@@ -14,7 +14,7 @@
     "gen7"
   ],
   "aspects": [
-    "disguise-form-disguised"
+    "disguised-form"
   ],
   "abilities": [
     "disguise",
@@ -51,6 +51,7 @@
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -179,7 +180,7 @@
         "gen7"
       ],
       "aspects": [
-        "disguise-form-busted"
+        "busted-form"
       ],
       "abilities": [
         "disguise",
@@ -209,6 +210,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:woodhammer",
         "1:splash",

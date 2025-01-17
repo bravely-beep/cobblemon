@@ -42,13 +42,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 4,
     "height": 6.5,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:dizzypunch",
     "1:confuseray",

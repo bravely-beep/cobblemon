@@ -12,7 +12,7 @@
     "gen9"
   ],
   "aspects": [
-    "two-segment"
+    "two-segment-form"
   ],
   "abilities": [
     "serenegrace",
@@ -43,6 +43,7 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -200,7 +201,7 @@
         "gen9"
       ],
       "aspects": [
-        "three-segment"
+        "three-segment-form"
       ],
       "abilities": [
         "serenegrace",
@@ -231,6 +232,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:defensecurl",
         "1:flail",

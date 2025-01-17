@@ -43,13 +43,13 @@
   "catchRate": 30,
   "eggCycles": 10,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 3,
     "entries": [
@@ -90,7 +90,6 @@
     "1:sweetkiss",
     "1:lifedew",
     "1:bestow",
-    "evolution:airslash",
     "egg:aerialace",
     "egg:bestow",
     "egg:extrasensory",

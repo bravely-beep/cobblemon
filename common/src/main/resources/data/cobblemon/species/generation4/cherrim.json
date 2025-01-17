@@ -12,7 +12,7 @@
     "gen4"
   ],
   "aspects": [
-    "blossom-form-overcast"
+    "overcast-form"
   ],
   "abilities": [
     "flowergift",
@@ -43,13 +43,13 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -79,7 +79,6 @@
     "48:worryseed",
     "55:solarbeam",
     "62:petaldance",
-    "evolution:sunnyday",
     "egg:aromatherapy",
     "egg:defensecurl",
     "egg:flowershield",
@@ -162,7 +161,7 @@
         "gen5"
       ],
       "aspects": [
-        "blossom-form-sunshine"
+        "sunshine-form"
       ],
       "abilities": [
         "flowergift",
@@ -193,6 +192,7 @@
       "catchRate": 75,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:growth",
@@ -209,7 +209,6 @@
         "48:worryseed",
         "55:solarbeam",
         "62:petaldance",
-        "evolution:sunnyday",
         "tm:aromatherapy",
         "tm:bulletseed",
         "tm:dazzlinggleam",

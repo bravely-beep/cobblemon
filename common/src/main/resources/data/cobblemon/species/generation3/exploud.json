@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 1.4,
     "height": 1.7,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -79,7 +79,6 @@
     "63:hypervoice",
     "72:boomburst",
     "81:hyperbeam",
-    "evolution:crunch",
     "egg:circlethrow",
     "egg:disarmingvoice",
     "egg:endeavor",

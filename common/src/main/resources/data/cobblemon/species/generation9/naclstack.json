@@ -52,12 +52,14 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.15
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInWater": false
       }
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -90,7 +92,6 @@
     "41:heavyslam",
     "45:earthquake",
     "51:stoneedge",
-    "evolution:saltcure",
     "egg:ancientpower",
     "egg:curse",
     "egg:fissure",

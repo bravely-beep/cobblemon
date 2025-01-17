@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.9,
@@ -52,9 +51,6 @@
   },
   "behaviour": {
     "resting": {
-      "canSleep": false,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -82,7 +78,6 @@
     "46:acrobatics",
     "49:slackoff",
     "56:flareblitz",
-    "evolution:machpunch",
     "egg:assist",
     "egg:counter",
     "egg:doublekick",

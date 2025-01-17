@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
@@ -95,7 +94,6 @@
     "44:screech",
     "50:gastroacid",
     "56:bugbuzz",
-    "evolution:stickyweb",
     "egg:camouflage",
     "egg:disable",
     "egg:doubleteam",

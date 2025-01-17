@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 35,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -202,7 +202,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "solarpower",
@@ -233,6 +233,7 @@
       "eggCycles": 20,
       "baseFriendship": 35,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:thunderfang",
         "1:leer",

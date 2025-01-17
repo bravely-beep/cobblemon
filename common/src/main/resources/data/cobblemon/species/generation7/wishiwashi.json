@@ -13,7 +13,7 @@
     "gen7"
   ],
   "aspects": [
-    "solo"
+    "solo-form"
   ],
   "abilities": [
     "schooling",
@@ -44,9 +44,8 @@
   "eggCycles": 15,
   "baseFriendship": 50,
   "features": [
-    "schooling_form"
+    "schooling"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.4,
   "hitbox": {
     "width": 0.6,
@@ -61,8 +60,9 @@
       },
       "swim": {
         "swimSpeed": 0.1,
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false
       }
     }
   },
@@ -157,7 +157,7 @@
         "gen7"
       ],
       "aspects": [
-        "school"
+        "school-form"
       ],
       "abilities": [
         "schooling",
@@ -199,8 +199,10 @@
             "avoidsLand": true
           },
           "swim": {
+            "canBreatheUnderwater": true,
             "canSwimInWater": true,
-            "canBreatheUnderwater": true
+            "canSwimInLava": false,
+            "swimSpeed": "0.2"
           }
         }
       },

@@ -43,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 1.3,
@@ -53,8 +52,10 @@
   "behaviour": {
     "moving": {
       "swim": {
+        "canBreatheUnderwater": true,
         "canSwimInWater": true,
-        "canBreatheUnderwater": true
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       },
       "walk": {
         "walkSpeed": 0.2
@@ -62,8 +63,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -104,7 +103,6 @@
     "52:drillpeck",
     "59:hydropump",
     "66:wavecrash",
-    "evolution:aquajet",
     "egg:aquaring",
     "egg:bide",
     "egg:doublehit",

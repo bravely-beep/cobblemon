@@ -14,7 +14,7 @@
     "restricted"
   ],
   "aspects": [
-    "tera-form-normal"
+    "normal-form"
   ],
   "abilities": [
     "terashift",
@@ -44,6 +44,7 @@
   "catchRate": 255,
   "eggCycles": 5,
   "baseFriendship": 50,
+  "behaviour": {},
   "moves": [
     "1:withdraw",
     "1:triattack",
@@ -134,7 +135,7 @@
         "restricted"
       ],
       "aspects": [
-        "tera-form-terastal"
+        "terastal-form"
       ],
       "abilities": [
         "terashell",
@@ -164,6 +165,7 @@
       "catchRate": 255,
       "eggCycles": 5,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:withdraw",
         "1:triattack",
@@ -255,7 +257,7 @@
         "restricted"
       ],
       "aspects": [
-        "tera-form-stellar"
+        "stellar-form"
       ],
       "abilities": [
         "teraformzero",
@@ -286,6 +288,7 @@
       "eggCycles": 5,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:withdraw",
         "1:triattack",

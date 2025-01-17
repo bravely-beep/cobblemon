@@ -43,6 +43,7 @@
   "catchRate": 10,
   "eggCycles": 20,
   "baseFriendship": 50,
+  "behaviour": {},
   "moves": [
     "1:ficklebeam",
     "1:withdraw",
@@ -63,7 +64,6 @@
     "40:energyball",
     "44:substitute",
     "54:powerwhip",
-    "evolution:ficklebeam",
     "egg:defensecurl",
     "egg:recycle",
     "egg:rollout",

@@ -10,7 +10,8 @@
     "cobblemon.species.raticate.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "alolan"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.8,
   "hitbox": {
     "width": 0.7,
@@ -60,8 +60,6 @@
     },
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -94,7 +92,6 @@
     "34:superfang",
     "39:doubleedge",
     "44:endeavor",
-    "evolution:scaryface",
     "egg:bite",
     "egg:counter",
     "egg:finalgambit",
@@ -189,9 +186,11 @@
         "cobblemon.species.raticate-alola.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "alolan_form"
       ],
       "aspects": [
+        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -223,6 +222,7 @@
       "catchRate": 127,
       "eggCycles": 15,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 3,
         "entries": [
@@ -252,7 +252,6 @@
         "34:superfang",
         "39:doubleedge",
         "44:endeavor",
-        "evolution:scaryface",
         "egg:counter",
         "egg:finalgambit",
         "egg:furyswipes",

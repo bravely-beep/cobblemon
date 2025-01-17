@@ -13,7 +13,7 @@
     "gen7"
   ],
   "aspects": [
-    "dance-style-baile"
+    "baile-style"
   ],
   "abilities": [
     "dancer",
@@ -43,7 +43,7 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -161,7 +161,7 @@
         "gen7"
       ],
       "aspects": [
-        "dance-style-pom_pom"
+        "pom_pom-style"
       ],
       "abilities": [
         "dancer",
@@ -191,6 +191,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:pound",
         "1:doubleslap",
@@ -289,7 +290,7 @@
         "gen7"
       ],
       "aspects": [
-        "dance-style-pa'u"
+        "pa'u-style"
       ],
       "abilities": [
         "dancer",
@@ -319,6 +320,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:pound",
         "1:doubleslap",
@@ -417,7 +419,7 @@
         "gen7"
       ],
       "aspects": [
-        "dance-style-sensu"
+        "sensu-style"
       ],
       "abilities": [
         "dancer",
@@ -447,6 +449,7 @@
       "catchRate": 45,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:pound",
         "1:doubleslap",

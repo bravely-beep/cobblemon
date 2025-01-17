@@ -52,9 +52,11 @@
   "behaviour": {
     "moving": {
       "swim": {
-        "canSwimInWater": true,
         "canBreatheUnderwater": true,
-        "canWalkOnWater": true
+        "canWalkOnWater": true,
+        "canSwimInWater": true,
+        "canSwimInLava": false,
+        "swimSpeed": "0.2"
       },
       "walk": {
         "walkSpeed": 0.25
@@ -91,7 +93,6 @@
     "52:featherdance",
     "58:closecombat",
     "64:wavecrash",
-    "evolution:aquastep",
     "egg:detect",
     "egg:lastresort",
     "egg:rapidspin",

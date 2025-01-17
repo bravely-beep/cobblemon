@@ -45,7 +45,6 @@
   "features": [
     "shulker"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 1.25,
@@ -56,7 +55,6 @@
     "resting": {
       "canSleep": true,
       "willSleepOnBed": true,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -100,9 +98,6 @@
     "42:irondefense",
     "46:gyroball",
     "50:doubleedge",
-    "evolution:autotomize",
-    "evolution:heavyslam",
-    "evolution:mirrorshot",
     "egg:counter",
     "egg:flail",
     "egg:pinmissile",

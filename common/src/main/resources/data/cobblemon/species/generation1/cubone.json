@@ -10,7 +10,8 @@
     "cobblemon.species.cubone.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -43,15 +44,16 @@
   "eggCycles": 20,
   "baseFriendship": 50,
   "features": [
+    "alolan",
     "region_bias"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.55,
     "height": 0.87,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -224,7 +226,9 @@
         "cobblemon.species.cubone-alolabias.desc"
       ],
       "labels": [
-        "gen7"
+        "gen7",
+        "customized_official",
+        "alolan_form"
       ],
       "aspects": [
         "region-bias-alola"

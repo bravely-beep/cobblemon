@@ -43,7 +43,6 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "shoulderMountable": false,
   "baseScale": 1.2,
   "hitbox": {
     "width": 0.75,
@@ -245,7 +244,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega_x"
+        "mega_x"
       ],
       "abilities": [
         "steadfast",
@@ -276,6 +275,7 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:confusion",
         "1:disable",
@@ -456,7 +456,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega_y"
+        "mega_y"
       ],
       "abilities": [
         "insomnia",
@@ -487,6 +487,7 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:confusion",
         "1:disable",

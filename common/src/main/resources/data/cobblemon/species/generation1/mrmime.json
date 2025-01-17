@@ -11,7 +11,8 @@
     "cobblemon.species.mrmime.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -46,13 +47,13 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 0.7,
   "hitbox": {
     "width": 0.8,
     "height": 1.8,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -221,7 +222,8 @@
         "cobblemon.species.mrmime-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -255,6 +257,7 @@
       "catchRate": 45,
       "eggCycles": 25,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [

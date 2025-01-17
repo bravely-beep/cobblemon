@@ -40,13 +40,13 @@
   "catchRate": 90,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -71,7 +71,6 @@
     "41:bulletseed",
     "48:superfang",
     "55:belch",
-    "evolution:covet",
     "egg:bellydrum",
     "egg:defensecurl",
     "egg:lastresort",

@@ -10,7 +10,8 @@
     "cobblemon.species.weezing.desc"
   ],
   "labels": [
-    "gen1"
+    "gen1",
+    "kantonian_form"
   ],
   "aspects": [],
   "abilities": [
@@ -45,7 +46,6 @@
   "features": [
     "galarian"
   ],
-  "shoulderMountable": false,
   "baseScale": 1.2,
   "hitbox": {
     "width": 1.3,
@@ -86,7 +86,6 @@
     "50:explosion",
     "56:memento",
     "62:destinybond",
-    "evolution:doublehit",
     "egg:curse",
     "egg:grudge",
     "egg:painsplit",
@@ -175,7 +174,8 @@
         "cobblemon.species.weezing-galar.desc"
       ],
       "labels": [
-        "gen8"
+        "gen8",
+        "galarian_form"
       ],
       "aspects": [
         "galarian"
@@ -209,6 +209,7 @@
       "catchRate": 60,
       "eggCycles": 20,
       "baseFriendship": 50,
+      "behaviour": {},
       "drops": {
         "amount": 3,
         "entries": [
@@ -249,7 +250,6 @@
         "56:memento",
         "62:destinybond",
         "68:mistyterrain",
-        "evolution:doublehit",
         "egg:aromatherapy",
         "egg:curse",
         "egg:grudge",

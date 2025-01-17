@@ -42,7 +42,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1.1,
   "hitbox": {
     "width": 0.7,
@@ -52,8 +51,6 @@
   "behaviour": {
     "resting": {
       "canSleep": true,
-      "willSleepOnBed": false,
-      "depth": "normal",
       "light": "0-4"
     }
   },
@@ -92,7 +89,6 @@
     "48:stompingtantrum",
     "53:outrage",
     "57:finalgambit",
-    "evolution:rage",
     "egg:beatup",
     "egg:counter",
     "egg:curse",

@@ -42,13 +42,13 @@
   "catchRate": 45,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.1,
     "height": 2.6,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -91,7 +91,6 @@
     "49:reversal",
     "56:flareblitz",
     "63:bravebird",
-    "evolution:blazekick",
     "egg:counter",
     "egg:crushclaw",
     "egg:feint",
@@ -229,7 +228,7 @@
         "mega"
       ],
       "aspects": [
-        "mega-evolution-mega"
+        "mega"
       ],
       "abilities": [
         "speedboost",
@@ -260,6 +259,7 @@
       "eggCycles": 20,
       "baseFriendship": 50,
       "dynamaxBlocked": true,
+      "behaviour": {},
       "moves": [
         "1:firepunch",
         "1:scratch",
@@ -286,7 +286,6 @@
         "49:reversal",
         "56:flareblitz",
         "63:bravebird",
-        "evolution:blazekick",
         "egg:counter",
         "egg:crushclaw",
         "egg:feint",

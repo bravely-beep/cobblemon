@@ -11,7 +11,8 @@
     "cobblemon.species.bastiodon.desc"
   ],
   "labels": [
-    "gen4"
+    "gen4",
+    "fossil"
   ],
   "aspects": [],
   "abilities": [
@@ -42,7 +43,6 @@
   "catchRate": 45,
   "eggCycles": 30,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1.75,
@@ -53,6 +53,9 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.12
+      },
+      "swim": {
+        "canSwimInLava": true
       }
     }
   },
@@ -80,7 +83,6 @@
     "43:metalburst",
     "51:ironhead",
     "58:heavyslam",
-    "evolution:block",
     "egg:counter",
     "egg:fissure",
     "egg:focusenergy",

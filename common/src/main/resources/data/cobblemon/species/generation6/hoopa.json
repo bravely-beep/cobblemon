@@ -14,7 +14,7 @@
     "mythical"
   ],
   "aspects": [
-    "djinn-state-confined"
+    "confined"
   ],
   "abilities": [
     "magician",
@@ -44,13 +44,13 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 100,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "moves": [
     "1:destinybond",
     "1:allyswitch",
@@ -172,7 +172,7 @@
         "mythical"
       ],
       "aspects": [
-        "djinn-state-unbound"
+        "unbound"
       ],
       "abilities": [
         "magician",
@@ -202,6 +202,7 @@
       "catchRate": 3,
       "eggCycles": 120,
       "baseFriendship": 50,
+      "behaviour": {},
       "moves": [
         "1:destinybond",
         "1:allyswitch",

@@ -9,5 +9,5 @@
     "hangry"
   ],
   "isAspect": true,
-  "aspectFormat": "hunger-mode-{{choice}}"
+  "aspectFormat": "{{choice}}-mode"
 }

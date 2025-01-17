@@ -41,13 +41,13 @@
   "catchRate": 45,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "shoulderMountable": false,
   "baseScale": 1,
   "hitbox": {
     "width": 1,
     "height": 1,
     "fixed": false
   },
+  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [
@@ -79,7 +79,6 @@
     "35:bugbuzz",
     "37:rage",
     "40:quiverdance",
-    "evolution:gust",
     "tm:absorb",
     "tm:acrobatics",
     "tm:aerialace",
