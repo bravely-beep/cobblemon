@@ -22,6 +22,12 @@ object CobblemonPokemonLabels {
     const val LEGENDARY = "legendary"
 
     /**
+     * Represents a Pokémon who is typically banned or has restricted usage in competitive sanctions.
+     * For example usage see this [VGC](https://www.pokemon.com/us/pokemon-news/trainers-can-once-again-use-a-restricted-pokemon-in-ranked-battles-series-10-starting-august-1-2021) page.
+     */
+    const val RESTRICTED = "restricted"
+
+    /**
      * Represents a mythical Pokémon.
      * In Cobblemon terms they do not exist since we do not share the concept of timed event only Pokémon but the official ones are still tagged.
      */
