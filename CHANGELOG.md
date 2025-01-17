@@ -72,6 +72,8 @@
 - Fixed Fossil Restoration Machine not accepting Hay Bales.
 - Fixed Potion items so that they no longer apply over double their intended healing value.
 - Fixed Fast Ball capture rate applying to all Pokémon.
+- Fix "learned new move" messages appearing for already known moves on Pokémon evolutions.
+- Fix Pokémon Item Models breaking shadows nearby when being placed in Display Cases or Item Frames.
 
 ### Molang & Datapacks  
 - Added flows for:
