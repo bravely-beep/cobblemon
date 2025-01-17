@@ -35,7 +35,8 @@
           "q.bedrock('armarouge', 'eye_flame_overlay')"
         ],
         "quirks": [
-          "q.bedrock_quirk('armarouge', 'blink')","q.bedrock_quirk('armarouge', 'look_quirk')"
+          "q.bedrock_quirk('armarouge', 'blink')","q.bedrock_quirk('armarouge', 'look_quirk')",
+          "q.bedrock_primary_quirk('armarouge', 'tap_quirk', 20, 40, 1, q.curve('symmetrical_wide'))"
         ]
       },
       "walking": {
