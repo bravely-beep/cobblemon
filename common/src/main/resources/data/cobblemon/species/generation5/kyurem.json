@@ -49,7 +49,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:dragonrage",
     "1:ancientpower",
@@ -168,9 +167,6 @@
         "turboblaze",
         "h:turboblaze"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 125,
         "attack": 120,
@@ -188,11 +184,6 @@
         "speed": 0
       },
       "baseExperienceYield": 350,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:dragonrage",
         "1:ancientpower",
@@ -313,9 +304,6 @@
         "teravolt",
         "h:teravolt"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 125,
         "attack": 170,
@@ -333,11 +321,6 @@
         "speed": 0
       },
       "baseExperienceYield": 350,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:dragonrage",
         "1:ancientpower",

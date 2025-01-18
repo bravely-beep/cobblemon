@@ -170,13 +170,6 @@
       "aspects": [
         "blade-forme"
       ],
-      "abilities": [
-        "stancechange",
-        "h:stancechange"
-      ],
-      "eggGroups": [
-        "mineral"
-      ],
       "baseStats": {
         "hp": 60,
         "attack": 140,
@@ -192,19 +185,6 @@
         "special_attack": 1,
         "special_defence": 0,
         "speed": 0
-      },
-      "baseExperienceYield": 250,
-      "experienceGroup": "medium_fast",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {
-        "moving": {
-          "swim": {
-            "avoidsWater": true,
-            "canSwimInWater": false
-          }
-        }
       },
       "moves": [
         "1:furycutter",

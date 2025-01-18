@@ -217,7 +217,6 @@
         "alolan_form"
       ],
       "aspects": [
-        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -225,37 +224,6 @@
         "gluttony",
         "h:powerofalchemy"
       ],
-      "eggGroups": [
-        "amorphous"
-      ],
-      "baseStats": {
-        "hp": 105,
-        "attack": 105,
-        "defence": 75,
-        "special_attack": 65,
-        "special_defence": 100,
-        "speed": 50
-      },
-      "evYield": {
-        "hp": 1,
-        "attack": 1,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 175,
-      "experienceGroup": "medium_fast",
-      "catchRate": 75,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {
-        "moving": {
-          "swim": {
-            "canSwimInWater": true
-          }
-        }
-      },
       "drops": {
         "amount": 4,
         "entries": [

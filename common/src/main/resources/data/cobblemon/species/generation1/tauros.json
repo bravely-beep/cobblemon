@@ -53,7 +53,6 @@
     "height": 1.4,
     "fixed": false
   },
-  "behaviour": {},
   "drops": {
     "amount": 5,
     "entries": [
@@ -180,9 +179,6 @@
         "angerpoint",
         "h:cudchew"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 75,
         "attack": 110,
@@ -199,12 +195,6 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 172,
-      "experienceGroup": "slow",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:tailwhip",
@@ -299,9 +289,6 @@
         "angerpoint",
         "h:cudchew"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 75,
         "attack": 110,
@@ -318,12 +305,6 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 172,
-      "experienceGroup": "slow",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:tailwhip",
@@ -415,16 +396,13 @@
         "paldean_form"
       ],
       "aspects": [
-        "aqua-breed",
-        "paldean"
+        "paldean",
+        "aqua-breed"
       ],
       "abilities": [
         "intimidate",
         "angerpoint",
         "h:cudchew"
-      ],
-      "eggGroups": [
-        "field"
       ],
       "baseStats": {
         "hp": 75,
@@ -442,12 +420,6 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 172,
-      "experienceGroup": "slow",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:tailwhip",

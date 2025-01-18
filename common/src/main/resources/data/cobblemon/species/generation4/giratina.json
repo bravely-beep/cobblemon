@@ -45,7 +45,6 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "behaviour": {},
   "moves": [
     "1:shadowsneak",
     "1:defog",
@@ -164,9 +163,6 @@
         "levitate",
         "h:levitate"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 150,
         "attack": 120,
@@ -175,20 +171,6 @@
         "special_defence": 100,
         "speed": 90
       },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 340,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:shadowsneak",
         "1:defog",

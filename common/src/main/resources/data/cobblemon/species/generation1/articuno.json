@@ -180,9 +180,6 @@
         "competitive",
         "h:competitive"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 90,
         "attack": 85,
@@ -199,12 +196,7 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 290,
-      "experienceGroup": "slow",
-      "catchRate": 3,
       "eggCycles": 120,
-      "baseFriendship": 35,
-      "behaviour": {},
       "drops": {
         "amount": 6,
         "entries": [
