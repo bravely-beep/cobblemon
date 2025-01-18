@@ -208,7 +208,8 @@
           "variant": "time_range",
           "range": "night"
         }
-      ]
+      ],
+      "permanent": true
     }
   ],
   "forms": [
@@ -388,7 +389,8 @@
               "variant": "time_range",
               "range": "day"
             }
-          ]
+          ],
+          "permanent": true
         }
       ],
       "battleOnly": false

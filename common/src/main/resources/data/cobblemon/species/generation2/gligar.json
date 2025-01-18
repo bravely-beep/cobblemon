@@ -209,7 +209,8 @@
           "variant": "time_range",
           "range": "night"
         }
-      ]
+      ],
+      "permanent": true
     }
   ]
 }
