@@ -219,52 +219,6 @@
       "aspects": [
         "hisuian"
       ],
-      "abilities": [
-        "poisonpoint",
-        "swiftswim",
-        "h:intimidate"
-      ],
-      "eggGroups": [
-        "water_2"
-      ],
-      "baseStats": {
-        "hp": 65,
-        "attack": 95,
-        "defence": 85,
-        "special_attack": 55,
-        "special_defence": 55,
-        "speed": 85
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 1,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 88,
-      "experienceGroup": "medium_fast",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {
-        "moving": {
-          "walk": {
-            "avoidsLand": true
-          },
-          "swim": {
-            "swimSpeed": 0.3,
-            "canBreatheUnderwater": true,
-            "canSwimInWater": true,
-            "canSwimInLava": false
-          }
-        },
-        "resting": {
-          "canSleep": true,
-          "light": "0-4"
-        }
-      },
       "moves": [
         "1:tackle",
         "1:poisonsting",

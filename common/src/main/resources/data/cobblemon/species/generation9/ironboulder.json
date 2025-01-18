@@ -42,7 +42,6 @@
   "catchRate": 10,
   "eggCycles": 50,
   "baseFriendship": 0,
-  "behaviour": {},
   "moves": [
     "1:hornattack",
     "1:leer",

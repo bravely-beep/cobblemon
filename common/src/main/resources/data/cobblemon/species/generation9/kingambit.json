@@ -42,7 +42,6 @@
   "catchRate": 25,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "behaviour": {},
   "drops": {
     "amount": 2,
     "entries": [

@@ -50,7 +50,6 @@
     "height": 1.1,
     "fixed": false
   },
-  "behaviour": {},
   "drops": {
     "amount": 4,
     "entries": [
@@ -160,9 +159,6 @@
         "gluttony",
         "h:thickfat"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 115,
         "attack": 90,
@@ -171,19 +167,6 @@
         "special_defence": 90,
         "speed": 65
       },
-      "evYield": {
-        "hp": 2,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 171,
-      "experienceGroup": "medium_fast",
-      "catchRate": 100,
-      "eggCycles": 15,
-      "baseFriendship": 50,
       "moves": [
         "1:tackle",
         "1:tailwhip",

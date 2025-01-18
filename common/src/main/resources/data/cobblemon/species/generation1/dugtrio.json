@@ -198,16 +198,12 @@
         "alolan_form"
       ],
       "aspects": [
-        "alolan",
         "alolan"
       ],
       "abilities": [
         "sandveil",
         "tanglinghair",
         "h:sandforce"
-      ],
-      "eggGroups": [
-        "field"
       ],
       "baseStats": {
         "hp": 35,
@@ -225,12 +221,6 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 149,
-      "experienceGroup": "medium_fast",
-      "catchRate": 50,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:sandtomb",
         "1:rototiller",

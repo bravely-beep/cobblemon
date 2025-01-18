@@ -43,7 +43,6 @@
   "catchRate": 3,
   "eggCycles": 120,
   "baseFriendship": 0,
-  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -186,13 +185,6 @@
       "aspects": [
         "attack-forme"
       ],
-      "abilities": [
-        "pressure",
-        "h:pressure"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 50,
         "attack": 180,
@@ -209,12 +201,6 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 300,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -359,13 +345,6 @@
       "aspects": [
         "defense-forme"
       ],
-      "abilities": [
-        "pressure",
-        "h:pressure"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 50,
         "attack": 70,
@@ -382,12 +361,6 @@
         "special_defence": 1,
         "speed": 0
       },
-      "baseExperienceYield": 300,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
@@ -538,13 +511,6 @@
       "aspects": [
         "speed-forme"
       ],
-      "abilities": [
-        "pressure",
-        "h:pressure"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 50,
         "attack": 95,
@@ -561,12 +527,6 @@
         "special_defence": 0,
         "speed": 3
       },
-      "baseExperienceYield": 300,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [

@@ -42,7 +42,6 @@
   "catchRate": 6,
   "eggCycles": 50,
   "baseFriendship": 0,
-  "behaviour": {},
   "moves": [
     "1:meanlook",
     "1:sandtomb",

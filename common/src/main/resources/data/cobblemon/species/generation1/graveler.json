@@ -214,7 +214,6 @@
         "alolan_form"
       ],
       "aspects": [
-        "alolan",
         "alolan"
       ],
       "abilities": [
@@ -222,38 +221,6 @@
         "sturdy",
         "h:galvanize"
       ],
-      "eggGroups": [
-        "mineral"
-      ],
-      "baseStats": {
-        "hp": 55,
-        "attack": 95,
-        "defence": 115,
-        "special_attack": 45,
-        "special_defence": 45,
-        "speed": 35
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 0,
-        "defence": 2,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 137,
-      "experienceGroup": "medium_slow",
-      "catchRate": 120,
-      "eggCycles": 15,
-      "baseFriendship": 50,
-      "behaviour": {
-        "moving": {
-          "swim": {
-            "avoidsWater": true,
-            "canSwimInWater": false
-          }
-        }
-      },
       "drops": {
         "amount": 5,
         "entries": [

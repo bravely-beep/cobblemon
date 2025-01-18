@@ -42,7 +42,6 @@
   "catchRate": 50,
   "eggCycles": 50,
   "baseFriendship": 0,
-  "behaviour": {},
   "moves": [
     "1:sandattack",
     "1:tackle",

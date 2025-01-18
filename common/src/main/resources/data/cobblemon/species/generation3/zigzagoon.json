@@ -193,42 +193,6 @@
       "aspects": [
         "galarian"
       ],
-      "abilities": [
-        "pickup",
-        "gluttony",
-        "h:quickfeet"
-      ],
-      "eggGroups": [
-        "field"
-      ],
-      "baseStats": {
-        "hp": 38,
-        "attack": 30,
-        "defence": 41,
-        "special_attack": 30,
-        "special_defence": 41,
-        "speed": 60
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 1
-      },
-      "baseExperienceYield": 56,
-      "experienceGroup": "medium_fast",
-      "catchRate": 255,
-      "eggCycles": 15,
-      "baseFriendship": 50,
-      "baseScale": 0.8,
-      "hitbox": {
-        "width": 0.6,
-        "height": 0.4,
-        "fixed": false
-      },
-      "behaviour": {},
       "drops": {
         "amount": 1,
         "entries": [

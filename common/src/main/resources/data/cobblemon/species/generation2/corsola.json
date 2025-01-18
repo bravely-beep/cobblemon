@@ -204,10 +204,6 @@
         "weakarmor",
         "h:cursedbody"
       ],
-      "eggGroups": [
-        "water_1",
-        "water_3"
-      ],
       "baseStats": {
         "hp": 60,
         "attack": 55,
@@ -224,18 +220,13 @@
         "special_defence": 1,
         "speed": 0
       },
-      "baseExperienceYield": 144,
-      "experienceGroup": "fast",
-      "catchRate": 60,
-      "eggCycles": 20,
-      "baseFriendship": 50,
       "behaviour": {
         "moving": {
           "swim": {
+            "swimSpeed": "0.2",
             "canSwimInWater": true,
-            "canSwimInLava": false,
             "canBreatheUnderwater": true,
-            "swimSpeed": "0.2"
+            "canSwimInLava": false
           }
         }
       },

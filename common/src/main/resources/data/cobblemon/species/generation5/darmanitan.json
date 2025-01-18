@@ -202,13 +202,6 @@
       "aspects": [
         "zen-mode"
       ],
-      "abilities": [
-        "sheerforce",
-        "h:zenmode"
-      ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 105,
         "attack": 30,
@@ -226,17 +219,11 @@
         "speed": 0
       },
       "baseExperienceYield": 189,
-      "experienceGroup": "medium_slow",
-      "catchRate": 60,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "baseScale": 1,
       "hitbox": {
         "width": 1.3,
         "height": 1.5,
         "fixed": false
       },
-      "behaviour": {},
       "moves": [
         "1:tackle",
         "1:rage",
@@ -358,38 +345,12 @@
       ],
       "aspects": [
         "standard-mode",
-        "galarian",
         "galarian"
       ],
       "abilities": [
         "gorillatactics",
         "h:zenmode"
       ],
-      "eggGroups": [
-        "field"
-      ],
-      "baseStats": {
-        "hp": 105,
-        "attack": 140,
-        "defence": 55,
-        "special_attack": 30,
-        "special_defence": 55,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 2,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 168,
-      "experienceGroup": "medium_slow",
-      "catchRate": 60,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [
@@ -519,15 +480,12 @@
         "galarian_form"
       ],
       "aspects": [
-        "zen-mode",
-        "galarian"
+        "galarian",
+        "zen-mode"
       ],
       "abilities": [
         "gorillatactics",
         "h:zenmode"
-      ],
-      "eggGroups": [
-        "field"
       ],
       "baseStats": {
         "hp": 105,
@@ -546,11 +504,6 @@
         "speed": 0
       },
       "baseExperienceYield": 189,
-      "experienceGroup": "medium_slow",
-      "catchRate": 60,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:iciclecrash",
         "1:powdersnow",
