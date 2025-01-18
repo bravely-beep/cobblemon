@@ -550,8 +550,6 @@ object PokemonModelRepository : VaryingModelRepository<PokemonPosableModel>() {
         inbuilt("roserade", ::RoseradeModel)
         inbuilt("woobat", ::WoobatModel)
         inbuilt("swoobat", ::SwoobatModel)
-        inbuilt("sandile", ::SandileModel)
-        inbuilt("krokorok", ::KrokorokModel)
         inbuilt("frillish", ::FrillishModel)
         inbuilt("jellicent", ::JellicentModel)
         inbuilt("cubchoo", ::CubchooModel)
