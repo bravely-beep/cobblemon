@@ -6341,5 +6341,16 @@
     "cobblemon.pokedex.variation.wood": "Madera",
     "cobblemon.pokedex.variation.variant": "Variante",
     "cobblemon.pokedex.variation.size": "Tamaño",
-    "cobblemon.pokedex.variation.snake_pattern": "Patrón de serpiente"
+    "cobblemon.pokedex.variation.snake_pattern": "Patrón de serpiente",
+    "cobblemon.subtitle.pokemon.wild_shiny_shine": "¡Un Pokémon salvaje variocolor brilla!",
+    "cobblemon.subtitle.pokemon.owned_shiny_ambient": "Un Pokémon variocolor tintinea",
+    "cobblemon.subtitle.pokemon.shiny_shine": "Un Pokémon variocolor brilla",
+    "cobblemon.subtitle.pokemon.shiny_ambient": "¡Un Pokémon salvaje variocolor tintinea!",
+    "cobblemon.battle.clearboost": "¡Las características de %1$s han vuelto a sus valores originales!",
+    "cobblemon.challenge.multi.invite": "Invitar",
+    "cobblemon.pokedex.variation.pattern": "Patrón",
+    "cobblemon.pokedex.variation.metal": "Metal",
+    "cobblemon.battle.crit_spread": "¡Un golpe crítico a %1$s!",
+    "cobblemon.battle.superEffective_spread": "¡Es supereficaz contra %1$s!",
+    "cobblemon.battle.resisted_spread": "No es muy eficaz contra %1$s."
 }
