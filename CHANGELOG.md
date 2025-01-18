@@ -26,6 +26,7 @@
 - Edited some recipes to utilize tags instead of direct item ids, for greater mod compatibility.
 - Berries will drop if broken at age 0
 - Improved Fortune drops on Mint Seeds
+- New Slowpoke shiny texture.
 
 ### Pokémon Added
 
@@ -69,9 +70,6 @@
 - Sandile
 - Krokorok
 - Krookodile
-
-### Changes
-- New Slowpoke shiny texture.
 
 ### Model updates for the following Pokémon
 - Slowpoke
