@@ -42,13 +42,18 @@
   "catchRate": 45,
   "eggCycles": 25,
   "baseFriendship": 50,
-  "baseScale": 0.75,
+  "baseScale": 0.9,
   "hitbox": {
     "width": 1,
     "height": 1.45,
     "fixed": false
   },
   "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.15
+      }
+    },
     "resting": {
       "canSleep": true,
       "light": "0-4"

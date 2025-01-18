@@ -53,6 +53,7 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.118
+        }
       },
       "resting": {
         "canSleep": true,
@@ -60,7 +61,6 @@
         "depth": "normal",
         "light": "0-15"
       }
-    }
   },
   "drops": {
     "amount": 5,
