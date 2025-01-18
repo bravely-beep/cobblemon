@@ -52,8 +52,8 @@
             "weightMultiplier": {
                 "multiplier": 0.6,
                 "condition": {
-                    "minLureLevel": "0",
-                    "maxLureLevel": "1"
+                    "minLureLevel": 0,
+                    "maxLureLevel": 1
                 }
             },
             "condition": {
@@ -91,8 +91,8 @@
             "weightMultiplier": {
                 "multiplier": 0.6,
                 "condition": {
-                    "minLureLevel": "0",
-                    "maxLureLevel": "1"
+                    "minLureLevel": 0,
+                    "maxLureLevel": 1
                 }
             },
             "condition": {
@@ -101,6 +101,25 @@
                 "maxSkyLight": 15,
                 "biomes": [
                     "#cobblemon:is_frozen_ocean"
+                ]
+            }
+        },
+        {
+            "id": "bergmite-6",
+            "pokemon": "bergmite",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "uncommon",
+            "level": "5-30",
+            "weight": 8.4,
+            "condition": {
+                "minSkyLight": 8,
+                "maxSkyLight": 15,
+                "biomes": [
+                    "#cobblemon:space/is_icy"
                 ]
             }
         }

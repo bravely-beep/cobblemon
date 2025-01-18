@@ -51,6 +51,28 @@
         {
             "id": "claydol-3",
             "pokemon": "claydol",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "uncommon",
+            "level": "36-50",
+            "weight": 0.96,
+            "condition": {
+                "biomes": [
+                    "#cobblemon:space/is_mars"
+                ]
+            },
+            "anticondition": {
+                "biomes": [
+                    "#cobblemon:space/is_icy"
+                ]
+            }
+        },
+        {
+            "id": "claydol-4",
+            "pokemon": "claydol",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
