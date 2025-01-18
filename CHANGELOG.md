@@ -53,7 +53,9 @@
 - Paldean Tauros's
 
 ### Added cries to the following Pokémon
+- All Nidorans
 - Shellder, Cloyster
+- Pinsir
 - Tyrogue, Hitmontop
 - Spinda
 
