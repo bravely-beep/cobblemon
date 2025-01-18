@@ -8,6 +8,7 @@
 - Added molang particle queries for getting distance to targeted entities.
 - Added debug renderer for poseable entity locators.
 - Added `baseScale` property to NPCs.
+- Added cry for Spinda.
 - Added the player to `PokerodReelEvent`.
 - Pokédex and Dialogue API screens now close when the inventory keybind is pressed.
 - Added Galarica Nuts, used for crafting Galarica Cuffs and Wreaths. Dropped from certain Pokémon.
@@ -27,24 +28,66 @@
 - Improved Fortune drops on Mint Seeds
 
 ### Pokémon Added
+
 #### Gen 5
-- Foongus
-- Amoonguss
+- Ducklett
+- Swanna
+- Shelmet
+- Accelgor
+- Karrablast
+- Escavalier
+- Rufflet
+- Braviary
+
+#### Gen 7
+- Dewpider
+- Araquanid
 
 #### Gen 8
 - Galarian Slowpoke
 - Galarian Slowbro
 - Galarian Slowking
 
-### Added cries to the following Pokémon
-- Spinda
+#### Gen 9
+- Palean Tauros's
 
 ### Animation updates for the following Pokémon
-- placeholder
+- Primeape
+- Munchlax 
+- Snorlax
+- Poliwrath
+- Goldeen
+- Seaking
+- Dondozo
+- Wobbuffet
+- Charcadet
+- Armarouge
+- Ceruledge
+- Geodude
+- Graveler
+- Golem
+- Sandile
+- Krokorok
+- Krookodile
+
+### Changes
+- New Slowpoke shiny texture.
 
 ### Model updates for the following Pokémon
-- Slowpoke, Slowbro, Slowking
+- Slowpoke
+- Slowbro
+- Slowking
 - Eiscue
+- Binacle
+- Barbaracle
+- Tauros
+- Goldeen
+- Seaking
+- Charcadet
+- Pinsir
+- Geodude
+- Graveler
+- Golem
 
 ### Fixes
 - Fixed Pokédex sometimes crashing when switching forms.
