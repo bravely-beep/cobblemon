@@ -13,7 +13,7 @@
       "poseTypes": ["STAND"],
       "isTouchingWater": false,
       "isBattle": true,
-      "animations": ["q.bedrock('seaking', 'battle_idle')"],
+      "animations": ["q.bedrock('seaking', 'ground_battle_idle')"],
       "quirks": ["q.bedrock_quirk('seaking', 'blink')"]
     },
     "battle-swimming": {
