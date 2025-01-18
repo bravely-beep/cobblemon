@@ -52,14 +52,14 @@
     "moving": {
       "walk": {
         "walkSpeed": 0.147
-      },
+      }
+    },
       "resting": {
         "canSleep": true,
         "willSleepOnBed": false,
         "depth": "normal",
         "light": "0-15"
       }
-    }
   },
   "drops": {
     "amount": 8,
