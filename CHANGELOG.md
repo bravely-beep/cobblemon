@@ -50,7 +50,7 @@
 - Galarian Slowking
 
 #### Gen 9
-- Palean Tauros's
+- Paldean Tauros's
 
 ### Animation updates for the following Pokémon
 - Primeape
