@@ -14,7 +14,7 @@
     "gen5"
   ],
   "aspects": [
-    "on-spring-sea"
+    "spring"
   ],
   "abilities": [
     "chlorophyll",
@@ -185,7 +185,7 @@
         "gen5"
       ],
       "aspects": [
-        "on-summer-sea"
+        "summer"
       ],
       "abilities": [
         "chlorophyll",
@@ -334,7 +334,7 @@
         "gen5"
       ],
       "aspects": [
-        "on-autumn-sea"
+        "autumn"
       ],
       "abilities": [
         "chlorophyll",
@@ -483,7 +483,7 @@
         "gen5"
       ],
       "aspects": [
-        "on-winter-sea"
+        "winter"
       ],
       "abilities": [
         "chlorophyll",
