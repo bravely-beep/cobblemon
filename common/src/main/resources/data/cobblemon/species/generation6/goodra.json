@@ -62,7 +62,7 @@
       },
       {
         "item": "cobblemon:haban_berry",
-        "percentage": 10
+        "percentage": 10.0
       }
     ]
   },
@@ -222,7 +222,7 @@
           },
           {
             "item": "cobblemon:bluk_berry",
-            "percentage": 10
+            "percentage": 10.0
           }
         ]
       },

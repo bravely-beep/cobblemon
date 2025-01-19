@@ -50,9 +50,9 @@
       "light": "0-4"
     },
     "moving": {
-        "walk": {
-          "walkSpeed": 0.15
-        },
+      "walk": {
+        "walkSpeed": 0.15
+      },
       "swim": {
         "canSwimInWater": true,
         "canSwimInLava": false,
@@ -80,7 +80,7 @@
       },
       {
         "item": "cobblemon:aspear_berry",
-        "percentage": 5
+        "percentage": 5.0
       }
     ]
   },
@@ -199,7 +199,7 @@
           },
           {
             "item": "cobblemon:aspear_berry",
-            "percentage": 5
+            "percentage": 5.0
           }
         ]
       }

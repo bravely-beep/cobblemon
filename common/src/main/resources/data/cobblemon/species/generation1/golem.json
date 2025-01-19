@@ -72,20 +72,20 @@
     "amount": 6,
     "entries": [
       {
-        "item": "minecraft:flint",
+        "item": "minecraft:gravel",
         "quantityRange": "0-3"
       },
       {
         "item": "cobblemon:everstone",
-        "percentage": 10
+        "percentage": 10.0
       },
       {
         "item": "cobblemon:black_augurite",
-        "percentage": 10
+        "percentage": 10.0
       },
       {
         "item": "cobblemon:rindo_berry",
-        "percentage": 10
+        "percentage": 10.0
       }
     ]
   },
@@ -228,15 +228,15 @@
           },
           {
             "item": "cobblemon:cell_battery",
-            "percentage": 10
+            "percentage": 10.0
           },
           {
             "item": "cobblemon:magnet",
-            "percentage": 10
+            "percentage": 10.0
           },
           {
             "item": "cobblemon:shuca_berry",
-            "percentage": 10
+            "percentage": 10.0
           }
         ]
       },

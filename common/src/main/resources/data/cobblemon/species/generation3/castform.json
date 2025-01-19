@@ -64,7 +64,7 @@
     "entries": [
       {
         "item": "cobblemon:mystic_water",
-        "percentage": 5
+        "percentage": 5.0
       }
     ]
   },
@@ -162,7 +162,7 @@
         "entries": [
           {
             "item": "cobblemon:heat_rock",
-            "percentage": 5
+            "percentage": 5.0
           }
         ]
       },
@@ -189,7 +189,7 @@
         "entries": [
           {
             "item": "cobblemon:damp_rock",
-            "percentage": 5
+            "percentage": 5.0
           }
         ]
       },
@@ -216,7 +216,7 @@
         "entries": [
           {
             "item": "cobblemon:icy_rock",
-            "percentage": 5
+            "percentage": 5.0
           }
         ]
       },
