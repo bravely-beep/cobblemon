@@ -727,7 +727,7 @@
   "item.cobblemon.relic_coin": "Relic Coin",
   "block.cobblemon.relic_coin_pouch": "Relic Coin Pouch",
   "block.cobblemon.relic_coin_sack": "Relic Coin Sack",
-  
+
   "item.cobblemon.automaton_armor_trim_smithing_template": "Smithing Template",
   "trim_pattern.cobblemon.automaton": "Automaton Armor Trim",
 
@@ -937,6 +937,7 @@
   "cobblemon.command.clearparty.cleared": "Cleared %1$s's party.",
   "cobblemon.command.clearpc.cleared": "Cleared %1$s's PC.",
   "cobblemon.command.dialogue.invalid-dialogue": "Invalid dialogue identifier",
+  "cobblemon.command.pc.invalid-box": "Box number %1$s exceeds max boxes of %2$s.",
 
   "cobblemon.ui.generic.yes": "Yes",
   "cobblemon.ui.generic.no": "No",
@@ -4277,7 +4278,7 @@
   "entity.cobblemon.poke_bobber": "Poké Bobber",
   "entity.cobblemon.boat": "Boat",
   "entity.cobblemon.chest_boat": "Boat with Chest",
-  
+
   "painting.cobblemon.premonition.title": "Premonition",
   "painting.cobblemon.premonition.author": "PKMNCC",
   "painting.cobblemon.slumber.title": "Slumber",
