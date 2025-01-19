@@ -48,10 +48,14 @@
     "fixed": false
   },
   "drops": {
-    "amount": 1,
+    "amount": 2,
     "entries": [
       {
         "item": "cobblemon:wepear_berry",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:cell_battery",
         "percentage": 10
       }
     ]

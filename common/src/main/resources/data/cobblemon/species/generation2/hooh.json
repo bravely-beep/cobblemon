@@ -55,6 +55,9 @@
       {
         "item": "minecraft:feather",
         "quantityRange": "2-4"
+      },
+      {
+        "item": "cobblemon:sacred_ash"
       }
     ]
   },

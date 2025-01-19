@@ -27,6 +27,7 @@
 - Berries will drop if broken at age 0
 - Improved Fortune drops on Mint Seeds
 - New Slowpoke shiny texture.
+- Updated drops for many Pokémon.
 
 ### Pokémon Added
 
@@ -53,7 +54,9 @@
 - Paldean Tauros's
 
 ### Added cries to the following Pokémon
+- All Nidorans
 - Shellder, Cloyster
+- Pinsir
 - Tyrogue, Hitmontop
 - Spinda
 

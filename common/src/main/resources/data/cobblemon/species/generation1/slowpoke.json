@@ -252,6 +252,8 @@
       ],
       "behaviour": {
         "moving": {
+        "walk": {
+          "walkSpeed": 0.125},
           "swim": {
             "swimSpeed": "0.2",
             "canBreatheUnderwater": true,
@@ -269,8 +271,12 @@
         }
       },
       "drops": {
-        "amount": 1,
+        "amount": 2,
         "entries": [
+          {
+            "item": "cobblemon:galarica_nuts",
+            "quantityRange": "0-1"
+          },
           {
             "item": "cobblemon:chesto_berry",
             "percentage": 2.5
