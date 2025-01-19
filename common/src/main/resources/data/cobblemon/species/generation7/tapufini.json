@@ -48,7 +48,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:watergun",
     "1:refresh",

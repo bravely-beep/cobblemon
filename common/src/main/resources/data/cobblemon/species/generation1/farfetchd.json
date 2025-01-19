@@ -218,10 +218,6 @@
         "steadfast",
         "h:scrappy"
       ],
-      "eggGroups": [
-        "flying",
-        "field"
-      ],
       "baseStats": {
         "hp": 52,
         "attack": 95,
@@ -230,20 +226,6 @@
         "special_defence": 62,
         "speed": 55
       },
-      "evYield": {
-        "hp": 0,
-        "attack": 1,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 132,
-      "experienceGroup": "medium_fast",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "drops": {
         "amount": 4,
         "entries": [

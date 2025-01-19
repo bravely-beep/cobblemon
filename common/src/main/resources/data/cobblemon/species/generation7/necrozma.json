@@ -48,7 +48,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:moonlight",
     "1:morningsun",
@@ -169,13 +168,6 @@
       "aspects": [
         "dusk-fusion"
       ],
-      "abilities": [
-        "prismarmor",
-        "h:prismarmor"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 97,
         "attack": 157,
@@ -193,10 +185,6 @@
         "speed": 0
       },
       "baseExperienceYield": 340,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
       "moves": [
         "1:moonlight",
         "1:morningsun",
@@ -320,13 +308,6 @@
       "aspects": [
         "dawn-fusion"
       ],
-      "abilities": [
-        "prismarmor",
-        "h:prismarmor"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 97,
         "attack": 113,
@@ -344,10 +325,6 @@
         "speed": 0
       },
       "baseExperienceYield": 340,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
       "moves": [
         "1:moonlight",
         "1:morningsun",
@@ -476,9 +453,6 @@
         "neuroforce",
         "h:neuroforce"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 97,
         "attack": 167,
@@ -496,112 +470,8 @@
         "speed": 1
       },
       "baseExperienceYield": 377,
-      "experienceGroup": "slow",
       "catchRate": 255,
-      "eggCycles": 120,
-      "baseFriendship": 0,
       "dynamaxBlocked": true,
-      "behaviour": {},
-      "moves": [
-        "1:moonlight",
-        "1:morningsun",
-        "1:chargebeam",
-        "1:mirrorshot",
-        "1:metalclaw",
-        "1:confusion",
-        "1:gravity",
-        "1:wringout",
-        "8:stealthrock",
-        "16:slash",
-        "24:nightslash",
-        "32:psychocut",
-        "40:storedpower",
-        "48:rockblast",
-        "56:irondefense",
-        "64:powergem",
-        "72:photongeyser",
-        "80:autotomize",
-        "88:prismaticlaser",
-        "tm:aerialace",
-        "tm:allyswitch",
-        "tm:autotomize",
-        "tm:bodyslam",
-        "tm:brickbreak",
-        "tm:brutalswing",
-        "tm:bulldoze",
-        "tm:calmmind",
-        "tm:chargebeam",
-        "tm:confusion",
-        "tm:cosmicpower",
-        "tm:darkpulse",
-        "tm:dragondance",
-        "tm:dragonpulse",
-        "tm:earthpower",
-        "tm:earthquake",
-        "tm:embargo",
-        "tm:endure",
-        "tm:expandingforce",
-        "tm:facade",
-        "tm:flashcannon",
-        "tm:fling",
-        "tm:futuresight",
-        "tm:gigaimpact",
-        "tm:gravity",
-        "tm:gyroball",
-        "tm:heatwave",
-        "tm:hyperbeam",
-        "tm:hypervoice",
-        "tm:imprison",
-        "tm:irondefense",
-        "tm:ironhead",
-        "tm:knockoff",
-        "tm:lightscreen",
-        "tm:magnetrise",
-        "tm:metalclaw",
-        "tm:meteorbeam",
-        "tm:mirrorshot",
-        "tm:moonlight",
-        "tm:morningsun",
-        "tm:nightslash",
-        "tm:outrage",
-        "tm:photongeyser",
-        "tm:powergem",
-        "tm:prismaticlaser",
-        "tm:protect",
-        "tm:psychic",
-        "tm:psychicfangs",
-        "tm:psychocut",
-        "tm:psyshock",
-        "tm:recycle",
-        "tm:reflect",
-        "tm:rest",
-        "tm:rockblast",
-        "tm:rockpolish",
-        "tm:rockslide",
-        "tm:rocktomb",
-        "tm:sandstorm",
-        "tm:scaryface",
-        "tm:shadowclaw",
-        "tm:shockwave",
-        "tm:signalbeam",
-        "tm:slash",
-        "tm:sleeptalk",
-        "tm:smartstrike",
-        "tm:solarbeam",
-        "tm:stealthrock",
-        "tm:stoneedge",
-        "tm:storedpower",
-        "tm:substitute",
-        "tm:sunnyday",
-        "tm:swift",
-        "tm:swordsdance",
-        "tm:telekinesis",
-        "tm:terablast",
-        "tm:thief",
-        "tm:trickroom",
-        "tm:wringout",
-        "tm:xscissor"
-      ],
       "evolutions": [],
       "battleOnly": true
     }

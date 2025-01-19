@@ -47,7 +47,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:multiattack",
     "1:healblock",
@@ -177,35 +176,6 @@
       "aspects": [
         "fighting-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -332,35 +302,6 @@
       "aspects": [
         "flying-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -487,35 +428,6 @@
       "aspects": [
         "poison-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -642,35 +554,6 @@
       "aspects": [
         "ground-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -797,35 +680,6 @@
       "aspects": [
         "rock-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -952,35 +806,6 @@
       "aspects": [
         "bug-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1107,35 +932,6 @@
       "aspects": [
         "ghost-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1262,35 +1058,6 @@
       "aspects": [
         "steel-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1417,35 +1184,6 @@
       "aspects": [
         "fire-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1572,35 +1310,6 @@
       "aspects": [
         "water-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1727,35 +1436,6 @@
       "aspects": [
         "grass-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -1882,35 +1562,6 @@
       "aspects": [
         "electric-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2037,35 +1688,6 @@
       "aspects": [
         "psychic-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2192,35 +1814,6 @@
       "aspects": [
         "ice-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2347,35 +1940,6 @@
       "aspects": [
         "dragon-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2502,35 +2066,6 @@
       "aspects": [
         "dark-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",
@@ -2657,35 +2192,6 @@
       "aspects": [
         "fairy-memory"
       ],
-      "abilities": [
-        "rkssystem",
-        "h:rkssystem"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 95,
-        "attack": 95,
-        "defence": 95,
-        "special_attack": 95,
-        "special_defence": 95,
-        "speed": 95
-      },
-      "evYield": {
-        "hp": 3,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 285,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 0,
-      "behaviour": {},
       "moves": [
         "1:multiattack",
         "1:healblock",

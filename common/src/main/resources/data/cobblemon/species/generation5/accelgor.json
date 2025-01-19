@@ -1,4 +1,5 @@
 {
+  "implemented": true,
   "nationalPokedexNumber": 617,
   "name": "Accelgor",
   "primaryType": "bug",
@@ -47,7 +48,6 @@
     "height": 1.7,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:acidspray",
     "1:doubleteam",

@@ -49,7 +49,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -101,7 +100,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=hardy"
+          "target": "toxel nature=hardy"
         }
       ]
     },
@@ -118,7 +117,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=brave"
+          "target": "toxel nature=brave"
         }
       ]
     },
@@ -135,7 +134,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=adamant"
+          "target": "toxel nature=adamant"
         }
       ]
     },
@@ -152,7 +151,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=naughty"
+          "target": "toxel nature=naughty"
         }
       ]
     },
@@ -169,7 +168,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=docile"
+          "target": "toxel nature=docile"
         }
       ]
     },
@@ -186,7 +185,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=impish"
+          "target": "toxel nature=impish"
         }
       ]
     },
@@ -203,7 +202,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=lax"
+          "target": "toxel nature=lax"
         }
       ]
     },
@@ -220,7 +219,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=hasty"
+          "target": "toxel nature=hasty"
         }
       ]
     },
@@ -237,7 +236,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=jolly"
+          "target": "toxel nature=jolly"
         }
       ]
     },
@@ -254,7 +253,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=naive"
+          "target": "toxel nature=naive"
         }
       ]
     },
@@ -271,7 +270,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=rash"
+          "target": "toxel nature=rash"
         }
       ]
     },
@@ -288,7 +287,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=sassy"
+          "target": "toxel nature=sassy"
         }
       ]
     },
@@ -307,7 +306,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=quirky"
+          "target": "toxel nature=quirky"
         }
       ]
     },
@@ -324,7 +323,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=lonely"
+          "target": "toxel nature=lonely"
         }
       ]
     },
@@ -341,7 +340,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=bold"
+          "target": "toxel nature=bold"
         }
       ]
     },
@@ -358,7 +357,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=relaxed"
+          "target": "toxel nature=relaxed"
         }
       ]
     },
@@ -375,7 +374,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=timid"
+          "target": "toxel nature=timid"
         }
       ]
     },
@@ -392,7 +391,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=serious"
+          "target": "toxel nature=serious"
         }
       ]
     },
@@ -409,7 +408,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=modest"
+          "target": "toxel nature=modest"
         }
       ]
     },
@@ -426,7 +425,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=mild"
+          "target": "toxel nature=mild"
         }
       ]
     },
@@ -443,7 +442,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=quiet"
+          "target": "toxel nature=quiet"
         }
       ]
     },
@@ -460,7 +459,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=bashful"
+          "target": "toxel nature=bashful"
         }
       ]
     },
@@ -477,7 +476,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=calm"
+          "target": "toxel nature=calm"
         }
       ]
     },
@@ -494,7 +493,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=gentle"
+          "target": "toxel nature=gentle"
         }
       ]
     },
@@ -513,7 +512,7 @@
         },
         {
           "variant": "properties",
-          "target": "nature=careful"
+          "target": "toxel nature=careful"
         }
       ]
     }

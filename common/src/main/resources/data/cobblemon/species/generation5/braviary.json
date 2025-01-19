@@ -187,9 +187,6 @@
         "sheerforce",
         "h:tintedlens"
       ],
-      "eggGroups": [
-        "flying"
-      ],
       "baseStats": {
         "hp": 110,
         "attack": 83,
@@ -206,12 +203,6 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 179,
-      "experienceGroup": "slow",
-      "catchRate": 60,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "drops": {
         "amount": 5,
         "entries": [
