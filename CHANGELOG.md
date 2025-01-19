@@ -28,6 +28,7 @@
 - Improved Fortune drops on Mint Seeds
 - New Slowpoke shiny texture.
 - Updated drops for many Pokémon.
+- Completely resynced Pokémon move and stat data based on later games. Learnsets have changed considerably to maximise available moves.
 
 ### Pokémon Added
 
