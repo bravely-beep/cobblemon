@@ -179,14 +179,6 @@
       "baseFriendship": 0,
       "dynamaxBlocked": true,
       "behaviour": {},
-      "drops": {
-        "amount": 1,
-        "entries": [
-          {
-            "item": "minecraft:diamond_sword"
-          }
-        ]
-      },
       "moves": [
         "1:sacredsword",
         "1:quickguard",
@@ -267,5 +259,13 @@
       "evolutions": [],
       "battleOnly": true
     }
-  ]
+  ],
+  "drops": {
+    "amount": 1,
+    "entries": [
+      {
+        "item": "minecraft:diamond_sword"
+      }
+    ]
+  }
 }

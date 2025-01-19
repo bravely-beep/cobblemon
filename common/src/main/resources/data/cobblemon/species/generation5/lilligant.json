@@ -57,15 +57,15 @@
     "amount": 3,
     "entries": [
       {
-        "item": "cobblemon:big_root",
-        "percentage": 5
-      },
-      {
         "item": "cobblemon:revival_herb",
         "percentage": 5
       },
       {
         "item": "cobblemon:persim_berry",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:absorb_bulb",
         "percentage": 5
       }
     ]

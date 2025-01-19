@@ -183,14 +183,6 @@
       "baseFriendship": 0,
       "dynamaxBlocked": true,
       "behaviour": {},
-      "drops": {
-        "amount": 1,
-        "entries": [
-          {
-            "item": "cobblemon:ability_shield"
-          }
-        ]
-      },
       "moves": [
         "1:wideguard",
         "1:metalclaw",
@@ -275,5 +267,13 @@
       "evolutions": [],
       "battleOnly": true
     }
-  ]
+  ],
+  "drops": {
+    "amount": 1,
+    "entries": [
+      {
+        "item": "cobblemon:ability_shield"
+      }
+    ]
+  }
 }

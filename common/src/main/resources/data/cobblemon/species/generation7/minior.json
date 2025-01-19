@@ -248,5 +248,14 @@
       ],
       "evolutions": []
     }
-  ]
+  ],
+  "drops": {
+    "amount": 1,
+    "entries": [
+      {
+        "item": "cobblemon:float_stone",
+        "percentage": 5
+      }
+    ]
+  }
 }

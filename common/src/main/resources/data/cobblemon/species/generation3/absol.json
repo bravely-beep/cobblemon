@@ -50,10 +50,14 @@
   },
   "behaviour": {},
   "drops": {
-    "amount": 2,
+    "amount": 3,
     "entries": [
       {
         "item": "cobblemon:razor_claw",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:life_orb",
         "percentage": 5
       },
       {

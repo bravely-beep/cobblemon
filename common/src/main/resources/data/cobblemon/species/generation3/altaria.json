@@ -54,7 +54,7 @@
     "entries": [
       {
         "item": "minecraft:white_wool",
-        "quantityRange": "1-2"
+        "quantityRange": "0-2"
       },
       {
         "item": "minecraft:chicken"

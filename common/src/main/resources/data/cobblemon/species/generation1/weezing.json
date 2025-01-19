@@ -60,10 +60,14 @@
     }
   },
   "drops": {
-    "amount": 1,
+    "amount": 2,
     "entries": [
       {
         "item": "cobblemon:black_sludge",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:smoke_ball",
         "percentage": 5
       }
     ]

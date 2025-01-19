@@ -70,7 +70,7 @@
         "percentage": 25
       },
       {
-        "item": "minecraft:nautilus_shell",
+        "item": "cobblemon:shell_bell",
         "percentage": 25
       }
     ]
@@ -249,19 +249,6 @@
             "canBreatheUnderwater": true
           }
         }
-      },
-      "drops": {
-        "amount": 2,
-        "entries": [
-          {
-            "item": "cobblemon:mystic_water",
-            "percentage": 25
-          },
-          {
-            "item": "cobblemon:shell_bell",
-            "percentage": 25
-          }
-        ]
       },
       "moves": [
         "1:megahorn",

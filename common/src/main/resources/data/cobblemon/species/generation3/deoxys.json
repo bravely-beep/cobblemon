@@ -45,10 +45,11 @@
   "baseFriendship": 0,
   "behaviour": {},
   "drops": {
-    "amount": 1,
+    "amount": 5,
     "entries": [
       {
-        "item": "minecraft:eye_of_ender"
+        "item": "minecraft:eye_of_ender",
+        "quantityRange": "3-5"
       }
     ]
   },
@@ -215,15 +216,6 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "behaviour": {},
-      "drops": {
-        "amount": 5,
-        "entries": [
-          {
-            "item": "minecraft:eye_of_ender",
-            "quantityRange": "3-5"
-          }
-        ]
-      },
       "moves": [
         "1:leer",
         "1:wrap",
@@ -388,15 +380,6 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "behaviour": {},
-      "drops": {
-        "amount": 5,
-        "entries": [
-          {
-            "item": "minecraft:eye_of_ender",
-            "quantityRange": "3-5"
-          }
-        ]
-      },
       "moves": [
         "1:leer",
         "1:wrap",
@@ -567,15 +550,6 @@
       "eggCycles": 120,
       "baseFriendship": 0,
       "behaviour": {},
-      "drops": {
-        "amount": 5,
-        "entries": [
-          {
-            "item": "minecraft:eye_of_ender",
-            "quantityRange": "3-5"
-          }
-        ]
-      },
       "moves": [
         "1:leer",
         "1:wrap",
