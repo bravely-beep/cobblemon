@@ -41,7 +41,7 @@ class PCGUI(
     val pc: ClientPC,
     val party: ClientParty,
     val configuration: PCGUIConfiguration,
-    val openOnBox: Int = 1
+    val openOnBox: Int = 0
 ) : Screen(Component.translatable("cobblemon.ui.pc.title")), CobblemonRenderable {
 
     companion object {
