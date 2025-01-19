@@ -68,7 +68,7 @@
       },
       {
         "item": "cobblemon:kebia_berry",
-        "percentage": 5
+        "percentage": 5.0
       }
     ]
   },
@@ -320,7 +320,7 @@
           },
           {
             "item": "cobblemon:kebia_berry",
-            "percentage": 5
+            "percentage": 5.0
           }
         ]
       },

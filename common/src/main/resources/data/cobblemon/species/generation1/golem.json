@@ -77,15 +77,15 @@
       },
       {
         "item": "cobblemon:everstone",
-        "percentage": 10
+        "percentage": 10.0
       },
       {
         "item": "cobblemon:black_augurite",
-        "percentage": 10
+        "percentage": 10.0
       },
       {
         "item": "cobblemon:rindo_berry",
-        "percentage": 10
+        "percentage": 10.0
       }
     ]
   },

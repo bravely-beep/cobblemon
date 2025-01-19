@@ -252,16 +252,14 @@
       ],
       "behaviour": {
         "moving": {
-        "walk": {
-          "walkSpeed": 0.125},
+          "walk": {
+            "walkSpeed": 0.125
+          },
           "swim": {
             "swimSpeed": "0.2",
             "canBreatheUnderwater": true,
             "canSwimInWater": true,
             "canSwimInLava": false
-          },
-          "walk": {
-            "walkSpeed": 0.125
           }
         },
         "resting": {
