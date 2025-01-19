@@ -235,7 +235,7 @@
       },
       "hitbox": {
         "width": 1.6,
-        "height": 17.8,
+        "height": 11,
         "fixed": false
       },
       "standingEyeHeight": 0.96,
