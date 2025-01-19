@@ -99,6 +99,8 @@
 - Goldeen
 - Seaking
 - Charcadet
+- Armarouge
+- Ceruledge
 - Pinsir
 - Geodude
 - Graveler
