@@ -206,15 +206,11 @@
         "alolan_form"
       ],
       "aspects": [
-        "alolan",
         "alolan"
       ],
       "abilities": [
         "snowcloak",
         "h:snowwarning"
-      ],
-      "eggGroups": [
-        "field"
       ],
       "baseStats": {
         "hp": 73,
@@ -232,12 +228,6 @@
         "special_defence": 0,
         "speed": 2
       },
-      "baseExperienceYield": 177,
-      "experienceGroup": "medium_fast",
-      "catchRate": 75,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "drops": {
         "amount": 7,
         "entries": [

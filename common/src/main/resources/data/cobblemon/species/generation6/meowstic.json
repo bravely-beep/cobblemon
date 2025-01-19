@@ -43,7 +43,6 @@
   "catchRate": 75,
   "eggCycles": 20,
   "baseFriendship": 50,
-  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [
@@ -184,31 +183,6 @@
         "infiltrator",
         "h:competitive"
       ],
-      "eggGroups": [
-        "field"
-      ],
-      "baseStats": {
-        "hp": 74,
-        "attack": 48,
-        "defence": 76,
-        "special_attack": 83,
-        "special_defence": 81,
-        "speed": 104
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 2
-      },
-      "baseExperienceYield": 163,
-      "experienceGroup": "medium_fast",
-      "catchRate": 75,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:mefirst",
         "1:magicalleaf",

@@ -215,9 +215,6 @@
         "overgrow",
         "h:scrappy"
       ],
-      "eggGroups": [
-        "flying"
-      ],
       "baseStats": {
         "hp": 88,
         "attack": 112,
@@ -226,26 +223,6 @@
         "special_defence": 95,
         "speed": 60
       },
-      "evYield": {
-        "hp": 0,
-        "attack": 3,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 265,
-      "experienceGroup": "medium_slow",
-      "catchRate": 45,
-      "eggCycles": 15,
-      "baseFriendship": 50,
-      "baseScale": 0.65,
-      "hitbox": {
-        "width": 0.9,
-        "height": 3,
-        "fixed": false
-      },
-      "behaviour": {},
       "moves": [
         "1:triplearrows",
         "1:tackle",

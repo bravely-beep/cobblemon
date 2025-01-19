@@ -184,6 +184,7 @@
       "variant": "level_up",
       "result": "torterra tree=oak",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -203,6 +204,7 @@
       "variant": "level_up",
       "result": "torterra tree=swamp",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -226,6 +228,7 @@
       "variant": "level_up",
       "result": "torterra tree=birch",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -245,6 +248,7 @@
       "variant": "level_up",
       "result": "torterra tree=darkoak",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -264,6 +268,7 @@
       "variant": "level_up",
       "result": "torterra tree=acacia",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -283,6 +288,7 @@
       "variant": "level_up",
       "result": "torterra tree=azalea",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -302,6 +308,7 @@
       "variant": "level_up",
       "result": "torterra tree=jungle",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -321,6 +328,7 @@
       "variant": "level_up",
       "result": "torterra tree=spruce",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -340,6 +348,7 @@
       "variant": "level_up",
       "result": "torterra tree=mangrove",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],
@@ -359,6 +368,7 @@
       "variant": "level_up",
       "result": "torterra tree=cherry",
       "consumeHeldItem": true,
+      "permanent": true,
       "learnableMoves": [
         "earthquake"
       ],

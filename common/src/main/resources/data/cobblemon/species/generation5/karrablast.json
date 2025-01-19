@@ -1,6 +1,7 @@
 {
-  "nationalPokedexNumber": 588,
+  "implemented": true,
   "name": "Karrablast",
+  "nationalPokedexNumber": 588,
   "primaryType": "bug",
   "maleRatio": 0.5,
   "height": 5,
@@ -47,7 +48,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "drops": {
     "amount": 1,
     "entries": [

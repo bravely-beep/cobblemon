@@ -70,7 +70,7 @@
         "percentage": 25
       },
       {
-        "item": "cobblemon:shell_bell",
+        "item": "minecraft:nautilus_shell",
         "percentage": 25
       }
     ]
@@ -209,9 +209,6 @@
         "torrent",
         "h:sharpness"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 90,
         "attack": 108,
@@ -228,27 +225,19 @@
         "special_defence": 0,
         "speed": 0
       },
-      "baseExperienceYield": 264,
-      "experienceGroup": "medium_slow",
-      "catchRate": 45,
-      "eggCycles": 20,
-      "baseFriendship": 50,
       "baseScale": 0.75,
-      "hitbox": {
-        "width": 1.6,
-        "height": 2.2,
-        "fixed": false
-      },
-      "behaviour": {
-        "resting": {
-          "canSleep": true,
-          "light": "0-4"
-        },
-        "moving": {
-          "swim": {
-            "canBreatheUnderwater": true
+      "drops": {
+        "amount": 2,
+        "entries": [
+          {
+            "item": "cobblemon:mystic_water",
+            "percentage": 25
+          },
+          {
+            "item": "cobblemon:shell_bell",
+            "percentage": 25
           }
-        }
+        ]
       },
       "moves": [
         "1:megahorn",

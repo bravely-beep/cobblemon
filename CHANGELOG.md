@@ -53,6 +53,13 @@
 #### Gen 9
 - Paldean Tauros's
 
+### Added cries to the following Pokémon
+- All Nidorans
+- Shellder, Cloyster
+- Pinsir
+- Tyrogue, Hitmontop
+- Spinda
+
 ### Animation updates for the following Pokémon
 - Primeape
 - Munchlax 
@@ -87,6 +94,9 @@
 - Geodude
 - Graveler
 - Golem
+
+### Cry updates for the following Pokémon
+- Sceptile
 
 ### Fixes
 - Fixed Pokédex sometimes crashing when switching forms.

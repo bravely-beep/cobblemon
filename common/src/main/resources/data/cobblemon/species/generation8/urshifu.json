@@ -50,7 +50,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:wickedblow",
     "1:suckerpunch",
@@ -162,35 +161,6 @@
       "aspects": [
         "rapid_strike-style"
       ],
-      "abilities": [
-        "unseenfist",
-        "h:unseenfist"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 100,
-        "attack": 130,
-        "defence": 100,
-        "special_attack": 63,
-        "special_defence": 60,
-        "speed": 97
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 3,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 275,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:surgingstrikes",
         "1:aquajet",
@@ -297,130 +267,10 @@
         "gmax"
       ],
       "aspects": [
-        "single_strike-style",
-        "gmax"
+        "gmax",
+        "single_strike-style"
       ],
-      "abilities": [
-        "unseenfist",
-        "h:unseenfist"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 100,
-        "attack": 130,
-        "defence": 100,
-        "special_attack": 63,
-        "special_defence": 60,
-        "speed": 97
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 3,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 275,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 50,
       "dynamaxBlocked": true,
-      "behaviour": {},
-      "moves": [
-        "1:wickedblow",
-        "1:suckerpunch",
-        "1:rocksmash",
-        "1:leer",
-        "1:endure",
-        "1:focusenergy",
-        "12:aerialace",
-        "16:scaryface",
-        "20:headbutt",
-        "24:brickbreak",
-        "28:detect",
-        "32:bulkup",
-        "36:ironhead",
-        "40:dynamicpunch",
-        "44:counter",
-        "48:closecombat",
-        "52:focuspunch",
-        "tm:acrobatics",
-        "tm:aerialace",
-        "tm:assurance",
-        "tm:aurasphere",
-        "tm:beatup",
-        "tm:bodypress",
-        "tm:bodyslam",
-        "tm:brickbreak",
-        "tm:bulkup",
-        "tm:closecombat",
-        "tm:coaching",
-        "tm:counter",
-        "tm:crunch",
-        "tm:darkestlariat",
-        "tm:darkpulse",
-        "tm:detect",
-        "tm:dig",
-        "tm:doubleedge",
-        "tm:drainpunch",
-        "tm:dynamicpunch",
-        "tm:endure",
-        "tm:facade",
-        "tm:falseswipe",
-        "tm:firepunch",
-        "tm:fling",
-        "tm:focusblast",
-        "tm:focusenergy",
-        "tm:focuspunch",
-        "tm:foulplay",
-        "tm:gigaimpact",
-        "tm:headbutt",
-        "tm:helpinghand",
-        "tm:icepunch",
-        "tm:irondefense",
-        "tm:ironhead",
-        "tm:lashout",
-        "tm:leer",
-        "tm:lowkick",
-        "tm:lowsweep",
-        "tm:megakick",
-        "tm:megapunch",
-        "tm:metalclaw",
-        "tm:payback",
-        "tm:poisonjab",
-        "tm:protect",
-        "tm:rest",
-        "tm:retaliate",
-        "tm:revenge",
-        "tm:reversal",
-        "tm:roar",
-        "tm:rockslide",
-        "tm:rocksmash",
-        "tm:rocktomb",
-        "tm:scaryface",
-        "tm:sleeptalk",
-        "tm:snarl",
-        "tm:stoneedge",
-        "tm:substitute",
-        "tm:suckerpunch",
-        "tm:superpower",
-        "tm:swift",
-        "tm:swordsdance",
-        "tm:takedown",
-        "tm:taunt",
-        "tm:terablast",
-        "tm:throatchop",
-        "tm:thunderpunch",
-        "tm:trailblaze",
-        "tm:uturn",
-        "tm:wickedblow",
-        "tm:workup",
-        "tm:zenheadbutt"
-      ],
       "evolutions": [],
       "battleOnly": true
     },
@@ -439,39 +289,10 @@
         "gmax"
       ],
       "aspects": [
-        "rapid_strike-style",
-        "gmax"
+        "gmax",
+        "rapid_strike-style"
       ],
-      "abilities": [
-        "unseenfist",
-        "h:unseenfist"
-      ],
-      "eggGroups": [
-        "undiscovered"
-      ],
-      "baseStats": {
-        "hp": 100,
-        "attack": 130,
-        "defence": 100,
-        "special_attack": 63,
-        "special_defence": 60,
-        "speed": 97
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 3,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 275,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 50,
       "dynamaxBlocked": true,
-      "behaviour": {},
       "moves": [
         "1:surgingstrikes",
         "1:aquajet",

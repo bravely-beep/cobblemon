@@ -47,7 +47,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:rest",
     "1:confusion",

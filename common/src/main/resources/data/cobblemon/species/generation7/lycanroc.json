@@ -43,7 +43,6 @@
   "catchRate": 90,
   "eggCycles": 15,
   "baseFriendship": 50,
-  "behaviour": {},
   "drops": {
     "amount": 6,
     "entries": [
@@ -184,9 +183,6 @@
         "vitalspirit",
         "h:noguard"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 85,
         "attack": 115,
@@ -195,20 +191,6 @@
         "special_defence": 75,
         "speed": 82
       },
-      "evYield": {
-        "hp": 0,
-        "attack": 2,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 170,
-      "experienceGroup": "medium_fast",
-      "catchRate": 90,
-      "eggCycles": 15,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:counter",
         "1:reversal",
@@ -340,9 +322,6 @@
         "toughclaws",
         "h:toughclaws"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 75,
         "attack": 117,
@@ -351,20 +330,6 @@
         "special_defence": 65,
         "speed": 110
       },
-      "evYield": {
-        "hp": 0,
-        "attack": 2,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 170,
-      "experienceGroup": "medium_fast",
-      "catchRate": 90,
-      "eggCycles": 15,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:thrash",
         "1:accelerock",

@@ -169,46 +169,8 @@
         "hisuian_form"
       ],
       "aspects": [
-        "hisuian",
         "hisuian"
       ],
-      "abilities": [
-        "soundproof",
-        "static",
-        "h:aftermath"
-      ],
-      "eggGroups": [
-        "mineral"
-      ],
-      "baseStats": {
-        "hp": 60,
-        "attack": 50,
-        "defence": 70,
-        "special_attack": 80,
-        "special_defence": 80,
-        "speed": 150
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 0,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 2
-      },
-      "baseExperienceYield": 172,
-      "experienceGroup": "medium_fast",
-      "catchRate": 60,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {
-        "moving": {
-          "swim": {
-            "avoidsWater": true,
-            "canSwimInWater": false
-          }
-        }
-      },
       "drops": {
         "amount": 5,
         "entries": [

@@ -186,35 +186,6 @@
       "aspects": [
         "galarian"
       ],
-      "abilities": [
-        "hustle",
-        "h:innerfocus"
-      ],
-      "eggGroups": [
-        "field"
-      ],
-      "baseStats": {
-        "hp": 70,
-        "attack": 90,
-        "defence": 45,
-        "special_attack": 15,
-        "special_defence": 45,
-        "speed": 50
-      },
-      "evYield": {
-        "hp": 0,
-        "attack": 1,
-        "defence": 0,
-        "special_attack": 0,
-        "special_defence": 0,
-        "speed": 0
-      },
-      "baseExperienceYield": 63,
-      "experienceGroup": "medium_slow",
-      "catchRate": 120,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "drops": {
         "amount": 2,
         "entries": [

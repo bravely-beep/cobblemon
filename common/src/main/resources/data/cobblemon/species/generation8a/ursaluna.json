@@ -49,7 +49,6 @@
     "height": 2,
     "fixed": false
   },
-  "behaviour": {},
   "drops": {
     "amount": 8,
     "entries": [
@@ -215,9 +214,6 @@
         "mindseye",
         "h:mindseye"
       ],
-      "eggGroups": [
-        "field"
-      ],
       "baseStats": {
         "hp": 113,
         "attack": 70,
@@ -235,11 +231,7 @@
         "speed": 0
       },
       "baseExperienceYield": 278,
-      "experienceGroup": "medium_fast",
       "catchRate": 5,
-      "eggCycles": 20,
-      "baseFriendship": 50,
-      "behaviour": {},
       "moves": [
         "1:scratch",
         "1:leer",

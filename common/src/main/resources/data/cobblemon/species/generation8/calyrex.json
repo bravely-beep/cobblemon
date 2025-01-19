@@ -49,7 +49,6 @@
     "height": 1,
     "fixed": false
   },
-  "behaviour": {},
   "moves": [
     "1:pound",
     "1:megadrain",
@@ -159,9 +158,6 @@
         "asoneglastrier",
         "h:asoneglastrier"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 100,
         "attack": 165,
@@ -179,11 +175,6 @@
         "speed": 0
       },
       "baseExperienceYield": 340,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 100,
-      "behaviour": {},
       "moves": [
         "1:glaciallance",
         "1:tackle",
@@ -347,9 +338,6 @@
         "asonespectrier",
         "h:asonespectrier"
       ],
-      "eggGroups": [
-        "undiscovered"
-      ],
       "baseStats": {
         "hp": 100,
         "attack": 85,
@@ -367,11 +355,6 @@
         "speed": 0
       },
       "baseExperienceYield": 340,
-      "experienceGroup": "slow",
-      "catchRate": 3,
-      "eggCycles": 120,
-      "baseFriendship": 100,
-      "behaviour": {},
       "moves": [
         "1:astralbarrage",
         "1:tackle",
