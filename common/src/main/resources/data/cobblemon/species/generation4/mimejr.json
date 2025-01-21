@@ -207,7 +207,7 @@
     {
       "id": "mimejr_mrmimegalar",
       "variant": "level_up",
-      "result": "mrmime galarian",
+      "result": "mrmime",
       "consumeHeldItem": false,
       "learnableMoves": [],
       "requirements": [
@@ -272,7 +272,7 @@
         {
           "id": "mimejr_mrmimegalar",
           "variant": "level_up",
-          "result": "mrmime galarian",
+          "result": "mrmime",
           "consumeHeldItem": false,
           "learnableMoves": [],
           "requirements": [
