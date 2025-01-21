@@ -80,46 +80,6 @@
                     "#minecraft:lava"
                 ]
             }
-        },
-        {
-            "id": "slugma-5",
-            "pokemon": "slugma",
-            "presets": [
-                "natural"
-            ],
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "uncommon",
-            "level": "1-25",
-            "weight": 8.4,
-            "condition": {
-                "biomes": [
-                    "#cobblemon:space/is_fiery"
-                ],
-                "neededNearbyBlocks": [
-                    "#minecraft:lava"
-                ]
-            }
-        },
-        {
-            "id": "slugma-6",
-            "pokemon": "slugma",
-            "presets": [
-                "lava"
-            ],
-            "type": "pokemon",
-            "context": "surface",
-            "bucket": "uncommon",
-            "level": "1-25",
-            "weight": 8.4,
-            "condition": {
-                "biomes": [
-                    "#cobblemon:space/is_fiery"
-                ],
-                "neededNearbyBlocks": [
-                    "#minecraft:lava"
-                ]
-            }
         }
     ]
 }

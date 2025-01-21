@@ -80,46 +80,6 @@
                     "#minecraft:lava"
                 ]
             }
-        },
-        {
-            "id": "magcargo-5",
-            "pokemon": "magcargo",
-            "presets": [
-                "natural"
-            ],
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "uncommon",
-            "level": "38-43",
-            "weight": 1.6,
-            "condition": {
-                "biomes": [
-                    "#cobblemon:space/is_fiery"
-                ],
-                "neededNearbyBlocks": [
-                    "#minecraft:lava"
-                ]
-            }
-        },
-        {
-            "id": "magcargo-6",
-            "pokemon": "magcargo",
-            "presets": [
-                "lava"
-            ],
-            "type": "pokemon",
-            "context": "surface",
-            "bucket": "uncommon",
-            "level": "38-43",
-            "weight": 1.6,
-            "condition": {
-                "biomes": [
-                    "#cobblemon:space/is_fiery"
-                ],
-                "neededNearbyBlocks": [
-                    "#minecraft:lava"
-                ]
-            }
         }
     ]
 }

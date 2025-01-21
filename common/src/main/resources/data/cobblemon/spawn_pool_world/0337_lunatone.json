@@ -95,23 +95,6 @@
                     "cobblemon:ruins/luna_henge_ruins"
                 ]
             }
-        },
-        {
-            "id": "lunatone-5",
-            "pokemon": "lunatone",
-            "presets": [
-                "natural"
-            ],
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "uncommon",
-            "level": "21-46",
-            "weight": 6.0,
-            "condition": {
-                "biomes": [
-                    "#cobblemon:space/is_moon"
-                ]
-            }
         }
     ]
 }

@@ -49,28 +49,6 @@
             }
         },
         {
-            "id": "baltoy-3",
-            "pokemon": "baltoy",
-            "presets": [
-                "natural"
-            ],
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "uncommon",
-            "level": "5-30",
-            "weight": 5.04,
-            "condition": {
-                "biomes": [
-                    "#cobblemon:space/is_mars"
-                ]
-            },
-            "anticondition": {
-                "biomes": [
-                    "#cobblemon:space/is_icy"
-                ]
-            }
-        },
-        {
             "id": "baltoy-4",
             "pokemon": "baltoy",
             "type": "pokemon",

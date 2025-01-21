@@ -109,10 +109,8 @@
             "weight": 6.0,
             "condition": {
                 "biomes": [
-                    "#cobblemon:space/is_mercury",
                     "aether:skyroot_grove",
-                    "aether:skyroot_meadow",
-                    "#cobblemon:space/is_venus"
+                    "aether:skyroot_meadow"
                 ]
             }
         }
