@@ -30,6 +30,7 @@
 - New Slowpoke shiny texture.
 - Updated drops for many Pokémon.
 - Completely resynced Pokémon move and stat data based on later games. Learnsets have changed considerably to maximise available moves.
+- Cobblemon save data now saves .old files where applicable as a means to recover from file corruption due to crashes or similar abrupt stops
 
 ### Pokémon Added
 
