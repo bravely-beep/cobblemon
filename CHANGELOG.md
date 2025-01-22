@@ -159,6 +159,9 @@
 - Fix Pokémon Item Models breaking shadows nearby when being placed in Display Cases or Item Frames.
 - Fixed Berries not giving bonus yields when planted in their preferred biomes
 - Fix NeoForge not supporting "SodiumDynamicLights"
+- Fix Players disconnecting from servers if they made changes to certain config options
+- Fix JSON stores not loading properly if player with shouldered Pokémon is migrating from 1.5.2 into 1.6
+- Fix PokemonProperties ability=myAbility being declared as forced despite being legal for the Pokémon
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
