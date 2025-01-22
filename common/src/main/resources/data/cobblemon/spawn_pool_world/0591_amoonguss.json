@@ -4,8 +4,8 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "amoongus-1",
-            "pokemon": "amoongus",
+            "id": "amoonguss-1",
+            "pokemon": "amoonguss",
             "presets": [
                 "natural"
             ],
@@ -23,8 +23,8 @@
             }
         },
         {
-            "id": "amoongus-2",
-            "pokemon": "amoongus",
+            "id": "amoonguss-2",
+            "pokemon": "amoonguss",
             "presets": [
                 "natural"
             ],
