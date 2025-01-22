@@ -220,7 +220,7 @@ object Cobblemon {
             storage.onPlayerDataSync(it)
             playerDataManager.syncAllToPlayer(it)
             starterHandler.handleJoin(it)
-            ServerSettingsPacket(this.config.preventCompletePartyDeposit, this.config.displayEntityLevelLabel, this.config.displayEntityNameLabel, this.config.maxPokemonLevel).sendToPlayer(it)
+            ServerSettingsPacket(this.config.preventCompletePartyDeposit, this.config.displayEntityLevelLabel, this.config.displayEntityNameLabel, this.config.maxPokemonLevel, this.config.maxPokemonFriendship, this.config.maxDynamaxLevel).sendToPlayer(it)
         }
         PlatformEvents.SERVER_PLAYER_LOGOUT.subscribe {
             PCLinkManager.removeLink(it.player.uuid)
