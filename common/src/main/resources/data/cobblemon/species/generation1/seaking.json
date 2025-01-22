@@ -52,7 +52,7 @@
     "moving": {
       "canLook": false,
       "walk": {
-        "walkSpeed": 0.12,
+        "walkSpeed": 0.17,
         "avoidsLand": true
       },
       "swim": {
