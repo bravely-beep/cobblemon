@@ -187,6 +187,8 @@
   - For Pokémon:
     - `pokemon.apply(PokemonProperties)`: Applies the given properties to the Pokémon.
     - `pokemon.owner`: Returns the owner of the Pokémon or 0.0 if there is no owner or they are not online.
+- Added NPC field:
+  - `hideNameTag`: Hides the name tag of the NPC.
 
 ## [1.6.0 - The Record Catch Update (December 25th, 2024)](#1-6-0)
 #### "Now that there's a fishing mechanic, the mod is actually good!"
@@ -2090,4 +2092,3 @@ Thank you so much to all of our community translators that bring the mod to the 
 
 ## [1.0.0 (November 12th, 2022)](#1-0-0)
 - Initial release.
-
