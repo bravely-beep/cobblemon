@@ -167,6 +167,7 @@
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
+- Updated fields in `SpawnNPCPacket` and `SpawnPokemonPacket` to be visible and mutable.
 
 ### Molang & Datapacks  
 - Added flows for:
@@ -2090,4 +2091,3 @@ Thank you so much to all of our community translators that bring the mod to the 
 
 ## [1.0.0 (November 12th, 2022)](#1-0-0)
 - Initial release.
-

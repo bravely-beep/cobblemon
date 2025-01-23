@@ -30,13 +30,13 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.Entity
 
 class SpawnNPCPacket(
-    private val npcClass: ResourceLocation,
-    private val aspects: Set<String>,
-    private val level: Int,
-    private val battleIds: Set<UUID>,
-    private val name: Component,
-    private val poseType: PoseType,
-    private val texture: NPCPlayerTexture,
+    var npcClass: ResourceLocation,
+    var aspects: Set<String>,
+    var level: Int,
+    var battleIds: Set<UUID>,
+    var name: Component,
+    var poseType: PoseType,
+    var texture: NPCPlayerTexture,
     vanillaSpawnPacket: ClientboundAddEntityPacket
 ) : SpawnExtraDataEntityPacket<SpawnNPCPacket, NPCEntity>(vanillaSpawnPacket) {
 
