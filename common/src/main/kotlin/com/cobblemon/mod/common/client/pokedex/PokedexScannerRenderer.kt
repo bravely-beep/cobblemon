@@ -183,10 +183,11 @@ class PokedexScannerRenderer {
                             val typeWidth = Minecraft.getInstance().font.width(typeText.font(CobblemonResources.DEFAULT_LARGE))
                             // Split into 2 lines if text width is too long
                             if (typeWidth > (OUTER_INFO_FRAME_WIDTH - 8) && pokedexEntityData.getApparentForm().secondaryType !== null) {
+                                val splitLines = typeText.string.split("/")
                                 drawScaledText(
                                     context = graphics,
                                     font = CobblemonResources.DEFAULT_LARGE,
-                                    text = lang("type.suffix", pokedexEntityData.getApparentForm().primaryType.displayName).bold(),
+                                    text = text(splitLines[0], "/").bold(),
                                     x = centerX + xOffset + xOffsetText,
                                     y = centerY + yOffset + yOffsetText - 4,
                                     shadow = true,
@@ -196,7 +197,7 @@ class PokedexScannerRenderer {
                                 drawScaledText(
                                     context = graphics,
                                     font = CobblemonResources.DEFAULT_LARGE,
-                                    text = lang("type.suffix", pokedexEntityData.getApparentForm().secondaryType!!.displayName).bold(),
+                                    text = text(splitLines[1]).bold(),
                                     x = centerX + xOffset + xOffsetText,
                                     y = centerY + yOffset + yOffsetText + 3,
                                     shadow = true,
