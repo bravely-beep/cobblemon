@@ -258,6 +258,8 @@ object Cobblemon {
         // Lowest priority because this applies after luxury ball bonus as of gen 4
         CobblemonEvents.FRIENDSHIP_UPDATED.subscribe(Priority.LOWEST) { event ->
             var increment = (event.newFriendship - event.pokemon.friendship).toFloat()
+            if (increment <= 0) //these affects are only meant to affect positive gains
+                return@subscribe
             // Our Luxury ball spec is diff from official, but we will still assume these stack
             if (event.pokemon.heldItemNoCopy().`is`(CobblemonItemTags.IS_FRIENDSHIP_BOOSTER)) {
                 increment += increment * 0.5F

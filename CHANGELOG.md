@@ -163,6 +163,7 @@
 - Fix JSON stores not loading properly if player with shouldered Pokémon is migrating from 1.5.2 into 1.6
 - Fix PokemonProperties ability=myAbility being declared as forced despite being legal for the Pokémon
 - Fixed type formatting in Pokédex scanner mode when dual types require two lines
+- Fix trading sometimes crashing the game/server
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
