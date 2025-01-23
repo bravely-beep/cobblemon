@@ -60,4 +60,11 @@ class NPCRenderer(context: Context) : LivingEntityRenderer<NPCEntity, PosableEnt
 //            this.renderLabelIfPresent(entity, entity.displayName, poseMatrix, buffer, packedLight)
 //        }
     }
+
+    override fun shouldShowName(entity: NPCEntity): Boolean {
+        if (entity.npc.hideNameTag) {
+            return false
+        }
+        return super.shouldShowName(entity)
+    }
 }
