@@ -167,6 +167,7 @@
 - Fix trading sometimes crashing the game/server
 - Wild shiny sounds now respect the `shinyNoticeParticlesDistance` config setting.
 - Fixed Pokémon being able to evolve mid-battle
+- Fixed NPC held items being able to be stolen by players
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
