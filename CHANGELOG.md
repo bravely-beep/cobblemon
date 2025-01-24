@@ -164,6 +164,7 @@
 - Fix PokemonProperties ability=myAbility being declared as forced despite being legal for the Pokémon
 - Fixed type formatting in Pokédex scanner mode when dual types require two lines
 - Fix trading sometimes crashing the game/server
+- Fixed NPC held items being able to be stolen by players
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
@@ -2090,4 +2091,3 @@ Thank you so much to all of our community translators that bring the mod to the 
 
 ## [1.0.0 (November 12th, 2022)](#1-0-0)
 - Initial release.
-
