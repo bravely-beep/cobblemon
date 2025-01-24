@@ -166,6 +166,7 @@
 - Fixed type formatting in Pokédex scanner mode when dual types require two lines
 - Fix trading sometimes crashing the game/server
 - Wild shiny sounds now respect the `shinyNoticeParticlesDistance` config setting.
+- Fixed Pokémon being able to evolve mid-battle
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
@@ -2092,4 +2093,3 @@ Thank you so much to all of our community translators that bring the mod to the 
 
 ## [1.0.0 (November 12th, 2022)](#1-0-0)
 - Initial release.
-
