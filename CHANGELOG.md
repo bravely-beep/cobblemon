@@ -30,6 +30,7 @@
 - New Slowpoke shiny texture.
 - Updated drops for many Pokémon.
 - Completely resynced Pokémon move and stat data based on later games. Learnsets have changed considerably to maximise available moves.
+- Adjusted the evolution sound to match the timing of the particle effect.
 
 ### Pokémon Added
 
@@ -164,6 +165,7 @@
 - Fix PokemonProperties ability=myAbility being declared as forced despite being legal for the Pokémon
 - Fixed type formatting in Pokédex scanner mode when dual types require two lines
 - Fix trading sometimes crashing the game/server
+- Wild shiny sounds now respect the `shinyNoticeParticlesDistance` config setting.
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
