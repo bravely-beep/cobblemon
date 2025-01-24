@@ -171,6 +171,7 @@
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
+- Updated fields in `SpawnNPCPacket` and `SpawnPokemonPacket` to be visible and mutable.
 
 ### Molang & Datapacks  
 - Added flows for:
