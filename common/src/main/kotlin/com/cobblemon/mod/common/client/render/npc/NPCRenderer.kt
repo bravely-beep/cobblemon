@@ -62,7 +62,7 @@ class NPCRenderer(context: Context) : LivingEntityRenderer<NPCEntity, PosableEnt
     }
 
     override fun shouldShowName(entity: NPCEntity): Boolean {
-        if (entity.npc.hideNameTag) {
+        if (entity.hideNameTag) {
             return false
         }
         return super.shouldShowName(entity)
