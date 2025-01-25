@@ -188,6 +188,9 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
         val adjustments = listOf(-3.75F, 2.5F, 0.9F, 0.35F)
 
         val adjustedWeights = buckets.mapIndexed { index, bucket ->
+            if (index >= baseValues.size) {
+                return@mapIndexed bucket to bucket.weight
+            }
             val base = baseValues[index]
             val adjustment = adjustments[index]
             bucket to (base + adjustment * luckOfTheSeaLevel)
