@@ -35,6 +35,7 @@ import com.cobblemon.mod.common.util.asIdentifierDefaultingNamespace
 import com.cobblemon.mod.common.util.cobblemonResource
 import com.cobblemon.mod.common.util.lang
 import com.cobblemon.mod.common.util.toBlockPos
+import com.cobblemon.mod.common.util.weightedSelection
 import net.minecraft.advancements.CriteriaTriggers
 import net.minecraft.client.resources.sounds.EntityBoundSoundInstance
 import net.minecraft.core.BlockPos
@@ -183,33 +184,16 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
     }
 
     fun chooseAdjustedSpawnBucket(buckets: List<SpawnBucket>, luckOfTheSeaLevel: Int): SpawnBucket {
-        val baseIncreases = listOf(2.5F, 0.5F, 0.2F)  // Base increases for the first three buckets beyond the first
+        val baseValues = listOf(93.8F, 5.0F, 1.0F, 0.2F)
+        val adjustments = listOf(-4.1F, 2.5F, 1.0F, 0.6F)
+
         val adjustedWeights = buckets.mapIndexed { index, bucket ->
-            if (index == 0) {
-                // Placeholder, will be recalculated
-                0.0F
-            } else {
-                val increase = if (index < baseIncreases.size) baseIncreases[index] else baseIncreases.last() + (index - baseIncreases.size + 1) * 0.15F
-                bucket.weight + increase * luckOfTheSeaLevel
-            }
-        }.toMutableList()
+            val base = baseValues[index]
+            val adjustment = adjustments[index]
+            bucket to (base + adjustment * luckOfTheSeaLevel)
+        }.toMap()
 
-        // Recalculate the first bucket's weight to ensure the total is 100%
-        val totalAdjustedWeight = adjustedWeights.sum() - adjustedWeights[0]  // Corrected to ensure the list contains Floats
-        adjustedWeights[0] = 100.0F - totalAdjustedWeight + buckets[0].weight
-
-        // Random selection based on adjusted weights
-        val weightSum = adjustedWeights.sum()
-        val chosenSum = kotlin.random.Random.nextDouble(weightSum.toDouble()).toFloat()  // Ensure usage of Random from kotlin.random package
-        var sum = 0.0F
-        adjustedWeights.forEachIndexed { index, weight ->
-            sum += weight
-            if (sum >= chosenSum) {
-                return buckets[index]
-            }
-        }
-
-        return buckets.first()  // Fallback
+        return buckets.weightedSelection { adjustedWeights[it]!! }!!
     }
 
     fun isOpenOrWaterAround(pos: BlockPos): Boolean {
@@ -335,7 +319,7 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
 
                     val buckets = Cobblemon.bestSpawner.config.buckets
 
-                    // choose a spawn bucket according to weights no matter how many there are
+                    // choose a spawn bucket according to weights and luck of the sea
                     chosenBucket = chooseAdjustedSpawnBucket(buckets, luckOfTheSeaLevel)
                     CobblemonEvents.BOBBER_BUCKET_CHOSEN.post(BobberBucketChosenEvent(chosenBucket, buckets, luckOfTheSeaLevel)) { event ->
                         chosenBucket = event.chosenBucket

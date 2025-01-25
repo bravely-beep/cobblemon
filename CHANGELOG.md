@@ -171,6 +171,7 @@
 - Corrected evolutions requiring a held item consuming it on evolving rather than when meeting requirements
 - Fixed Pokémon showing only the default form when selecting a battle target
 - Fixed a possible error coming out of reeling fishing rods in specific situations.
+- Fixed incorrect weights being used when Poké Fishing with Luck of the Sea.
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.
