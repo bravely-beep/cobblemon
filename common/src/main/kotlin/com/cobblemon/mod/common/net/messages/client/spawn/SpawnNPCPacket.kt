@@ -37,6 +37,7 @@ class SpawnNPCPacket(
     var name: Component,
     var poseType: PoseType,
     var texture: NPCPlayerTexture,
+    var hideNameTag: Boolean,
     vanillaSpawnPacket: ClientboundAddEntityPacket
 ) : SpawnExtraDataEntityPacket<SpawnNPCPacket, NPCEntity>(vanillaSpawnPacket) {
 
@@ -50,6 +51,7 @@ class SpawnNPCPacket(
         entity.name,
         entity.entityData.get(NPCEntity.POSE_TYPE),
         entity.entityData.get(NPCEntity.NPC_PLAYER_TEXTURE),
+        entity.hideNameTag,
         vanillaSpawnPacket
     )
 
@@ -64,6 +66,7 @@ class SpawnNPCPacket(
         if (this.texture.model != NPCPlayerModelType.NONE) {
             buffer.writeByteArray(this.texture.texture)
         }
+        buffer.writeBoolean(this.hideNameTag)
     }
 
     override fun applyData(entity: NPCEntity) {
@@ -74,6 +77,7 @@ class SpawnNPCPacket(
         entity.entityData.set(NPCEntity.ASPECTS, aspects)
         entity.entityData.set(NPCEntity.POSE_TYPE, poseType)
         entity.entityData.set(NPCEntity.NPC_PLAYER_TEXTURE, texture)
+        entity.entityData.set(NPCEntity.HIDE_NAME_TAG, this.hideNameTag)
     }
 
     override fun checkType(entity: Entity): Boolean = entity is NPCEntity
@@ -93,9 +97,10 @@ class SpawnNPCPacket(
             } else {
                 NPCPlayerTexture(byteArrayOf(), model)
             }
+            val hideNameTag = buffer.readBoolean()
             val vanillaPacket = decodeVanillaPacket(buffer)
 
-            return SpawnNPCPacket(npc, aspects, level, battleIds, name, poseType, texture, vanillaPacket)
+            return SpawnNPCPacket(npc, aspects, level, battleIds, name, poseType, texture, hideNameTag, vanillaPacket)
         }
     }
 
