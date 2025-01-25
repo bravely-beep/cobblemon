@@ -170,6 +170,7 @@
 - Fixed NPC held items being able to be stolen by players
 - Corrected evolutions requiring a held item consuming it on evolving rather than when meeting requirements
 - Fixed Pokémon showing only the default form when selecting a battle target
+- Fixed a possible error coming out of reeling fishing rods in specific situations.
 
 ### Developer
 - Updated the Pokédex data updated events to always include a Pokemon instance, and optionally a DisguiseData instance.

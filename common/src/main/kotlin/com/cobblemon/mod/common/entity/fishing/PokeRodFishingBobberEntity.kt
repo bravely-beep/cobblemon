@@ -698,10 +698,9 @@ class PokeRodFishingBobberEntity(type: EntityType<out PokeRodFishingBobberEntity
         )
 
         // This has a chance to fail, if the position has no suitability for a fishing context
-        // it could also just be a miss which
-        // means two attempts to spawn in the same location can have differing results (which is expected for
-        // randomness).
-        if (result == null) {
+        // it could also just be a miss which means two attempts to spawn in the same location
+        // can have differing results (which is expected for randomness).
+        if (result == null || result.isCompletedExceptionally) {
             player.sendSystemMessage(lang("fishing.no_bite").red())
             return false
         }
