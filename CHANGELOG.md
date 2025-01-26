@@ -175,7 +175,7 @@
 - Added `hideNameTag` field and `HideNPCNameTag` nbt tag to `NPCEntity` to allow hiding the name tag of the NPC.
 - Added the player to `PokerodReelEvent` so you know who is doing the reeling.
 
-### MoLang & Datapacks  
+### MoLang & Datapacks
 - Added flows for:
   - `forme_change`: Triggered when a Pokémon changes form in battle.
   - `mega_evolution`: Triggered when a Pokémon mega evolves in battle. (Note: Third-party mods are required for this feature currently)
