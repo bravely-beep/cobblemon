@@ -1,4 +1,6 @@
 # Changelog
+## [1.7.0 (Month xth, 2025)](#1-7-0)
+
 ## [1.6.1 (January 26th, 2025)](#1-6-1)
 
 ### Additions
