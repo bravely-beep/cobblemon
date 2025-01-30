@@ -1,6 +1,9 @@
 # Changelog
 ## [1.7.0 (Month xth, 2025)](#1-7-0)
 
+### Fixes
+- Fixed Particles sometimes facing the wrong direction (looking at you swordsdance)
+
 ## [1.6.1 (January 26th, 2025)](#1-6-1)
 
 ### Additions
