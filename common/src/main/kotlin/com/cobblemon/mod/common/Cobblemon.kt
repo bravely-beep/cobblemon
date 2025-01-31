@@ -125,6 +125,7 @@ import kotlin.reflect.jvm.javaField
 import net.minecraft.client.Minecraft
 import net.minecraft.commands.synchronization.SingletonArgumentInfo
 import net.minecraft.resources.ResourceKey
+import net.minecraft.server.level.ServerPlayer
 import net.minecraft.server.packs.PackType
 import net.minecraft.world.item.NameTagItem
 import net.minecraft.world.level.Level
@@ -220,7 +221,7 @@ object Cobblemon {
             storage.onPlayerDataSync(it)
             playerDataManager.syncAllToPlayer(it)
             starterHandler.handleJoin(it)
-            ServerSettingsPacket(this.config.preventCompletePartyDeposit, this.config.displayEntityLevelLabel, this.config.displayEntityNameLabel, this.config.maxPokemonLevel, this.config.maxPokemonFriendship, this.config.maxDynamaxLevel).sendToPlayer(it)
+            sendServerSettingsPacketToPlayer(it)
         }
         PlatformEvents.SERVER_PLAYER_LOGOUT.subscribe {
             PCLinkManager.removeLink(it.player.uuid)
@@ -268,8 +269,17 @@ object Cobblemon {
         }
 
         HeldItemProvider.register(CobblemonHeldItemManager, Priority.LOWEST)
+    }
 
-
+    fun sendServerSettingsPacketToPlayer(player: ServerPlayer) {
+        ServerSettingsPacket(
+            this.config.preventCompletePartyDeposit,
+            this.config.displayEntityLevelLabel,
+            this.config.displayEntityNameLabel,
+            this.config.maxPokemonLevel,
+            this.config.maxPokemonFriendship,
+            this.config.maxDynamaxLevel,
+        ).sendToPlayer(player)
     }
 
     fun initialize() {
@@ -429,7 +439,23 @@ object Cobblemon {
         }
     }
 
+    private fun initializeConfig() {
+        loadCobblemonConfig()
+        saveConfig()
+        PokemonSpecies.observable.subscribe { starterConfig = this.loadStarterConfig() }
+    }
+
     fun loadConfig() {
+        initializeConfig()
+        bestSpawner.init()
+    }
+
+    fun reloadConfig() {
+        initializeConfig()
+        bestSpawner.reloadConfig()
+    }
+
+    private fun loadCobblemonConfig() {
         val configFile = File(CONFIG_PATH)
         configFile.parentFile.mkdirs()
 
@@ -472,12 +498,6 @@ object Cobblemon {
         } else {
             this.config = CobblemonConfig()
         }
-
-        config.lastSavedVersion = VERSION
-        this.saveConfig()
-
-        bestSpawner.loadConfig()
-        PokemonSpecies.observable.subscribe { starterConfig = this.loadStarterConfig() }
     }
 
     fun loadStarterConfig(): StarterConfig {
@@ -501,6 +521,8 @@ object Cobblemon {
     }
 
     fun saveConfig() {
+        config.lastSavedVersion = VERSION
+
         try {
             val configFile = File(CONFIG_PATH)
             val fileWriter = FileWriter(configFile)

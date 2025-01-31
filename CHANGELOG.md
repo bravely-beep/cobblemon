@@ -9,6 +9,8 @@
 - A finished battle now has winners and losers set inside of `PokemonBattle` instead of them always being empty.
 - Dialogues are correctly removed from memory when they are stopped.
 - Dialogues with variably-set initial pages now properly start timeout tracking.
+### Additions
+- Added `/cobblemonconfig reload` command to reload `main.json` configuration. **Note:** Some settings require a server restart to take effect; use this command cautiously.
 
 ## [1.6.1 (January 26th, 2025)](#1-6-1)
 

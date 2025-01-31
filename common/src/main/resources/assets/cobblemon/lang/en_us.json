@@ -1528,6 +1528,7 @@
   "cobblemon.command.pokemonrestart": "Cleared %1$s's party and PC.",
   "cobblemon.command.freezepokemon.non_pokemon": "You are not looking at a Pokémon.",
   "cobblemon.command.npcedit.non_npc": "You are not looking at a NPC.",
+  "cobblemon.command.cobblemon_config.reload": "Reloading Cobblemon settings.",
 
   "advancements.cobblemon.root": "The World of Cobblemon!",
   "advancements.cobblemon.root.description": "Choose a starter Pokémon and set out on a new adventure",
