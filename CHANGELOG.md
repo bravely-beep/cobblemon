@@ -2,9 +2,13 @@
 ## [1.7.0 (Month xth, 2025)](#1-7-0)
 
 ### Fixes
-- Fixed Particles sometimes facing the wrong direction (looking at you swordsdance)
-- Fixed Winners and Losers not being set when a battle ends
-- Fixed Dialogues not being removed from memory when it is stopped
+- Fixed Particles sometimes facing the wrong direction (looking at you, Swords Dance)
+- Fixed PCs always opening at box 2 instead of box 1.
+
+### Developer
+- A finished battle now has winners and losers set inside of `PokemonBattle` instead of them always being empty.
+- Dialogues are correctly removed from memory when they are stopped.
+- Dialogues with variably-set initial pages now properly start timeout tracking.
 
 ## [1.6.1 (January 26th, 2025)](#1-6-1)
 
