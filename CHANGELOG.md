@@ -23,6 +23,22 @@
 - Added config setting `maxPokedexScanningDetectionRange` to control from what distance the player can scan Pokémon using the Pokédex.
 - Added config setting `hideUnimplementedPokemonInThePokedex` which hides unimplemented Pokémon from the Pokédex when set to true. 
 - Added debug renderer for posable entity locators.
+- Added crossover paintings from Close Combat, Premonition, Altar, Slumber, and Nomad.
+- Added optional box argument to the /pc command
+
+### Changes
+- Pokémon will now be dynamically revealed to the Pokédex as they're seen instead of revealing entire parties at the end of battle regardless.
+- Unseen wild Pokémon will update their name from '???' to their real name as soon as a battle starts to reflect the battle UI showing the actual species name.
+- Pokémon under the illusion effect will reveal their disguise to the Pokédex first and then the base Pokémon once the disguise is broken.
+- Added more support for a variety of Fabric/NeoForge Convention tags.
+- Reformatted some tags to be more consistent.
+- Edited some recipes to utilize tags instead of direct item ids, for greater mod compatibility.
+- Berries will drop if broken at age 0
+- Improved Fortune drops on Mint Seeds
+- New Slowpoke shiny texture.
+- Updated drops for many Pokémon.
+- Completely resynced Pokémon move and stat data based on later games. Learnsets have changed considerably to maximise available moves.
+- Cobblemon save data now saves .old files where applicable as a means to recover from file corruption due to crashes or similar abrupt stops
 
 ### Pokémon Added
 
