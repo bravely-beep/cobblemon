@@ -3,6 +3,8 @@
 
 ### Fixes
 - Fixed Particles sometimes facing the wrong direction (looking at you swordsdance)
+- Fixed Winners and Losers not being set when a battle ends
+- Fixed Dialogues not being removed from memory when it is stopped
 
 ## [1.6.1 (January 26th, 2025)](#1-6-1)
 
