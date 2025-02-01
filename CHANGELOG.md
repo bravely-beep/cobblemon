@@ -9,6 +9,9 @@
 - A finished battle now has winners and losers set inside of `PokemonBattle` instead of them always being empty.
 - Dialogues are correctly removed from memory when they are stopped.
 - Dialogues with variably-set initial pages now properly start timeout tracking.
+- Added `EvGainedEvent.Pre` and `EvGainedEvent.Post`.
+- Deprecated `EVs#add(Stat, Int)`, you will not be able to compile against this code please migrate to the `EVs#add(Stat, Int, EvSource)` you most likely want to use `SidemodEvSource` but please check other implementations or make your own.
+
 ### Additions
 - Added `/cobblemonconfig reload` command to reload `main.json` configuration. **Note:** Some settings require a server restart to take effect; use this command cautiously.
 
