@@ -9,7 +9,9 @@
 package com.cobblemon.mod.common.command
 
 import com.cobblemon.mod.common.Cobblemon
+import com.cobblemon.mod.common.CobblemonNetwork.sendPacket
 import com.cobblemon.mod.common.api.permission.CobblemonPermissions
+import com.cobblemon.mod.common.net.messages.client.settings.OpenCobblemonConfigScreenPacket
 import com.cobblemon.mod.common.util.commandLang
 import com.cobblemon.mod.common.util.permission
 import com.mojang.brigadier.Command
@@ -22,6 +24,10 @@ object CobblemonConfigCommand {
     fun register(dispatcher: CommandDispatcher<CommandSourceStack>) {
         dispatcher.register(
             Commands.literal("cobblemonconfig")
+                .executes {
+                    it.source.playerOrException.sendPacket(OpenCobblemonConfigScreenPacket())
+                    Command.SINGLE_SUCCESS
+                }
                 .then(
                     Commands.literal("reload")
                         .permission(CobblemonPermissions.COBBLEMON_CONFIG_RELOAD)
