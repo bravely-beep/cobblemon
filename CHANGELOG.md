@@ -7,6 +7,7 @@
 
 ### Changes
 - Renamed `chargeGainedPerTick` config to `secondsToChargeHealingMachine`.
+- Made Blocks of Gold count as Big Nuggets when held by a Pokémon (for Fling functionality)
 
 ### Fixes
 - Fixed Particles sometimes facing the wrong direction (looking at you, Swords Dance)
